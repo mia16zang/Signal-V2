@@ -49,7 +49,21 @@ python verify_contract.py            # live collection, stubbed LLM
 python verify_contract.py --offline  # no network at all
 ```
 
-Checks the response against the shape of the completed responses in
-`backend/cache/`, exercises the JSON recovery path against fenced, truncated,
-prose-wrapped and wrong-typed model output, and confirms a provider outage
-still returns a renderable response.
+Runs without API keys — the LLM is stubbed. Exercises the JSON recovery path
+against fenced, truncated, prose-wrapped and wrong-typed model output, and
+confirms a provider outage still returns a renderable response.
+
+The expected response shape is `FROZEN_CONTRACT` in `verify_contract.py`,
+derived from the recorded production responses that completed successfully.
+`backend/cache/` is a runtime artifact and is not in version control, so a
+fresh clone uses the frozen copy; if a cache is present the verifier derives
+the contract from it instead and the frozen copy is ignored.
+
+## History
+
+The first commit is the original backend, unmodified, so the optimisation
+work is reviewable as a diff:
+
+```bash
+git diff HEAD~2 HEAD --stat
+```

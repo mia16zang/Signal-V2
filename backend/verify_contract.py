@@ -68,20 +68,119 @@ def merge(a, b):
     return a
 
 
-def expected_contract():
-    """Union of the shapes of the cached responses that actually completed.
+_NAMED = lambda field: [{"name": "str", field: "number"}]          # noqa: E731
+_INSIGHT = [{"title": "str", "reason": "str", "evidence": "str"}]
 
-    Only 3 of the 14 cached production runs contain any intelligence at all;
-    11 have `intelligence.customer/market/competitive == {}` because the old
+FROZEN_CONTRACT = {
+    "meta": {
+        "topic": "str",
+        "cached": "bool",
+        "generated_at": "str",
+        "intelligence_time": "number",
+        "synthesis_time": "number",
+        "total_time": "number",
+    },
+    "signals": {
+        "customer": {"discussion_volume": "number", "comment_volume": "number"},
+        "market": {"growth_score": "number", "startup_activity": "number"},
+        "competitive": {
+            "launches": "number",
+            "competition_score": "number",
+            "avg_votes_per_day": "number",
+        },
+        "virality": {
+            "momentum": "number",
+            "trend_growth": "number",
+            "avg_views_per_day": "number",
+            "avg_engagement_rate": "number",
+        },
+        "market_size": {"market_reports": "number"},
+        "market_opportunity": {
+            "opportunity_score": "number",
+            "market_size_mentions": "number",
+            "growth_mentions": "number",
+            "forecast_mentions": "number",
+            "billion_mentions": "number",
+            "million_mentions": "number",
+            "cagr_mentions": "number",
+            "detected_market_sizes": ["?"],
+            "detected_growth_rates": ["?"],
+        },
+    },
+    "intelligence": {
+        "customer": {
+            "customer_segments": _NAMED("score"),
+            "pain_points": _NAMED("signal_strength"),
+            "desired_outcomes": _NAMED("importance"),
+            "behavior_patterns": _NAMED("confidence"),
+            "opportunity_areas": _NAMED("score"),
+        },
+        "market": {
+            "market_size": {"estimate": "str", "confidence": "number"},
+            "growth_rate": {"estimate": "str", "confidence": "number"},
+            "market_maturity": {"stage": "str", "confidence": "number"},
+            "future_outlook": {"direction": "str", "confidence": "number"},
+            "key_trends": _NAMED("strength"),
+            "emerging_trends": _NAMED("potential"),
+            "market_drivers": _NAMED("impact"),
+        },
+        "competitive": {
+            "competitors": _NAMED("strength"),
+            "competitive_threats": _NAMED("severity"),
+            "positioning_gaps": _NAMED("opportunity"),
+            "white_space_opportunities": _NAMED("score"),
+            "differentiation_opportunities": _NAMED("score"),
+        },
+    },
+    "synthesis": {
+        "executive_summary": "str",
+        "market_pulse": "number",
+        "opportunity_score": "number",
+        "confidence": "number",
+        "confidence_explanation": "str",
+        "build_recommendation": {"decision": "str", "reason": "str"},
+        "top_reason_to_build": "str",
+        "biggest_risk": "str",
+        "best_customer_segment": "str",
+        "recommended_customer": "str",
+        "recommended_positioning": "str",
+        "best_moat": "str",
+        "key_opportunities": _INSIGHT,
+        "key_risks": _INSIGHT,
+        "why_now": _INSIGHT,
+        "potential_moats": _INSIGHT,
+        "execution_ideas": [{"title": "str", "reason": "str"}],
+    },
+}
+
+
+def expected_contract():
+    """The response shape the frontend consumes.
+
+    Preferred source is `cache/`: the shapes of the recorded production
+    responses that actually completed, unioned together. Only 2 of the 14
+    recorded runs qualify -- 11 have
+    `intelligence.customer/market/competitive == {}` because the old
     `openrouter/free` calls returned an empty object and the pipeline stored
-    it without complaint. A twelfth is a hand-written stub ({"test": ...}).
-    Those cannot define the contract -- the complete runs do.
+    it without complaint, and a twelfth is a hand-written stub
+    ({"test": ...}). Degraded runs cannot define the contract.
+
+    `cache/` is a runtime artifact and is not in version control, so a fresh
+    clone has nothing to derive from. FROZEN_CONTRACT below is that same
+    derivation, computed once from those 2 complete runs and checked in, so
+    the verifier is self-contained. When a cache is present it takes
+    precedence -- that keeps the check honest against real data rather than
+    against a literal that could drift.
     """
     complete, degraded = [], 0
 
     for path in sorted(glob.glob(os.path.join("cache", "*.json"))):
-        with open(path, encoding="utf-8") as f:
-            result = json.load(f)["result"]
+        try:
+            with open(path, encoding="utf-8") as f:
+                result = json.load(f)["result"]
+        except (OSError, ValueError, KeyError, TypeError):
+            degraded += 1
+            continue
         sections = result.get("intelligence", {})
         if all(
             isinstance(sections.get(s), dict) and len(sections[s]) >= 5
@@ -92,7 +191,7 @@ def expected_contract():
             degraded += 1
 
     if not complete:
-        raise SystemExit("no complete cached responses found; run from backend/")
+        return FROZEN_CONTRACT, 0, degraded
 
     contract = complete[0]
     for other in complete[1:]:
@@ -216,8 +315,12 @@ def main():
     from app.services.json_utils import parse_json, normalise_bundle
 
     contract, n_complete, n_degraded = expected_contract()
-    print(f"\nContract derived from {n_complete} complete cached responses "
-          f"({n_degraded} degraded entries ignored -- see notes).\n")
+    if n_complete:
+        print(f"\nContract derived from {n_complete} complete cached responses "
+              f"({n_degraded} degraded entries ignored -- see notes).\n")
+    else:
+        print("\nContract taken from the checked-in FROZEN_CONTRACT "
+              "(no cache/ present; see expected_contract docstring).\n")
 
     # ---------------------------------------------------------------- 1
     print("1. JSON recovery against adversarial model output")
