@@ -112,12 +112,17 @@ LLM_PROVIDER = os.getenv("LLM_PROVIDER", "gemini").strip().lower()
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 
 # Never "openrouter/free" -- that alias is the single largest source of tail
-# latency in the measured data. Free model IDs rotate frequently, so this is
-# an env var: check https://openrouter.ai/models?max_price=0 and set
-# OPENROUTER_MODEL if the default 404s.
+# latency in the measured data.
+#
+# Free model IDs rotate constantly. The previous default here,
+# "google/gemini-2.0-flash-exp:free", was retired and returned
+# 404 "No endpoints found" on every call, so this fallback provider was dead
+# on arrival. Verified working 2026-07-29; if it 404s, list the current free
+# catalogue at https://openrouter.ai/api/v1/models and pick one whose pricing
+# is 0, or just leave LLM_PROVIDER=gemini.
 OPENROUTER_MODEL = os.getenv(
     "OPENROUTER_MODEL",
-    "google/gemini-2.0-flash-exp:free",
+    "nvidia/nemotron-3-nano-30b-a3b:free",
 )
 
 # thinking_budget=0 disables the reasoning pass on gemini-2.5-flash, which is

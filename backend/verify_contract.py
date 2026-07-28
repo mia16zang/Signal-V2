@@ -23,8 +23,16 @@ import os
 import sys
 import time
 
+from dotenv import load_dotenv
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# Load any real .env FIRST. These stubs exist so the services can be
+# constructed without credentials -- but load_dotenv does not override
+# variables that are already set, so setting them first would mask the real
+# keys for anything else running in the same process. The LLM is stubbed
+# either way, so a real key present here is never spent.
+load_dotenv()
 os.environ.setdefault("GEMINI_API_KEY", "stub")
 os.environ.setdefault("OPENROUTER_API_KEY", "stub")
 

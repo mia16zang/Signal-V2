@@ -36,8 +36,8 @@ and can be overridden by environment variable.
 | LLM calls per request | 1 merged | 4 sequential |
 | Collectors | DDGS + YouTube | + Google Trends + Product Hunt |
 | Evidence kept | 30 ranked | 200 |
-| Typical cold request | ~15–20s | ~100s |
-| Cached request | <100ms | <100ms |
+| Typical cold request | ~18–22s measured | ~100s |
+| Cached request | 1ms measured | 1ms measured |
 
 The response shape is identical in both modes.
 
