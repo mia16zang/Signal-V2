@@ -1,0 +1,9 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+.vscode/
+
+# Response cache is a runtime artifact, not source.
+backend/cache/

@@ -1,0 +1,2 @@
+# marketintelligence
+market intelligence prototype 
