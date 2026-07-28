@@ -1,0 +1,38 @@
+# Render blueprint.
+#
+# This file must sit at the repository root -- Render's blueprint loader only
+# looks here. It previously lived at backend/render.yaml, where it was never
+# found, and its build command assumed a working directory that did not
+# contain requirements.txt. `rootDir` fixes both: Render treats backend/ as
+# the service root, so the build and start commands resolve correctly.
+services:
+  - type: web
+    name: market-intelligence-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      # Pinned so a change to Render's default Python cannot break the build
+      # without warning. Verified locally on 3.14.6; 3.13.4 is chosen here
+      # because it is reliably available on Render and every pinned dependency
+      # publishes wheels for it.
+      - key: PYTHON_VERSION
+        value: 3.13.4
+
+      # sync: false means Render prompts for the value and stores it in the
+      # service's environment. Never commit the values themselves.
+      - key: GEMINI_API_KEY
+        sync: false
+
+      # Optional. The YouTube collector skips cleanly when this is absent, so
+      # the service still boots and serves without it.
+      - key: YOUTUBE_API_KEY
+        sync: false
+
+      # Explicit rather than relying on the default in app/config.py, so the
+      # deployed mode is visible here and can be flipped from the Render
+      # dashboard without a code change.
+      - key: PORTFOLIO_MODE
+        value: "true"
