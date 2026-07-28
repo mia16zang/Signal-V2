@@ -171,16 +171,6 @@ medium
 Output valid JSON only.
 """
 
-    print("CALLING COMPETITIVE OPENROUTER")
+    print("  calling competitive intelligence")
 
-    service = OpenRouterService()
-
-    result = service.call_json(
-    prompt,
-    debug=True
-)
-
-    print("\nFINAL RESULT:")
-    print(result)
-
-    return result
+    return OpenRouterService().call_json(prompt)

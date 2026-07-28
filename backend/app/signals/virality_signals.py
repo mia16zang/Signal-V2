@@ -12,14 +12,14 @@ def extract(evidence):
 
     for item in evidence:
 
-        if item["source"] == "google_trends":
+        if item.get("source") =="google_trends":
 
             trend_growth = item.get(
                 "growth_rate",
                 0
             )
 
-        if item["source"] == "youtube":
+        if item.get("source") =="youtube":
 
             youtube_count += 1
 

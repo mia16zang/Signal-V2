@@ -1,11 +1,10 @@
-from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
+from app import config
 from app.routes.analyze import router
 
-app = FastAPI(
-    title="Market Intelligence API"
-)
+app = FastAPI(title="Market Intelligence API")
 
 app.add_middleware(
     CORSMiddleware,
@@ -17,14 +16,17 @@ app.add_middleware(
 
 app.include_router(router)
 
+
+@app.on_event("startup")
+def log_configuration():
+    print(f"\nMarket Intelligence API starting\n  {config.describe()}\n")
+
+
 @app.get("/health")
 def health():
-    return {
-        "status": "ok"
-    }
+    return {"status": "ok"}
+
 
 @app.get("/")
 def root():
-    return {
-        "status": "running"
-    }
+    return {"status": "running"}

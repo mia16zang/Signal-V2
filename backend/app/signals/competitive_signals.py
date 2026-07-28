@@ -10,7 +10,7 @@ def extract(evidence):
 
     for item in evidence:
 
-        if item["source"] == "producthunt":
+        if item.get("source") =="producthunt":
 
             launches += 1
 

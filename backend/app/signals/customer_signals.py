@@ -10,7 +10,7 @@ def extract(evidence):
 
     for item in evidence:
 
-        if item["source"] == "youtube":
+        if item.get("source") =="youtube":
 
             total_comments += item.get(
                 "comments",

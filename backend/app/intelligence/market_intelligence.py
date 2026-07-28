@@ -198,16 +198,6 @@ medium
 Output valid JSON only.
 """
 
-    print("CALLING MARKET OPENROUTER")
+    print("  calling market intelligence")
 
-    service = OpenRouterService()
-
-    result = service.call_json(
-    prompt,
-    debug=True
-)
-
-    print("\nFINAL RESULT:")
-    print(result)
-
-    return result
+    return OpenRouterService().call_json(prompt)
