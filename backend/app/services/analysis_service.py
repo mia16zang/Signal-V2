@@ -121,10 +121,15 @@ class AnalysisService:
 
     async def collect(self, topic):
         tasks = [
+            # collect_many enforces the real budget per query, so this outer
+            # guard is only a backstop against the gather itself wedging. At
+            # exactly COLLECTOR_TIMEOUT_SECONDS it would fire first and throw
+            # away the queries that did finish -- which is the failure this
+            # per-query timeout exists to prevent.
             _guarded(
                 "ddgs",
                 ddgs.collect_many(config.search_queries(topic), topic),
-                config.COLLECTOR_TIMEOUT_SECONDS,
+                config.COLLECTOR_TIMEOUT_SECONDS + 5,
             )
         ]
 

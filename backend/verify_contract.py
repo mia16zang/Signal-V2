@@ -87,7 +87,20 @@ FROZEN_CONTRACT = {
         "intelligence_time": "number",
         "synthesis_time": "number",
         "total_time": "number",
+        "evidence_count": "number",
+        "evidence_used": "number",
     },
+    # Additive: the ranked evidence the analysis was built from. Asserted here
+    # so a future change cannot quietly drop it again -- the frontend cites it.
+    "evidence": [{
+        "rank": "number",
+        "source": "str",
+        "title": "str",
+        "url": "str",
+        "snippet": "str",
+        "query": "str",
+        "used_in_prompt": "bool",
+    }],
     "signals": {
         "customer": {"discussion_volume": "number", "comment_volume": "number"},
         "market": {"growth_score": "number", "startup_activity": "number"},

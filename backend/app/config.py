@@ -44,24 +44,58 @@ PORTFOLIO_MODE = _flag("PORTFOLIO_MODE", True)
 # Collection
 # --------------------------------------------------------------------------
 
-# Google Trends is off by default because pytrends 4.9.2 is rate limited by
-# Google on essentially every cold call from a cloud IP. Measured: 7.4s to a
-# 429, returning zero evidence. It is pure latency with no payload.
-ENABLE_GOOGLE_TRENDS = _flag("ENABLE_GOOGLE_TRENDS", not PORTFOLIO_MODE)
+# Re-measured 2026-07-29 from a residential IP: 1.0-1.1s, returning a real
+# growth_rate on every one of three runs. The earlier note here said 7.4s to a
+# 429, which was measured against a cloud IP -- so the failure mode is real but
+# it is Google rate limiting the *deployment*, not the library being slow.
+#
+# On now because the payoff is the only non-zero value in signals.market and
+# signals.virality.trend_growth, and the downside is bounded: the collector
+# runs concurrently with DDGS (~6s wall) and returns [] on any error, so even a
+# full 7.4s 429 adds ~1.5s rather than 7.4s.
+#
+# If Render's logs show `google trends error` on every request, this is that
+# rate limit and ENABLE_GOOGLE_TRENDS=false costs nothing to set.
+ENABLE_GOOGLE_TRENDS = _flag("ENABLE_GOOGLE_TRENDS", True)
 
-# Product Hunt costs two sequential round trips (OAuth token, then GraphQL)
-# and returns the global "first 50" feed, which is not filtered by topic. It
-# feeds only competitive.launches / market.startup_activity.
-ENABLE_PRODUCT_HUNT = _flag("ENABLE_PRODUCT_HUNT", not PORTFOLIO_MODE)
+# Product Hunt stays off, and the reason is correctness rather than latency --
+# measured at 1.0s, it is cheap.
+#
+# The query is `posts(first: 50)`: the global launch feed, with no topic filter
+# anywhere in it. Measured across two unrelated topics it returned the same
+# posts and therefore the identical competition_score of 100 and
+# avg_votes_per_day of 391.0 for both. A signal that cannot vary with the topic
+# is not a signal.
+#
+# It also displaces real evidence. `_score` awards non-search sources +10, so
+# those unrelated launches took 3 of the 30 ranked slots away from sources that
+# were actually about the topic, and they are now surfaced to the user as
+# citations.
+ENABLE_PRODUCT_HUNT = _flag("ENABLE_PRODUCT_HUNT", False)
 
 ENABLE_YOUTUBE = _flag("ENABLE_YOUTUBE", True)
 
 # Per-search result cap handed to DDGS.
 DDGS_MAX_RESULTS = _int("DDGS_MAX_RESULTS", 10)
 
-# Hard ceiling on a single collector so one slow source cannot hold the whole
-# response hostage. Collectors that blow the budget return what they have.
-COLLECTOR_TIMEOUT_SECONDS = _int("COLLECTOR_TIMEOUT_SECONDS", 12)
+# Hard ceiling on a single collector -- and, inside DDGS, on a single query --
+# so one slow source cannot hold the whole response hostage.
+#
+# Was 12. DDGS has a long tail that never fully drains: measured across four
+# topics, collection took exactly the budget at every setting, because some
+# query is always still running when it expires.
+#
+#   budget   collection   ranked   of which web
+#      6s        6.01s       30         22
+#      8s        8.01s       30         24
+#     12s       10.96s       30         26
+#
+# The ranked evidence count is 30 either way -- MAX_EVIDENCE_ITEMS is the
+# binding constraint, not the budget. All the extra seconds buy is a slightly
+# different mix, trading YouTube items for search results. 8s keeps as many web
+# results as actually reach the prompt (PROMPT_EVIDENCE_ITEMS is 24) and gives
+# back ~3s of a ~22s request.
+COLLECTOR_TIMEOUT_SECONDS = _int("COLLECTOR_TIMEOUT_SECONDS", 8)
 
 # How many de-duplicated, ranked evidence items survive into signals.
 MAX_EVIDENCE_ITEMS = _int("MAX_EVIDENCE_ITEMS", 30 if PORTFOLIO_MODE else 200)
@@ -71,6 +105,33 @@ MAX_EVIDENCE_ITEMS = _int("MAX_EVIDENCE_ITEMS", 30 if PORTFOLIO_MODE else 200)
 # times over. This sends more evidence in roughly a third of the tokens.
 PROMPT_EVIDENCE_ITEMS = _int("PROMPT_EVIDENCE_ITEMS", 24)
 PROMPT_SNIPPET_CHARS = _int("PROMPT_SNIPPET_CHARS", 220)
+
+# The legacy path's three prompts each hardcode evidence[:10].
+LEGACY_PROMPT_EVIDENCE_ITEMS = 10
+
+
+def prompt_evidence_items() -> int:
+    """How many ranked items actually reach a prompt, in the current mode."""
+    return PROMPT_EVIDENCE_ITEMS if PORTFOLIO_MODE else LEGACY_PROMPT_EVIDENCE_ITEMS
+
+
+# --------------------------------------------------------------------------
+# Evidence in the response
+#
+# The pipeline used to collect evidence, rank it, feed the top slice to the
+# model and then throw all of it away -- the response carried only a count. So
+# nothing the model asserted could be traced back to a source, which is a
+# strange property for a tool whose whole pitch is that it is evidence-grounded.
+#
+# The ranked items are already in memory at response time, so returning them
+# costs one list comprehension and about 9KB on the wire.
+# --------------------------------------------------------------------------
+
+INCLUDE_EVIDENCE = _flag("INCLUDE_EVIDENCE", True)
+
+# Display budget per snippet. Longer than PROMPT_SNIPPET_CHARS because this one
+# is read by a person, not paid for by the token.
+EVIDENCE_SNIPPET_CHARS = _int("EVIDENCE_SNIPPET_CHARS", 300)
 
 
 # --------------------------------------------------------------------------

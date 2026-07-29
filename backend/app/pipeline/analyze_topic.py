@@ -69,6 +69,39 @@ def _unified(topic, evidence, signals, known_competitors):
     return intelligence, bundle["synthesis"], ai_time, 0.0
 
 
+def public_evidence(evidence):
+    """The ranked evidence, in a shape that is safe and stable to publish.
+
+    Collectors return heterogeneous dicts -- YouTube carries view counts,
+    Product Hunt carries vote rates, Google Trends carries none of the above.
+    Publishing those verbatim would make the response shape depend on which
+    collectors happened to be enabled, so this projects every source onto one
+    fixed set of keys instead.
+
+    `used_in_prompt` is the honest part: only the first N ranked items are
+    serialised into the prompt, so only those actually informed the analysis.
+    The rest were collected and outranked, and saying so is more useful than
+    implying all 30 were read.
+    """
+    cutoff = config.prompt_evidence_items()
+    out = []
+
+    for rank, item in enumerate(evidence, 1):
+        snippet = " ".join((item.get("snippet") or "").split())
+        out.append({
+            "rank": rank,
+            "source": item.get("source", "unknown"),
+            "title": (item.get("title") or "").strip(),
+            "url": item.get("url", "") or "",
+            "snippet": snippet[:config.EVIDENCE_SNIPPET_CHARS],
+            # Empty for collectors that are not query-driven.
+            "query": item.get("query", "") or "",
+            "used_in_prompt": rank <= cutoff,
+        })
+
+    return out
+
+
 def analyze_topic(
     topic,
     evidence,
@@ -109,10 +142,16 @@ def analyze_topic(
             "ai_time": ai_time,
             "parse_time": parse_time,
             "evidence_count": len(evidence),
+            # How many of those reached the prompt. The frontend needs this to
+            # explain `used_in_prompt` without hardcoding a backend constant.
+            "evidence_used": min(len(evidence), config.prompt_evidence_items()),
             "portfolio_mode": config.PORTFOLIO_MODE,
             "total_time": round(collection_time + ai_time, 2),
         },
         "signals": signals,
         "intelligence": intelligence,
         "synthesis": synthesis,
+        # Additive. Always present, empty when disabled, so the frontend never
+        # has to branch on the key existing.
+        "evidence": public_evidence(evidence) if config.INCLUDE_EVIDENCE else [],
     }

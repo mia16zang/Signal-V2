@@ -64,23 +64,40 @@ class DDGSCollector:
         set overlaps by design -- "competitors alternatives" and "reviews
         complaints" surface the same landing pages. Deduping at the source
         means the ranking step downstream sees real breadth, not repeats.
+
+        Each query carries its own timeout. It used to have none: the caller
+        wrapped this whole coroutine in a single `wait_for`, so one slow search
+        past the budget discarded all eight, and the request fell back to
+        YouTube alone. Observed live -- `ddgs: TIMEOUT after 12s, skipped`,
+        collection 12.0s, 11 items, zero web sources to cite.
+
+        The batch is only as slow as its slowest survivor either way. The
+        difference is that a straggler now costs one query instead of all of
+        them.
         """
         words = _topic_words(topic)
 
+        async def one(query):
+            return await asyncio.wait_for(
+                asyncio.to_thread(_search, query, words, config.DDGS_MAX_RESULTS),
+                timeout=config.COLLECTOR_TIMEOUT_SECONDS,
+            )
+
         batches = await asyncio.gather(
-            *[
-                asyncio.to_thread(_search, q, words, config.DDGS_MAX_RESULTS)
-                for q in queries
-            ],
+            *[one(q) for q in queries],
             return_exceptions=True,
         )
 
         merged = []
         seen = set()
+        timed_out = 0
 
-        for batch in batches:
+        for query, batch in zip(queries, batches):
+            if isinstance(batch, asyncio.TimeoutError):
+                timed_out += 1
+                continue
             if isinstance(batch, BaseException):
-                print(f"  ddgs batch failed: {batch!r}")
+                print(f"  ddgs batch failed [{query}]: {batch!r}")
                 continue
             for item in batch:
                 url = item.get("url", "")
@@ -89,6 +106,12 @@ class DDGSCollector:
                 if url:
                     seen.add(url)
                 merged.append(item)
+
+        if timed_out:
+            print(
+                f"  ddgs: {timed_out}/{len(queries)} queries timed out after "
+                f"{config.COLLECTOR_TIMEOUT_SECONDS}s, kept {len(merged)} items"
+            )
 
         return merged
 

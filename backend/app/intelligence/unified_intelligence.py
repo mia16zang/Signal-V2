@@ -90,10 +90,13 @@ def _format_evidence(evidence) -> str:
 def _format_signals(signals) -> str:
     """Only the numbers that carry information.
 
-    Empty containers are dropped rather than serialised as `[]`, which the
-    old prompts did unconditionally -- `detected_market_sizes` is always
-    empty because nothing in the live pipeline emits `market_report`
-    evidence, so every market prompt shipped two empty lists.
+    Empty containers are dropped rather than serialised as `[]`, which the old
+    prompts did unconditionally. That mattered most for `detected_market_sizes`
+    and `detected_growth_rates`, which were empty on every single request
+    because of the dead source filter in market_opportunity_signals. Now that
+    they populate, they reach the prompt -- roughly 100 characters of real
+    figures the model can ground `market.market_size` against, rather than two
+    empty brackets.
     """
     parts = []
     for group, values in (signals or {}).items():

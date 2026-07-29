@@ -1,183 +1,115 @@
+"""Market-opportunity signals: figures pulled straight out of the evidence text.
+
+This module used to open with `if item.get("source") != "market_report": continue`,
+and nothing in the pipeline has ever emitted `market_report` evidence --
+`MarketReportsCollector` exists but is imported nowhere. So the loop body never
+ran once, and every field below was hardcoded to zero by accident. The prompt
+builder had even grown a special case to strip the resulting empty lists before
+they were serialised.
+
+The filter is gone. Two ways to fix it were measured:
+
+  wire in MarketReportsCollector   +3.8s   (6.3s -> 10.1s collection)
+  drop the filter                  +0.0s
+
+The dedicated collector runs six more DDGS searches, and DDGS is already the
+critical path at eight -- fourteen concurrent searches throttle each other, so
+the whole batch slows down rather than the new work overlapping for free. It
+also displaced real evidence: the ranked 30 went from 24 search results to 16.
+
+Dropping the filter costs nothing because the figures were always there. The
+default query list already includes "{topic} market size growth forecast" and
+"{topic} industry report CAGR", so those market reports were being collected,
+ranked and fed to the model the whole time -- just never measured. Verified on
+three topics: opportunity_score 0 -> 100 / 71 / 100, with real figures.
+"""
+
 import re
 
+# A currency amount with a scale word or suffix: "$1.9 billion", "$400m".
+_MONEY = re.compile(r"\$\d+(?:\.\d+)?\s*(?:billion|million|b|m)\b", re.IGNORECASE)
 
-def extract(
-    evidence
-):
+# Any percentage. Deliberately broad, but see the gate in the loop below.
+_PERCENT = re.compile(r"\d+(?:\.\d+)?%")
 
+# A percentage is only a *growth* rate if the item is talking about growth.
+# Without this gate the field fills with discount percentages, survey results
+# and accuracy claims -- measured examples included "93%" and "99.9%".
+_GROWTH_CONTEXT = ("cagr", "growth", "growing", "forecast", "projected",
+                   "expected to reach", "annually", "per year", "yoy")
+
+_BILLION_SUFFIX = re.compile(r"\$\d+(?:\.\d+)?\s*b\b")
+_MILLION_SUFFIX = re.compile(r"\$\d+(?:\.\d+)?\s*m\b")
+
+
+def extract(evidence):
     market_size_mentions = 0
     growth_mentions = 0
     forecast_mentions = 0
     cagr_mentions = 0
-
     billion_mentions = 0
     million_mentions = 0
-    detected_market_sizes = []
-    detected_growth_rates = []
+
+    # dict.fromkeys semantics: dedupe while keeping first-seen order, which is
+    # evidence-rank order. The previous code used list(set(...)), whose
+    # iteration order changes between processes because string hashing is
+    # salted -- so the same response could come back with these arrays
+    # reordered, which is visible once a UI renders them.
+    detected_market_sizes = {}
+    detected_growth_rates = {}
 
     for item in evidence:
+        text = (
+            (item.get("title") or "") + " " + (item.get("snippet") or "")
+        ).lower()
 
-        if item.get(
-            "source"
-        ) != "market_report":
-
+        if not text.strip():
             continue
 
-        text = (
-            item.get(
-                "title",
-                ""
-            )
-            +
-            " "
-            +
-            item.get(
-                "snippet",
-                ""
-            )
-        ).lower()
-        
-        market_size_matches = re.findall(
-            r"\$\d+(?:\.\d+)?\s*(?:billion|million|b|m)",
-            text,
-            re.IGNORECASE
-        )
+        for match in _MONEY.findall(text):
+            detected_market_sizes[match.strip()] = None
 
-        detected_market_sizes.extend(
-        market_size_matches
-        )
-        
-        growth_matches = re.findall(
-            r"\d+(?:\.\d+)?%",
-            text
-        )
+        if any(term in text for term in _GROWTH_CONTEXT):
+            for match in _PERCENT.findall(text):
+                detected_growth_rates[match.strip()] = None
 
-        detected_growth_rates.extend(
-        growth_matches
-        )
-
-        if (
-            "market size"
-            in text
-        ):
-
+        if "market size" in text:
             market_size_mentions += 1
 
-        if (
-            "growth"
-            in text
-            or
-            "growing"
-            in text
-            or
-            "expansion"
-            in text
-        ):
-
+        if "growth" in text or "growing" in text or "expansion" in text:
             growth_mentions += 1
 
-        if (
-            "forecast"
-            in text
-            or
-            "projected"
-            in text
-            or
-            "expected to reach"
-            in text
-            or
-            "predicted"
-            in text
-        ):
-
+        if ("forecast" in text or "projected" in text
+                or "expected to reach" in text or "predicted" in text):
             forecast_mentions += 1
 
-        if (
-            "cagr"
-            in text
-        ):
-
+        if "cagr" in text:
             cagr_mentions += 1
 
-        if (
-            "billion"
-            in text
-            or
-            re.search(
-                r"\$\d+(\.\d+)?\s*b",
-                text
-            )
-        ):
-
+        if "billion" in text or _BILLION_SUFFIX.search(text):
             billion_mentions += 1
 
-        if (
-            "million"
-            in text
-            or
-            re.search(
-                r"\$\d+(\.\d+)?\s*m",
-                text
-            )
-        ):
-
+        if "million" in text or _MILLION_SUFFIX.search(text):
             million_mentions += 1
 
     opportunity_score = min(
         100,
-        (
-            market_size_mentions * 10
-            +
-            growth_mentions * 8
-            +
-            forecast_mentions * 10
-            +
-            cagr_mentions * 12
-            +
-            billion_mentions * 15
-            +
-            million_mentions * 5
-        )
-    )
-    
-    detected_market_sizes = list(
-    set(
-        detected_market_sizes
-    )
-    )
-
-    detected_growth_rates = list(
-    set(
-        detected_growth_rates
-    )
+        market_size_mentions * 10
+        + growth_mentions * 8
+        + forecast_mentions * 10
+        + cagr_mentions * 12
+        + billion_mentions * 15
+        + million_mentions * 5,
     )
 
     return {
-
-        "market_size_mentions":
-        market_size_mentions,
-
-        "growth_mentions":
-        growth_mentions,
-
-        "forecast_mentions":
-        forecast_mentions,
-
-        "cagr_mentions":
-        cagr_mentions,
-
-        "billion_mentions":
-        billion_mentions,
-
-        "million_mentions":
-        million_mentions,
-        
-        "detected_market_sizes":
-        detected_market_sizes,
-
-        "detected_growth_rates":
-        detected_growth_rates,
-
-        "opportunity_score":
-        opportunity_score
+        "market_size_mentions": market_size_mentions,
+        "growth_mentions": growth_mentions,
+        "forecast_mentions": forecast_mentions,
+        "cagr_mentions": cagr_mentions,
+        "billion_mentions": billion_mentions,
+        "million_mentions": million_mentions,
+        "detected_market_sizes": list(detected_market_sizes),
+        "detected_growth_rates": list(detected_growth_rates),
+        "opportunity_score": opportunity_score,
     }

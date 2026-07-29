@@ -8,6 +8,7 @@ work now happens on a worker thread and only the wrapper is async.
 
 import asyncio
 import os
+from datetime import datetime, timezone
 
 from dotenv import load_dotenv
 from googleapiclient.discovery import build
@@ -15,6 +16,17 @@ from googleapiclient.discovery import build
 from app import config
 
 load_dotenv()
+
+
+def _age_days(published: str) -> int:
+    """Whole days since publication, floored at 1 so it is safe to divide by."""
+    if not published:
+        return 1
+    try:
+        when = datetime.fromisoformat(published.replace("Z", "+00:00"))
+    except ValueError:
+        return 1
+    return max(1, (datetime.now(timezone.utc) - when).days)
 
 
 def _fetch(topic: str):
@@ -63,6 +75,18 @@ def _fetch(topic: str):
                 except (TypeError, ValueError):
                     return 0
 
+            views = count("viewCount")
+            likes = count("likeCount")
+            comments = count("commentCount")
+
+            # virality_signals reads `views_per_day` and `engagement_rate`, and
+            # this collector never emitted either -- so avg_views_per_day and
+            # avg_engagement_rate were hardcoded to 0 by omission, and
+            # `momentum` was only ever a rescaled trend_growth. Same defect as
+            # the dead `market_report` filter in market_opportunity_signals:
+            # a reader and a writer that never agreed on a key name.
+            age_days = _age_days(snippet.get("publishedAt", ""))
+
             results.append({
                 "source": "youtube",
                 "title": snippet.get("title", ""),
@@ -70,9 +94,16 @@ def _fetch(topic: str):
                 "snippet": snippet.get("description", "")[:500],
                 "channel": snippet.get("channelTitle", ""),
                 "published": snippet.get("publishedAt", ""),
-                "views": count("viewCount"),
-                "likes": count("likeCount"),
-                "comments": count("commentCount"),
+                "views": views,
+                "likes": likes,
+                "comments": comments,
+                "age_days": age_days,
+                "views_per_day": round(views / age_days, 2),
+                # Interactions per 100 views. A percentage, so the 0-100 scale
+                # the rest of the signal layer uses still applies.
+                "engagement_rate": (
+                    round((likes + comments) / views * 100, 2) if views else 0.0
+                ),
             })
 
         return results
