@@ -497,6 +497,49 @@ def main():
               f"status {e.status_code}")
         check("route explains why and says it is retryable",
               isinstance(e.detail, dict) and e.detail.get("retryable") is True)
+        check("the client-facing 503 body carries no raw provider JSON",
+              "RESOURCE_EXHAUSTED" not in json.dumps(e.detail)
+              and "quotaMetric" not in json.dumps(e.detail),
+              json.dumps(e.detail)[:200])
+
+    # A rate limit replayed through the real client path, verbatim as Gemini
+    # sent it. The raw body belongs in the log; the response gets the
+    # classified phrase and the retry window, nothing else.
+    from app.services.gemini_service import GeminiService, LLMUnavailable, quota_detail
+
+    RAW_429 = (
+        "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded "
+        "your current quota.', 'details': [{'@type': 'QuotaFailure', 'violations': "
+        "[{'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', "
+        "'quotaValue': '5'}]}, {'retryDelay': '33s'}]}}"
+    )
+
+    detail = quota_detail(Exception(RAW_429))
+    check("the violated quota is parsed out of the raw body",
+          "quotaValue" in detail or "limit=5" in detail, detail)
+    check("the retry window is parsed out of the raw body",
+          "retryDelay=33" in detail, detail)
+
+    class _Quota429:
+        def generate_content(self, **kw):
+            raise Exception(RAW_429)
+
+    saved_client = GeminiService._client
+    GeminiService._client = type("C", (), {"models": _Quota429()})()
+    try:
+        GeminiService().call("x")
+        check("a rate limit raises", False, "no exception")
+    except LLMUnavailable as e:
+        check("a rate limit fails fast rather than retrying a 33s window",
+              e.retryable is False)
+        check("the retry window reaches the caller", e.retry_after == 33.0,
+              str(e.retry_after))
+        check("the client-safe reason is short and readable",
+              len(e.reason) < 60 and "RESOURCE_EXHAUSTED" not in e.reason, e.reason)
+        check("the raw body is kept on the exception for the log",
+              "RESOURCE_EXHAUSTED" in str(e))
+    finally:
+        GeminiService._client = saved_client
 
     # Non-fatal provider errors are still retried; fatal ones are not.
     from app.services.gemini_service import classify

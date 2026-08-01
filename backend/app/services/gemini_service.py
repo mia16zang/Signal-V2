@@ -38,12 +38,17 @@ class LLMUnavailable(RuntimeError):
     is no briefing to serve and the request should say so.
     """
 
-    def __init__(self, message, retryable=False, retry_after=None):
+    def __init__(self, message, retryable=False, retry_after=None, reason=""):
         super().__init__(message)
         self.retryable = retryable
         # Seconds until a retry would plausibly succeed, when the provider
         # supplied a figure. None when it did not.
         self.retry_after = retry_after
+        # The classified phrase on its own -- "rate limited, clears in 33s".
+        # `message` carries the raw provider body for the log; this is what is
+        # safe to show a caller. Keeping them separate stops a 1.5KB JSON dump
+        # of Google's internals ending up in an HTTP response body.
+        self.reason = reason or message
 
 
 # Conditions that do not fix themselves inside one request. Retrying these
@@ -181,20 +186,23 @@ class GeminiService:
                 if not retryable:
                     log.warning("gemini call not retryable | reason=%s error=%s",
                                 reason, str(e)[:200])
-                    unavailable = LLMUnavailable(
+                    raise LLMUnavailable(
                         f"gemini call failed ({reason}): {str(e)[:200]}",
                         retryable=False,
-                    )
-                    # Seconds until this would succeed, when the provider said.
-                    unavailable.retry_after = wait
-                    raise unavailable from e
+                        retry_after=wait,
+                        reason=reason,
+                    ) from e
 
                 if attempt < config.LLM_MAX_ATTEMPTS:
                     time.sleep(wait if wait is not None else 1.5 * attempt)
 
         log.warning("gemini exhausted %d attempts | error=%s",
                     config.LLM_MAX_ATTEMPTS, str(last_error)[:200])
-        raise LLMUnavailable(f"gemini call failed: {last_error}", retryable=True)
+        raise LLMUnavailable(
+            f"gemini call failed: {last_error}",
+            retryable=True,
+            reason=f"the provider failed {config.LLM_MAX_ATTEMPTS} times in a row",
+        )
 
     def call_json(self, prompt, model=None):
         return parse_json(self.call(prompt, model=model, json_mode=True))

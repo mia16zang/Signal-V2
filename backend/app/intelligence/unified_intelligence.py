@@ -293,7 +293,11 @@ def _call_once(service, prompt, topic):
         print(f"  LLM CALL FAILED: {type(e).__name__}: {str(e)[:300]}")
         return None, {
             "strategy": "call_failed",
-            "detail": f"{type(e).__name__}: {str(e)[:200]}",
+            # The classified phrase, not the provider's raw body. The full
+            # error is already in the WARNING above; repeating it here would
+            # carry it into `degraded_reason` and out through the HTTP
+            # response, where it is noise at best and internals at worst.
+            "detail": getattr(e, "reason", None) or f"{type(e).__name__}",
             "retry_after": getattr(e, "retry_after", None),
         }
 
