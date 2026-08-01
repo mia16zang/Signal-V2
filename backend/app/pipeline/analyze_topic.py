@@ -15,6 +15,7 @@ from datetime import datetime
 
 from app import config
 from app.intelligence.unified_intelligence import build_everything
+from app.payload import build as payload
 from app.services.json_utils import normalise_synthesis
 
 
@@ -40,13 +41,13 @@ def _legacy(topic, evidence, signals, known_competitors):
     synthesis_time = round(time.time() - started, 2)
     print(f"AI Analysis (synthesis, 1 call): {synthesis_time}s")
 
-    return intelligence, synthesis, intelligence_time, synthesis_time
+    return intelligence, synthesis, intelligence_time, synthesis_time, [], None
 
 
 def _unified(topic, evidence, signals, known_competitors):
     """One call for all four sections."""
     started = time.time()
-    bundle, ok = build_everything(
+    bundle, ok, degraded, retry_after = build_everything(
         topic=topic,
         evidence=evidence,
         signals=signals,
@@ -66,7 +67,11 @@ def _unified(topic, evidence, signals, known_competitors):
     # the same response. `intelligence_time` carries the call, and
     # `synthesis_time` the parse and contract-normalisation that extracts it,
     # so both fields stay real rather than being invented.
-    return intelligence, bundle["synthesis"], ai_time, 0.0
+    # market_sizing rides along on `intelligence` so it reaches the payload
+    # builder without changing the return arity again.
+    intelligence["market_sizing"] = bundle.get("market_sizing", {"claims": []})
+
+    return intelligence, bundle["synthesis"], ai_time, 0.0, degraded, retry_after
 
 
 def public_evidence(evidence):
@@ -114,11 +119,13 @@ def analyze_topic(
     ai_start = time.time()
 
     if config.PORTFOLIO_MODE:
-        intelligence, synthesis, intelligence_time, synthesis_time = _unified(
+        (intelligence, synthesis, intelligence_time, synthesis_time,
+         degraded, retry_after) = _unified(
             topic, evidence, signals, known_competitors
         )
     else:
-        intelligence, synthesis, intelligence_time, synthesis_time = _legacy(
+        (intelligence, synthesis, intelligence_time, synthesis_time,
+         degraded, retry_after) = _legacy(
             topic, evidence, signals, known_competitors
         )
 
@@ -130,7 +137,7 @@ def analyze_topic(
 
     print(f"JSON Parsing: {parse_time}s")
 
-    return {
+    result = {
         "meta": {
             "topic": topic,
             "cached": False,
@@ -154,4 +161,34 @@ def analyze_topic(
         # Additive. Always present, empty when disabled, so the frontend never
         # has to branch on the key existing.
         "evidence": public_evidence(evidence) if config.INCLUDE_EVIDENCE else [],
+        # True whenever any repair or fallback fired. Always present so a
+        # client can check one key rather than infer completeness from whether
+        # a section happens to be empty.
+        "degraded": bool(degraded),
+        "degraded_reason": "; ".join(degraded) if degraded else None,
+        # Distinct from `degraded`. Degraded means part of the briefing is
+        # missing; this means there is no briefing at all, and the route turns
+        # it into an error rather than a 200 with a fabricated verdict.
+        "analysis_failed": not (synthesis.get("executive_summary") or "").strip(),
+        # Seconds until a retry would plausibly succeed, when the provider said
+        # so. On the free tier a rate limit answers with 33s.
+        "retry_after": retry_after,
     }
+
+    # Everything above is the v1 contract, untouched. `attach` adds the v2
+    # `report` block and its top-level companions beside it, so the deployed
+    # frontend keeps rendering from v1 until it is moved across.
+    payload_start = time.time()
+    result = payload.attach(result)
+    payload_time = round(time.time() - payload_start, 3)
+    result["meta"]["payload_time"] = payload_time
+
+    # One line per request with the full split, so "it feels slow" can always
+    # be answered with which stage was slow.
+    print(
+        f"TIMING collection={collection_time}s llm={ai_time}s "
+        f"parse={parse_time}s payload={payload_time}s "
+        f"total={round(collection_time + ai_time + payload_time, 2)}s"
+    )
+
+    return result

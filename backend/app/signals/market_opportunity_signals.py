@@ -92,6 +92,21 @@ def extract(evidence):
         if "million" in text or _MILLION_SUFFIX.search(text):
             million_mentions += 1
 
+    # DEPRECATED -- kept only so the deployed frontend keeps rendering. Do not
+    # read this. `report.signals.market_opportunity.sizing_language_density`
+    # carries the counts instead.
+    #
+    # These weights were written when the loop above was gated to `market_report`
+    # sources, of which there would have been a handful. Removing that dead
+    # filter widened the input from zero items to all 30 ranked ones, and the
+    # weights were never re-tuned -- so the sum now clears 100 on ordinary
+    # inputs and the clamp does the rest. Measured on "Developer tools for edge
+    # functions": 2*10 + 7*8 + 2*10 + 2*12 + 1*15 + 1*5 = 140, clamped to 100.
+    #
+    # A composite that saturates is not measuring anything. There is also no
+    # defensible scale here: nothing makes a CAGR mention worth 12 of whatever
+    # a "billion" mention is worth 15 of. The counts are the finding; the
+    # weighted sum only obscured them.
     opportunity_score = min(
         100,
         market_size_mentions * 10
@@ -109,6 +124,9 @@ def extract(evidence):
         "cagr_mentions": cagr_mentions,
         "billion_mentions": billion_mentions,
         "million_mentions": million_mentions,
+        # The denominator. Without it a count of 7 is unreadable -- 7 of 8 and
+        # 7 of 200 are opposite findings.
+        "sources_scanned": len(evidence),
         "detected_market_sizes": list(detected_market_sizes),
         "detected_growth_rates": list(detected_growth_rates),
         "opportunity_score": opportunity_score,

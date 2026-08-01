@@ -1,0 +1,2581 @@
+{
+  "meta": {
+    "topic": "Carbon accounting for SMBs",
+    "cached": false,
+    "generated_at": "2026-07-31T22:31:20.851748",
+    "intelligence_time": 24.66,
+    "synthesis_time": 0.0,
+    "collection_time": 6.16,
+    "ai_time": 24.66,
+    "parse_time": 0.0,
+    "evidence_count": 30,
+    "evidence_used": 24,
+    "portfolio_mode": true,
+    "total_time": 30.86,
+    "payload_time": 0.034
+  },
+  "signals": {
+    "virality": {
+      "momentum": 3,
+      "trend_growth": 0,
+      "avg_views_per_day": 0.9,
+      "avg_engagement_rate": 0.69
+    },
+    "competitive": {
+      "launches": 0,
+      "avg_votes_per_day": 0,
+      "competition_score": 0
+    },
+    "market": {
+      "growth_score": 0,
+      "startup_activity": 0
+    },
+    "customer": {
+      "discussion_volume": 30,
+      "comment_volume": 0
+    },
+    "market_opportunity": {
+      "market_size_mentions": 4,
+      "growth_mentions": 8,
+      "forecast_mentions": 4,
+      "cagr_mentions": 5,
+      "billion_mentions": 6,
+      "million_mentions": 1,
+      "detected_market_sizes": [
+        "$22.6 billion",
+        "$27.78 billion",
+        "$8b",
+        "$10b",
+        "$7 million"
+      ],
+      "detected_growth_rates": [
+        "22.9%",
+        "24.59%",
+        "6.6%"
+      ],
+      "opportunity_score": 100
+    },
+    "market_size": {
+      "market_reports": 4
+    }
+  },
+  "intelligence": {
+    "customer": {
+      "customer_segments": [
+        {
+          "name": "SMBs serving enterprise customers",
+          "score": 90,
+          "detail": "Small and mid-sized businesses are facing increasing pressure from larger enterprise customers to disclose their Scope 1, 2, and 3 emissions.",
+          "evidence_ids": [
+            "e1",
+            "e4",
+            "e8",
+            "e12",
+            "e13"
+          ]
+        },
+        {
+          "name": "UK SMBs",
+          "score": 75,
+          "detail": "There are specific offerings and funding rounds mentioned for carbon accounting solutions targeting UK-based SMBs.",
+          "evidence_ids": [
+            "e5",
+            "e19"
+          ]
+        },
+        {
+          "name": "Small businesses like coffee shops",
+          "score": 75,
+          "detail": "Examples are provided showing how carbon accounting can be applied to very small businesses, such as coffee shops, to help them achieve net zero.",
+          "evidence_ids": [
+            "e15",
+            "e22"
+          ]
+        }
+      ],
+      "pain_points": [
+        {
+          "name": "Mounting pressure for emissions disclosure",
+          "signal_strength": 90,
+          "detail": "SMBs are under increasing pressure from enterprise customers and new regulations to disclose their Scope 1, 2, and 3 emissions.",
+          "evidence_ids": [
+            "e1",
+            "e4",
+            "e8",
+            "e12",
+            "e13"
+          ]
+        },
+        {
+          "name": "Existing solutions not built for SMBs",
+          "signal_strength": 90,
+          "detail": "Current carbon accounting systems are often designed for compliance by large corporations, not for the specific needs or change-driving capabilities of SMBs.",
+          "evidence_ids": [
+            "e4",
+            "e24"
+          ]
+        },
+        {
+          "name": "Complexity of carbon accounting",
+          "signal_strength": 75,
+          "detail": "SMBs often lack dedicated sustainability teams, making the process of measuring, managing, and reporting emissions challenging.",
+          "evidence_ids": [
+            "e17",
+            "e20"
+          ]
+        },
+        {
+          "name": "Reluctance to purchase reporting tools",
+          "signal_strength": 75,
+          "detail": "Carbon accounting is often seen as a 'worthy but reluctant purchase' if it only serves as a reporting workflow rather than decision intelligence.",
+          "evidence_ids": [
+            "e2"
+          ]
+        }
+      ],
+      "desired_outcomes": [
+        {
+          "name": "Compliance with regulations and customer demands",
+          "importance": 90,
+          "detail": "SMBs need to meet new accounting requirements imposed by larger companies and regulations like EU CSRD and California SB 253.",
+          "evidence_ids": [
+            "e8",
+            "e12"
+          ]
+        },
+        {
+          "name": "Decision intelligence for emissions reduction",
+          "importance": 90,
+          "detail": "SMBs desire carbon accounting to move beyond mere reporting to provide actionable insights for reducing their carbon footprint.",
+          "evidence_ids": [
+            "e2",
+            "e10"
+          ]
+        },
+        {
+          "name": "Winning contracts and gaining competitive advantage",
+          "importance": 75,
+          "detail": "Carbon accounting can help SMBs secure new contracts and differentiate themselves in a market with growing sustainability expectations.",
+          "evidence_ids": [
+            "e13"
+          ]
+        },
+        {
+          "name": "Affordable and user-friendly solutions",
+          "importance": 75,
+          "detail": "SMBs are looking for accessible and easy-to-use tools for carbon accounting, especially those without dedicated sustainability teams.",
+          "evidence_ids": [
+            "e5",
+            "e17",
+            "e22"
+          ]
+        },
+        {
+          "name": "Achieving carbon neutrality or net zero",
+          "importance": 75,
+          "detail": "Small businesses are interested in using carbon accounting to become carbon neutral and demonstrate climate leadership.",
+          "evidence_ids": [
+            "e15",
+            "e22"
+          ]
+        }
+      ],
+      "behavior_patterns": [
+        {
+          "name": "Seeking free or affordable starter options",
+          "confidence": 90,
+          "detail": "SMBs are attracted to free or low-cost entry points for carbon accounting, indicating a price sensitivity or a desire to test the waters.",
+          "evidence_ids": [
+            "e5"
+          ]
+        },
+        {
+          "name": "Prioritizing cloud-based solutions",
+          "confidence": 75,
+          "detail": "Cloud deployment has become the preferred choice for SMBs in accounting connectivity, suggesting a similar preference for carbon accounting software.",
+          "evidence_ids": [
+            "e14"
+          ]
+        },
+        {
+          "name": "Looking for integrated reporting and decision tools",
+          "confidence": 75,
+          "detail": "SMBs are moving beyond basic compliance and seeking solutions that offer both reporting and actionable insights for emissions reduction.",
+          "evidence_ids": [
+            "e2",
+            "e10"
+          ]
+        }
+      ],
+      "opportunity_areas": [
+        {
+          "name": "Developing decision intelligence features",
+          "score": 90,
+          "detail": "There is a strong opportunity to build carbon accounting solutions that provide actionable insights and drive change, rather than just reporting.",
+          "evidence_ids": [
+            "e2",
+            "e24"
+          ]
+        },
+        {
+          "name": "Simplifying Scope 3 emissions reporting",
+          "score": 90,
+          "detail": "SMBs face significant challenges with Scope 3 emissions disclosure, presenting an opportunity for simplified tools and guidance.",
+          "evidence_ids": [
+            "e4",
+            "e13",
+            "e16"
+          ]
+        },
+        {
+          "name": "Offering free or low-cost entry points",
+          "score": 90,
+          "detail": "Providing free or affordable starter packages can attract SMBs who are new to carbon accounting or have budget constraints.",
+          "evidence_ids": [
+            "e5"
+          ]
+        },
+        {
+          "name": "Providing expert support and certifications",
+          "score": 75,
+          "detail": "SMBs without dedicated sustainability teams would benefit from integrated expert support and tools for certifications.",
+          "evidence_ids": [
+            "e17",
+            "e20"
+          ]
+        },
+        {
+          "name": "Integrating Generative AI for efficiency",
+          "score": 75,
+          "detail": "Adopting Generative AI can transform how organizations measure and manage carbon, offering a significant opportunity for innovation in carbon accounting solutions.",
+          "evidence_ids": [
+            "e3"
+          ]
+        }
+      ]
+    },
+    "market": {
+      "market_size": {
+        "estimate": "USD 10.71 Billion in 2024",
+        "confidence": 90
+      },
+      "growth_rate": {
+        "estimate": "29.20 % CAGR",
+        "confidence": 90
+      },
+      "market_maturity": {
+        "stage": "Growth",
+        "confidence": 90
+      },
+      "future_outlook": {
+        "direction": "Positive",
+        "confidence": 90
+      },
+      "key_trends": [
+        {
+          "name": "Increasing pressure for supply chain carbon disclosure",
+          "strength": 90,
+          "detail": "Larger organizations and new regulations are increasingly requiring SMBs in their supply chains to report climate emissions, particularly Scope 3.",
+          "evidence_ids": [
+            "e1",
+            "e4",
+            "e8",
+            "e12",
+            "e13"
+          ]
+        },
+        {
+          "name": "Shift from reporting to decision intelligence",
+          "strength": 90,
+          "detail": "The market is moving towards carbon accounting solutions that provide actionable insights for emissions reduction, not just compliance reporting.",
+          "evidence_ids": [
+            "e2",
+            "e10",
+            "e24"
+          ]
+        },
+        {
+          "name": "Adoption of cloud-based solutions",
+          "strength": 75,
+          "detail": "Cloud deployment is the preferred choice for SMBs in accounting connectivity, indicating a strong trend for carbon accounting software as well.",
+          "evidence_ids": [
+            "e14"
+          ]
+        },
+        {
+          "name": "Focus on user-friendly and affordable tools for SMBs",
+          "strength": 75,
+          "detail": "There is a clear demand for carbon accounting platforms designed specifically for SMBs, offering ease of use and cost-effectiveness.",
+          "evidence_ids": [
+            "e5",
+            "e17",
+            "e22"
+          ]
+        }
+      ],
+      "emerging_trends": [
+        {
+          "name": "Integration of Generative AI",
+          "potential": 90,
+          "detail": "Generative AI is anticipated to significantly impact carbon accounting solutions, transforming how organizations measure and manage emissions.",
+          "evidence_ids": [
+            "e3"
+          ]
+        },
+        {
+          "name": "Carbon accounting as a competitive advantage",
+          "potential": 75,
+          "detail": "Beyond compliance, carbon accounting is becoming a tool for SMBs to win contracts and differentiate themselves in the market.",
+          "evidence_ids": [
+            "e13"
+          ]
+        }
+      ],
+      "market_drivers": [
+        {
+          "name": "Regulatory mandates (e.g., EU CSRD, California SB 253)",
+          "impact": 90,
+          "detail": "New regulations are directly forcing carbon disclosure requirements down to SMBs, especially those serving enterprise customers.",
+          "evidence_ids": [
+            "e12"
+          ]
+        },
+        {
+          "name": "Enterprise customer sustainability standards",
+          "impact": 90,
+          "detail": "Large companies like Microsoft are raising sustainability bars, compelling their SMB suppliers to adapt to new accounting requirements.",
+          "evidence_ids": [
+            "e1",
+            "e8"
+          ]
+        },
+        {
+          "name": "Growing sustainability expectations",
+          "impact": 75,
+          "detail": "Overall societal and business expectations around sustainability are increasing, making carbon accounting relevant for more businesses.",
+          "evidence_ids": [
+            "e13"
+          ]
+        }
+      ]
+    },
+    "competitive": {
+      "competitors": [
+        {
+          "name": "Radicle’s Climate Smart Software",
+          "strength": 75,
+          "detail": "This is a known carbon accounting software with alternatives and competitors, indicating its presence in the market.",
+          "evidence_ids": [
+            "e9"
+          ]
+        },
+        {
+          "name": "Aclymate",
+          "strength": 75,
+          "detail": "Aclymate offers user-friendly and affordable tools for small businesses to become carbon neutral and climate leaders.",
+          "evidence_ids": [
+            "e22"
+          ]
+        },
+        {
+          "name": "Zevero",
+          "strength": 75,
+          "detail": "UK-based Zevero recently raised $7 million to expand its carbon accounting platform for businesses to measure and report emissions.",
+          "evidence_ids": [
+            "e19"
+          ]
+        },
+        {
+          "name": "CarbonPass",
+          "strength": 75,
+          "detail": "CarbonPass offers free carbon accounting for UK SMBs with paid tiers for reports and bid documents.",
+          "evidence_ids": [
+            "e5"
+          ]
+        },
+        {
+          "name": "Constellation Navigator",
+          "strength": 75,
+          "detail": "Constellation Navigator is an enterprise carbon software platform built for B2B sustainability teams to measure, report, and reduce emissions.",
+          "evidence_ids": [
+            "e20"
+          ]
+        }
+      ],
+      "competitive_threats": [
+        {
+          "name": "Solutions built for enterprise being adapted for SMBs",
+          "severity": 75,
+          "detail": "Existing carbon accounting systems, though not ideal, might be adapted or scaled down for SMBs, potentially limiting new entrants.",
+          "evidence_ids": [
+            "e4",
+            "e24"
+          ]
+        },
+        {
+          "name": "Lack of differentiation leading to reluctant purchases",
+          "severity": 75,
+          "detail": "If new solutions don't offer clear decision intelligence beyond reporting, they risk being seen as a 'worthy but reluctant purchase'.",
+          "evidence_ids": [
+            "e2"
+          ]
+        },
+        {
+          "name": "Free or low-cost offerings from incumbents",
+          "severity": 75,
+          "detail": "Some competitors already offer free or very affordable starter options, setting a low price expectation for basic services.",
+          "evidence_ids": [
+            "e5"
+          ]
+        }
+      ],
+      "positioning_gaps": [
+        {
+          "name": "Focus on decision intelligence over mere compliance",
+          "opportunity": 90,
+          "detail": "There's a gap for solutions that genuinely help SMBs make decisions to reduce emissions, rather than just fulfilling reporting requirements.",
+          "evidence_ids": [
+            "e2",
+            "e24"
+          ]
+        },
+        {
+          "name": "Simplified Scope 3 reporting for SMBs",
+          "opportunity": 90,
+          "detail": "Existing solutions struggle with Scope 3 for SMBs, creating a gap for platforms that simplify this complex area.",
+          "evidence_ids": [
+            "e4",
+            "e13"
+          ]
+        },
+        {
+          "name": "Integrated expert support for SMBs",
+          "opportunity": 75,
+          "detail": "SMBs often lack internal expertise, so solutions that bundle expert guidance with software can fill a crucial gap.",
+          "evidence_ids": [
+            "e17",
+            "e20"
+          ]
+        }
+      ],
+      "white_space_opportunities": [
+        {
+          "name": "AI-powered carbon accounting for SMBs",
+          "score": 90,
+          "detail": "Leveraging Generative AI to transform how SMBs measure and manage carbon emissions represents a significant untapped area.",
+          "evidence_ids": [
+            "e3"
+          ]
+        },
+        {
+          "name": "Carbon accounting as a sales enablement tool",
+          "score": 75,
+          "detail": "Positioning carbon accounting not just for compliance but as a direct tool for SMBs to win new contracts is a white space.",
+          "evidence_ids": [
+            "e13"
+          ]
+        }
+      ],
+      "differentiation_opportunities": [
+        {
+          "name": "Superior user experience and affordability",
+          "score": 90,
+          "detail": "Differentiating through the most user-friendly and affordable tools specifically tailored for small businesses.",
+          "evidence_ids": [
+            "e17",
+            "e22"
+          ]
+        },
+        {
+          "name": "Actionable insights for emissions reduction",
+          "score": 90,
+          "detail": "Offering clear, actionable recommendations and decision support to help SMBs reduce their footprint, moving beyond basic reporting.",
+          "evidence_ids": [
+            "e2",
+            "e10"
+          ]
+        },
+        {
+          "name": "Specialized support for specific SMB verticals",
+          "score": 75,
+          "detail": "Tailoring solutions and support for particular SMB sectors, like coffee shops, could offer a strong differentiation.",
+          "evidence_ids": [
+            "e15"
+          ]
+        }
+      ]
+    }
+  },
+  "synthesis": {
+    "market_pulse": 75,
+    "opportunity_score": 100,
+    "build_recommendation": {
+      "decision": "Strong Yes",
+      "reason": "The market for carbon accounting for SMBs is rapidly growing, driven by regulatory pressure and enterprise demand, with significant white space for innovative, user-friendly solutions."
+    },
+    "confidence": 90,
+    "confidence_explanation": "The market opportunity is clearly stated with multiple reports and growth figures. Customer pain points and desired outcomes are consistently highlighted across various sources. Competitive landscape is identifiable but with clear gaps.",
+    "top_reason_to_build": "The market is experiencing significant growth, driven by regulatory mandates and enterprise customer demands, creating an urgent need for SMB-specific solutions.",
+    "biggest_risk": "The challenge of moving SMBs beyond reluctant compliance purchases to actively embrace carbon accounting for decision-making.",
+    "best_customer_segment": "SMBs serving enterprise customers who are mandated to disclose Scope 3 emissions.",
+    "best_moat": "Proprietary AI-driven analytics that provide highly accurate, automated, and actionable emissions reduction insights tailored for SMBs.",
+    "executive_summary": "The carbon accounting market for SMBs is a high-growth opportunity, propelled by regulatory and supply chain pressures. Existing solutions often fail SMBs by focusing on compliance over actionable intelligence. A strong entry point exists for user-friendly, AI-enhanced platforms that simplify Scope 3 reporting and drive decision-making.",
+    "why_now": [
+      {
+        "title": "Regulatory and Enterprise Pressure",
+        "reason": "New regulations and enterprise demands are creating an immediate and non-negotiable need for SMBs to adopt carbon accounting.",
+        "detail": "New regulations and enterprise demands are creating an immediate and non-negotiable need for SMBs to adopt carbon accounting.",
+        "score": 90,
+        "evidence_ids": [
+          "e1",
+          "e4",
+          "e8",
+          "e12"
+        ],
+        "evidence": "EU CSRD and California SB 253 are forcing supply chain carbon disclosure down to SMBs serving enterprise customers."
+      },
+      {
+        "title": "High Market Growth Rate",
+        "reason": "The market is expanding rapidly, indicating strong demand and significant potential for new entrants to capture market share.",
+        "detail": "The market is expanding rapidly, indicating strong demand and significant potential for new entrants to capture market share.",
+        "score": 90,
+        "evidence_ids": [
+          "e11",
+          "e18"
+        ],
+        "evidence": "Carbon Accounting Software Market is projected to reach USD 46.95 Billion by 2032, growing at a CAGR of 29.20 %."
+      },
+      {
+        "title": "Technological Advancements (AI)",
+        "reason": "Emerging AI capabilities offer a chance to build fundamentally better and more efficient solutions, leapfrogging existing offerings.",
+        "detail": "Emerging AI capabilities offer a chance to build fundamentally better and more efficient solutions, leapfrogging existing offerings.",
+        "score": 90,
+        "evidence_ids": [
+          "e3"
+        ],
+        "evidence": "Adoption of Generative AI Proficiencies into Carbon Accounting to Upsurge the Market Growth."
+      }
+    ],
+    "key_opportunities": [
+      {
+        "title": "Decision Intelligence Focus",
+        "reason": "Building solutions that provide actionable insights for emissions reduction will differentiate from compliance-only tools.",
+        "detail": "Building solutions that provide actionable insights for emissions reduction will differentiate from compliance-only tools.",
+        "score": 90,
+        "evidence_ids": [
+          "e2",
+          "e24"
+        ],
+        "evidence": "Carbon accounting needs to move from reporting workflow to decision intelligence."
+      },
+      {
+        "title": "Simplified Scope 3 Reporting",
+        "reason": "Simplifying the complex process of Scope 3 emissions for SMBs addresses a critical pain point and compliance requirement.",
+        "detail": "Simplifying the complex process of Scope 3 emissions for SMBs addresses a critical pain point and compliance requirement.",
+        "score": 90,
+        "evidence_ids": [
+          "e4",
+          "e13"
+        ],
+        "evidence": "Small and mid-sized businesses face mounting pressure from enterprise customers to disclose Scope 1, 2, and 3 emissions, but existing carbon accounting…"
+      },
+      {
+        "title": "User-Friendly and Affordable Platforms",
+        "reason": "Designing intuitive and cost-effective solutions will attract a broad base of SMBs who lack dedicated sustainability teams.",
+        "detail": "Designing intuitive and cost-effective solutions will attract a broad base of SMBs who lack dedicated sustainability teams.",
+        "score": 90,
+        "evidence_ids": [
+          "e5",
+          "e17",
+          "e22"
+        ],
+        "evidence": "Aclymate offers the most user-friendly and affordable tools to help any business, no matter how small."
+      }
+    ],
+    "key_risks": [
+      {
+        "title": "Reluctance to Purchase",
+        "reason": "SMBs may view carbon accounting as a necessary evil rather than a value-add, making sales challenging if not positioned correctly.",
+        "detail": "SMBs may view carbon accounting as a necessary evil rather than a value-add, making sales challenging if not positioned correctly.",
+        "score": 75,
+        "evidence_ids": [
+          "e2"
+        ],
+        "evidence": "Otherwise, it will stay stuck as a worthy but reluctant purchase."
+      },
+      {
+        "title": "Competition from Existing Players",
+        "reason": "The market already has established players, requiring strong differentiation to stand out.",
+        "detail": "The market already has established players, requiring strong differentiation to stand out.",
+        "score": 75,
+        "evidence_ids": [
+          "e9",
+          "e10"
+        ],
+        "evidence": "Top 10 Radicle’s Climate Smart Software Alternatives & Competitors."
+      },
+      {
+        "title": "Complexity of GHG Protocol",
+        "reason": "Adhering to complex accounting standards while simplifying for SMBs is a significant technical and user experience challenge.",
+        "detail": "Adhering to complex accounting standards while simplifying for SMBs is a significant technical and user experience challenge.",
+        "score": 75,
+        "evidence_ids": [
+          "e16"
+        ],
+        "evidence": "The GHG Protocol, the globally accepted standard for carbon measurement, classifies emissions into three scopes."
+      }
+    ],
+    "recommended_customer": "Small and mid-sized businesses (SMBs) that are part of larger enterprise supply chains and are being mandated to report their Scope 3 emissions.",
+    "recommended_positioning": "The most user-friendly, AI-powered carbon accounting platform that transforms compliance into actionable decision intelligence for SMBs, enabling them to reduce emissions and win new contracts.",
+    "potential_moats": [
+      {
+        "title": "Proprietary AI Algorithms",
+        "reason": "Developing unique AI models for automated data collection, analysis, and actionable insights can create a strong technological barrier.",
+        "detail": "Developing unique AI models for automated data collection, analysis, and actionable insights can create a strong technological barrier.",
+        "score": 90,
+        "evidence_ids": [
+          "e3"
+        ],
+        "evidence": "Adoption of Generative AI Proficiencies into Carbon Accounting to Upsurge the Market Growth."
+      },
+      {
+        "title": "Deep Integration with SMB Accounting Software",
+        "reason": "Seamless integration with existing SMB accounting and operational software can create sticky workflows and reduce switching costs.",
+        "detail": "Seamless integration with existing SMB accounting and operational software can create sticky workflows and reduce switching costs.",
+        "score": 75,
+        "evidence_ids": [
+          "e14",
+          "e23"
+        ],
+        "evidence": "Cloud deployment has emerged as the preferred choice for SMBs, accounting for a significant majority."
+      },
+      {
+        "title": "Specialized Industry Templates and Benchmarks",
+        "reason": "Offering tailored solutions with industry-specific data and benchmarks can provide unique value and expertise.",
+        "detail": "Offering tailored solutions with industry-specific data and benchmarks can provide unique value and expertise.",
+        "score": 75,
+        "evidence_ids": [
+          "e15"
+        ],
+        "evidence": "Carbon Accounting for Small Businesses: Emma’s Coffee Shop Journey to Net Zero."
+      }
+    ],
+    "execution_ideas": [
+      {
+        "title": "Develop an AI-driven data ingestion and analysis engine",
+        "reason": "Leverage Generative AI to automate the collection and analysis of emissions data, simplifying the process for SMBs.",
+        "detail": "Leverage Generative AI to automate the collection and analysis of emissions data, simplifying the process for SMBs.",
+        "score": 90,
+        "evidence_ids": [
+          "e3"
+        ]
+      },
+      {
+        "title": "Offer a freemium model with clear upgrade paths",
+        "reason": "Attract SMBs with a free basic reporting tool and upsell to advanced features like decision intelligence and expert support.",
+        "detail": "Attract SMBs with a free basic reporting tool and upsell to advanced features like decision intelligence and expert support.",
+        "score": 90,
+        "evidence_ids": [
+          "e5"
+        ]
+      },
+      {
+        "title": "Focus on simplifying Scope 3 emissions calculations",
+        "reason": "Address the major pain point for SMBs by providing intuitive tools and guidance for Scope 3 reporting.",
+        "detail": "Address the major pain point for SMBs by providing intuitive tools and guidance for Scope 3 reporting.",
+        "score": 90,
+        "evidence_ids": [
+          "e4",
+          "e13"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "rank": 1,
+      "source": "ddgs",
+      "title": "Climate Emission (Carbon) Accounting For SMBs - A Chat With...",
+      "url": "https://www.climateconfidentpodcast.com/1329991/episodes/11607942-climate-emission-carbon-accounting-for-smbs-a-chat-with-greenly-ceo-alexis-normand",
+      "snippet": "Carbon accounting (measuring and reporting climate emissions) has not traditionally been something SMBs have needed to do. That is starting to change as larger organisations are requiring reporting from their supply chains.One company looking to help SMBs with this is Greenly.",
+      "query": "Carbon accounting for SMBs competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e1",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 2,
+      "source": "ddgs",
+      "title": "Carbon Accounting for SMBs: From Reporting to Decision ...",
+      "url": "https://www.linkedin.com/posts/warwickrussell_the-uncomfortable-truth-about-smb-carbon-activity-7481196101862141952-85nh",
+      "snippet": "Carbon accounting needs to move from reporting workflow to decision intelligence. Otherwise, it will stay stuck as a worthy but reluctant purchase.",
+      "query": "Carbon accounting for SMBs reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e2",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 3,
+      "source": "ddgs",
+      "title": "Carbon Accounting Software Market Size, Growth | Analysis 2034Carbon Accounting Software Market Share, Size, Trends, Report ...Carbon Accounting Software Market Report: Size, Growth ...Carbon Accounting Software Market Size Report, 2026-2033Carbon Accounting Software Market Size, Growth, Forecast Till ...Carbon Accounting Software Market Size, Trends, Outlook 2035",
+      "url": "https://www.fortunebusinessinsights.com/carbon-accounting-software-market-107292",
+      "snippet": "Adoption of Generative AI Proficiencies into Carbon Accounting to Upsurge the Market Growth Generative AI is anticipated to significantly impact carbon accounting solutions, transforming the way organizations measure, manage, and mitigate their greenhouse gas (GHG) emissions and carbon footprint. Ge",
+      "query": "Carbon accounting for SMBs market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e3",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 4,
+      "source": "ddgs",
+      "title": "Carbon Accounting for SMBs · ClimateTech · Top Startup Ideas",
+      "url": "https://www.topstartupideas.com/idea/idb-7225",
+      "snippet": "Small and mid-sized businesses face mounting pressure from enterprise customers to disclose Scope 1, 2, and 3 emissions, but existing carbon accounting … ClimateTech startup idea · score 84/100 · TAM $8B.",
+      "query": "Carbon accounting for SMBs funding startup launches",
+      "used_in_prompt": true,
+      "id": "e4",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 5,
+      "source": "ddgs",
+      "title": "Pricing — Carbon Accounting for UK SMBs | CarbonPass",
+      "url": "https://carbonpass.co/pricing",
+      "snippet": "Free carbon accounting for UK SMBs. Starter from £199/year — PDF reports, Carbon Passport and a PPN 006 bid document included. No lock-in. Start free today.",
+      "query": "Carbon accounting for SMBs pricing",
+      "used_in_prompt": true,
+      "id": "e5",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 6,
+      "source": "ddgs",
+      "title": "reddit.com/comments/34l7vo/?sort=top",
+      "url": "https://www.reddit.com/comments/34l7vo/?sort=top",
+      "snippet": "Here, a redditor saved another's life by diagnosing carbon monoxide...",
+      "query": "site:reddit.com Carbon accounting for SMBs",
+      "used_in_prompt": true,
+      "id": "e6",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 7,
+      "source": "ddgs",
+      "title": "Managed Detection Response for SMB Accounting Market...",
+      "url": "https://www.linkedin.com/pulse/managed-detection-response-smb-accounting-market-application-q5bef",
+      "snippet": "Overall, the MDR market for SMB accounting presents compelling opportunities for strategic entrants and incumbents willing to invest in innovation, regional adaptation, and resilient supply chain models.",
+      "query": "Carbon accounting for SMBs industry report CAGR",
+      "used_in_prompt": true,
+      "id": "e7",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 8,
+      "source": "youtube",
+      "title": "Carbon Accounting for SMBs  Lessons From Microsoft’s Supplier Standards",
+      "url": "https://youtube.com/watch?v=210Z1YZBTgA",
+      "snippet": "As companies like Microsoft raise the bar for sustainability, small- and mid-sized businesses (SMBs) must adapt to new accounting requirements. But compliance isn’t just about checking a box—it’s an opportunity for growth, efficiency, and competitive advantage. Listen as Microsoft suppliers share ho",
+      "query": "",
+      "used_in_prompt": true,
+      "id": "e8",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 9,
+      "source": "ddgs",
+      "title": "Top 10 Radicle’s Climate Smart Software Alternatives & Competitors...",
+      "url": "https://www.g2.com/products/radicle-s-climate-smart-software/competitors/alternatives",
+      "snippet": "Find top-ranking free & paid apps similar to Radicle’s Climate Smart Software for your Carbon Accounting Software needs. Read the latest reviews, pricing details, and features.",
+      "query": "Carbon accounting for SMBs competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e9",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 10,
+      "source": "ddgs",
+      "title": "12 Best Carbon Accounting Software for SME & Enterprises in ...",
+      "url": "https://climatesort.com/carbon-accounting-software/",
+      "snippet": "May 29, 2026 · In this article, we’ll review the 12 best carbon accounting software platforms for SMEs and enterprises in 2026. Whether you’re looking to reduce your carbon footprint, comply with regulations, or simply track your emissions more effectively, we’ve got you covered.",
+      "query": "Carbon accounting for SMBs reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e10",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 11,
+      "source": "ddgs",
+      "title": "Carbon Accounting Software Market Report: Size, Growth ...Carbon Accounting Software Market Size Report, 2026-2033Carbon Accounting Software Market Size, Growth, Forecast Till ...Carbon Accounting Software Market Size, Trends, Outlook 2035",
+      "url": "https://www.verifiedmarketresearch.com/product/carbon-accounting-software-market/",
+      "snippet": "What is the projected market size & growth rate of the Carbon Accounting Software Market? Carbon Accounting Software Market was valued at USD 10.71 Billion in 2024 and is projected to reach USD 46.95 Billion by 2032, growing at a CAGR of 24.59% during the forecasted period 2026 to 2032. Global Carbo",
+      "query": "Carbon accounting for SMBs market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e11",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 12,
+      "source": "ddgs",
+      "title": "Carbon Accounting for SMBs · ClimateTech · Top Startup Ideas",
+      "url": "https://www.topstartupideas.com/idea/idb-6595",
+      "snippet": "EU CSRD and California SB 253 are forcing supply chain carbon disclosure down to SMBs serving enterprise customers. ClimateTech startup idea · score 84/100 · TAM $10B.",
+      "query": "Carbon accounting for SMBs funding startup launches",
+      "used_in_prompt": true,
+      "id": "e12",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 13,
+      "source": "ddgs",
+      "title": "6 Ways Carbon Accounting Can Help SMBs Win Contracts and ...",
+      "url": "https://www.greenprojecttech.com/newsroom/6-ways-carbon-accounting-can-help-smbs-win-contracts-and-build-loyalty",
+      "snippet": "Feb 12, 2025 · Carbon accounting isn’t just for massive corporations anymore. As sustainability expectations grow — particularly with Scope 3 emissions reporting — small and medium-sized businesses (SMBs) are increasingly asked to measure and share their carbon footprint.",
+      "query": "Carbon accounting for SMBs pricing",
+      "used_in_prompt": true,
+      "id": "e13",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 14,
+      "source": "ddgs",
+      "title": "SMB Accounting Connectivity Market Research Report 2033",
+      "url": "https://dataintelo.com/report/smb-accounting-connectivity-market",
+      "snippet": "The Deployment Mode segment of the SMB Accounting Connectivity market is divided into Cloud and On-Premises solutions. Cloud deployment has emerged as the preferred choice for SMBs, accounting for a significant majority of new implementations in 2024.",
+      "query": "Carbon accounting for SMBs industry report CAGR",
+      "used_in_prompt": true,
+      "id": "e14",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 15,
+      "source": "youtube",
+      "title": "Carbon accounting for small shops.",
+      "url": "https://youtube.com/watch?v=JQM1CKeN-Tk",
+      "snippet": "Carbon Accounting for Small Businesses: Emma’s Coffee Shop Journey to Net Zero” Welcome back to our channel! Today, we’re showing you how carbon accounting works for small businesses, with a focus on coffee shops like Emma’s Coffee Shop. Why should small businesses like Emma’s care about carbon acco",
+      "query": "",
+      "used_in_prompt": true,
+      "id": "e15",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 16,
+      "source": "ddgs",
+      "title": "Carbon Accounting Guide for Businesses",
+      "url": "https://tallysolutions.com/accounting/carbon-accounting-guide-business/",
+      "snippet": "What carbon accounting covers. The GHG Protocol, the globally accepted standard for carbon measurement, classifies emissions into three scopes. Identifying which scope applies to your operations determines what you measure, report and manage",
+      "query": "Carbon accounting for SMBs competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e16",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 17,
+      "source": "ddgs",
+      "title": "Best Carbon Accounting Platforms for Small and Mid-Sized ...",
+      "url": "https://aclymate.com/blog/insights/best-carbon-accounting-platforms-for-small-and-mid-sized-businesses",
+      "snippet": "May 15, 2026 · Compare the best carbon accounting platforms for small and mid-sized businesses, including software, expert support, certifications, and sustainability reporting tools designed for SMBs without dedicated sustainability teams.",
+      "query": "Carbon accounting for SMBs reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e17",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 18,
+      "source": "ddgs",
+      "title": "Carbon Accounting Software Market Size, Growth, Forecast Till ...",
+      "url": "https://www.reportprime.com/carbon-accounting-software-r20498",
+      "snippet": "The Carbon Accounting Software market is expected to grow from USD 2.50 Billion in 2025 to USD 13.60 Billion by 2032, at a CAGR of 29.20 % during the forecast period.",
+      "query": "Carbon accounting for SMBs market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e18",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 19,
+      "source": "ddgs",
+      "title": "Carbon Accounting Startup Zevero Raises $7 Million to Drive ...",
+      "url": "https://www.esgtoday.com/carbon-accounting-startup-zevero-raises-7-million-to-drive-global-expansion/",
+      "snippet": "Sep 17, 2024 · UK-based Zevero announced that it has raised $7 million in a seed funding round to expand its footprint and enable more companies around the globe to utilize its platform to help businesses measure, report and reduce carbon emissions.",
+      "query": "Carbon accounting for SMBs funding startup launches",
+      "used_in_prompt": true,
+      "id": "e19",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 20,
+      "source": "ddgs",
+      "title": "Carbon Accounting Platform - Enterprise Carbon Software",
+      "url": "https://www.bing.com/aclick?ld=e8kpekKxOxNS7kVPcIxla3tjVUCUzKP7f65bCeRJ_qUlN6Kis3Ia9_cPTvCpVOJjdlaISJ2G1dNJQxUegS_VDvKxtL3Yz5pEx0-ZHb0-IktHWhw6ZyV158Q3MIp6rzvgqHNAtM9iYiCoZTxoDx4cTenGRVbeNyare8AFid8R9Mv4XI0V91dODN_-O8LPhXBMqekLmVxexy6cL9GJPPAWeNMHsHb4g&u=aHR0cHMlM2ElMmYlMmZuYXZpZ2F0b3IuY29uc3RlbGxhdGlvbi5jb20lMmZzb2x1dGlvbnMlMmZjYXJib24tYWNjb3VudGluZyUzZnV0bV90ZXJtJTNkY2FyYm9uJTI1MjBhY2NvdW50aW5nJTI2dXRtX2NhbXBhaWduJTNkTSUyYi0lMmJDYXJib24lMmJBY2NvdW50aW5nJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkcHBjJTI2dXRtX2lkJTNkNTcxMzcxMzAwJTI2aHNhX2FjYyUzZDc3MzE1NjQ2ODIlMjZoc2FfY2FtJTNkMjM5ODk1NDAyNTYlMjZoc2FfZ3JwJTNkMTE3NjQ3OTcyODYxNDIyOCUyNmhzYV9hZCUzZCUyNmhzYV9zcmMlM2RvJTI2aHNhX3RndCUzZGt3ZC03MzUzMDY1MDEyNjA2OSUzYWxvYy05MCUyNmhzYV9rdyUzZGNhcmJvbiUyNTIwYWNjb3VudGluZyUyNmhzYV9tdCUzZHAlMjZoc2FfbmV0JTNkYWR3b3JkcyUyNmhzYV92ZXIlM2QzJTI2bXNjbGtpZCUzZDgzMWE0Y2MwYmNlZTExOTYxYWQ0MjZhZDllZjAzMjBk&rlid=831a4cc0bcee11961ad426ad9ef0320d",
+      "snippet": "Talk to a carbon expert or request a demo of Constellation Navigator today. Measure, report and reduce emissions on one platform built for B2B sustainability teams. Service Features, Data Analytics, Carbon Analytics, Emissions Calculation and more",
+      "query": "Carbon accounting for SMBs pricing",
+      "used_in_prompt": true,
+      "id": "e20",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 21,
+      "source": "ddgs",
+      "title": "investopedia.com/ask/answers/071014/what-formula-calculating...",
+      "url": "https://www.investopedia.com/ask/answers/071014/what-formula-calculating-compound-annual-growth-rate-cagr-excel.asp",
+      "snippet": "Formula for Calculating Compound Annual Growth Rate (CAGR) in Excel.",
+      "query": "Carbon accounting for SMBs industry report CAGR",
+      "used_in_prompt": true,
+      "id": "e21",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 22,
+      "source": "youtube",
+      "title": "Easy Carbon Accounting for Small Business - Getting Started with Aclymate",
+      "url": "https://youtube.com/watch?v=fpLUN2QQ4UU",
+      "snippet": "At Aclymate we have the most user-friendly and affordable tools to help any business, no matter how small, be carbon neutral and become a Climate Leader. Our Climate Navigator explains how easy it is to get started. To schedule a 15-minute chat to discuss your sustainability needs, visit: https://ac",
+      "query": "",
+      "used_in_prompt": true,
+      "id": "e22",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 23,
+      "source": "ddgs",
+      "title": "Accounting - SMB Guide",
+      "url": "https://www.smbguide.com/accounting/",
+      "snippet": "Perfect software stack for SMBs. Accounting.FreshBooks Alternatives & Competitors. FreshBooks is a cloud-based accounting software that helps users with invoicing and expense tracking.",
+      "query": "Carbon accounting for SMBs competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e23",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 24,
+      "source": "ddgs",
+      "title": "Why Carbon Accounting Fails SMBs and How to Fix It",
+      "url": "https://www.linkedin.com/posts/warwickrussell_sustainabilitycfo-carbonaccounting-smbs-activity-7389759408995647488-pDdi",
+      "snippet": "Here’s Why Most SMBs Are Stuck Carbon accounting is broken. Not because business owners don’t care, but because the system was built for compliance, not change.",
+      "query": "Carbon accounting for SMBs reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e24",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 25,
+      "source": "ddgs",
+      "title": "Carbon Accounting Software Market Size, Trends, Outlook 2035",
+      "url": "https://www.businessresearchinsights.com/market-reports/carbon-accounting-software-market-117640",
+      "snippet": "Jun 25, 2026 · Starting at USD 0.91 Billion in 2026, the global Carbon Accounting Software Market is set to witness notable growth. By 2035, it is projected to reach USD 1.61 Billion. The market is expected to expand at a CAGR of 6.6% throughout the forecast period from 2026 to 2035.",
+      "query": "Carbon accounting for SMBs market size growth forecast",
+      "used_in_prompt": false,
+      "id": "e25",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 25 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 26,
+      "source": "ddgs",
+      "title": "Sage launches Carbon Accounting for SMBs and accountants",
+      "url": "https://www.linkedin.com/posts/adriansproston_sage-makes-carbon-reporting-simple-for-small-activity-7384855915121844224-hoqk",
+      "snippet": "Sage Earth Carbon Accounting is now live in Sage Accounting and Sage for Accountants—empowering small businesses to meet growing supply chain demands with ease.",
+      "query": "Carbon accounting for SMBs funding startup launches",
+      "used_in_prompt": false,
+      "id": "e26",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 26 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 27,
+      "source": "ddgs",
+      "title": "Pricing Plans | CarbonAnalytics - Carbon Accounting Software",
+      "url": "https://www.carbonanalytics.com/pricing",
+      "snippet": "Transparent pricing for carbon accounting software. Choose from Starter, Pro, Growth, or Enterprise plans.",
+      "query": "Carbon accounting for SMBs pricing",
+      "used_in_prompt": false,
+      "id": "e27",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 27 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 28,
+      "source": "ddgs",
+      "title": "Small Business Cyberattack Analysis: Most-Targeted SMBs",
+      "url": "https://www.crowdstrike.com/en-us/blog/small-business-cyberattack-analysis-most-targeted-smb-sectors/",
+      "snippet": "SMBs are more frequent targets of cybercrime than large companies. Find recent stats and top prevention methods in our small business cyberattack analysis.",
+      "query": "Carbon accounting for SMBs industry report CAGR",
+      "used_in_prompt": false,
+      "id": "e28",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 28 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 29,
+      "source": "youtube",
+      "title": "What Is Carbon Accounting?",
+      "url": "https://youtube.com/watch?v=MxHNad19lbM",
+      "snippet": "Master carbon accounting to track your business emissions effectively. This guide breaks down the essentials of measuring your environmental impact, perfect for professionals navigating SECR and CSRD requirements. You will learn how to utilise data visualisation tools to turn complex metrics into cl",
+      "query": "",
+      "used_in_prompt": false,
+      "id": "e29",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": "Ranked 29 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 30,
+      "source": "ddgs",
+      "title": "r/carbonaccounting - Subreddit Stats & Analysis",
+      "url": "https://gummysearch.com/r/carbonaccounting/",
+      "snippet": "Solution Requests. : \"Best Carbon Accounting Software?\"Smb. : \"How are Smbs handling carbon emissions tracking?\"",
+      "query": "Carbon accounting for SMBs competitors alternatives",
+      "used_in_prompt": false,
+      "id": "e30",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 30 of 30; below the prompt cutoff"
+    }
+  ],
+  "report": {
+    "schema_version": 2,
+    "verdict": {
+      "decision": "Strong Yes",
+      "reason": "The market for carbon accounting for SMBs is rapidly growing, driven by regulatory pressure and enterprise demand, with significant white space for innovative, user-friendly solutions.",
+      "executive_summary": "The carbon accounting market for SMBs is a high-growth opportunity, propelled by regulatory and supply chain pressures. Existing solutions often fail SMBs by focusing on compliance over actionable intelligence. A strong entry point exists for user-friendly, AI-enhanced platforms that simplify Scope 3 reporting and drive decision-making.",
+      "top_reason_to_build": "The market is experiencing significant growth, driven by regulatory mandates and enterprise customer demands, creating an urgent need for SMB-specific solutions.",
+      "biggest_risk": "The challenge of moving SMBs beyond reluctant compliance purchases to actively embrace carbon accounting for decision-making.",
+      "market_pulse": {
+        "value": 75,
+        "display": "75",
+        "unit": null,
+        "confidence": null,
+        "confidence_band": "none",
+        "basis": "The model's overall read of market conditions across every section it wrote.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": true
+      },
+      "confidence": {
+        "value": 90,
+        "display": "90",
+        "unit": null,
+        "confidence": 90,
+        "confidence_band": "high",
+        "basis": "The market opportunity is clearly stated with multiple reports and growth figures. Customer pain points and desired outcomes are consistently highlighted across various sources. Competitive landscape is identifiable but with clear gaps.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": true
+      }
+    },
+    "headline": {
+      "recommended_customer": {
+        "value": "Small and mid-sized businesses (SMBs) that are part of larger enterprise supply chains and are being mandated to report their Scope 3 emissions.",
+        "suppressed_reason": null
+      },
+      "best_customer_segment": {
+        "value": "SMBs serving enterprise customers who are mandated to disclose Scope 3 emissions.",
+        "suppressed_reason": null
+      },
+      "recommended_positioning": {
+        "value": "The most user-friendly, AI-powered carbon accounting platform that transforms compliance into actionable decision intelligence for SMBs, enabling them to reduce emissions and win new contracts.",
+        "suppressed_reason": null
+      },
+      "best_moat": {
+        "value": "Proprietary AI-driven analytics that provide highly accurate, automated, and actionable emissions reduction insights tailored for SMBs.",
+        "suppressed_reason": null
+      }
+    },
+    "market": {
+      "market_size": {
+        "value": "USD 11 Billion in 2024",
+        "display": "USD 11 Billion in 2024",
+        "unit": null,
+        "confidence": 90,
+        "confidence_band": "high",
+        "basis": "Model estimate, grounded in the 6 collected sources containing sizing or forecast language.",
+        "source_count": 6,
+        "evidence_ids": [
+          "e3",
+          "e11",
+          "e18",
+          "e19",
+          "e21",
+          "e25"
+        ],
+        "collected": true
+      },
+      "growth_rate": {
+        "value": "29% CAGR",
+        "display": "29% CAGR",
+        "unit": null,
+        "confidence": 90,
+        "confidence_band": "high",
+        "basis": "Model estimate, grounded in the 6 collected sources containing sizing or forecast language.",
+        "source_count": 6,
+        "evidence_ids": [
+          "e3",
+          "e11",
+          "e18",
+          "e19",
+          "e21",
+          "e25"
+        ],
+        "collected": true
+      },
+      "market_maturity": {
+        "value": "Growth",
+        "display": "Growth",
+        "unit": null,
+        "confidence": 90,
+        "confidence_band": "high",
+        "basis": "Model estimate, grounded in the 6 collected sources containing sizing or forecast language.",
+        "source_count": 6,
+        "evidence_ids": [
+          "e3",
+          "e11",
+          "e18",
+          "e19",
+          "e21",
+          "e25"
+        ],
+        "collected": true
+      },
+      "future_outlook": {
+        "value": "Positive",
+        "display": "Positive",
+        "unit": null,
+        "confidence": 90,
+        "confidence_band": "high",
+        "basis": "Model estimate, grounded in the 6 collected sources containing sizing or forecast language.",
+        "source_count": 6,
+        "evidence_ids": [
+          "e3",
+          "e11",
+          "e18",
+          "e19",
+          "e21",
+          "e25"
+        ],
+        "collected": true
+      }
+    },
+    "signals": {
+      "customer": {
+        "discussion_volume": {
+          "value": 30,
+          "display": "30",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Count of items in the ranked evidence list.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        },
+        "comment_volume": {
+          "value": 0,
+          "display": "0",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Sum of the YouTube comment count on every collected video.",
+          "source_count": 4,
+          "evidence_ids": [
+            "e8",
+            "e15",
+            "e22",
+            "e29"
+          ],
+          "collected": true
+        }
+      },
+      "market": {
+        "growth_score": {
+          "value": null,
+          "display": "—",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Google Trends returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "startup_activity": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        }
+      },
+      "competitive": {
+        "launches": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "avg_votes_per_day": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "competition_score": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        }
+      },
+      "virality": {
+        "momentum": {
+          "value": 3,
+          "display": "3",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Weighted blend of search growth, video engagement and daily views.",
+          "source_count": 4,
+          "evidence_ids": [
+            "e8",
+            "e15",
+            "e22",
+            "e29"
+          ],
+          "collected": true
+        },
+        "trend_growth": {
+          "value": null,
+          "display": "—",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Google Trends returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "avg_views_per_day": {
+          "value": 0.9,
+          "display": "0.9",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Lifetime views divided by days since publication, averaged.",
+          "source_count": 4,
+          "evidence_ids": [
+            "e8",
+            "e15",
+            "e22",
+            "e29"
+          ],
+          "collected": true
+        },
+        "avg_engagement_rate": {
+          "value": 1,
+          "display": "~1%",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "(likes + comments) / views x 100, averaged across videos.",
+          "source_count": 4,
+          "evidence_ids": [
+            "e8",
+            "e15",
+            "e22",
+            "e29"
+          ],
+          "collected": true
+        }
+      },
+      "market_size": {
+        "market_reports": {
+          "value": 4,
+          "display": "4",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Sources whose text contains 'market size', 'market forecast' or 'industry report'.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        }
+      },
+      "market_opportunity": {
+        "sizing_language_density": {
+          "value": 100,
+          "display": "100",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Weighted count of sizing, growth, forecast and CAGR mentions, capped at 100.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        },
+        "mentions": {
+          "definition": "How often each kind of sizing language appeared in the collected sources. A property of the writing, not evidence of the market's actual size.",
+          "counts": {
+            "market_size_mentions": 4,
+            "growth_mentions": 8,
+            "forecast_mentions": 4,
+            "cagr_mentions": 5,
+            "billion_mentions": 6,
+            "million_mentions": 1
+          },
+          "detected_market_sizes": [
+            "$23 billion",
+            "$28 billion",
+            "$8 b",
+            "$10 b",
+            "$7 million"
+          ],
+          "detected_growth_rates": [
+            "23%",
+            "25%",
+            "7%"
+          ]
+        }
+      }
+    },
+    "signals_unavailable": [
+      "market.growth_score",
+      "market.startup_activity",
+      "competitive.launches",
+      "competitive.avg_votes_per_day",
+      "competitive.competition_score",
+      "virality.trend_growth"
+    ],
+    "lists": {
+      "customer_segments": {
+        "key": "customer_segments",
+        "label": "Customer segments",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "customer_segments-1",
+            "label": "SMBs serving enterprise customers",
+            "detail": "Small and mid-sized businesses are facing increasing pressure from larger enterprise customers to disclose their Scope 1, 2, and 3 emissions.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e1",
+              "e4",
+              "e8",
+              "e12",
+              "e13"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "customer_segments-2",
+            "label": "UK SMBs",
+            "detail": "There are specific offerings and funding rounds mentioned for carbon accounting solutions targeting UK-based SMBs.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e5",
+              "e19"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "customer_segments-3",
+            "label": "Small businesses like coffee shops",
+            "detail": "Examples are provided showing how carbon accounting can be applied to very small businesses, such as coffee shops, to help them achieve net zero.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e15",
+              "e22"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "pain_points": {
+        "key": "pain_points",
+        "label": "Pain points",
+        "metric_key": "signal_strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "pain_points-1",
+            "label": "Mounting pressure for emissions disclosure",
+            "detail": "SMBs are under increasing pressure from enterprise customers and new regulations to disclose their Scope 1, 2, and 3 emissions.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e1",
+              "e4",
+              "e8",
+              "e12",
+              "e13"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "pain_points-2",
+            "label": "Existing solutions not built for SMBs",
+            "detail": "Current carbon accounting systems are often designed for compliance by large corporations, not for the specific needs or change-driving capabilities of SMBs.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e24"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "pain_points-3",
+            "label": "Complexity of carbon accounting",
+            "detail": "SMBs often lack dedicated sustainability teams, making the process of measuring, managing, and reporting emissions challenging.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e17",
+              "e20"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "pain_points-4",
+            "label": "Reluctance to purchase reporting tools",
+            "detail": "Carbon accounting is often seen as a 'worthy but reluctant purchase' if it only serves as a reporting workflow rather than decision intelligence.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e2"
+            ],
+            "rank": 4
+          }
+        ]
+      },
+      "desired_outcomes": {
+        "key": "desired_outcomes",
+        "label": "Desired outcomes",
+        "metric_key": "importance",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "desired_outcomes-1",
+            "label": "Compliance with regulations and customer demands",
+            "detail": "SMBs need to meet new accounting requirements imposed by larger companies and regulations like EU CSRD and California SB 253.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e8",
+              "e12"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "desired_outcomes-2",
+            "label": "Decision intelligence for emissions reduction",
+            "detail": "SMBs desire carbon accounting to move beyond mere reporting to provide actionable insights for reducing their carbon footprint.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e10"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "desired_outcomes-4",
+            "label": "Affordable and user-friendly solutions",
+            "detail": "SMBs are looking for accessible and easy-to-use tools for carbon accounting, especially those without dedicated sustainability teams.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e5",
+              "e17",
+              "e22"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "desired_outcomes-5",
+            "label": "Achieving carbon neutrality or net zero",
+            "detail": "Small businesses are interested in using carbon accounting to become carbon neutral and demonstrate climate leadership.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e15",
+              "e22"
+            ],
+            "rank": 4
+          },
+          {
+            "id": "desired_outcomes-3",
+            "label": "Winning contracts and gaining competitive advantage",
+            "detail": "Carbon accounting can help SMBs secure new contracts and differentiate themselves in a market with growing sustainability expectations.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e13"
+            ],
+            "rank": 5
+          }
+        ]
+      },
+      "behavior_patterns": {
+        "key": "behavior_patterns",
+        "label": "Behaviour patterns",
+        "metric_key": "confidence",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "behavior_patterns-1",
+            "label": "Seeking free or affordable starter options",
+            "detail": "SMBs are attracted to free or low-cost entry points for carbon accounting, indicating a price sensitivity or a desire to test the waters.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e5"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "behavior_patterns-3",
+            "label": "Looking for integrated reporting and decision tools",
+            "detail": "SMBs are moving beyond basic compliance and seeking solutions that offer both reporting and actionable insights for emissions reduction.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e2",
+              "e10"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "behavior_patterns-2",
+            "label": "Prioritizing cloud-based solutions",
+            "detail": "Cloud deployment has become the preferred choice for SMBs in accounting connectivity, suggesting a similar preference for carbon accounting software.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e14"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "opportunity_areas": {
+        "key": "opportunity_areas",
+        "label": "Opportunity areas",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "opportunity_areas-2",
+            "label": "Simplifying Scope 3 emissions reporting",
+            "detail": "SMBs face significant challenges with Scope 3 emissions disclosure, presenting an opportunity for simplified tools and guidance.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e13",
+              "e16"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "opportunity_areas-1",
+            "label": "Developing decision intelligence features",
+            "detail": "There is a strong opportunity to build carbon accounting solutions that provide actionable insights and drive change, rather than just reporting.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e24"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "opportunity_areas-3",
+            "label": "Offering free or low-cost entry points",
+            "detail": "Providing free or affordable starter packages can attract SMBs who are new to carbon accounting or have budget constraints.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e5"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "opportunity_areas-4",
+            "label": "Providing expert support and certifications",
+            "detail": "SMBs without dedicated sustainability teams would benefit from integrated expert support and tools for certifications.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e17",
+              "e20"
+            ],
+            "rank": 4
+          },
+          {
+            "id": "opportunity_areas-5",
+            "label": "Integrating Generative AI for efficiency",
+            "detail": "Adopting Generative AI can transform how organizations measure and manage carbon, offering a significant opportunity for innovation in carbon accounting solutions.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e3"
+            ],
+            "rank": 5
+          }
+        ]
+      },
+      "key_trends": {
+        "key": "key_trends",
+        "label": "Key trends",
+        "metric_key": "strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "key_trends-1",
+            "label": "Increasing pressure for supply chain carbon disclosure",
+            "detail": "Larger organizations and new regulations are increasingly requiring SMBs in their supply chains to report climate emissions, particularly Scope 3.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e1",
+              "e4",
+              "e8",
+              "e12",
+              "e13"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "key_trends-2",
+            "label": "Shift from reporting to decision intelligence",
+            "detail": "The market is moving towards carbon accounting solutions that provide actionable insights for emissions reduction, not just compliance reporting.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e10",
+              "e24"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "key_trends-4",
+            "label": "Focus on user-friendly and affordable tools for SMBs",
+            "detail": "There is a clear demand for carbon accounting platforms designed specifically for SMBs, offering ease of use and cost-effectiveness.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e5",
+              "e17",
+              "e22"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "key_trends-3",
+            "label": "Adoption of cloud-based solutions",
+            "detail": "Cloud deployment is the preferred choice for SMBs in accounting connectivity, indicating a strong trend for carbon accounting software as well.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e14"
+            ],
+            "rank": 4
+          }
+        ]
+      },
+      "emerging_trends": {
+        "key": "emerging_trends",
+        "label": "Emerging trends",
+        "metric_key": "potential",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "emerging_trends-1",
+            "label": "Integration of Generative AI",
+            "detail": "Generative AI is anticipated to significantly impact carbon accounting solutions, transforming how organizations measure and manage emissions.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e3"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "emerging_trends-2",
+            "label": "Carbon accounting as a competitive advantage",
+            "detail": "Beyond compliance, carbon accounting is becoming a tool for SMBs to win contracts and differentiate themselves in the market.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e13"
+            ],
+            "rank": 2
+          }
+        ]
+      },
+      "market_drivers": {
+        "key": "market_drivers",
+        "label": "Market drivers",
+        "metric_key": "impact",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "market_drivers-2",
+            "label": "Enterprise customer sustainability standards",
+            "detail": "Large companies like Microsoft are raising sustainability bars, compelling their SMB suppliers to adapt to new accounting requirements.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e1",
+              "e8"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "market_drivers-1",
+            "label": "Regulatory mandates (e.g., EU CSRD, California SB 253)",
+            "detail": "New regulations are directly forcing carbon disclosure requirements down to SMBs, especially those serving enterprise customers.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e12"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "market_drivers-3",
+            "label": "Growing sustainability expectations",
+            "detail": "Overall societal and business expectations around sustainability are increasing, making carbon accounting relevant for more businesses.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e13"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "competitors": {
+        "key": "competitors",
+        "label": "Competitors",
+        "metric_key": "strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "competitors-1",
+            "label": "Radicle’s Climate Smart Software",
+            "detail": "This is a known carbon accounting software with alternatives and competitors, indicating its presence in the market.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e9"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "competitors-2",
+            "label": "Aclymate",
+            "detail": "Aclymate offers user-friendly and affordable tools for small businesses to become carbon neutral and climate leaders.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e22"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "competitors-3",
+            "label": "Zevero",
+            "detail": "UK-based Zevero recently raised $7 million to expand its carbon accounting platform for businesses to measure and report emissions.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e19"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "competitors-4",
+            "label": "CarbonPass",
+            "detail": "CarbonPass offers free carbon accounting for UK SMBs with paid tiers for reports and bid documents.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e5"
+            ],
+            "rank": 4
+          },
+          {
+            "id": "competitors-5",
+            "label": "Constellation Navigator",
+            "detail": "Constellation Navigator is an enterprise carbon software platform built for B2B sustainability teams to measure, report, and reduce emissions.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e20"
+            ],
+            "rank": 5
+          }
+        ]
+      },
+      "competitive_threats": {
+        "key": "competitive_threats",
+        "label": "Competitive threats",
+        "metric_key": "severity",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "competitive_threats-1",
+            "label": "Solutions built for enterprise being adapted for SMBs",
+            "detail": "Existing carbon accounting systems, though not ideal, might be adapted or scaled down for SMBs, potentially limiting new entrants.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e4",
+              "e24"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "competitive_threats-2",
+            "label": "Lack of differentiation leading to reluctant purchases",
+            "detail": "If new solutions don't offer clear decision intelligence beyond reporting, they risk being seen as a 'worthy but reluctant purchase'.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e2"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "competitive_threats-3",
+            "label": "Free or low-cost offerings from incumbents",
+            "detail": "Some competitors already offer free or very affordable starter options, setting a low price expectation for basic services.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e5"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "positioning_gaps": {
+        "key": "positioning_gaps",
+        "label": "Positioning gaps",
+        "metric_key": "opportunity",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "positioning_gaps-1",
+            "label": "Focus on decision intelligence over mere compliance",
+            "detail": "There's a gap for solutions that genuinely help SMBs make decisions to reduce emissions, rather than just fulfilling reporting requirements.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e24"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "positioning_gaps-2",
+            "label": "Simplified Scope 3 reporting for SMBs",
+            "detail": "Existing solutions struggle with Scope 3 for SMBs, creating a gap for platforms that simplify this complex area.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e13"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "positioning_gaps-3",
+            "label": "Integrated expert support for SMBs",
+            "detail": "SMBs often lack internal expertise, so solutions that bundle expert guidance with software can fill a crucial gap.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e17",
+              "e20"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "white_space_opportunities": {
+        "key": "white_space_opportunities",
+        "label": "White space",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "white_space_opportunities-1",
+            "label": "AI-powered carbon accounting for SMBs",
+            "detail": "Leveraging Generative AI to transform how SMBs measure and manage carbon emissions represents a significant untapped area.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e3"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "white_space_opportunities-2",
+            "label": "Carbon accounting as a sales enablement tool",
+            "detail": "Positioning carbon accounting not just for compliance but as a direct tool for SMBs to win new contracts is a white space.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e13"
+            ],
+            "rank": 2
+          }
+        ]
+      },
+      "differentiation_opportunities": {
+        "key": "differentiation_opportunities",
+        "label": "Differentiation",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "differentiation_opportunities-1",
+            "label": "Superior user experience and affordability",
+            "detail": "Differentiating through the most user-friendly and affordable tools specifically tailored for small businesses.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e17",
+              "e22"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "differentiation_opportunities-2",
+            "label": "Actionable insights for emissions reduction",
+            "detail": "Offering clear, actionable recommendations and decision support to help SMBs reduce their footprint, moving beyond basic reporting.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e10"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "differentiation_opportunities-3",
+            "label": "Specialized support for specific SMB verticals",
+            "detail": "Tailoring solutions and support for particular SMB sectors, like coffee shops, could offer a strong differentiation.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e15"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "why_now": {
+        "key": "why_now",
+        "label": "Why now",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "why_now-1",
+            "label": "Regulatory and Enterprise Pressure",
+            "detail": "New regulations and enterprise demands are creating an immediate and non-negotiable need for SMBs to adopt carbon accounting.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e1",
+              "e4",
+              "e8",
+              "e12"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "why_now-2",
+            "label": "High Market Growth Rate",
+            "detail": "The market is expanding rapidly, indicating strong demand and significant potential for new entrants to capture market share.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e11",
+              "e18"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "why_now-3",
+            "label": "Technological Advancements (AI)",
+            "detail": "Emerging AI capabilities offer a chance to build fundamentally better and more efficient solutions, leapfrogging existing offerings.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e3"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "key_opportunities": {
+        "key": "key_opportunities",
+        "label": "Key opportunities",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "key_opportunities-3",
+            "label": "User-Friendly and Affordable Platforms",
+            "detail": "Designing intuitive and cost-effective solutions will attract a broad base of SMBs who lack dedicated sustainability teams.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e5",
+              "e17",
+              "e22"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "key_opportunities-1",
+            "label": "Decision Intelligence Focus",
+            "detail": "Building solutions that provide actionable insights for emissions reduction will differentiate from compliance-only tools.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e24"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "key_opportunities-2",
+            "label": "Simplified Scope 3 Reporting",
+            "detail": "Simplifying the complex process of Scope 3 emissions for SMBs addresses a critical pain point and compliance requirement.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e13"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "key_risks": {
+        "key": "key_risks",
+        "label": "Key risks",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "key_risks-2",
+            "label": "Competition from Existing Players",
+            "detail": "The market already has established players, requiring strong differentiation to stand out.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e9",
+              "e10"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "key_risks-1",
+            "label": "Reluctance to Purchase",
+            "detail": "SMBs may view carbon accounting as a necessary evil rather than a value-add, making sales challenging if not positioned correctly.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e2"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "key_risks-3",
+            "label": "Complexity of GHG Protocol",
+            "detail": "Adhering to complex accounting standards while simplifying for SMBs is a significant technical and user experience challenge.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e16"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "potential_moats": {
+        "key": "potential_moats",
+        "label": "Potential moats",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "potential_moats-1",
+            "label": "Proprietary AI Algorithms",
+            "detail": "Developing unique AI models for automated data collection, analysis, and actionable insights can create a strong technological barrier.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e3"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "potential_moats-2",
+            "label": "Deep Integration with SMB Accounting Software",
+            "detail": "Seamless integration with existing SMB accounting and operational software can create sticky workflows and reduce switching costs.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e14",
+              "e23"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "potential_moats-3",
+            "label": "Specialized Industry Templates and Benchmarks",
+            "detail": "Offering tailored solutions with industry-specific data and benchmarks can provide unique value and expertise.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e15"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "execution_ideas": {
+        "key": "execution_ideas",
+        "label": "Execution ideas",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "execution_ideas-3",
+            "label": "Focus on simplifying Scope 3 emissions calculations",
+            "detail": "Address the major pain point for SMBs by providing intuitive tools and guidance for Scope 3 reporting.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e13"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "execution_ideas-1",
+            "label": "Develop an AI-driven data ingestion and analysis engine",
+            "detail": "Leverage Generative AI to automate the collection and analysis of emissions data, simplifying the process for SMBs.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e3"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "execution_ideas-2",
+            "label": "Offer a freemium model with clear upgrade paths",
+            "detail": "Attract SMBs with a free basic reporting tool and upsell to advanced features like decision intelligence and expert support.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e5"
+            ],
+            "rank": 3
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "count": 26
+      },
+      {
+        "source_key": "youtube",
+        "display_name": "YouTube",
+        "count": 4
+      }
+    ]
+  },
+  "metric_definitions": [
+    {
+      "key": "support",
+      "label": "Support",
+      "definition": "How consistently this item appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "score",
+      "label": "Score",
+      "definition": "How consistently this item appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "signal_strength",
+      "label": "Signal strength",
+      "definition": "How often and how emphatically this was raised in the source material.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "importance",
+      "label": "Importance",
+      "definition": "How central this was to the discussions where it appeared.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "confidence",
+      "label": "Confidence",
+      "definition": "How consistently this pattern appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "strength",
+      "label": "Strength",
+      "definition": "How established this is across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "potential",
+      "label": "Potential",
+      "definition": "How much room this has to grow, judged from the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "impact",
+      "label": "Impact",
+      "definition": "How strongly this shapes the market, judged from the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "severity",
+      "label": "Severity",
+      "definition": "How directly this threat overlaps with the proposed product.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "opportunity",
+      "label": "Opportunity",
+      "definition": "How much unmet demand this gap represents in the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "discussion_volume",
+      "label": "Discussions",
+      "definition": "Ranked sources matching this topic across every collector.",
+      "derivation": "Count of items in the ranked evidence list.",
+      "scale": "Whole number of sources."
+    },
+    {
+      "key": "comment_volume",
+      "label": "Comments",
+      "definition": "Total viewer replies across the collected videos.",
+      "derivation": "Sum of the YouTube comment count on every collected video.",
+      "scale": "Whole number."
+    },
+    {
+      "key": "growth_score",
+      "label": "Growth score",
+      "definition": "Movement in search interest for this topic over the sampled window.",
+      "derivation": "Google Trends growth rate for the topic term.",
+      "scale": "Percentage change."
+    },
+    {
+      "key": "startup_activity",
+      "label": "Startup activity",
+      "definition": "New products shipped into this space recently.",
+      "derivation": "Count of Product Hunt launches in the collected evidence.",
+      "scale": "Whole number of launches."
+    },
+    {
+      "key": "launches",
+      "label": "Launches",
+      "definition": "Recent product releases observed in this space.",
+      "derivation": "Count of Product Hunt items in the collected evidence.",
+      "scale": "Whole number."
+    },
+    {
+      "key": "avg_votes_per_day",
+      "label": "Avg votes / day",
+      "definition": "Mean daily upvotes across those releases.",
+      "derivation": "Product Hunt votes divided by days since launch, averaged.",
+      "scale": "Votes per day."
+    },
+    {
+      "key": "competition_score",
+      "label": "Competition score",
+      "definition": "How crowded the field looks, from launch count and traction.",
+      "derivation": "min(100, launches x 2 + mean votes per day).",
+      "scale": "0-100."
+    },
+    {
+      "key": "momentum",
+      "label": "Momentum",
+      "definition": "How fast attention is moving on this topic.",
+      "derivation": "Weighted blend of search growth, video engagement and daily views.",
+      "scale": "0-100."
+    },
+    {
+      "key": "trend_growth",
+      "label": "Trend growth",
+      "definition": "Change in search interest over the sampled window.",
+      "derivation": "Google Trends growth rate for the topic term.",
+      "scale": "Percentage change."
+    },
+    {
+      "key": "avg_views_per_day",
+      "label": "Avg views / day",
+      "definition": "Mean daily plays across the collected videos.",
+      "derivation": "Lifetime views divided by days since publication, averaged.",
+      "scale": "Views per day."
+    },
+    {
+      "key": "avg_engagement_rate",
+      "label": "Engagement rate",
+      "definition": "Likes and comments per 100 plays on the collected videos.",
+      "derivation": "(likes + comments) / views x 100, averaged across videos.",
+      "scale": "Percentage."
+    },
+    {
+      "key": "market_reports",
+      "label": "Market reports",
+      "definition": "Collected sources that read as dedicated industry research.",
+      "derivation": "Sources whose text contains 'market size', 'market forecast' or 'industry report'.",
+      "scale": "Whole number of sources."
+    },
+    {
+      "key": "sizing_language_density",
+      "label": "Sizing language density",
+      "definition": "How much of the collected text talks in figures and forecasts.",
+      "derivation": "Weighted count of sizing, growth, forecast and CAGR mentions, capped at 100.",
+      "scale": "0-100. A property of the text, not of the market."
+    }
+  ],
+  "score_scale": {
+    "values": [
+      90,
+      75,
+      50
+    ],
+    "bands": [
+      {
+        "score": 90,
+        "band": "high",
+        "label": "Directly supported",
+        "meaning": "Stated directly and repeatedly across multiple independent sources."
+      },
+      {
+        "score": 75,
+        "band": "moderate",
+        "label": "Clearly indicated",
+        "meaning": "Stated clearly but in few sources, or implied consistently across many."
+      },
+      {
+        "score": 50,
+        "band": "low",
+        "label": "Inferred",
+        "meaning": "Inferred from context; not directly stated in any single source."
+      }
+    ],
+    "note": "Three bands, not a continuous scale. The model cannot reliably distinguish a 72 from a 78, so it is not asked to."
+  },
+  "evidence_summary": {
+    "collected": 30,
+    "used": 24,
+    "excluded": 6
+  },
+  "signals_unavailable": [
+    "market.growth_score",
+    "market.startup_activity",
+    "competitive.launches",
+    "competitive.avg_votes_per_day",
+    "competitive.competition_score",
+    "virality.trend_growth"
+  ]
+}

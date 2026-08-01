@@ -1,0 +1,2693 @@
+{
+  "meta": {
+    "topic": "AI note-taking for clinicians",
+    "cached": false,
+    "generated_at": "2026-07-31T22:28:33.279199",
+    "intelligence_time": 25.11,
+    "synthesis_time": 0.0,
+    "collection_time": 6.02,
+    "ai_time": 25.11,
+    "parse_time": 0.0,
+    "evidence_count": 30,
+    "evidence_used": 24,
+    "portfolio_mode": true,
+    "total_time": 31.14,
+    "payload_time": 0.009
+  },
+  "signals": {
+    "virality": {
+      "momentum": 8,
+      "trend_growth": 0,
+      "avg_views_per_day": 1222.11,
+      "avg_engagement_rate": 1.48
+    },
+    "competitive": {
+      "launches": 0,
+      "avg_votes_per_day": 0,
+      "competition_score": 0
+    },
+    "market": {
+      "growth_score": 0,
+      "startup_activity": 0
+    },
+    "customer": {
+      "discussion_volume": 30,
+      "comment_volume": 1376
+    },
+    "market_opportunity": {
+      "market_size_mentions": 2,
+      "growth_mentions": 2,
+      "forecast_mentions": 2,
+      "cagr_mentions": 2,
+      "billion_mentions": 3,
+      "million_mentions": 3,
+      "detected_market_sizes": [
+        "$300m",
+        "$300 million",
+        "$5.3 billion",
+        "$800m",
+        "$800 million"
+      ],
+      "detected_growth_rates": [
+        "18.7%"
+      ],
+      "opportunity_score": 100
+    },
+    "market_size": {
+      "market_reports": 2
+    }
+  },
+  "intelligence": {
+    "customer": {
+      "customer_segments": [
+        {
+          "name": "Solo Clinicians and Small Practices",
+          "score": 90,
+          "detail": "These clinicians often seek cost-effective, scalable solutions for note-taking, with pricing models that support individual or small group use.",
+          "evidence_ids": [
+            "e5",
+            "e14",
+            "e22"
+          ]
+        },
+        {
+          "name": "Clinicians in Mental Wellness",
+          "score": 75,
+          "detail": "Specific AI note-taking tools cater to mental wellness professionals, offering features like AI-generated clinical notes in various formats such as SOAP, DAP, and BIRP.",
+          "evidence_ids": [
+            "e5"
+          ]
+        },
+        {
+          "name": "European Clinicians",
+          "score": 75,
+          "detail": "AI note-taking tools are being adopted by European clinicians, with studies indicating increased time with patients.",
+          "evidence_ids": [
+            "e20",
+            "e23"
+          ]
+        },
+        {
+          "name": "Clinicians using Electronic Health Records (EHR)",
+          "score": 75,
+          "detail": "Platforms that integrate with EHRs are highly valued by clinicians for streamlining documentation and reducing administrative burden.",
+          "evidence_ids": [
+            "e21"
+          ]
+        }
+      ],
+      "pain_points": [
+        {
+          "name": "Excessive Administrative Burden",
+          "signal_strength": 90,
+          "detail": "Doctors spend significant time on administrative tasks, including note-taking, which AI tools aim to reduce.",
+          "evidence_ids": [
+            "e4",
+            "e11",
+            "e13"
+          ]
+        },
+        {
+          "name": "Time Constraints with Patients",
+          "signal_strength": 90,
+          "detail": "Clinicians struggle with competing demands, leading to less time with patients, a problem AI note-taking seeks to solve.",
+          "evidence_ids": [
+            "e11",
+            "e20",
+            "e23"
+          ]
+        },
+        {
+          "name": "Need for HIPAA Compliance",
+          "signal_strength": 90,
+          "detail": "Clinicians require note-taking tools that adhere to HIPAA regulations to ensure patient data privacy and security.",
+          "evidence_ids": [
+            "e2",
+            "e14"
+          ]
+        },
+        {
+          "name": "Inefficient Manual Note-Taking",
+          "signal_strength": 75,
+          "detail": "Traditional note-taking methods are often time-consuming and less efficient compared to AI-powered alternatives.",
+          "evidence_ids": [
+            "e9"
+          ]
+        }
+      ],
+      "desired_outcomes": [
+        {
+          "name": "Reduced Documentation Time",
+          "importance": 90,
+          "detail": "Clinicians want to cut down the time spent on creating clinical notes, allowing them to focus more on patient care.",
+          "evidence_ids": [
+            "e4",
+            "e11",
+            "e13",
+            "e21"
+          ]
+        },
+        {
+          "name": "Improved Patient Interaction Time",
+          "importance": 90,
+          "detail": "A key goal is to reclaim patient time by automating note-taking, leading to better patient engagement and care.",
+          "evidence_ids": [
+            "e11",
+            "e20",
+            "e23"
+          ]
+        },
+        {
+          "name": "HIPAA-Compliant Solutions",
+          "importance": 90,
+          "detail": "Clinicians prioritize tools that guarantee the security and privacy of patient information in accordance with HIPAA standards.",
+          "evidence_ids": [
+            "e2",
+            "e14"
+          ]
+        },
+        {
+          "name": "Accurate and Structured Clinical Notes",
+          "importance": 75,
+          "detail": "The desire is for AI to generate precise and well-formatted clinical notes, such as SOAP, DAP, or BIRP, from patient conversations.",
+          "evidence_ids": [
+            "e5",
+            "e21"
+          ]
+        },
+        {
+          "name": "Integration with Existing Workflows",
+          "importance": 75,
+          "detail": "Clinicians seek AI tools that can seamlessly integrate with their current electronic health record systems.",
+          "evidence_ids": [
+            "e21"
+          ]
+        }
+      ],
+      "behavior_patterns": [
+        {
+          "name": "Seeking Alternatives to Traditional Tools",
+          "confidence": 90,
+          "detail": "Clinicians are actively looking for next-generation AI note-taking apps as alternatives to traditional options like Apple Notes or Notion.",
+          "evidence_ids": [
+            "e9"
+          ]
+        },
+        {
+          "name": "Evaluating HIPAA Compliance",
+          "confidence": 90,
+          "detail": "When choosing AI note-taking tools, clinicians prioritize and review their HIPAA compliance to ensure data security.",
+          "evidence_ids": [
+            "e2",
+            "e14"
+          ]
+        },
+        {
+          "name": "Adopting AI for Efficiency",
+          "confidence": 90,
+          "detail": "Clinicians are adopting AI-powered systems to address competing demands and improve efficiency in their practice.",
+          "evidence_ids": [
+            "e11"
+          ]
+        },
+        {
+          "name": "Comparing Features and Pricing",
+          "confidence": 75,
+          "detail": "Clinicians compare features, ratings, user reviews, and pricing of various AI note-taking tools before making a decision.",
+          "evidence_ids": [
+            "e1",
+            "e10",
+            "e14",
+            "e22"
+          ]
+        }
+      ],
+      "opportunity_areas": [
+        {
+          "name": "Specialty-Specific AI Scribes",
+          "score": 90,
+          "detail": "There is an opportunity to develop AI scribes with specialty templates tailored for various clinical practices, as seen with mental wellness formats.",
+          "evidence_ids": [
+            "e5",
+            "e22"
+          ]
+        },
+        {
+          "name": "Enhanced Integration with EHRs",
+          "score": 90,
+          "detail": "Further development in seamless integration with electronic health records can significantly reduce documentation friction for clinicians.",
+          "evidence_ids": [
+            "e21"
+          ]
+        },
+        {
+          "name": "Advanced AI for Continuous Biomarker Context",
+          "score": 75,
+          "detail": "AI that analyzes streaming biomarker data to detect trends and provide actionable insights could empower clinicians with proactive care.",
+          "evidence_ids": [
+            "e6"
+          ]
+        },
+        {
+          "name": "Privacy-Focused Open-Source Solutions",
+          "score": 75,
+          "detail": "An open-source, AI-powered note-taking platform that prioritizes user privacy presents a unique opportunity.",
+          "evidence_ids": [
+            "e24"
+          ]
+        },
+        {
+          "name": "AI for Trustworthy Diagnostic Tools",
+          "score": 75,
+          "detail": "Building trustworthy AI diagnostic tools, especially in under-researched areas like women's health, offers a significant opportunity.",
+          "evidence_ids": [
+            "e8"
+          ]
+        }
+      ]
+    },
+    "market": {
+      "market_size": {
+        "estimate": "$5.3 billion",
+        "confidence": 75
+      },
+      "growth_rate": {
+        "estimate": "18.7%",
+        "confidence": 75
+      },
+      "market_maturity": {
+        "stage": "Growth",
+        "confidence": 90
+      },
+      "future_outlook": {
+        "direction": "Growing",
+        "confidence": 90
+      },
+      "key_trends": [
+        {
+          "name": "Increasing Investment in AI Note-Taking",
+          "strength": 90,
+          "detail": "The market is seeing significant financial injections, with funding reaching $800 million in 2024, doubling from the previous year, and a startup raising $300 million at a $5.3 billion valuation.",
+          "evidence_ids": [
+            "e4",
+            "e13",
+            "e21"
+          ]
+        },
+        {
+          "name": "Focus on HIPAA Compliance",
+          "strength": 90,
+          "detail": "There is a strong emphasis on HIPAA-compliant AI note-taking tools, with top lists and comparisons specifically highlighting this feature.",
+          "evidence_ids": [
+            "e2",
+            "e14"
+          ]
+        },
+        {
+          "name": "Clinician Adoption for Efficiency",
+          "strength": 90,
+          "detail": "Clinicians are actively adopting AI note-taking tools to reduce administrative burden and reclaim time with patients.",
+          "evidence_ids": [
+            "e11",
+            "e20",
+            "e23"
+          ]
+        },
+        {
+          "name": "Integration with Electronic Health Records",
+          "strength": 75,
+          "detail": "AI note-taking platforms are integrating with electronic health records to streamline workflows and reduce documentation.",
+          "evidence_ids": [
+            "e21"
+          ]
+        }
+      ],
+      "emerging_trends": [
+        {
+          "name": "AI for Continuous Biomarker Intelligence",
+          "potential": 75,
+          "detail": "The use of AI to analyze streaming biomarker data for continuous health intelligence and actionable insights is an emerging area.",
+          "evidence_ids": [
+            "e6"
+          ]
+        },
+        {
+          "name": "Trustworthy AI in Specialized Medicine",
+          "potential": 75,
+          "detail": "Building trustworthy AI diagnostic tools for historically under-researched areas like women's health represents a significant emerging trend.",
+          "evidence_ids": [
+            "e8"
+          ]
+        },
+        {
+          "name": "Open-Source, Privacy-Focused AI Note-Taking",
+          "potential": 75,
+          "detail": "The development of open-source, AI-powered note-taking platforms that prioritize user privacy is an emerging trend.",
+          "evidence_ids": [
+            "e24"
+          ]
+        }
+      ],
+      "market_drivers": [
+        {
+          "name": "Need to Reduce Clinician Burnout",
+          "impact": 90,
+          "detail": "The significant administrative burden on doctors, including note-taking, drives the adoption of AI solutions to alleviate burnout.",
+          "evidence_ids": [
+            "e4",
+            "e11",
+            "e13"
+          ]
+        },
+        {
+          "name": "Demand for Improved Patient Care",
+          "impact": 90,
+          "detail": "AI note-taking helps clinicians reclaim patient time, leading to better patient interaction and care, which is a strong market driver.",
+          "evidence_ids": [
+            "e11",
+            "e20",
+            "e23"
+          ]
+        },
+        {
+          "name": "Advancements in AI Technology",
+          "impact": 75,
+          "detail": "The continuous development of powerful AI, including generative models and faster processing chips, fuels innovation in note-taking tools.",
+          "evidence_ids": [
+            "e16",
+            "e21"
+          ]
+        },
+        {
+          "name": "Increased Funding and Investment",
+          "impact": 75,
+          "detail": "Substantial financial investments in AI note-taking startups indicate strong market confidence and drive further development and adoption.",
+          "evidence_ids": [
+            "e4",
+            "e13",
+            "e21"
+          ]
+        }
+      ]
+    },
+    "competitive": {
+      "competitors": [
+        {
+          "name": "Abridge",
+          "strength": 90,
+          "detail": "Abridge is a well-funded startup that offers an AI note-taking tool for doctors, having raised $300 million at a $5.3 billion valuation.",
+          "evidence_ids": [
+            "e4",
+            "e21"
+          ]
+        },
+        {
+          "name": "SimplePractice Note Taker",
+          "strength": 75,
+          "detail": "SimplePractice offers an AI-powered system that listens to clinical conversations and generates draft notes for clinician review.",
+          "evidence_ids": [
+            "e11"
+          ]
+        },
+        {
+          "name": "United We Care",
+          "strength": 75,
+          "detail": "United We Care offers an AI-powered transcription and note generation service for clinicians, including various note formats.",
+          "evidence_ids": [
+            "e5"
+          ]
+        },
+        {
+          "name": "Heidi Health (and alternatives)",
+          "strength": 75,
+          "detail": "Heidi Health provides AI note-taking solutions, with other companies offering alternatives focusing on speed, templates, and voice dictation.",
+          "evidence_ids": [
+            "e10",
+            "e19"
+          ]
+        },
+        {
+          "name": "Freed",
+          "strength": 75,
+          "detail": "Freed offers an AI scribe with transparent per-clinician pricing and specialty templates.",
+          "evidence_ids": [
+            "e22"
+          ]
+        }
+      ],
+      "competitive_threats": [
+        {
+          "name": "Well-Funded Incumbents",
+          "severity": 90,
+          "detail": "Existing players like Abridge have secured significant funding, making it challenging for new entrants to compete on resources and market reach.",
+          "evidence_ids": [
+            "e4",
+            "e13",
+            "e21"
+          ]
+        },
+        {
+          "name": "Need for HIPAA Compliance",
+          "severity": 90,
+          "detail": "Strict regulatory requirements for HIPAA compliance pose a significant barrier to entry and a continuous challenge for all competitors.",
+          "evidence_ids": [
+            "e2",
+            "e14"
+          ]
+        },
+        {
+          "name": "Integration with EHR Systems",
+          "severity": 75,
+          "detail": "The necessity to integrate with diverse electronic health record systems can be complex and a competitive hurdle.",
+          "evidence_ids": [
+            "e21"
+          ]
+        },
+        {
+          "name": "Trust and Accuracy of AI",
+          "severity": 75,
+          "detail": "Building trustworthy AI diagnostic tools and ensuring the accuracy of AI-generated notes is critical for clinician adoption and patient safety.",
+          "evidence_ids": [
+            "e8"
+          ]
+        }
+      ],
+      "positioning_gaps": [
+        {
+          "name": "Specialized AI for Unique Medical Fields",
+          "opportunity": 75,
+          "detail": "While some specialty templates exist, there's a gap for highly specialized AI note-taking tools for niche medical fields beyond general practice or mental health.",
+          "evidence_ids": [
+            "e5",
+            "e8",
+            "e22"
+          ]
+        },
+        {
+          "name": "Continuous Biomarker Context Integration",
+          "opportunity": 75,
+          "detail": "A gap exists in AI note-taking tools that seamlessly integrate continuous biomarker data for proactive insights, beyond just transcribing conversations.",
+          "evidence_ids": [
+            "e6"
+          ]
+        },
+        {
+          "name": "Open-Source and Privacy-First Solutions",
+          "opportunity": 75,
+          "detail": "There is a positioning gap for a robust, open-source, and privacy-focused AI note-taking platform that appeals to clinicians wary of proprietary systems.",
+          "evidence_ids": [
+            "e24"
+          ]
+        }
+      ],
+      "white_space_opportunities": [
+        {
+          "name": "AI for Proactive Health Monitoring",
+          "score": 75,
+          "detail": "Developing AI that analyzes streaming health and biomarker data to provide continuous, actionable insights for clinicians represents a significant white space.",
+          "evidence_ids": [
+            "e6"
+          ]
+        },
+        {
+          "name": "AI for Under-Researched Medical Areas",
+          "score": 75,
+          "detail": "Creating trustworthy AI diagnostic and note-taking tools for historically under-researched areas, such as women's health, offers a unique opportunity.",
+          "evidence_ids": [
+            "e8"
+          ]
+        }
+      ],
+      "differentiation_opportunities": [
+        {
+          "name": "Superior Accuracy and Customization",
+          "score": 90,
+          "detail": "Offering AI note-taking with demonstrably higher accuracy and greater customization options for various clinical note formats (SOAP, DAP, BIRP) can be a strong differentiator.",
+          "evidence_ids": [
+            "e5",
+            "e21"
+          ]
+        },
+        {
+          "name": "Seamless EHR Integration",
+          "score": 90,
+          "detail": "Providing the most seamless and robust integration with a wide range of electronic health record systems can set a product apart.",
+          "evidence_ids": [
+            "e21"
+          ]
+        },
+        {
+          "name": "Transparent and Flexible Pricing",
+          "score": 75,
+          "detail": "Offering transparent, flat, per-clinician pricing without hidden fees or minute meters can differentiate from competitors.",
+          "evidence_ids": [
+            "e14",
+            "e22"
+          ]
+        },
+        {
+          "name": "Enhanced Privacy and Data Control",
+          "score": 75,
+          "detail": "Differentiating through superior privacy features, potentially open-source models, and greater clinician control over their data.",
+          "evidence_ids": [
+            "e24"
+          ]
+        }
+      ]
+    }
+  },
+  "synthesis": {
+    "market_pulse": 8,
+    "opportunity_score": 100,
+    "build_recommendation": {
+      "decision": "Strong Yes",
+      "reason": "The market is experiencing rapid growth and significant investment, driven by a clear clinician need to reduce administrative burden and improve patient time."
+    },
+    "confidence": 90,
+    "confidence_explanation": "High confidence due to multiple direct mentions of market size, growth, and strong investment signals from various sources.",
+    "top_reason_to_build": "Clinicians desperately need to reduce administrative burden and reclaim patient time, a pain point directly addressed by AI note-taking.",
+    "biggest_risk": "Navigating the highly competitive landscape with well-funded incumbents and ensuring robust HIPAA compliance.",
+    "best_customer_segment": "Solo clinicians and small practices seeking cost-effective, HIPAA-compliant solutions with specialty-specific note formats.",
+    "best_moat": "Proprietary AI models that offer demonstrably superior accuracy and seamless integration with a wide array of EHR systems.",
+    "executive_summary": "The AI note-taking market for clinicians is rapidly growing, fueled by substantial investment and a clear demand for solutions that reduce administrative burden and enhance patient care. While competition is strong, opportunities exist for specialized, privacy-focused, and highly integrated offerings. A strong 'yes' for entry is recommended.",
+    "why_now": [
+      {
+        "title": "High Market Growth and Investment",
+        "reason": "Significant capital inflow indicates strong market validation and readiness for new solutions.",
+        "detail": "Significant capital inflow indicates strong market validation and readiness for new solutions.",
+        "score": 90,
+        "evidence_ids": [
+          "e4",
+          "e13",
+          "e21"
+        ],
+        "evidence": "Market funding reached $800 million in 2024, doubling from the previous year, and a startup raised $300 million at a $5.3 billion valuation."
+      },
+      {
+        "title": "Clear Clinician Pain Point",
+        "reason": "Addressing a critical and widely acknowledged problem for healthcare professionals.",
+        "detail": "Addressing a critical and widely acknowledged problem for healthcare professionals.",
+        "score": 90,
+        "evidence_ids": [
+          "e11",
+          "e20",
+          "e23"
+        ],
+        "evidence": "AI note-taking helps clinicians reclaim patient time and reduces documentation burden."
+      },
+      {
+        "title": "Technological Advancements in AI",
+        "reason": "Maturing AI technology makes effective solutions more feasible and powerful.",
+        "detail": "Maturing AI technology makes effective solutions more feasible and powerful.",
+        "score": 75,
+        "evidence_ids": [
+          "e16",
+          "e21"
+        ],
+        "evidence": "Generative models are used to produce structured clinical notes, and AI training is becoming faster."
+      }
+    ],
+    "key_opportunities": [
+      {
+        "title": "Specialized AI Scribes",
+        "reason": "Tailoring solutions to specific clinical needs can capture niche markets effectively.",
+        "detail": "Tailoring solutions to specific clinical needs can capture niche markets effectively.",
+        "score": 90,
+        "evidence_ids": [
+          "e5",
+          "e22"
+        ],
+        "evidence": "AI generated clinical notes across multiple formats, including SOAP, DAP, BIRP, and specialty templates."
+      },
+      {
+        "title": "Enhanced EHR Integration",
+        "reason": "Seamless integration is a critical factor for adoption and workflow efficiency.",
+        "detail": "Seamless integration is a critical factor for adoption and workflow efficiency.",
+        "score": 90,
+        "evidence_ids": [
+          "e21"
+        ],
+        "evidence": "The platform integrates with electronic health records, reducing documentation friction."
+      },
+      {
+        "title": "Privacy-Focused Open-Source Solutions",
+        "reason": "Appeals to a segment concerned with data control and transparency, offering a strong differentiator.",
+        "detail": "Appeals to a segment concerned with data control and transparency, offering a strong differentiator.",
+        "score": 75,
+        "evidence_ids": [
+          "e24"
+        ],
+        "evidence": "A powerful open-source, AI-powered note-taking/research platform that respects your privacy."
+      }
+    ],
+    "key_risks": [
+      {
+        "title": "High Competition and Funding",
+        "reason": "New entrants face a challenge against well-capitalized and established players.",
+        "detail": "New entrants face a challenge against well-capitalized and established players.",
+        "score": 90,
+        "evidence_ids": [
+          "e4",
+          "e13",
+          "e21"
+        ],
+        "evidence": "Abridge raised $300 million at a $5.3 billion valuation; funding reached $800 million in 2024."
+      },
+      {
+        "title": "HIPAA Compliance Complexity",
+        "reason": "Strict regulatory requirements demand significant investment and expertise to ensure compliance.",
+        "detail": "Strict regulatory requirements demand significant investment and expertise to ensure compliance.",
+        "score": 90,
+        "evidence_ids": [
+          "e2",
+          "e14"
+        ],
+        "evidence": "Top 10 HIPAA-Compliant AI Note Tools for Clinicians (2026)."
+      },
+      {
+        "title": "Building Clinician Trust",
+        "reason": "Gaining trust in AI accuracy and reliability is crucial for widespread adoption in a sensitive field.",
+        "detail": "Gaining trust in AI accuracy and reliability is crucial for widespread adoption in a sensitive field.",
+        "score": 75,
+        "evidence_ids": [
+          "e8"
+        ],
+        "evidence": "How do you build trustworthy AI diagnostic tools in one of medicine's most historically under-researched areas?"
+      }
+    ],
+    "recommended_customer": "Solo clinicians and small group practices in mental wellness, seeking HIPAA-compliant AI note-taking with specific note formats (e.g., SOAP, DAP, BIRP) and transparent pricing.",
+    "recommended_positioning": "Position as the most accurate, HIPAA-compliant AI note-taking assistant offering highly customizable specialty templates and seamless integration with common EHRs, specifically designed to maximize patient-clinician interaction time.",
+    "potential_moats": [
+      {
+        "title": "Proprietary AI Model Accuracy",
+        "reason": "Superior accuracy in generating structured, specialty-specific clinical notes is hard to replicate.",
+        "detail": "Superior accuracy in generating structured, specialty-specific clinical notes is hard to replicate.",
+        "score": 90,
+        "evidence_ids": [
+          "e5"
+        ],
+        "evidence": "AI generated clinical notes (30/month) across multiple formats, including SOAP, DAP, BIRP, and more."
+      },
+      {
+        "title": "Deep EHR Integration",
+        "reason": "Extensive and robust integrations with diverse EHR systems create significant switching costs.",
+        "detail": "Extensive and robust integrations with diverse EHR systems create significant switching costs.",
+        "score": 90,
+        "evidence_ids": [
+          "e21"
+        ],
+        "evidence": "The platform integrates with electronic health records, reducing documentation friction."
+      },
+      {
+        "title": "Strong Brand and Trust",
+        "reason": "Establishing a reputation for trustworthiness and reliability in sensitive medical contexts.",
+        "detail": "Establishing a reputation for trustworthiness and reliability in sensitive medical contexts.",
+        "score": 75,
+        "evidence_ids": [
+          "e8"
+        ],
+        "evidence": "Building Trustworthy AI for Women's Health with Hertility."
+      }
+    ],
+    "execution_ideas": [
+      {
+        "title": "Develop Niche-Specific AI Models",
+        "reason": "Focus on highly specialized medical fields with unique note-taking requirements to capture underserved segments.",
+        "detail": "Focus on highly specialized medical fields with unique note-taking requirements to capture underserved segments.",
+        "score": 90,
+        "evidence_ids": [
+          "e5",
+          "e8",
+          "e22"
+        ]
+      },
+      {
+        "title": "Prioritize Seamless EHR Integration",
+        "reason": "Invest heavily in developing robust, user-friendly integrations with a wide range of popular EHR systems.",
+        "detail": "Invest heavily in developing robust, user-friendly integrations with a wide range of popular EHR systems.",
+        "score": 90,
+        "evidence_ids": [
+          "e21"
+        ]
+      },
+      {
+        "title": "Offer Transparent, Value-Based Pricing",
+        "reason": "Implement clear, per-clinician pricing models without hidden fees to attract solo and small practice users.",
+        "detail": "Implement clear, per-clinician pricing models without hidden fees to attract solo and small practice users.",
+        "score": 75,
+        "evidence_ids": [
+          "e14",
+          "e22"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "rank": 1,
+      "source": "ddgs",
+      "title": "Best ChatGPT for Clinicians Alternatives & Competitors",
+      "url": "https://sourceforge.net/software/product/ChatGPT-for-Clinicians/alternatives",
+      "snippet": "SourceForge ranks the best alternatives to ChatGPT for Clinicians in 2026. Compare features, ratings, user reviews, pricing, and more from ChatGPT for Clinicians competitors and alternatives in order to make an informed decision for your business.",
+      "query": "AI note-taking for clinicians competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e1",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 2,
+      "source": "ddgs",
+      "title": "Top 10 HIPAA-Compliant AI Note Tools for Clinicians (2026)",
+      "url": "https://www.trytwofold.com/blog/hipaa-compliant-ai-note-tools",
+      "snippet": "Jun 10, 2026 · Expert Advice Top 10 HIPAA-Compliant AI Note Tools in 2026 (Reviewed by Real Clinicians) Find your match of the top 10 best HIPAA-compliant AI note-taking tools, ranked by practicing clinicians in 2026.",
+      "query": "AI note-taking for clinicians reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e2",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 3,
+      "source": "ddgs",
+      "title": "Digital Credential Wallets for Clinicians Market Size to Hit USD 6.32...",
+      "url": "https://growthmarketreports.com/report/digital-credential-wallets-for-clinicians-market",
+      "snippet": "According to our latest research, the digital credential wallets for clinicians market size reached USD 1.35 billion in 2025, with a robust compound annual growth rate (CAGR) of 18.7% projected through 2034.",
+      "query": "AI note-taking for clinicians market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e3",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 4,
+      "source": "ddgs",
+      "title": "AI Note-Taking Startup Abridge Raises $300M As Tech To Reduce ...",
+      "url": "https://news.crunchbase.com/health-wellness-biotech/ai-doctor-note-taking-startup-abridge/",
+      "snippet": "Jun 24, 2025 · Abridge, a startup that offers an AI note-taking tool for doctors, raised $300 million at a $5.3 billion valuation, according to The Wall Street Journal. Andreessen Horowitz led the Series E round for the Pittsburgh- and San Francisco-based startup, with Khosla Ventures joining.",
+      "query": "AI note-taking for clinicians funding startup launches",
+      "used_in_prompt": true,
+      "id": "e4",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 5,
+      "source": "ddgs",
+      "title": "Clinicians Pricing - United We Care | A Super App for Mental Wellness",
+      "url": "https://www.unitedwecare.com/clinicians-pricing/",
+      "snippet": "Pricing Plans. Free Plan. $0/month per clinician. AI powered transcription through voice/document. AI generated clinical notes (30/month) across multiple formats, including SOAP, DAP, BIRP, and more.",
+      "query": "AI note-taking for clinicians pricing",
+      "used_in_prompt": true,
+      "id": "e5",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 6,
+      "source": "ddgs",
+      "title": "Adaptyx — Continuous health & biomarker intelligence for AI-powered...",
+      "url": "https://adaptyx.bio/",
+      "snippet": "Continuous Biomarker Context for AI. Powerful AI analyzes streaming data continuously, detecting trends and patterns invisible to single-point tests.Actionable insights empower clinicians (and AI agents) to make proactive decisions, preventing complications before they occur.",
+      "query": "AI note-taking for clinicians trends",
+      "used_in_prompt": true,
+      "id": "e6",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 7,
+      "source": "ddgs",
+      "title": "reddit.com/r/KaiOS/comments/14iz3dl/delete_app_on_and_forbid_new...",
+      "url": "https://www.reddit.com/r/KaiOS/comments/14iz3dl/delete_app_on_and_forbid_new_app_on_kaios/",
+      "snippet": "Yes, take me to Reddit.",
+      "query": "site:reddit.com AI note-taking for clinicians",
+      "used_in_prompt": true,
+      "id": "e7",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 8,
+      "source": "ddgs",
+      "title": "Building Trustworthy AI for Women's Health with Hertility | LinkedIn",
+      "url": "https://www.linkedin.com/posts/teresatorres_how-do-you-build-trustworthy-ai-diagnostic-activity-7486106360170885120-hGVL",
+      "snippet": "How do you build trustworthy AI diagnostic tools in one of medicine's most historically under-researched areas?The future of critical care is not clinician versus AI. It is clinicians using AI responsibly and safely—while remaining accountable for every bedside decision.",
+      "query": "AI note-taking for clinicians industry report CAGR",
+      "used_in_prompt": true,
+      "id": "e8",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 9,
+      "source": "youtube",
+      "title": "Top 5 BEST AI Note-Taking Apps (Better than Notion?)",
+      "url": "https://youtube.com/watch?v=wGLd43TkCGc",
+      "snippet": "In this video, I explore my personal top 5 favorite AI notetaking apps. These are next‑generation tools that are great alternatives to traditional options like Apple Notes, Notion, and Obsidian. Each one has innovative AI features for writers, students, creators, and entrepreneurs! ➤ TOOLS MENTIONED",
+      "query": "",
+      "used_in_prompt": true,
+      "id": "e9",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 10,
+      "source": "ddgs",
+      "title": "Top Heidi Health Alternatives for Clinicians (2026)",
+      "url": "https://www.trytwofold.com/compare/heidi-health-alternatives",
+      "snippet": "Jun 11, 2026 · Explore top Heidi Health alternatives in 2026 for faster notes, richer templates, voice dictation, and more. Compare pricing, speed, and real user reviews.",
+      "query": "AI note-taking for clinicians competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e10",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 11,
+      "source": "ddgs",
+      "title": "AI note-taking helps clinicians reclaim patient time",
+      "url": "https://www.healthcareitnews.com/news/ai-note-taking-helps-clinicians-reclaim-patient-time",
+      "snippet": "Jul 10, 2026 · Weiner adopted Note Taker from vendor SimplePractice to address those competing demands. The AI-powered system listens to the clinical conversation, generates a draft note and presents it for clinician review and editing before finalization.",
+      "query": "AI note-taking for clinicians reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e11",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 12,
+      "source": "ddgs",
+      "title": "Robotic Clinicians Market is expected to grow at a CAGR of around...",
+      "url": "https://www.acumenresearchandconsulting.com/robotic-clinicians-market",
+      "snippet": "Market Size and Forecast Data. Segment Analysis.The market for robotic clinicians is expected to reach a market value of around US$ 32,265.7 Mn by 2027.",
+      "query": "AI note-taking for clinicians market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e12",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 13,
+      "source": "ddgs",
+      "title": "AI-Powered Medical Note-Taking Apps Make Waves with $800M...",
+      "url": "https://opentools.ai/news/ai-powered-medical-note-taking-apps-make-waves-with-dollar800m-investment-boost",
+      "snippet": "Jan 6, 2025 · AI‑driven medical note‑taking apps are receiving a financial injection, with funding reaching $800 million in 2024—double from the previous year. These digital \"scribes\" are cutting doctors' administrative tasks, creating more time for patient care.",
+      "query": "AI note-taking for clinicians funding startup launches",
+      "used_in_prompt": true,
+      "id": "e13",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 14,
+      "source": "ddgs",
+      "title": "Top 7 Best HIPAA-Compliant Transcription Software for Therapists...",
+      "url": "https://www.supanote.ai/blog/hipaa-compliant-transcription-software",
+      "snippet": "Scalable for multi-provider clinics. Pricing: Starts at $90/month for solo clinicians, $84/month per clinician for 2–9 users (billed annually), with custom pricing for 10+ users. 7-day free trial available. Best For: Large practices needing unlimited transcription capacity.",
+      "query": "AI note-taking for clinicians pricing",
+      "used_in_prompt": true,
+      "id": "e14",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 15,
+      "source": "ddgs",
+      "title": "EasyNoteAI: AI Note-Taking Assistant - Generate Notes & Summaries",
+      "url": "https://easynoteai.com/",
+      "snippet": "EasyNoteAI is a powerful AI note-taking assistant. Generate notes from audio, videos, and PDFs, create AI outlines, flashcards, quizzes, summaries, and chatbots. Boost your learning!Al-Powered Note-Taking for a Clear Mind.",
+      "query": "AI note-taking for clinicians trends",
+      "used_in_prompt": true,
+      "id": "e15",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 16,
+      "source": "ddgs",
+      "title": "Cerebras is the go-to platform for fast and effortless AI training.",
+      "url": "https://www.cerebras.ai/",
+      "snippet": "The World’s Fastest AI Runs on The World’s Biggest chip. The Cerebras Wafer-Scale Engine is purpose-built for ultra-fast AI. It is 58x larger and 15x faster than GPUs. Designed for builders who want to do extraordinary things.",
+      "query": "AI note-taking for clinicians industry report CAGR",
+      "used_in_prompt": true,
+      "id": "e16",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 17,
+      "source": "youtube",
+      "title": "Claude just killed the note-taking app. Here is proof.",
+      "url": "https://youtube.com/watch?v=geIKyDaXwGg",
+      "snippet": "🚀✨ Build your Future-Proof AI Productivity System TODAY: https://www.myicor.com/?utm_source=youtube&utm_medium=video&utm_campaign=geIKyDaXwGg&utm_content=description I started this channel in 2017 reviewing note-taking apps. I used every single one. Roam, Obsidian, Notion, Mem, Tana, Heptabase. All ",
+      "query": "",
+      "used_in_prompt": true,
+      "id": "e17",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 18,
+      "source": "ddgs",
+      "title": "9 Best AI Scribes for Clinicians [2026]: Comparisons ...",
+      "url": "https://www.getfreed.ai/resources/best-ai-scribes",
+      "snippet": "May 7, 2026 · But how do you know which tool is best for your clinical notes, patients, and practice? This guide compares the top AI scribes of 2025. Whether you’re a solo clinician, a growing group practice, or part of a large health system, you’ll have everything you need to find the right tool fo",
+      "query": "AI note-taking for clinicians competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e18",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 19,
+      "source": "ddgs",
+      "title": "Honest Heidi Remote Review for Clinicians | Psychreg",
+      "url": "https://www.psychreg.org/honest-heidi-remote-review-clinicians/",
+      "snippet": "Home Health & Fitness Honest Heidi Remote Review for Clinicians.Heidi Remote is a good hardware fix for a narrow but common clinical problem. I would recommend it to clinicians whose AI notes fail because the microphone setup is unreliable.",
+      "query": "AI note-taking for clinicians reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e19",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 20,
+      "source": "ddgs",
+      "title": "AI Note-Taking Tool Gives European Clinicians More... - British Wire",
+      "url": "https://britishwire.com/health/ai-note-taking-tool-gives-european-clinicians-more-time-with-patients-study-finds/",
+      "snippet": "The company reviewed more than 375,000 medical notes produced with its AI scribe, a tool now used by nearly 1,300 clinicians in.British Wire > Blog > Health > AI Note-Taking Tool Gives European Clinicians More Time With Patients, Study Finds.",
+      "query": "AI note-taking for clinicians market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e20",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 21,
+      "source": "ddgs",
+      "title": "Abridge Secures $300 Million Series E Funding at $5.3 Billion ...",
+      "url": "https://techcrawlr.com/abridge-secures-300-million-series-e-funding-at-5-3-billion-valuation/",
+      "snippet": "Feb 4, 2026 · Healthcare AI startup Abridge transcribes patient-clinician conversations using generative models to produce structured clinical notes. The platform integrates with electronic health records, reducing documentation time by up to 70% according to internal benchmarks. Clinicians dictate ",
+      "query": "AI note-taking for clinicians funding startup launches",
+      "used_in_prompt": true,
+      "id": "e21",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 22,
+      "source": "ddgs",
+      "title": "Freed Alternatives — Pricing & Feature Comparison (2026) | Augustun",
+      "url": "https://www.augustun.com/compare/freed-alternatives",
+      "snippet": "Augustun pricing is transparent, flat, and per-clinician — no quotes, no minute meters, no upsells. Pro. Solo clinicians who want a best-in-class AI scribe with specialty templates.",
+      "query": "AI note-taking for clinicians pricing",
+      "used_in_prompt": true,
+      "id": "e22",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 23,
+      "source": "ddgs",
+      "title": "Herald America",
+      "url": "https://heraldamerica.com/health/ai-note-taking-tool-gives-european-clinicians-more-time-with-patients-study-finds/",
+      "snippet": "AI Note-Taking Tool Gives European Clinicians More Time With Patients, Study Finds.",
+      "query": "AI note-taking for clinicians trends",
+      "used_in_prompt": true,
+      "id": "e23",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 24,
+      "source": "ddgs",
+      "title": "What is Open Notebook? | Take Control of Your Research, Privately",
+      "url": "https://www.open-notebook.ai/",
+      "snippet": "A powerful open-source, AI-powered note-taking/research platform that respects your privacy.Open Notebook is the cognitive partner you always wanted and could never explain why. It combines the power of AI with unwavering privacy controls.",
+      "query": "AI note-taking for clinicians industry report CAGR",
+      "used_in_prompt": true,
+      "id": "e24",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 25,
+      "source": "youtube",
+      "title": "The AI Notetaker Clinicians Didn’t Know They Needed | Eleos in Action",
+      "url": "https://youtube.com/watch?v=QQuy_kwxN6c",
+      "snippet": "Correnda Perkins, Chief Program Officer at Hillsides, shares how Eleos creates richer, more accurate clinical notes — capturing details providers might otherwise forget. From documenting evidence-based treatments like CBT or motivational interviewing, to reminding clinicians of everything they accom",
+      "query": "",
+      "used_in_prompt": false,
+      "id": "e25",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": "Ranked 25 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 26,
+      "source": "ddgs",
+      "title": "MESH AI Alternatives | AVIA Marketplace",
+      "url": "https://marketplace.aviahealth.com/product/76672/mesh-ai/competitors/alternatives",
+      "snippet": "Overall Top 10 MESH AI Alternatives & Competitors. Browse options below. Based on data from AVIA reviews and gathered information about the vendor's clients, you can see how MESH AI stacks up to the competition.",
+      "query": "AI note-taking for clinicians competitors alternatives",
+      "used_in_prompt": false,
+      "id": "e26",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 26 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 27,
+      "source": "ddgs",
+      "title": "This AI tool promises a 'second pair of eyes' to clinicians : NPR - Eb...",
+      "url": "https://ebrol.net/this-ai-tool-promises-a-second-pair-of-eyes-to-clinicians-npr/",
+      "snippet": "The other half used a computer for note-taking without the AI tool. Here’s how the AI program works. It provides three prompts — green, yellow and red, like a traffic light. The AI looks for possible problems in a patient’s care or gaps in the notes.",
+      "query": "AI note-taking for clinicians reviews complaints problems",
+      "used_in_prompt": false,
+      "id": "e27",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 27 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 28,
+      "source": "ddgs",
+      "title": "Gemini Notebook | AI Research Tool & Thinking Partner",
+      "url": "https://notebooklm.google/",
+      "snippet": "Meet Gemini Notebook, the AI research tool and thinking partner that can analyze your sources, turn complexity into clarity and transform your content.Spark new ideas. Upload brainstorming notes, market research, and competitor research.",
+      "query": "AI note-taking for clinicians market size growth forecast",
+      "used_in_prompt": false,
+      "id": "e28",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 28 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 29,
+      "source": "ddgs",
+      "title": "New Funding Rounds in medical note-taking | VentureRadar",
+      "url": "https://www.ventureradar.com/funding/medical+note-taking",
+      "snippet": "Offers an AI Scribe Co-Pilot that transforms clinicians' spoken words into real-time clinical notes, providing time-saving and personalized note-taking in Spanish and English.",
+      "query": "AI note-taking for clinicians funding startup launches",
+      "used_in_prompt": false,
+      "id": "e29",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 29 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 30,
+      "source": "ddgs",
+      "title": "Heidi | Your AI Care Partner for Modern Clinical Practice",
+      "url": "https://www.heidihealth.com/",
+      "snippet": "Heidi supports clinicians across every step of care—from documentation to evidence. Practical AI tools designed to save time, reduce admin, and support…Patient notes, handled. Let Heidi handle the note, codes, and every task that follows.",
+      "query": "AI note-taking for clinicians pricing",
+      "used_in_prompt": false,
+      "id": "e30",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 30 of 30; below the prompt cutoff"
+    }
+  ],
+  "report": {
+    "schema_version": 2,
+    "verdict": {
+      "decision": "Strong Yes",
+      "reason": "The market is experiencing rapid growth and significant investment, driven by a clear clinician need to reduce administrative burden and improve patient time.",
+      "executive_summary": "The AI note-taking market for clinicians is rapidly growing, fueled by substantial investment and a clear demand for solutions that reduce administrative burden and enhance patient care. While competition is strong, opportunities exist for specialized, privacy-focused, and highly integrated offerings. A strong 'yes' for entry is recommended.",
+      "top_reason_to_build": "Clinicians desperately need to reduce administrative burden and reclaim patient time, a pain point directly addressed by AI note-taking.",
+      "biggest_risk": "Navigating the highly competitive landscape with well-funded incumbents and ensuring robust HIPAA compliance.",
+      "market_pulse": {
+        "value": 8,
+        "display": "8",
+        "unit": null,
+        "confidence": null,
+        "confidence_band": "none",
+        "basis": "The model's overall read of market conditions across every section it wrote.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": true
+      },
+      "confidence": {
+        "value": 90,
+        "display": "90",
+        "unit": null,
+        "confidence": 90,
+        "confidence_band": "high",
+        "basis": "High confidence due to multiple direct mentions of market size, growth, and strong investment signals from various sources.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": true
+      }
+    },
+    "headline": {
+      "recommended_customer": {
+        "value": "Solo clinicians and small group practices in mental wellness, seeking HIPAA-compliant AI note-taking with specific note formats (e.g., SOAP, DAP, BIRP) and transparent pricing.",
+        "suppressed_reason": null
+      },
+      "best_customer_segment": {
+        "value": "Solo clinicians and small practices seeking cost-effective, HIPAA-compliant solutions with specialty-specific note formats.",
+        "suppressed_reason": null
+      },
+      "recommended_positioning": {
+        "value": "Position as the most accurate, HIPAA-compliant AI note-taking assistant offering highly customizable specialty templates and seamless integration with common EHRs, specifically designed to maximize patient-clinician interaction time.",
+        "suppressed_reason": null
+      },
+      "best_moat": {
+        "value": "Proprietary AI models that offer demonstrably superior accuracy and seamless integration with a wide array of EHR systems.",
+        "suppressed_reason": null
+      }
+    },
+    "market": {
+      "market_size": {
+        "value": "$5.3 billion",
+        "display": "$5.3 billion",
+        "unit": null,
+        "confidence": 75,
+        "confidence_band": "moderate",
+        "basis": "Model estimate, grounded in the 5 collected sources containing sizing or forecast language.",
+        "source_count": 5,
+        "evidence_ids": [
+          "e3",
+          "e4",
+          "e12",
+          "e13",
+          "e21"
+        ],
+        "collected": true
+      },
+      "growth_rate": {
+        "value": "19%",
+        "display": "19%",
+        "unit": null,
+        "confidence": 75,
+        "confidence_band": "moderate",
+        "basis": "Model estimate, grounded in the 5 collected sources containing sizing or forecast language.",
+        "source_count": 5,
+        "evidence_ids": [
+          "e3",
+          "e4",
+          "e12",
+          "e13",
+          "e21"
+        ],
+        "collected": true
+      },
+      "market_maturity": {
+        "value": "Growth",
+        "display": "Growth",
+        "unit": null,
+        "confidence": 90,
+        "confidence_band": "high",
+        "basis": "Model estimate, grounded in the 5 collected sources containing sizing or forecast language.",
+        "source_count": 5,
+        "evidence_ids": [
+          "e3",
+          "e4",
+          "e12",
+          "e13",
+          "e21"
+        ],
+        "collected": true
+      },
+      "future_outlook": {
+        "value": "Growing",
+        "display": "Growing",
+        "unit": null,
+        "confidence": 90,
+        "confidence_band": "high",
+        "basis": "Model estimate, grounded in the 5 collected sources containing sizing or forecast language.",
+        "source_count": 5,
+        "evidence_ids": [
+          "e3",
+          "e4",
+          "e12",
+          "e13",
+          "e21"
+        ],
+        "collected": true
+      }
+    },
+    "signals": {
+      "customer": {
+        "discussion_volume": {
+          "value": 30,
+          "display": "30",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Count of items in the ranked evidence list.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        },
+        "comment_volume": {
+          "value": 1376,
+          "display": "1,376",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Sum of the YouTube comment count on every collected video.",
+          "source_count": 3,
+          "evidence_ids": [
+            "e9",
+            "e17",
+            "e25"
+          ],
+          "collected": true
+        }
+      },
+      "market": {
+        "growth_score": {
+          "value": null,
+          "display": "—",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Google Trends returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "startup_activity": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        }
+      },
+      "competitive": {
+        "launches": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "avg_votes_per_day": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "competition_score": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        }
+      },
+      "virality": {
+        "momentum": {
+          "value": 8,
+          "display": "8",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Weighted blend of search growth, video engagement and daily views.",
+          "source_count": 3,
+          "evidence_ids": [
+            "e9",
+            "e17",
+            "e25"
+          ],
+          "collected": true
+        },
+        "trend_growth": {
+          "value": null,
+          "display": "—",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Google Trends returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "avg_views_per_day": {
+          "value": 1200,
+          "display": "1,200",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Lifetime views divided by days since publication, averaged.",
+          "source_count": 3,
+          "evidence_ids": [
+            "e9",
+            "e17",
+            "e25"
+          ],
+          "collected": true
+        },
+        "avg_engagement_rate": {
+          "value": 1,
+          "display": "~1%",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "(likes + comments) / views x 100, averaged across videos.",
+          "source_count": 3,
+          "evidence_ids": [
+            "e9",
+            "e17",
+            "e25"
+          ],
+          "collected": true
+        }
+      },
+      "market_size": {
+        "market_reports": {
+          "value": 2,
+          "display": "2",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Sources whose text contains 'market size', 'market forecast' or 'industry report'.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        }
+      },
+      "market_opportunity": {
+        "sizing_language_density": {
+          "value": 100,
+          "display": "100",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Weighted count of sizing, growth, forecast and CAGR mentions, capped at 100.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        },
+        "mentions": {
+          "definition": "How often each kind of sizing language appeared in the collected sources. A property of the writing, not evidence of the market's actual size.",
+          "counts": {
+            "market_size_mentions": 2,
+            "growth_mentions": 2,
+            "forecast_mentions": 2,
+            "cagr_mentions": 2,
+            "billion_mentions": 3,
+            "million_mentions": 3
+          },
+          "detected_market_sizes": [
+            "$300 m",
+            "$300 million",
+            "$5.3 billion",
+            "$800 m",
+            "$800 million"
+          ],
+          "detected_growth_rates": [
+            "19%"
+          ]
+        }
+      }
+    },
+    "signals_unavailable": [
+      "market.growth_score",
+      "market.startup_activity",
+      "competitive.launches",
+      "competitive.avg_votes_per_day",
+      "competitive.competition_score",
+      "virality.trend_growth"
+    ],
+    "lists": {
+      "customer_segments": {
+        "key": "customer_segments",
+        "label": "Customer segments",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "customer_segments-1",
+            "label": "Solo Clinicians and Small Practices",
+            "detail": "These clinicians often seek cost-effective, scalable solutions for note-taking, with pricing models that support individual or small group use.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e5",
+              "e14",
+              "e22"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "customer_segments-3",
+            "label": "European Clinicians",
+            "detail": "AI note-taking tools are being adopted by European clinicians, with studies indicating increased time with patients.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e20",
+              "e23"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "customer_segments-2",
+            "label": "Clinicians in Mental Wellness",
+            "detail": "Specific AI note-taking tools cater to mental wellness professionals, offering features like AI-generated clinical notes in various formats such as SOAP, DAP, and BIRP.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e5"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "customer_segments-4",
+            "label": "Clinicians using Electronic Health Records (EHR)",
+            "detail": "Platforms that integrate with EHRs are highly valued by clinicians for streamlining documentation and reducing administrative burden.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e21"
+            ],
+            "rank": 4
+          }
+        ]
+      },
+      "pain_points": {
+        "key": "pain_points",
+        "label": "Pain points",
+        "metric_key": "signal_strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "pain_points-1",
+            "label": "Excessive Administrative Burden",
+            "detail": "Doctors spend significant time on administrative tasks, including note-taking, which AI tools aim to reduce.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e11",
+              "e13"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "pain_points-2",
+            "label": "Time Constraints with Patients",
+            "detail": "Clinicians struggle with competing demands, leading to less time with patients, a problem AI note-taking seeks to solve.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e11",
+              "e20",
+              "e23"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "pain_points-3",
+            "label": "Need for HIPAA Compliance",
+            "detail": "Clinicians require note-taking tools that adhere to HIPAA regulations to ensure patient data privacy and security.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e14"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "pain_points-4",
+            "label": "Inefficient Manual Note-Taking",
+            "detail": "Traditional note-taking methods are often time-consuming and less efficient compared to AI-powered alternatives.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e9"
+            ],
+            "rank": 4
+          }
+        ]
+      },
+      "desired_outcomes": {
+        "key": "desired_outcomes",
+        "label": "Desired outcomes",
+        "metric_key": "importance",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "desired_outcomes-1",
+            "label": "Reduced Documentation Time",
+            "detail": "Clinicians want to cut down the time spent on creating clinical notes, allowing them to focus more on patient care.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e11",
+              "e13",
+              "e21"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "desired_outcomes-2",
+            "label": "Improved Patient Interaction Time",
+            "detail": "A key goal is to reclaim patient time by automating note-taking, leading to better patient engagement and care.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e11",
+              "e20",
+              "e23"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "desired_outcomes-3",
+            "label": "HIPAA-Compliant Solutions",
+            "detail": "Clinicians prioritize tools that guarantee the security and privacy of patient information in accordance with HIPAA standards.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e14"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "desired_outcomes-4",
+            "label": "Accurate and Structured Clinical Notes",
+            "detail": "The desire is for AI to generate precise and well-formatted clinical notes, such as SOAP, DAP, or BIRP, from patient conversations.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e5",
+              "e21"
+            ],
+            "rank": 4
+          },
+          {
+            "id": "desired_outcomes-5",
+            "label": "Integration with Existing Workflows",
+            "detail": "Clinicians seek AI tools that can seamlessly integrate with their current electronic health record systems.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e21"
+            ],
+            "rank": 5
+          }
+        ]
+      },
+      "behavior_patterns": {
+        "key": "behavior_patterns",
+        "label": "Behaviour patterns",
+        "metric_key": "confidence",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "behavior_patterns-2",
+            "label": "Evaluating HIPAA Compliance",
+            "detail": "When choosing AI note-taking tools, clinicians prioritize and review their HIPAA compliance to ensure data security.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e14"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "behavior_patterns-1",
+            "label": "Seeking Alternatives to Traditional Tools",
+            "detail": "Clinicians are actively looking for next-generation AI note-taking apps as alternatives to traditional options like Apple Notes or Notion.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e9"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "behavior_patterns-3",
+            "label": "Adopting AI for Efficiency",
+            "detail": "Clinicians are adopting AI-powered systems to address competing demands and improve efficiency in their practice.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e11"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "behavior_patterns-4",
+            "label": "Comparing Features and Pricing",
+            "detail": "Clinicians compare features, ratings, user reviews, and pricing of various AI note-taking tools before making a decision.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e1",
+              "e10",
+              "e14",
+              "e22"
+            ],
+            "rank": 4
+          }
+        ]
+      },
+      "opportunity_areas": {
+        "key": "opportunity_areas",
+        "label": "Opportunity areas",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "opportunity_areas-1",
+            "label": "Specialty-Specific AI Scribes",
+            "detail": "There is an opportunity to develop AI scribes with specialty templates tailored for various clinical practices, as seen with mental wellness formats.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e5",
+              "e22"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "opportunity_areas-2",
+            "label": "Enhanced Integration with EHRs",
+            "detail": "Further development in seamless integration with electronic health records can significantly reduce documentation friction for clinicians.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e21"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "opportunity_areas-3",
+            "label": "Advanced AI for Continuous Biomarker Context",
+            "detail": "AI that analyzes streaming biomarker data to detect trends and provide actionable insights could empower clinicians with proactive care.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e6"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "opportunity_areas-4",
+            "label": "Privacy-Focused Open-Source Solutions",
+            "detail": "An open-source, AI-powered note-taking platform that prioritizes user privacy presents a unique opportunity.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e24"
+            ],
+            "rank": 4
+          },
+          {
+            "id": "opportunity_areas-5",
+            "label": "AI for Trustworthy Diagnostic Tools",
+            "detail": "Building trustworthy AI diagnostic tools, especially in under-researched areas like women's health, offers a significant opportunity.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e8"
+            ],
+            "rank": 5
+          }
+        ]
+      },
+      "key_trends": {
+        "key": "key_trends",
+        "label": "Key trends",
+        "metric_key": "strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "key_trends-1",
+            "label": "Increasing Investment in AI Note-Taking",
+            "detail": "The market is seeing significant financial injections, with funding reaching $800 million in 2024, doubling from the previous year, and a startup raising $300 million at a $5.3 billion valuation.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e13",
+              "e21"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "key_trends-3",
+            "label": "Clinician Adoption for Efficiency",
+            "detail": "Clinicians are actively adopting AI note-taking tools to reduce administrative burden and reclaim time with patients.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e11",
+              "e20",
+              "e23"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "key_trends-2",
+            "label": "Focus on HIPAA Compliance",
+            "detail": "There is a strong emphasis on HIPAA-compliant AI note-taking tools, with top lists and comparisons specifically highlighting this feature.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e14"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "key_trends-4",
+            "label": "Integration with Electronic Health Records",
+            "detail": "AI note-taking platforms are integrating with electronic health records to streamline workflows and reduce documentation.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e21"
+            ],
+            "rank": 4
+          }
+        ]
+      },
+      "emerging_trends": {
+        "key": "emerging_trends",
+        "label": "Emerging trends",
+        "metric_key": "potential",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "emerging_trends-1",
+            "label": "AI for Continuous Biomarker Intelligence",
+            "detail": "The use of AI to analyze streaming biomarker data for continuous health intelligence and actionable insights is an emerging area.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e6"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "emerging_trends-2",
+            "label": "Trustworthy AI in Specialized Medicine",
+            "detail": "Building trustworthy AI diagnostic tools for historically under-researched areas like women's health represents a significant emerging trend.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e8"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "emerging_trends-3",
+            "label": "Open-Source, Privacy-Focused AI Note-Taking",
+            "detail": "The development of open-source, AI-powered note-taking platforms that prioritize user privacy is an emerging trend.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e24"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "market_drivers": {
+        "key": "market_drivers",
+        "label": "Market drivers",
+        "metric_key": "impact",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "market_drivers-1",
+            "label": "Need to Reduce Clinician Burnout",
+            "detail": "The significant administrative burden on doctors, including note-taking, drives the adoption of AI solutions to alleviate burnout.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e11",
+              "e13"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "market_drivers-2",
+            "label": "Demand for Improved Patient Care",
+            "detail": "AI note-taking helps clinicians reclaim patient time, leading to better patient interaction and care, which is a strong market driver.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e11",
+              "e20",
+              "e23"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "market_drivers-4",
+            "label": "Increased Funding and Investment",
+            "detail": "Substantial financial investments in AI note-taking startups indicate strong market confidence and drive further development and adoption.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e4",
+              "e13",
+              "e21"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "market_drivers-3",
+            "label": "Advancements in AI Technology",
+            "detail": "The continuous development of powerful AI, including generative models and faster processing chips, fuels innovation in note-taking tools.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e16",
+              "e21"
+            ],
+            "rank": 4
+          }
+        ]
+      },
+      "competitors": {
+        "key": "competitors",
+        "label": "Competitors",
+        "metric_key": "strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "competitors-1",
+            "label": "Abridge",
+            "detail": "Abridge is a well-funded startup that offers an AI note-taking tool for doctors, having raised $300 million at a $5.3 billion valuation.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e21"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "competitors-4",
+            "label": "Heidi Health (and alternatives)",
+            "detail": "Heidi Health provides AI note-taking solutions, with other companies offering alternatives focusing on speed, templates, and voice dictation.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e10",
+              "e19"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "competitors-2",
+            "label": "SimplePractice Note Taker",
+            "detail": "SimplePractice offers an AI-powered system that listens to clinical conversations and generates draft notes for clinician review.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e11"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "competitors-3",
+            "label": "United We Care",
+            "detail": "United We Care offers an AI-powered transcription and note generation service for clinicians, including various note formats.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e5"
+            ],
+            "rank": 4
+          },
+          {
+            "id": "competitors-5",
+            "label": "Freed",
+            "detail": "Freed offers an AI scribe with transparent per-clinician pricing and specialty templates.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e22"
+            ],
+            "rank": 5
+          }
+        ]
+      },
+      "competitive_threats": {
+        "key": "competitive_threats",
+        "label": "Competitive threats",
+        "metric_key": "severity",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "competitive_threats-1",
+            "label": "Well-Funded Incumbents",
+            "detail": "Existing players like Abridge have secured significant funding, making it challenging for new entrants to compete on resources and market reach.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e13",
+              "e21"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "competitive_threats-2",
+            "label": "Need for HIPAA Compliance",
+            "detail": "Strict regulatory requirements for HIPAA compliance pose a significant barrier to entry and a continuous challenge for all competitors.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e14"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "competitive_threats-3",
+            "label": "Integration with EHR Systems",
+            "detail": "The necessity to integrate with diverse electronic health record systems can be complex and a competitive hurdle.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e21"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "competitive_threats-4",
+            "label": "Trust and Accuracy of AI",
+            "detail": "Building trustworthy AI diagnostic tools and ensuring the accuracy of AI-generated notes is critical for clinician adoption and patient safety.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e8"
+            ],
+            "rank": 4
+          }
+        ]
+      },
+      "positioning_gaps": {
+        "key": "positioning_gaps",
+        "label": "Positioning gaps",
+        "metric_key": "opportunity",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "positioning_gaps-1",
+            "label": "Specialized AI for Unique Medical Fields",
+            "detail": "While some specialty templates exist, there's a gap for highly specialized AI note-taking tools for niche medical fields beyond general practice or mental health.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e5",
+              "e8",
+              "e22"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "positioning_gaps-2",
+            "label": "Continuous Biomarker Context Integration",
+            "detail": "A gap exists in AI note-taking tools that seamlessly integrate continuous biomarker data for proactive insights, beyond just transcribing conversations.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e6"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "positioning_gaps-3",
+            "label": "Open-Source and Privacy-First Solutions",
+            "detail": "There is a positioning gap for a robust, open-source, and privacy-focused AI note-taking platform that appeals to clinicians wary of proprietary systems.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e24"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "white_space_opportunities": {
+        "key": "white_space_opportunities",
+        "label": "White space",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "white_space_opportunities-1",
+            "label": "AI for Proactive Health Monitoring",
+            "detail": "Developing AI that analyzes streaming health and biomarker data to provide continuous, actionable insights for clinicians represents a significant white space.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e6"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "white_space_opportunities-2",
+            "label": "AI for Under-Researched Medical Areas",
+            "detail": "Creating trustworthy AI diagnostic and note-taking tools for historically under-researched areas, such as women's health, offers a unique opportunity.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e8"
+            ],
+            "rank": 2
+          }
+        ]
+      },
+      "differentiation_opportunities": {
+        "key": "differentiation_opportunities",
+        "label": "Differentiation",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "differentiation_opportunities-1",
+            "label": "Superior Accuracy and Customization",
+            "detail": "Offering AI note-taking with demonstrably higher accuracy and greater customization options for various clinical note formats (SOAP, DAP, BIRP) can be a strong differentiator.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e5",
+              "e21"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "differentiation_opportunities-2",
+            "label": "Seamless EHR Integration",
+            "detail": "Providing the most seamless and robust integration with a wide range of electronic health record systems can set a product apart.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e21"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "differentiation_opportunities-3",
+            "label": "Transparent and Flexible Pricing",
+            "detail": "Offering transparent, flat, per-clinician pricing without hidden fees or minute meters can differentiate from competitors.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e14",
+              "e22"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "differentiation_opportunities-4",
+            "label": "Enhanced Privacy and Data Control",
+            "detail": "Differentiating through superior privacy features, potentially open-source models, and greater clinician control over their data.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e24"
+            ],
+            "rank": 4
+          }
+        ]
+      },
+      "why_now": {
+        "key": "why_now",
+        "label": "Why now",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "why_now-1",
+            "label": "High Market Growth and Investment",
+            "detail": "Significant capital inflow indicates strong market validation and readiness for new solutions.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e13",
+              "e21"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "why_now-2",
+            "label": "Clear Clinician Pain Point",
+            "detail": "Addressing a critical and widely acknowledged problem for healthcare professionals.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e11",
+              "e20",
+              "e23"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "why_now-3",
+            "label": "Technological Advancements in AI",
+            "detail": "Maturing AI technology makes effective solutions more feasible and powerful.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e16",
+              "e21"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "key_opportunities": {
+        "key": "key_opportunities",
+        "label": "Key opportunities",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "key_opportunities-1",
+            "label": "Specialized AI Scribes",
+            "detail": "Tailoring solutions to specific clinical needs can capture niche markets effectively.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e5",
+              "e22"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "key_opportunities-2",
+            "label": "Enhanced EHR Integration",
+            "detail": "Seamless integration is a critical factor for adoption and workflow efficiency.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e21"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "key_opportunities-3",
+            "label": "Privacy-Focused Open-Source Solutions",
+            "detail": "Appeals to a segment concerned with data control and transparency, offering a strong differentiator.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e24"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "key_risks": {
+        "key": "key_risks",
+        "label": "Key risks",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "key_risks-1",
+            "label": "High Competition and Funding",
+            "detail": "New entrants face a challenge against well-capitalized and established players.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e13",
+              "e21"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "key_risks-2",
+            "label": "HIPAA Compliance Complexity",
+            "detail": "Strict regulatory requirements demand significant investment and expertise to ensure compliance.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e2",
+              "e14"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "key_risks-3",
+            "label": "Building Clinician Trust",
+            "detail": "Gaining trust in AI accuracy and reliability is crucial for widespread adoption in a sensitive field.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e8"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "potential_moats": {
+        "key": "potential_moats",
+        "label": "Potential moats",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "potential_moats-1",
+            "label": "Proprietary AI Model Accuracy",
+            "detail": "Superior accuracy in generating structured, specialty-specific clinical notes is hard to replicate.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e5"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "potential_moats-2",
+            "label": "Deep EHR Integration",
+            "detail": "Extensive and robust integrations with diverse EHR systems create significant switching costs.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e21"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "potential_moats-3",
+            "label": "Strong Brand and Trust",
+            "detail": "Establishing a reputation for trustworthiness and reliability in sensitive medical contexts.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e8"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "execution_ideas": {
+        "key": "execution_ideas",
+        "label": "Execution ideas",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "execution_ideas-1",
+            "label": "Develop Niche-Specific AI Models",
+            "detail": "Focus on highly specialized medical fields with unique note-taking requirements to capture underserved segments.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e5",
+              "e8",
+              "e22"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "execution_ideas-2",
+            "label": "Prioritize Seamless EHR Integration",
+            "detail": "Invest heavily in developing robust, user-friendly integrations with a wide range of popular EHR systems.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e21"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "execution_ideas-3",
+            "label": "Offer Transparent, Value-Based Pricing",
+            "detail": "Implement clear, per-clinician pricing models without hidden fees to attract solo and small practice users.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e14",
+              "e22"
+            ],
+            "rank": 3
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "count": 27
+      },
+      {
+        "source_key": "youtube",
+        "display_name": "YouTube",
+        "count": 3
+      }
+    ]
+  },
+  "metric_definitions": [
+    {
+      "key": "support",
+      "label": "Support",
+      "definition": "How consistently this item appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "score",
+      "label": "Score",
+      "definition": "How consistently this item appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "signal_strength",
+      "label": "Signal strength",
+      "definition": "How often and how emphatically this was raised in the source material.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "importance",
+      "label": "Importance",
+      "definition": "How central this was to the discussions where it appeared.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "confidence",
+      "label": "Confidence",
+      "definition": "How consistently this pattern appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "strength",
+      "label": "Strength",
+      "definition": "How established this is across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "potential",
+      "label": "Potential",
+      "definition": "How much room this has to grow, judged from the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "impact",
+      "label": "Impact",
+      "definition": "How strongly this shapes the market, judged from the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "severity",
+      "label": "Severity",
+      "definition": "How directly this threat overlaps with the proposed product.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "opportunity",
+      "label": "Opportunity",
+      "definition": "How much unmet demand this gap represents in the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "discussion_volume",
+      "label": "Discussions",
+      "definition": "Ranked sources matching this topic across every collector.",
+      "derivation": "Count of items in the ranked evidence list.",
+      "scale": "Whole number of sources."
+    },
+    {
+      "key": "comment_volume",
+      "label": "Comments",
+      "definition": "Total viewer replies across the collected videos.",
+      "derivation": "Sum of the YouTube comment count on every collected video.",
+      "scale": "Whole number."
+    },
+    {
+      "key": "growth_score",
+      "label": "Growth score",
+      "definition": "Movement in search interest for this topic over the sampled window.",
+      "derivation": "Google Trends growth rate for the topic term.",
+      "scale": "Percentage change."
+    },
+    {
+      "key": "startup_activity",
+      "label": "Startup activity",
+      "definition": "New products shipped into this space recently.",
+      "derivation": "Count of Product Hunt launches in the collected evidence.",
+      "scale": "Whole number of launches."
+    },
+    {
+      "key": "launches",
+      "label": "Launches",
+      "definition": "Recent product releases observed in this space.",
+      "derivation": "Count of Product Hunt items in the collected evidence.",
+      "scale": "Whole number."
+    },
+    {
+      "key": "avg_votes_per_day",
+      "label": "Avg votes / day",
+      "definition": "Mean daily upvotes across those releases.",
+      "derivation": "Product Hunt votes divided by days since launch, averaged.",
+      "scale": "Votes per day."
+    },
+    {
+      "key": "competition_score",
+      "label": "Competition score",
+      "definition": "How crowded the field looks, from launch count and traction.",
+      "derivation": "min(100, launches x 2 + mean votes per day).",
+      "scale": "0-100."
+    },
+    {
+      "key": "momentum",
+      "label": "Momentum",
+      "definition": "How fast attention is moving on this topic.",
+      "derivation": "Weighted blend of search growth, video engagement and daily views.",
+      "scale": "0-100."
+    },
+    {
+      "key": "trend_growth",
+      "label": "Trend growth",
+      "definition": "Change in search interest over the sampled window.",
+      "derivation": "Google Trends growth rate for the topic term.",
+      "scale": "Percentage change."
+    },
+    {
+      "key": "avg_views_per_day",
+      "label": "Avg views / day",
+      "definition": "Mean daily plays across the collected videos.",
+      "derivation": "Lifetime views divided by days since publication, averaged.",
+      "scale": "Views per day."
+    },
+    {
+      "key": "avg_engagement_rate",
+      "label": "Engagement rate",
+      "definition": "Likes and comments per 100 plays on the collected videos.",
+      "derivation": "(likes + comments) / views x 100, averaged across videos.",
+      "scale": "Percentage."
+    },
+    {
+      "key": "market_reports",
+      "label": "Market reports",
+      "definition": "Collected sources that read as dedicated industry research.",
+      "derivation": "Sources whose text contains 'market size', 'market forecast' or 'industry report'.",
+      "scale": "Whole number of sources."
+    },
+    {
+      "key": "sizing_language_density",
+      "label": "Sizing language density",
+      "definition": "How much of the collected text talks in figures and forecasts.",
+      "derivation": "Weighted count of sizing, growth, forecast and CAGR mentions, capped at 100.",
+      "scale": "0-100. A property of the text, not of the market."
+    }
+  ],
+  "score_scale": {
+    "values": [
+      90,
+      75,
+      50
+    ],
+    "bands": [
+      {
+        "score": 90,
+        "band": "high",
+        "label": "Directly supported",
+        "meaning": "Stated directly and repeatedly across multiple independent sources."
+      },
+      {
+        "score": 75,
+        "band": "moderate",
+        "label": "Clearly indicated",
+        "meaning": "Stated clearly but in few sources, or implied consistently across many."
+      },
+      {
+        "score": 50,
+        "band": "low",
+        "label": "Inferred",
+        "meaning": "Inferred from context; not directly stated in any single source."
+      }
+    ],
+    "note": "Three bands, not a continuous scale. The model cannot reliably distinguish a 72 from a 78, so it is not asked to."
+  },
+  "evidence_summary": {
+    "collected": 30,
+    "used": 24,
+    "excluded": 6
+  },
+  "signals_unavailable": [
+    "market.growth_score",
+    "market.startup_activity",
+    "competitive.launches",
+    "competitive.avg_votes_per_day",
+    "competitive.competition_score",
+    "virality.trend_growth"
+  ]
+}

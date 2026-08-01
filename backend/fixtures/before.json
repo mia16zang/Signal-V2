@@ -1,0 +1,670 @@
+{
+  "meta": {
+    "topic": "Developer tools for edge functions",
+    "cached": false,
+    "generated_at": "2026-07-31T21:26:59.909126",
+    "intelligence_time": 14.66,
+    "synthesis_time": 0.0,
+    "collection_time": 5.17,
+    "ai_time": 14.66,
+    "parse_time": 0.0,
+    "evidence_count": 30,
+    "evidence_used": 24,
+    "portfolio_mode": true,
+    "total_time": 19.84
+  },
+  "signals": {
+    "virality": {
+      "momentum": 53,
+      "trend_growth": 76.67,
+      "avg_views_per_day": 246.17,
+      "avg_engagement_rate": 3.08
+    },
+    "competitive": {
+      "launches": 0,
+      "avg_votes_per_day": 0,
+      "competition_score": 0
+    },
+    "market": {
+      "growth_score": 76.67,
+      "startup_activity": 0
+    },
+    "customer": {
+      "discussion_volume": 30,
+      "comment_volume": 481
+    },
+    "market_opportunity": {
+      "market_size_mentions": 2,
+      "growth_mentions": 7,
+      "forecast_mentions": 2,
+      "cagr_mentions": 2,
+      "billion_mentions": 1,
+      "million_mentions": 1,
+      "detected_market_sizes": [
+        "$9.75 billion",
+        "$496.1m"
+      ],
+      "detected_growth_rates": [
+        "24%",
+        "76.67%",
+        "27.6%",
+        "7%",
+        "14%",
+        "17%"
+      ],
+      "opportunity_score": 100
+    },
+    "market_size": {
+      "market_reports": 2
+    }
+  },
+  "intelligence": {
+    "customer": {
+      "customer_segments": [
+        {
+          "name": "Web Developers using Microsoft Edge",
+          "score": 90
+        },
+        {
+          "name": "Developers building with Supabase",
+          "score": 75
+        },
+        {
+          "name": "Teams evaluating Kubernetes management tools",
+          "score": 50
+        }
+      ],
+      "pain_points": [
+        {
+          "name": "Identifying and troubleshooting issues in web applications",
+          "signal_strength": 90
+        },
+        {
+          "name": "Debugging Edge Functions, especially with existing tools like VSCode",
+          "signal_strength": 75
+        },
+        {
+          "name": "Managing Kubernetes in edge environments",
+          "signal_strength": 50
+        },
+        {
+          "name": "Cost-effectiveness compared to tier 1 services like Vercel",
+          "signal_strength": 50
+        }
+      ],
+      "desired_outcomes": [
+        {
+          "name": "Efficient web development through powerful debugging, performance testing, and design tools",
+          "importance": 90
+        },
+        {
+          "name": "Ability to inspect elements, debug, and experiment with web pages",
+          "importance": 90
+        },
+        {
+          "name": "Seamless debugging of Edge Functions, ideally with familiar tools",
+          "importance": 75
+        },
+        {
+          "name": "Control over access to specific edge environments",
+          "importance": 50
+        }
+      ],
+      "behavior_patterns": [
+        {
+          "name": "Utilizing browser-native developer tools for web application development and testing",
+          "confidence": 90
+        },
+        {
+          "name": "Seeking alternatives to existing developer tools for better functionality or experience",
+          "confidence": 75
+        },
+        {
+          "name": "Deploying JavaScript files to repositories for Edge functions with their platform of choice",
+          "confidence": 50
+        },
+        {
+          "name": "Comparing pricing and features of different Edge Function platforms",
+          "confidence": 50
+        }
+      ],
+      "opportunity_areas": [
+        {
+          "name": "Enhanced debugging tools specifically for Edge Functions",
+          "score": 75
+        },
+        {
+          "name": "Integration with popular development environments like VSCode for Edge Function debugging",
+          "score": 75
+        },
+        {
+          "name": "Cost-effective alternatives to existing Edge Function platforms",
+          "score": 50
+        },
+        {
+          "name": "Tools for managing and orchestrating edge environments",
+          "score": 50
+        }
+      ]
+    },
+    "market": {
+      "market_size": {
+        "estimate": "$9.75 billion by 2029",
+        "confidence": 75
+      },
+      "growth_rate": {
+        "estimate": "24% CAGR (Germany MEC), 27.6% (Edge AI Software), 7%-17% (Developer Tools)",
+        "confidence": 90
+      },
+      "market_maturity": {
+        "stage": "Growth",
+        "confidence": 90
+      },
+      "future_outlook": {
+        "direction": "Strong Growth",
+        "confidence": 90
+      },
+      "key_trends": [
+        {
+          "name": "Accelerating growth in Edge Functions Platform Market",
+          "strength": 75
+        },
+        {
+          "name": "Breakthroughs in edge orchestration tools development",
+          "strength": 75
+        },
+        {
+          "name": "Blending of cloud and edge environments",
+          "strength": 75
+        },
+        {
+          "name": "Increasing adoption of open-source alternatives for developer tools",
+          "strength": 75
+        },
+        {
+          "name": "Focus on cost-effectiveness for Edge Functions",
+          "strength": 50
+        }
+      ],
+      "emerging_trends": [
+        {
+          "name": "Integration of vector embeddings for AI applications in platforms like Supabase",
+          "potential": 50
+        },
+        {
+          "name": "Developer-friendly wrappers for tier 1 services for Edge Functions",
+          "potential": 50
+        }
+      ],
+      "market_drivers": [
+        {
+          "name": "Crucial need for identifying and troubleshooting issues in web applications",
+          "impact": 90
+        },
+        {
+          "name": "Demand for efficient web development tools",
+          "impact": 90
+        },
+        {
+          "name": "Growth of the broader developer tools market",
+          "impact": 75
+        },
+        {
+          "name": "Expansion of Edge AI Software market",
+          "impact": 50
+        },
+        {
+          "name": "Innovation driven by key players in Mobile Edge Computing",
+          "impact": 50
+        }
+      ]
+    },
+    "competitive": {
+      "competitors": [
+        {
+          "name": "Microsoft Edge Developer Tools",
+          "strength": 90
+        },
+        {
+          "name": "Vercel Edge Functions",
+          "strength": 75
+        },
+        {
+          "name": "Supabase Edge Functions",
+          "strength": 75
+        },
+        {
+          "name": "Cloudflare Workers",
+          "strength": 50
+        },
+        {
+          "name": "Portainer (for Kubernetes management in edge)",
+          "strength": 50
+        }
+      ],
+      "competitive_threats": [
+        {
+          "name": "Established browser-native developer tools (e.g., Microsoft Edge DevTools)",
+          "severity": 90
+        },
+        {
+          "name": "Well-known platforms offering Edge Functions (Vercel, Supabase)",
+          "severity": 75
+        },
+        {
+          "name": "Cost-effectiveness of existing solutions like Cloudflare Workers",
+          "severity": 50
+        }
+      ],
+      "positioning_gaps": [
+        {
+          "name": "Seamless debugging experience for Edge Functions across different platforms/IDEs",
+          "opportunity": 75
+        },
+        {
+          "name": "Developer tools specifically for edge orchestration and blending cloud/edge environments",
+          "opportunity": 75
+        },
+        {
+          "name": "More cost-effective developer-friendly wrappers for Edge Functions",
+          "opportunity": 50
+        }
+      ],
+      "white_space_opportunities": [
+        {
+          "name": "Advanced debugging and performance analysis tools tailored for distributed edge functions",
+          "score": 75
+        },
+        {
+          "name": "Unified developer experience for managing and deploying across hybrid cloud-edge environments",
+          "score": 75
+        }
+      ],
+      "differentiation_opportunities": [
+        {
+          "name": "Superior debugging capabilities for Edge Functions, especially with VSCode integration",
+          "score": 75
+        },
+        {
+          "name": "Cost-effective solutions compared to Vercel, potentially leveraging open-source",
+          "score": 50
+        },
+        {
+          "name": "Tools for monitoring and managing edge function performance and resource usage",
+          "score": 50
+        }
+      ]
+    }
+  },
+  "synthesis": {
+    "market_pulse": 76,
+    "opportunity_score": 100,
+    "build_recommendation": {
+      "decision": "Yes",
+      "reason": "Market is growing rapidly with clear pain points and white space."
+    },
+    "confidence": 90,
+    "confidence_explanation": "Strong evidence from multiple sources on market growth, customer pain points, and existing competitors.",
+    "top_reason_to_build": "High market growth and clear developer pain points in debugging edge functions.",
+    "biggest_risk": "Competition from established browser tools and platforms like Vercel/Supabase.",
+    "best_customer_segment": "Developers building with Supabase and other serverless edge platforms.",
+    "best_moat": "Proprietary debugging technology for distributed edge functions.",
+    "executive_summary": "The market for developer tools for edge functions is experiencing strong growth, driven by the increasing adoption of edge computing. Developers face significant pain points in debugging and managing these functions, presenting a clear opportunity for innovative solutions. While existing players offer foundational tools, there are white spaces for advanced debugging and cost-effective alternatives.",
+    "why_now": [
+      {
+        "title": "Accelerating Market Growth",
+        "evidence": "Edge Functions Platform Market Poised to Hit $9.75 Billion by 2029",
+        "reason": "Market is expanding rapidly, indicating high demand."
+      },
+      {
+        "title": "High Developer Interest",
+        "evidence": "Google Trends growth: 76.67%, discussion volume: 30",
+        "reason": "Developers are actively seeking and discussing these tools."
+      },
+      {
+        "title": "Emerging Pain Points",
+        "evidence": "Issues with Microsoft Edge's Developer Tools, Debug your Edge Functions with Chrome Dev tools",
+        "reason": "Existing tools are problematic for edge function debugging."
+      }
+    ],
+    "key_opportunities": [
+      {
+        "title": "Enhanced Edge Function Debugging",
+        "evidence": "Debug your Edge Functions with Chrome Dev tools, Issues with Microsoft Edge's Developer Tools",
+        "reason": "Address critical pain points in troubleshooting edge functions."
+      },
+      {
+        "title": "Cost-Effective Alternatives",
+        "evidence": "Edge functions are cost effective, the problem is that they are comparing from V...",
+        "reason": "Offer more competitive pricing than current premium options."
+      },
+      {
+        "title": "Unified Edge Orchestration Tools",
+        "evidence": "breakthroughs in how edge orchestration tools are developed, the blending of cloud and edge environments",
+        "reason": "Provide comprehensive solutions for complex edge deployments."
+      }
+    ],
+    "key_risks": [
+      {
+        "title": "Strong Incumbent Competition",
+        "evidence": "Microsoft Edge DevTools documentation, Vercel Edge Functions Reviews",
+        "reason": "Established players have strong market presence and existing user bases."
+      },
+      {
+        "title": "Integration Complexity",
+        "evidence": "blending of cloud and edge environments",
+        "reason": "Developing tools for diverse edge environments is challenging."
+      },
+      {
+        "title": "Pricing Pressure",
+        "evidence": "Vercel is 25x more expensive than eg. Cloudflare Workers",
+        "reason": "Users are sensitive to cost, requiring competitive pricing."
+      }
+    ],
+    "recommended_customer": "Developers actively building and deploying serverless edge functions, especially those frustrated with current debugging limitations.",
+    "recommended_positioning": "A specialized, highly efficient, and cost-effective debugging and development platform for distributed edge functions.",
+    "potential_moats": [
+      {
+        "title": "Proprietary Debugging Engine",
+        "evidence": "Debug your Edge Functions with Chrome Dev tools",
+        "reason": "Develop a unique engine optimized for edge function complexities."
+      },
+      {
+        "title": "Deep Integration with Popular Frameworks",
+        "evidence": "Supabase provides a full Postgres database with instant APIs, built-in authentication, storage, and edge functions",
+        "reason": "Become the go-to tool for specific, widely used edge platforms."
+      },
+      {
+        "title": "Open-Source Community & Ecosystem",
+        "evidence": "Supabase is open-source from day one",
+        "reason": "Foster a strong community around an open-source core."
+      }
+    ],
+    "execution_ideas": [
+      {
+        "title": "Focus on VSCode Integration",
+        "reason": "Address developer pain points with existing VSCode debugging for Edge Functions."
+      },
+      {
+        "title": "Offer a Free Tier with Core Debugging",
+        "reason": "Attract users and demonstrate value, similar to Vercel and Supabase."
+      },
+      {
+        "title": "Target Supabase and Cloudflare Workers Users",
+        "reason": "Address specific pain points and cost comparisons mentioned in evidence."
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "rank": 1,
+      "source": "ddgs",
+      "title": "Microsoft Edge Alternatives, Competitors & Similar Software | GetApp 2026",
+      "url": "https://www.getapp.com/all-software/a/microsoft-edge/alternatives/",
+      "snippet": "Microsoft Edge · 0.1 · 4.6 · Value for money · 4.5 · 5.83 · flat rate/per month · Free trialFree version · Starting price · No pricing info · 0.3 · 4.6 · Functionality · 4.3 · Activity Dashboard · 5/5 · Collaboration Tools · 4.9/5 · Chat/Messaging · 4.7/5 · Top Features · App Management · 4.6/5 · Ex",
+      "query": "Developer tools for edge functions competitors alternatives",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 2,
+      "source": "ddgs",
+      "title": "Issues with Microsoft Edge's Developer Tools - GeeksforGeeks",
+      "url": "https://www.geeksforgeeks.org/websites-apps/issues-tool-in-microsoft-edge-browser/",
+      "snippet": "When developing and testing web applications, identifying and troubleshooting issues is crucial for ensuring performance and functionality. Microsoft Edge's Issues Tool is a valuable resource for web developers, offering an easy way to detect issues with web performance, accessibility, and features ",
+      "query": "Developer tools for edge functions reviews complaints problems",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 3,
+      "source": "ddgs",
+      "title": "Edge Functions Platform Market Poised to Hit $9.75 Billion by 2029 with Accelerating Growth Trends",
+      "url": "https://www.openpr.com/news/4262951/edge-functions-platform-market-poised-to-hit-9-75-billion",
+      "snippet": "November 11, 2025 - Furthermore, significant developments shaping this period are anticipated to encompass breakthroughs in how edge orchestration tools are developed, the blending of cloud and edge environments, progress in creating more energy-conscious edge hardware, enhancements to flexible work",
+      "query": "Developer tools for edge functions market size growth forecast",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 4,
+      "source": "ddgs",
+      "title": "12 Fastest Growing Developer Tools Companies and Startups | Landbase",
+      "url": "https://www.landbase.com/blog/fastest-growing-developer-tools",
+      "snippet": "April 10, 2026 - Supabase provides a full Postgres database with instant APIs, built-in authentication, storage, and edge functions. The platform is open-source from day one and includes vector embeddings for AI applications, positioning itself as an open alternative to Firebase. Supabase raised $49",
+      "query": "Developer tools for edge functions funding startup launches",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 5,
+      "source": "ddgs",
+      "title": "Vercel Edge Functions Reviews, Pricing & Alternatives (2026)",
+      "url": "https://toolradar.com/tools/vercel-edge-functions",
+      "snippet": "May 18, 2026 - Vercel Edge Functions: Run code at the edge with Vercel. Free plan available. Compare features, pricing, pros & cons. Find the best alternatives on",
+      "query": "Developer tools for edge functions pricing",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 6,
+      "source": "ddgs",
+      "title": "The top 25 most used Edge add-on in \"Developer tools\" category",
+      "url": "https://chrome-stats.com/c/Developer-Tools/edge",
+      "snippet": "To see how any Edge add-on's ranking in this category has changed over time, click on it and visit its trends page. Tracking category rankings helps you monitor your competition, identify opportunities for growth, and measure the effectiveness of your optimization efforts. View results for Developer",
+      "query": "Developer tools for edge functions trends",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 7,
+      "source": "ddgs",
+      "title": "r/Supabase on Reddit: Debug your Edge Functions with Chrome Dev tools",
+      "url": "https://www.reddit.com/r/Supabase/comments/1jclngv/debug_your_edge_functions_with_chrome_dev_tools/",
+      "snippet": "March 16, 2025 - This subreddit is for developers and users building with Supabase Please keep discussions respectful, helpful, and on-topic. ... I debug on VSCode it works but it’s very problematic. Supabase team must make VSCode debugging experience perfect for edge functions.",
+      "query": "site:reddit.com Developer tools for edge functions",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 8,
+      "source": "ddgs",
+      "title": "Germany Mobile Edge Computing Market Outlook from 2026 to 2033...",
+      "url": "https://www.linkedin.com/pulse/germany-mobile-edge-computing-market-outlook-from-2026-2033-gx6ee",
+      "snippet": "Market analysts project a Compound Annual Growth Rate (CAGR) of approximately 24% for the Germany MEC sector through 2026. Key players include Deutsche Telekom, Ericsson, and Nokia, which are significant in driving innovations and ecosystem partnerships.",
+      "query": "Developer tools for edge functions industry report CAGR",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 9,
+      "source": "youtube",
+      "title": "How to Enable Developer Tools in Microsoft Edge Browser | Quick & Easy Guide",
+      "url": "https://youtube.com/watch?v=ejZr5hHUB20",
+      "snippet": "In this tutorial, learn how to enable Developer Tools in Microsoft Edge browser on your Windows PC. These tools are essential for web developers and enthusiasts who want to inspect elements, debug, and experiment with web pages. Follow this step-by-step guide to activate Developer Tools easily. Whet",
+      "query": "",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 10,
+      "source": "google_trends",
+      "title": "Developer tools for edge functions",
+      "url": "",
+      "snippet": "Interest: 0, 30d Avg: 3.3, 90d Avg: 1.9, Growth: 76.67%",
+      "query": "",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 11,
+      "source": "ddgs",
+      "title": "5 Best Edge Computing Platforms in 2026: Full Breakdown",
+      "url": "https://www.portainer.io/blog/edge-computing-platforms",
+      "snippet": "This flexibility also makes Portainer a top option for teams evaluating Kubernetes management tools or alternatives to platforms like Rancher or OpenShift. Portainer gives teams control over who can access specific edge environments and what ...",
+      "query": "Developer tools for edge functions competitors alternatives",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 12,
+      "source": "ddgs",
+      "title": "How to Use Developer Tools on Microsoft Edge - GeeksforGeeks",
+      "url": "https://www.geeksforgeeks.org/techtips/developer-resources-tool-in-microsoft-edge-browser/",
+      "snippet": "Learn how to use Developer Tools in Microsoft Edge for 2025. Access the powerful suite of debugging, performance testing, and design tools directly from the browser for efficient web development.",
+      "query": "Developer tools for edge functions reviews complaints problems",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 13,
+      "source": "ddgs",
+      "title": "Edge AI Software Market Size Growth And Forecast To 2033",
+      "url": "https://www.thebusinessresearchcompany.com/press-Releases/edge-ai-software-market-240624",
+      "snippet": "Global edge ai software market size is expected to reach $4.68 Bn by 2028 at a rate of 27.6%, segmented as by component, solution, software tools, platform, services, training and consulting services, system integration testing, support maintenance",
+      "query": "Developer tools for edge functions market size growth forecast",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 14,
+      "source": "ddgs",
+      "title": "Tools | Microsoft Edge Developer",
+      "url": "https://developer.microsoft.com/en-us/microsoft-edge/tools?form=discover",
+      "snippet": "Check and debug your site with these cross-platform tools. We've completely revamped our site-scanning tool to bring you webhint, a configurable hinting tool for the web. Automate testing of your website in Microsoft Edge and Microsoft Edge Legacy.",
+      "query": "Developer tools for edge functions funding startup launches",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 15,
+      "source": "ddgs",
+      "title": "Edge functions are cost effective, the problem is that they are comparing from V... | Hacker News",
+      "url": "https://news.ycombinator.com/item?id=38063751",
+      "snippet": "October 30, 2023 - Vercel is basically a dev friendly wrapper for tier 1 services: https://news.ycombinator.com/item?id=35774730 · Eg. Vercel is 25x more expensive than eg. Cloudflare Workers. Raw guess would be that their 150$ bill would have become 6$",
+      "query": "Developer tools for edge functions pricing",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 16,
+      "source": "ddgs",
+      "title": "Understanding Edge Functions: Definition & Benefits | Sanity",
+      "url": "https://www.sanity.io/glossary/edge-function",
+      "snippet": "April 15, 2026 - Developers can utilize Edge functions by simply adding a JavaScript file to their repository and deploying it with their platform of choice. These files contain the necessary code for tasks such as modifying data, localizing content, or even deploying entire applications at the edge",
+      "query": "Developer tools for edge functions trends",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 17,
+      "source": "ddgs",
+      "title": "r/webdev on Reddit: Alternatives for Edge Developer Tools?",
+      "url": "https://www.reddit.com/r/webdev/comments/9orc8y/alternatives_for_edge_developer_tools/",
+      "snippet": "",
+      "query": "site:reddit.com Developer tools for edge functions",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 18,
+      "source": "ddgs",
+      "title": "React Developer Tools – React",
+      "url": "https://react.dev/learn/react-developer-tools",
+      "snippet": "Use React Developer Tools to inspect React components, edit props and state, and identify performance problems. You will learn.Install for Edge. Now, if you visit a website built with React, you will see the Components and Profiler panels. React Developer Tools extension.",
+      "query": "Developer tools for edge functions industry report CAGR",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 19,
+      "source": "youtube",
+      "title": "Enable Disable ‘Open the Developer Tools ’ in Microsoft Edge [2025 Full Guide]",
+      "url": "https://youtube.com/watch?v=b304FIDdFh4",
+      "snippet": "Enable Disable ‘Open the Developer Tools ’ in Microsoft Edge [2025 Full Guide] In today's video we will show you disable developer tool in microsoft edge, disable developers tool in ms edge, how to enable javascript in microsoft edge, disable vertical tabs in microsoft edge using registry, enable ja",
+      "query": "",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 20,
+      "source": "ddgs",
+      "title": "12 Open Source Alternatives to Popular Software (For Developers) - DEV Community",
+      "url": "https://dev.to/therealmrmumba/12-open-source-alternatives-to-popular-software-for-developers-1heg",
+      "snippet": "July 25, 2025 - Supabase is a full Firebase alternative built on PostgreSQL. It offers authentication, real-time data, edge functions, and object storage—all with an open-source license.",
+      "query": "Developer tools for edge functions competitors alternatives",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 21,
+      "source": "ddgs",
+      "title": "Microsoft Edge DevTools documentation - Microsoft Edge Developer ...",
+      "url": "https://learn.microsoft.com/en-us/microsoft-edge/devtools/landing/",
+      "snippet": "Development using DevTools in Microsoft Edge. Debugging web projects Quickstart Analyze pages using the Inspect tool Tutorial Get started viewing and changing CSS Get started viewing and changing the DOM How-To Guide Find and fix problems using the Issues tool Navigate webpage layers, z-index, and D",
+      "query": "Developer tools for edge functions reviews complaints problems",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 22,
+      "source": "ddgs",
+      "title": "Developer Tools Market: Solutions, Trends, and Growth Potential",
+      "url": "https://www.eleken.co/blog-posts/developer-tools-market-overview",
+      "snippet": "Software development tools market size is increasing fast. The projected annual growth rate (CAGR), according to different estimations, is between 7% to 14% or even 17%, with expected market volume of US$234.70bn by 2028.",
+      "query": "Developer tools for edge functions market size growth forecast",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 23,
+      "source": "ddgs",
+      "title": "List of Developer Tools Investors & VC Firms for Startups",
+      "url": "https://www.openvc.app/investor-lists/developer-tools-investors",
+      "snippet": "Find active investors and VC firms funding developer tools startups. Raise capital for seed, pre-seed, and early-stage investments in dev tools.",
+      "query": "Developer tools for edge functions funding startup launches",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 24,
+      "source": "ddgs",
+      "title": "Supabase Edge Functions Reviews, Pricing & Alternatives (2026)",
+      "url": "https://toolradar.com/tools/supabase-edge-functions",
+      "snippet": "March 18, 2026 - Supabase Edge Functions: Deploy JavaScript globally in seconds with serverless functions distributed at the edge. Free plan available. Compare features,",
+      "query": "Developer tools for edge functions pricing",
+      "used_in_prompt": true
+    },
+    {
+      "rank": 25,
+      "source": "ddgs",
+      "title": "The Complete Guide to Developer Productivity Tools in 2026 - DEV Community",
+      "url": "https://dev.to/_d7eb1c1703182e3ce1782/the-complete-guide-to-developer-productivity-tools-in-2026-165b",
+      "snippet": "March 20, 2026 - Vercel — The default for Next.js and frontend projects. Zero-config deployments, preview URLs for every PR, and edge functions for API routes.",
+      "query": "Developer tools for edge functions trends",
+      "used_in_prompt": false
+    },
+    {
+      "rank": 26,
+      "source": "ddgs",
+      "title": "r/vscode on Reddit: The Microsoft Edge Dev Tools extension for VS Code is so awesome that I’m ditching Chrome for web development",
+      "url": "https://www.reddit.com/r/vscode/comments/x0n4h2/the_microsoft_edge_dev_tools_extension_for_vs/",
+      "snippet": "August 29, 2022 - This extension is for front end web development, so it's most useful with JavaScript & TypeScript debugging with whatever framework you're using, CSS styling, general in-browser app testing during development, etc. ... That's what I figured. Thanks! ... Oh yeah, imo Edge is absolut",
+      "query": "site:reddit.com Developer tools for edge functions",
+      "used_in_prompt": false
+    },
+    {
+      "rank": 27,
+      "source": "ddgs",
+      "title": "React Developer Tools - Microsoft Edge Add-ons",
+      "url": "https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil",
+      "snippet": "Make Microsoft Edge your own with extensions that help you personalize the browser and be more productive.",
+      "query": "Developer tools for edge functions industry report CAGR",
+      "used_in_prompt": false
+    },
+    {
+      "rank": 28,
+      "source": "youtube",
+      "title": "14 DevTools Tricks That`ll Make You a Better Developer",
+      "url": "https://youtube.com/watch?v=pw14NzfYPa8",
+      "snippet": "** Check out my new video: https://youtu.be/lJNjDoJi6hQ?si=EOlGTECyFbmRR4dK ** In this video, I’ll show you 14 powerful #DevTools features you probably didn’t know existed. From hidden #performance tools to smart #debugging tricks — these workflows will save you time and help you ship faster. #webde",
+      "query": "",
+      "used_in_prompt": false
+    },
+    {
+      "rank": 29,
+      "source": "ddgs",
+      "title": "5 best Vercel alternatives in 2026: Cost, edge performance, & lock-in compared | Catalyst Blog",
+      "url": "https://catalyst.zoho.com/blog/5-best-vercel-alternatives-in-2026-cost-edge-performance-and-lock-in-compared.html",
+      "snippet": "June 5, 2026 - For teams exploring unified frontend and backend management without piecing together multiple services, Catalyst Slate presents an emerging alternative, combining developer speed with ecosystem-level integration and offering early-stage cost ...",
+      "query": "Developer tools for edge functions competitors alternatives",
+      "used_in_prompt": false
+    },
+    {
+      "rank": 30,
+      "source": "ddgs",
+      "title": "Overview of DevTools - Microsoft Edge Developer documentation",
+      "url": "https://learn.microsoft.com/en-us/microsoft-edge/devtools/overview",
+      "snippet": "To connect with the Microsoft Edge DevTools team to report a problem or issue (or to suggest an idea), describe what happened, and include a screenshot. See Contact the Microsoft Edge DevTools team.",
+      "query": "Developer tools for edge functions reviews complaints problems",
+      "used_in_prompt": false
+    }
+  ]
+}

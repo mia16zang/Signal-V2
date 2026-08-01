@@ -1,0 +1,300 @@
+
+=== Developer tools for edge functions — run 1/5 ===
+
+==========================================================
+ANALYZE: Developer tools for edge functions
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.5s
+  google_trends: 1 items in 1.2s
+  ddgs error [Developer tools for edge functions competitors alternatives]: DDGSException: No results found.
+  ddgs: 59 items in 5.7s
+Collection: 5.67s (70 raw -> 30 ranked) {'ddgs': 26, 'youtube': 3, 'google_trends': 1}
+  prompt: 13034 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 24.6s (attempt 1)
+AI Analysis: 26.09s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=5.67s llm=26.09s parse=0.0s payload=0.009s total=31.77s
+Total: 31.77s
+
+
+=== Developer tools for edge functions — run 2/5 ===
+
+==========================================================
+ANALYZE: Developer tools for edge functions
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.5s
+  google_trends: 1 items in 1.2s
+  ddgs: 57 items in 5.2s
+Collection: 5.21s (68 raw -> 30 ranked) {'ddgs': 26, 'youtube': 3, 'google_trends': 1}
+  prompt: 12628 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 26.6s (attempt 1)
+AI Analysis: 26.62s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=5.21s llm=26.62s parse=0.0s payload=0.032s total=31.86s
+Total: 31.87s
+
+
+=== Developer tools for edge functions — run 3/5 ===
+
+==========================================================
+ANALYZE: Developer tools for edge functions
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.5s
+  google_trends: 1 items in 1.1s
+  ddgs: 49 items in 4.9s
+Collection: 4.92s (60 raw -> 30 ranked) {'ddgs': 26, 'youtube': 3, 'google_trends': 1}
+  prompt: 12738 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 22.0s (attempt 1)
+AI Analysis: 22.04s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=4.92s llm=22.04s parse=0.0s payload=0.008s total=26.97s
+Total: 26.97s
+
+
+=== Developer tools for edge functions — run 4/5 ===
+
+==========================================================
+ANALYZE: Developer tools for edge functions
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.6s
+  google_trends: 1 items in 1.1s
+  ddgs: 52 items in 6.1s
+Collection: 6.08s (63 raw -> 30 ranked) {'ddgs': 26, 'youtube': 3, 'google_trends': 1}
+  prompt: 12447 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 23.7s (attempt 1)
+AI Analysis: 23.7s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=6.08s llm=23.7s parse=0.0s payload=0.005s total=29.79s
+Total: 29.79s
+
+
+=== Developer tools for edge functions — run 5/5 ===
+
+==========================================================
+ANALYZE: Developer tools for edge functions
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.5s
+  google_trends: 1 items in 1.1s
+  ddgs: 54 items in 5.3s
+Collection: 5.34s (65 raw -> 30 ranked) {'ddgs': 26, 'youtube': 3, 'google_trends': 1}
+  prompt: 12659 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 24.4s (attempt 1)
+AI Analysis: 24.43s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=5.34s llm=24.43s parse=0.0s payload=0.034s total=29.8s
+Total: 29.8s
+
+
+=== AI note-taking for clinicians — run 1/5 ===
+
+==========================================================
+ANALYZE: AI note-taking for clinicians
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.5s
+  google_trends: 0 items in 1.2s
+  ddgs: 50 items in 6.0s
+Collection: 6.02s (60 raw -> 30 ranked) {'ddgs': 27, 'youtube': 3}
+  prompt: 12429 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 25.1s (attempt 1)
+AI Analysis: 25.11s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=6.02s llm=25.11s parse=0.0s payload=0.009s total=31.14s
+Total: 31.14s
+
+
+=== AI note-taking for clinicians — run 2/5 ===
+
+==========================================================
+ANALYZE: AI note-taking for clinicians
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.6s
+  google_trends: 0 items in 1.0s
+  ddgs: 1/8 queries timed out after 8s, kept 46 items
+  ddgs: 46 items in 8.0s
+Collection: 8.01s (56 raw -> 30 ranked) {'ddgs': 26, 'youtube': 4}
+  prompt: 12853 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 27.8s (attempt 1)
+AI Analysis: 27.82s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=8.01s llm=27.82s parse=0.0s payload=0.007s total=35.84s
+Total: 35.84s
+
+
+=== AI note-taking for clinicians — run 3/5 ===
+
+==========================================================
+ANALYZE: AI note-taking for clinicians
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.9s
+  google_trends: 0 items in 3.4s
+  ddgs: 4/8 queries timed out after 8s, kept 29 items
+  ddgs: 29 items in 8.1s
+Collection: 8.11s (39 raw -> 30 ranked) {'ddgs': 24, 'youtube': 6}
+  prompt: 12498 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 27.8s (attempt 1)
+AI Analysis: 27.78s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=8.11s llm=27.78s parse=0.0s payload=0.007s total=35.9s
+Total: 35.9s
+
+
+=== AI note-taking for clinicians — run 4/5 ===
+
+==========================================================
+ANALYZE: AI note-taking for clinicians
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.5s
+  google_trends: 0 items in 1.1s
+  ddgs: 60 items in 5.9s
+Collection: 5.94s (70 raw -> 30 ranked) {'ddgs': 27, 'youtube': 3}
+  prompt: 12735 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 25.1s (attempt 1)
+  label over 10 words, truncated (opportunity): "AI as a 'second pair of eyes' for proactive problem detection"
+AI Analysis: 25.06s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=5.94s llm=25.06s parse=0.0s payload=0.009s total=31.01s
+Total: 31.01s
+
+
+=== AI note-taking for clinicians — run 5/5 ===
+
+==========================================================
+ANALYZE: AI note-taking for clinicians
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.5s
+  google_trends: 0 items in 1.0s
+  ddgs: 48 items in 5.6s
+Collection: 5.56s (58 raw -> 30 ranked) {'ddgs': 27, 'youtube': 3}
+  prompt: 12822 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 28.3s (attempt 1)
+AI Analysis: 28.32s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=5.56s llm=28.32s parse=0.0s payload=0.006s total=33.89s
+Total: 33.88s
+
+
+=== Carbon accounting for SMBs — run 1/5 ===
+
+==========================================================
+ANALYZE: Carbon accounting for SMBs
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.4s
+  google_trends: 0 items in 1.0s
+  ddgs error [Carbon accounting for SMBs trends]: DDGSException: No results found.
+  ddgs: 43 items in 6.2s
+Collection: 6.16s (53 raw -> 30 ranked) {'ddgs': 26, 'youtube': 4}
+  prompt: 12609 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 24.7s (attempt 1)
+AI Analysis: 24.66s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=6.16s llm=24.66s parse=0.0s payload=0.034s total=30.85s
+Total: 30.86s
+
+
+=== Carbon accounting for SMBs — run 2/5 ===
+
+==========================================================
+ANALYZE: Carbon accounting for SMBs
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.5s
+  google_trends: 0 items in 1.1s
+  ddgs: 37 items in 6.4s
+Collection: 6.42s (47 raw -> 30 ranked) {'ddgs': 26, 'youtube': 4}
+  prompt: 12051 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 22.7s (attempt 1)
+AI Analysis: 22.69s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=6.42s llm=22.69s parse=0.0s payload=0.004s total=29.11s
+Total: 29.12s
+
+
+=== Carbon accounting for SMBs — run 3/5 ===
+
+==========================================================
+ANALYZE: Carbon accounting for SMBs
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.5s
+  google_trends: 0 items in 1.1s
+  ddgs: 45 items in 5.0s
+Collection: 4.99s (55 raw -> 30 ranked) {'ddgs': 27, 'youtube': 3}
+  prompt: 12540 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash ok in 22.8s (attempt 1)
+AI Analysis: 22.78s (1 call, ok)
+JSON Parsing: 0.0s
+TIMING collection=4.99s llm=22.78s parse=0.0s payload=0.006s total=27.78s
+Total: 27.78s
+
+
+=== Carbon accounting for SMBs — run 4/5 ===
+
+==========================================================
+ANALYZE: Carbon accounting for SMBs
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.5s
+  google_trends: 0 items in 1.0s
+  ddgs: 46 items in 5.0s
+Collection: 4.97s (56 raw -> 30 ranked) {'ddgs': 27, 'youtube': 3}
+  prompt: 12304 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash failed after 0.4s (attempt 1/3): ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.
+  gemini gemini-2.5-flash failed after 0.2s (attempt 2/3): ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.
+  gemini gemini-2.5-flash failed after 0.1s (attempt 3/3): ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.
+  LLM CALL FAILED: RuntimeError: gemini call failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https:/
+  JSON UNRECOVERABLE
+AI Analysis: 5.21s (1 call, DEGRADED)
+JSON Parsing: 0.0s
+TIMING collection=4.97s llm=5.21s parse=0.0s payload=0.003s total=10.18s
+Total: 10.19s
+
+
+=== Carbon accounting for SMBs — run 5/5 ===
+
+==========================================================
+ANALYZE: Carbon accounting for SMBs
+PORTFOLIO_MODE=True provider=gemini model=gemini-2.5-flash trends=True producthunt=False youtube=True max_evidence=30
+==========================================================
+  youtube: 10 items in 0.4s
+  google_trends: 0 items in 1.3s
+  ddgs: 43 items in 5.7s
+Collection: 5.71s (53 raw -> 30 ranked) {'ddgs': 27, 'youtube': 3}
+  prompt: 12689 chars, provider=gemini, model=gemini-2.5-flash
+  gemini gemini-2.5-flash failed after 0.2s (attempt 1/3): ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.
+  gemini gemini-2.5-flash failed after 0.2s (attempt 2/3): ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.
+  gemini gemini-2.5-flash failed after 0.2s (attempt 3/3): ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.
+  LLM CALL FAILED: RuntimeError: gemini call failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https:/
+  JSON UNRECOVERABLE
+AI Analysis: 5.02s (1 call, DEGRADED)
+JSON Parsing: 0.0s
+TIMING collection=5.71s llm=5.02s parse=0.0s payload=0.002s total=10.73s
+Total: 10.74s
+
+
+============================================================
+# Variance report
+
+5 runs per query, cache disabled, run sequentially.
+
+| query | verdict flips | pulse spread | mean list recurrence | ratios >2x | unstable fields | median |
+|---|---|---|---|---|---|---|
+| Developer tools for edge functions | no | 0 | 0% | 13 | 28 | 29.8s |
+| AI note-taking for clinicians | **YES** | 92 | 0% | 24 | 40 | 33.9s |
+| Carbon accounting for SMBs | **YES** | 75 | 0% | 14 | 35 | 27.8s |
+
+Median of per-query medians: **29.8s**
+
+> **The verdict flips between identical runs.** This is a product-level finding, not a rendering bug.
+
+wrote fixtures/variance/report.md

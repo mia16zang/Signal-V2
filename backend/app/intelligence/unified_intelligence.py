@@ -20,38 +20,58 @@ median for synthesis.
 """
 
 import json
+import logging
 
 from app import config
-from app.services.json_utils import normalise_bundle, parse_json
+from app.services.json_utils import normalise_bundle, parse_json_verbose
 
-SCHEMA = """{
- "customer": {
-  "customer_segments": [{"name": "", "score": 0}],
-  "pain_points": [{"name": "", "signal_strength": 0}],
-  "desired_outcomes": [{"name": "", "importance": 0}],
-  "behavior_patterns": [{"name": "", "confidence": 0}],
-  "opportunity_areas": [{"name": "", "score": 0}]
- },
- "market": {
-  "market_size": {"estimate": "", "confidence": 0},
-  "growth_rate": {"estimate": "", "confidence": 0},
-  "market_maturity": {"stage": "", "confidence": 0},
-  "future_outlook": {"direction": "", "confidence": 0},
-  "key_trends": [{"name": "", "strength": 0}],
-  "emerging_trends": [{"name": "", "potential": 0}],
-  "market_drivers": [{"name": "", "impact": 0}]
- },
- "competitive": {
-  "competitors": [{"name": "", "strength": 0}],
-  "competitive_threats": [{"name": "", "severity": 0}],
-  "positioning_gaps": [{"name": "", "opportunity": 0}],
-  "white_space_opportunities": [{"name": "", "score": 0}],
-  "differentiation_opportunities": [{"name": "", "score": 0}]
- },
- "synthesis": {
+log = logging.getLogger("signal.intelligence")
+
+# Every ranked item now carries three things it did not before: a `detail` for
+# the drawer, `evidence_ids` pointing at the sources behind it, and a score
+# restricted to three values. `name` is capped at 10 words because it is a list
+# row -- the long strings the model used to return were being cut off by CSS,
+# which threw away the only part of the row that carried meaning.
+def _row(score_key: str) -> str:
+    return (
+        f'{{"name": "", "{score_key}": 90, "detail": "", "evidence_ids": ["e1"]}}'
+    )
+
+
+_INSIGHT = ('{"title": "", "score": 90, "evidence": "", "reason": "", '
+            '"evidence_ids": ["e1"]}')
+
+SCHEMA = f"""{{
+ "customer": {{
+  "customer_segments": [{_row("score")}],
+  "pain_points": [{_row("signal_strength")}],
+  "desired_outcomes": [{_row("importance")}],
+  "behavior_patterns": [{_row("confidence")}],
+  "opportunity_areas": [{_row("score")}]
+ }},
+ "market_sizing": {{
+  "claims": [{{"evidence_id": "e1", "figure_text": "", "year": 2030, "scope": ""}}]
+ }},
+ "market": {{
+  "market_size": {{"estimate": "", "confidence": 0}},
+  "growth_rate": {{"estimate": "", "confidence": 0}},
+  "market_maturity": {{"stage": "", "confidence": 0}},
+  "future_outlook": {{"direction": "", "confidence": 0}},
+  "key_trends": [{_row("strength")}],
+  "emerging_trends": [{_row("potential")}],
+  "market_drivers": [{_row("impact")}]
+ }},
+ "competitive": {{
+  "competitors": [{_row("strength")}],
+  "competitive_threats": [{_row("severity")}],
+  "positioning_gaps": [{_row("opportunity")}],
+  "white_space_opportunities": [{_row("score")}],
+  "differentiation_opportunities": [{_row("score")}]
+ }},
+ "synthesis": {{
   "market_pulse": 0,
   "opportunity_score": 0,
-  "build_recommendation": {"decision": "", "reason": ""},
+  "build_recommendation": {{"decision": "", "reason": ""}},
   "confidence": 0,
   "confidence_explanation": "",
   "top_reason_to_build": "",
@@ -59,15 +79,15 @@ SCHEMA = """{
   "best_customer_segment": "",
   "best_moat": "",
   "executive_summary": "",
-  "why_now": [{"title": "", "evidence": "", "reason": ""}],
-  "key_opportunities": [{"title": "", "evidence": "", "reason": ""}],
-  "key_risks": [{"title": "", "evidence": "", "reason": ""}],
+  "why_now": [{_INSIGHT}],
+  "key_opportunities": [{_INSIGHT}],
+  "key_risks": [{_INSIGHT}],
   "recommended_customer": "",
   "recommended_positioning": "",
-  "potential_moats": [{"title": "", "evidence": "", "reason": ""}],
-  "execution_ideas": [{"title": "", "reason": ""}]
- }
-}"""
+  "potential_moats": [{_INSIGHT}],
+  "execution_ideas": [{{"title": "", "score": 90, "reason": "", "evidence_ids": ["e1"]}}]
+ }}
+}}"""
 
 
 def _format_evidence(evidence) -> str:
@@ -83,7 +103,11 @@ def _format_evidence(evidence) -> str:
         snippet = (item.get("snippet") or "").strip()
         snippet = " ".join(snippet.split())[:config.PROMPT_SNIPPET_CHARS]
         source = item.get("source", "")
-        lines.append(f"{i}. [{source}] {title} :: {snippet}")
+        # `eN` is the id the model cites back in `evidence_ids`. It matches the
+        # id assigned in app.payload.normalise.assign_evidence_ids, which keys
+        # off the same rank, so a cited id resolves to the same source the
+        # model was shown.
+        lines.append(f"e{i}. [{source}] {title} :: {snippet}")
     return "\n".join(lines) or "(no evidence collected)"
 
 
@@ -136,25 +160,70 @@ market       - size, growth rate, maturity, outlook, key trends, emerging
 competitive  - competitors, threats, positioning gaps, white space,
                differentiation. Max 5 each. Never invent a competitor.
 synthesis    - the investment view. Decide whether a startup should enter.
-               Max 3 items in each list. Executive summary max 3 sentences,
-               reasons under 25 words, evidence fields under 15 words.
+               Max 3 items in each list. Executive summary max 3 sentences.
 
 Write customer, market and competitive first, then base synthesis only on
 what you wrote in them.
 
 RULES
 
+Evidence
 - Ground every conclusion in the evidence above. Do not invent facts,
   companies, statistics or market sizes.
-- Weak or missing evidence means low confidence, not a guess.
-- Rank strongest items first in every list.
-- market_maturity.stage is one of: Emerging, Growth, Mature, Declining.
-- build_recommendation.decision is one of: Strong Yes, Yes, Monitor, No.
-- Confidence ceiling by supporting sources: 1 source -> 50, 2-3 -> 75,
-  4+ -> 90. No evidence -> 0. Never exceed 95.
+- Every list item must cite the evidence behind it in `evidence_ids`, using
+  the `eN` ids exactly as they appear above. Cite only ids you actually used.
+  An item you cannot cite is an item you should not return.
+
+Scoring — exactly three values
+- Every score is one of 90, 75 or 50. No other value is valid. Not 80, not 65,
+  not "high", not "60".
+    90 - stated directly and repeatedly across multiple independent sources
+    75 - stated clearly but in few sources, or implied consistently across many
+    50 - inferred from context; not directly stated in any single source
+- `confidence` on the four market estimates is a 0-100 integer, not banded.
+  Ceiling by supporting sources: 1 source -> 50, 2-3 -> 75, 4+ -> 90.
+  Never exceed 95.
+
+Length
+- `name` and `title`: at most 10 words, no trailing punctuation. These render
+  as one line in a list. Put the explanation in `detail`, not here.
+- `detail`: one or two complete sentences.
+- `reason`: under 25 words. `evidence`: under 15 words.
+
+Do not repeat yourself
+- recommended_customer, best_customer_segment, recommended_positioning and
+  best_moat must each say something the others do not.
+  recommended_customer is who to sell to first -- the narrow beachhead.
+  best_customer_segment is the broader group that shares the same pain.
+  If you cannot make one materially different from the others, return null
+  for it rather than restating a neighbour.
+
+market_sizing — extraction only, no judgement
+- List every source above that states the size of a *market*, and only those.
+- A funding round, a company's revenue, a valuation, a customer count or a
+  single deal is not a market size. Leave those out entirely — mixing them in
+  produces a range spanning a startup's seed round and a global market, which
+  is not a disagreement about one quantity.
+- `figure_text` must be copied verbatim from the source, character for
+  character, exactly as it appears. It is checked against the source text and
+  the claim is discarded if it does not match, so do not tidy, reformat,
+  convert or round it.
+- `evidence_id` is the `eN` of the source the figure came from.
+- `scope` is what the figure measures, in the source's own framing
+  (for example "Edge AI software, global"). `year` is the year the figure
+  targets, or null.
+- If no source states a market size, return `"claims": []`. That is a normal
+  and common outcome. Do not estimate one, do not infer one from adjacent
+  markets, and do not carry a figure over from `market.market_size`.
+
+Numbers
+- Return null for any quantitative estimate the evidence does not directly
+  support. A plausible invented figure is worse than no figure.
 - In synthesis, never write a number that is not already in the sections
   above. Write "MyFitnessPal", not "MyFitnessPal (95)".
-- Every score is a bare JSON integer from 0 to 100. Not "60". Not "high".
+- market_maturity.stage is one of: Emerging, Growth, Mature, Declining.
+- build_recommendation.decision is one of: Strong Yes, Yes, Monitor, No.
+- Rank strongest items first in every list.
 
 Return only this JSON object, with no prose and no code fences:
 
@@ -170,32 +239,149 @@ def _service():
     return GeminiService(), config.GEMINI_MODEL
 
 
+VALID_SCORES = (90, 75, 50)
+
+
+def _walk_items(parsed):
+    """Every ranked item in the reply, with a path for the log."""
+    for section in ("customer", "market", "competitive", "synthesis"):
+        block = parsed.get(section)
+        if not isinstance(block, dict):
+            continue
+        for key, value in block.items():
+            if not isinstance(value, list):
+                continue
+            for index, item in enumerate(value, 1):
+                if isinstance(item, dict):
+                    yield f"{section}.{key}[{index}]", key, item
+
+
+def _violations(parsed, valid_ids):
+    """Compliance failures worth one retry.
+
+    Deliberately narrow. Only the two rules the payload cannot repair on its
+    own are checked: a score off the declared scale would have to be snapped
+    to the nearest band, and a missing citation cannot be reconstructed
+    server-side without inventing the link.
+    """
+    off_scale, uncited = [], []
+
+    for path, key, item in _walk_items(parsed):
+        score = item.get("score")
+        for candidate in ("score", "signal_strength", "importance", "confidence",
+                          "strength", "potential", "impact", "severity",
+                          "opportunity"):
+            if candidate in item:
+                score = item[candidate]
+                break
+        if isinstance(score, (int, float)) and int(score) not in VALID_SCORES:
+            off_scale.append(f"{path}={score}")
+
+        cited = [i for i in (item.get("evidence_ids") or []) if i in valid_ids]
+        if not cited:
+            uncited.append(path)
+
+    return off_scale, uncited
+
+
+def _call_once(service, prompt, topic):
+    try:
+        raw = service.call(prompt)
+    except Exception as e:
+        log.warning("LLM call failed | query=%r %s: %s",
+                    topic, type(e).__name__, str(e)[:300])
+        print(f"  LLM CALL FAILED: {type(e).__name__}: {str(e)[:300]}")
+        return None, {
+            "strategy": "call_failed",
+            "detail": f"{type(e).__name__}: {str(e)[:200]}",
+            "retry_after": getattr(e, "retry_after", None),
+        }
+
+    parsed, report = parse_json_verbose(raw, topic)
+    return (parsed or None), report
+
+
 def build_everything(topic, evidence, signals, known_competitors=None):
-    """One call. Returns {customer, market, competitive, synthesis}.
+    """One call, plus at most one corrective retry.
 
     Never raises: a provider failure degrades to an empty-but-valid contract
     so the frontend still renders.
     """
     prompt = build_prompt(topic, evidence, signals, known_competitors)
+    valid_ids = {f"e{i}" for i in range(1, len(evidence[:config.PROMPT_EVIDENCE_ITEMS]) + 1)}
 
     service, model = _service()
     print(f"  prompt: {len(prompt)} chars, provider={config.LLM_PROVIDER}, model={model}")
 
-    try:
-        raw = service.call(prompt)
-    except Exception as e:
-        print(f"  LLM CALL FAILED: {type(e).__name__}: {str(e)[:300]}")
-        return normalise_bundle({}), False
+    parsed, parse_report = _call_once(service, prompt, topic)
+    degraded: list[str] = []
 
-    parsed = parse_json(raw)
+    if parse_report.get("strategy") not in ("direct", None):
+        degraded.append(
+            f"model reply needed {parse_report['strategy']}"
+            + (f", {parse_report['chars_lost']} chars discarded"
+               if parse_report.get("chars_lost") else "")
+        )
+
+    if parsed:
+        off_scale, uncited = _violations(parsed, valid_ids)
+        if off_scale or uncited:
+            print(f"  compliance: {len(off_scale)} off-scale scores, "
+                  f"{len(uncited)} uncited items -- retrying once")
+            if off_scale[:3]:
+                print(f"    e.g. {', '.join(off_scale[:3])}")
+
+            retry, retry_report = _call_once(service, topic=topic, prompt=prompt + f"""
+
+Your previous reply broke two rules. Return the whole JSON object again, fixed.
+
+- {len(off_scale)} scores were not 90, 75 or 50. Every score must be exactly
+  one of those three integers.
+- {len(uncited)} items had a missing or unrecognised `evidence_ids`. Every item
+  needs at least one id from the list above, written exactly as `e1`, `e2`.""")
+
+            if retry:
+                still_off, still_uncited = _violations(retry, valid_ids)
+                # Only keep the retry if it is actually better. A retry that
+                # regressed is worse than the original reply.
+                if len(still_off) + len(still_uncited) < len(off_scale) + len(uncited):
+                    parsed = retry
+                    off_scale, uncited = still_off, still_uncited
+                    parse_report = retry_report
+                print(f"  after retry: {len(off_scale)} off-scale, {len(uncited)} uncited")
+
+            if uncited:
+                degraded.append(f"{len(uncited)} insights could not cite a source")
+            if off_scale:
+                degraded.append(
+                    f"{len(off_scale)} scores were off the declared scale and "
+                    f"were snapped to the nearest band"
+                )
 
     if not parsed:
-        print(f"  JSON UNRECOVERABLE. First 500 chars of response:\n{raw[:500]}")
-        return normalise_bundle({}), False
+        log.warning("no usable model output | query=%r strategy=%s",
+                    topic, parse_report.get("strategy"))
+        # Say which of the two it was. Printing "JSON UNRECOVERABLE" for a call
+        # that never returned is what made a 429 look like a parsing problem
+        # for the first half of this session.
+        if parse_report.get("strategy") == "call_failed":
+            print(f"  NO MODEL OUTPUT: {parse_report.get('detail')}")
+        else:
+            print("  JSON UNRECOVERABLE: a reply arrived but could not be parsed")
+
+        reason = (f"no usable model output ({parse_report.get('detail')})"
+                  if parse_report.get("strategy") == "call_failed"
+                  else "the model reply could not be parsed")
+        return normalise_bundle({}), False, [reason], parse_report.get("retry_after")
 
     missing = [k for k in ("customer", "market", "competitive", "synthesis")
                if k not in parsed]
     if missing:
+        # Not cosmetic: normalise_bundle fills these with empty structures, so
+        # without this the response is indistinguishable from a topic that
+        # genuinely had nothing to say.
+        log.warning("model omitted sections %s | query=%r", missing, topic)
         print(f"  WARNING: model omitted sections {missing}; filled as empty")
+        degraded.append(f"model omitted section(s): {', '.join(missing)}")
 
-    return normalise_bundle(parsed), True
+    return normalise_bundle(parsed), True, degraded, None

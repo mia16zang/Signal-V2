@@ -259,55 +259,77 @@ def diff(expected, actual, path="") -> list:
 # Stub model output
 # --------------------------------------------------------------------------
 
+def _row(name, score_key, score, ids=("e1",)):
+    return {"name": name, score_key: score, "detail": f"{name} — drawer copy.",
+            "evidence_ids": list(ids)}
+
+
+def _ins(title, score, ids=("e1",)):
+    return {"title": title, "score": score, "evidence": "Noted in sources",
+            "reason": "Short reason.", "evidence_ids": list(ids)}
+
+
+# A compliant reply: every score on the declared 90/75/50 scale and every item
+# citing at least one evidence id. `recommended_customer` and
+# `best_customer_segment` are deliberately identical -- that is the duplicate
+# the headline de-duplication is supposed to catch.
 GOOD = json.dumps({
     "customer": {
-        "customer_segments": [{"name": "Busy professionals", "score": 72}],
-        "pain_points": [{"name": "Inconsistent tracking", "signal_strength": 68}],
-        "desired_outcomes": [{"name": "Effortless logging", "importance": 70}],
-        "behavior_patterns": [{"name": "Abandons apps after two weeks", "confidence": 55}],
-        "opportunity_areas": [{"name": "Automated meal capture", "score": 64}],
+        "customer_segments": [_row("Busy professionals", "score", 90)],
+        "pain_points": [_row("Inconsistent tracking", "signal_strength", 75)],
+        "desired_outcomes": [_row("Effortless logging", "importance", 75)],
+        "behavior_patterns": [_row("Abandons apps after two weeks", "confidence", 50)],
+        "opportunity_areas": [_row("Automated meal capture", "score", 75)],
     },
     "market": {
-        "market_size": {"estimate": "$4.2B", "confidence": 55},
-        "growth_rate": {"estimate": "14% CAGR", "confidence": 50},
-        "market_maturity": {"stage": "Growth", "confidence": 60},
-        "future_outlook": {"direction": "Expanding", "confidence": 58},
-        "key_trends": [{"name": "AI personalisation", "strength": 75}],
-        "emerging_trends": [{"name": "Wearable integration", "potential": 62}],
-        "market_drivers": [{"name": "Preventive health spend", "impact": 66}],
+        "market_size": {"estimate": "$4.23B", "confidence": 75},
+        "growth_rate": {"estimate": "14.4% CAGR", "confidence": 50},
+        "market_maturity": {"stage": "Growth", "confidence": 90},
+        "future_outlook": {"direction": "Expanding", "confidence": 75},
+        "key_trends": [_row("AI personalisation", "strength", 75)],
+        "emerging_trends": [_row("Wearable integration", "potential", 50)],
+        "market_drivers": [_row("Preventive health spend", "impact", 90)],
     },
     "competitive": {
-        "competitors": [{"name": "MyFitnessPal", "strength": 80}],
-        "competitive_threats": [{"name": "Incumbent data moat", "severity": 70}],
-        "positioning_gaps": [{"name": "Clinical credibility", "opportunity": 65}],
-        "white_space_opportunities": [{"name": "Chronic condition support", "score": 68}],
-        "differentiation_opportunities": [{"name": "Dietitian in the loop", "score": 71}],
+        "competitors": [_row("MyFitnessPal", "strength", 90)],
+        "competitive_threats": [_row("Incumbent data moat", "severity", 75)],
+        "positioning_gaps": [_row("Clinical credibility", "opportunity", 75)],
+        "white_space_opportunities": [_row("Chronic condition support", "score", 50)],
+        "differentiation_opportunities": [_row("Dietitian in the loop", "score", 75)],
     },
     "synthesis": {
         "market_pulse": 68, "opportunity_score": 64,
         "build_recommendation": {"decision": "Yes", "reason": "Clear unserved segment."},
-        "confidence": 60, "confidence_explanation": "Moderate evidence breadth.",
+        "confidence": 75, "confidence_explanation": "Moderate evidence breadth.",
         "top_reason_to_build": "Retention gap in incumbents.",
         "biggest_risk": "Incumbent distribution.",
         "best_customer_segment": "Busy professionals",
         "best_moat": "Clinical partnerships",
         "executive_summary": "Growing market with a retention gap.",
-        "why_now": [{"title": "AI cost drop", "evidence": "Multiple launches", "reason": "Enables personalisation."}],
-        "key_opportunities": [{"title": "Automated capture", "evidence": "Repeated complaint", "reason": "Removes friction."}],
-        "key_risks": [{"title": "Churn", "evidence": "Two-week abandonment", "reason": "Category-wide problem."}],
+        "why_now": [_ins("AI cost drop", 90)],
+        "key_opportunities": [_ins("Automated capture", 75)],
+        "key_risks": [_ins("Churn", 75)],
         "recommended_customer": "Busy professionals",
         "recommended_positioning": "Clinically credible automation",
-        "potential_moats": [{"title": "Dietitian network", "evidence": "Gap noted", "reason": "Hard to copy."}],
-        "execution_ideas": [{"title": "Photo logging", "reason": "Lowest friction entry."}],
+        "potential_moats": [_ins("Dietitian network", 50)],
+        "execution_ideas": [{"title": "Photo logging", "score": 75,
+                             "reason": "Lowest friction entry.",
+                             "evidence_ids": ["e1"]}],
     },
 })
+
+# The same reply with both rules broken: an off-scale score and no citations.
+NON_COMPLIANT = (
+    GOOD.replace('"score": 90', '"score": 64')
+        .replace('"evidence_ids": ["e1"]', '"evidence_ids": []')
+)
 
 ADVERSARIAL = {
     "fenced": "```json\n" + GOOD + "\n```",
     "prose wrapped": "Sure! Here is the analysis:\n" + GOOD + "\nLet me know if you need more.",
     "truncated": GOOD[: int(len(GOOD) * 0.7)],
     "trailing commas": GOOD.replace("}]", "},]"),
-    "scores as strings": GOOD.replace('"score": 72', '"score": "72"'),
+    "scores as strings": GOOD.replace('"score": 90', '"score": "90"'),
     "score out of range": GOOD.replace('"market_pulse": 68', '"market_pulse": 480'),
     "empty": "",
     "not json at all": "I cannot help with that request.",
@@ -364,6 +386,13 @@ def main():
     check("coerces string score to int",
           isinstance(stringy["customer"]["customer_segments"][0]["score"], int))
 
+    long_label = json.dumps({"customer": {"customer_segments": [
+        {"name": " ".join(f"word{i}" for i in range(20)), "score": 90}]}})
+    capped = normalise_bundle(parse_json(long_label))
+    check("caps a list label at 10 words",
+          len(capped["customer"]["customer_segments"][0]["name"].split()) <= 11,
+          capped["customer"]["customer_segments"][0]["name"])
+
     # ---------------------------------------------------------------- 2
     print("\n2. Full pipeline response shape")
 
@@ -390,11 +419,34 @@ def main():
 
     problems = diff(contract, result)
     check("response matches cached contract exactly", not problems, "; ".join(problems[:6]))
-    check("exactly one LLM call", stub.calls == 1, f"{stub.calls} calls")
+    # A compliant reply must cost exactly one call. The corrective retry is
+    # conditional, and a retry that fired on every request would quietly undo
+    # the whole point of merging four calls into one.
+    check("exactly one LLM call on a compliant reply", stub.calls == 1,
+          f"{stub.calls} calls")
     check("evidence reached the prompt", "EVIDENCE" in stub.prompt)
     check("prompt under 12KB", len(stub.prompt) < 12000, f"{len(stub.prompt)} chars")
     print(f"       prompt size: {len(stub.prompt)} chars | wall: {elapsed:.1f}s"
           f" | evidence: {result['meta']['evidence_count']}")
+
+    # ------------------------------------------------------------- 2b
+    print("\n2b. Off-scale scores and missing citations trigger one retry")
+
+    bad = StubLLM(payload=NON_COMPLIANT)
+    unified_intelligence._service = lambda: (bad, "stub-model")
+    retried = asyncio.run(service.analyze("AI Nutrition Coach retry"))
+
+    check("retries exactly once, not repeatedly", bad.calls == 2, f"{bad.calls} calls")
+    check("still returns full contract after a failed retry",
+          not diff(contract, retried))
+
+    scores = [
+        item["score"]
+        for lst in retried["report"]["lists"].values()
+        for item in lst["items"]
+    ]
+    check("off-scale scores are snapped onto the declared scale",
+          all(s in (90, 75, 50) for s in scores), str(sorted(set(scores))))
 
     # ---------------------------------------------------------------- 3
     print("\n3. Degradation when the provider is down")
@@ -403,6 +455,91 @@ def main():
     degraded = asyncio.run(service.analyze("AI Nutrition Coach"))
     check("still returns full contract on LLM failure", not diff(contract, degraded))
     check("no exception surfaced to the route", isinstance(degraded, dict))
+
+    # The failure has to be *legible*. Returning the empty contract quietly is
+    # what let a provider outage reach the reader as a "Monitor" verdict.
+    check("total failure is flagged degraded", degraded.get("degraded") is True)
+    check("degraded carries a reason", bool(degraded.get("degraded_reason")),
+          str(degraded.get("degraded_reason")))
+    check("total failure is flagged analysis_failed",
+          degraded.get("analysis_failed") is True)
+    check("v2 verdict refuses to state a decision it does not have",
+          degraded["report"]["verdict"]["decision"] is None,
+          str(degraded["report"]["verdict"]["decision"]))
+    check("v2 verdict says why",
+          bool(degraded["report"]["verdict"]["decision_unavailable_reason"]))
+    check("v1 verdict keeps its default so the live page still renders",
+          degraded["synthesis"]["build_recommendation"]["decision"] == "Monitor")
+
+    # A transient outage must not become a lasting one.
+    from app.services.cache_service import CacheService as _Cache
+
+    config.CACHE_ENABLED = True
+    asyncio.run(service.analyze("poison probe topic"))
+    check("a failed briefing is not written to the cache",
+          _Cache.get("poison probe topic") is None,
+          "an empty briefing was cached and would be served for CACHE_TTL_HOURS")
+    config.CACHE_ENABLED = False
+
+    # And the route turns it into an error rather than a 200.
+    from fastapi import HTTPException
+
+    from app.models.analysis import AnalysisRequest
+    from app.routes import analyze as analyze_route
+
+    analyze_route.service = service
+    try:
+        asyncio.run(analyze_route.analyze(AnalysisRequest(topic="AI Nutrition Coach")))
+        check("route returns an error when there is no briefing", False,
+              "route returned 200 with an empty briefing")
+    except HTTPException as e:
+        check("route returns 503 when there is no briefing", e.status_code == 503,
+              f"status {e.status_code}")
+        check("route explains why and says it is retryable",
+              isinstance(e.detail, dict) and e.detail.get("retryable") is True)
+
+    # Non-fatal provider errors are still retried; fatal ones are not.
+    from app.services.gemini_service import classify
+
+    check("an exhausted quota is not retried",
+          classify(Exception("429 RESOURCE_EXHAUSTED quota")) [0] is False)
+    check("a rate limit with a short delay is retried",
+          classify(Exception("429 RESOURCE_EXHAUSTED {'retryDelay': '3s'}"))[0] is True)
+    check("a bad api key is not retried",
+          classify(Exception("400 INVALID_ARGUMENT API key not valid"))[0] is False)
+    check("an unknown error is retried",
+          classify(Exception("503 backend unavailable"))[0] is True)
+
+    # ------------------------------------------------------------- 3b
+    print("\n3b. Landing-page suggestions are served without the provider")
+
+    from app.services.cache_service import CacheService as _Seed
+
+    config.CACHE_ENABLED = True
+    counting = StubLLM(fail=True)
+    unified_intelligence._service = lambda: (counting, "stub-model")
+
+    seeds = sorted(_Seed.SEED_DIR.glob("*.json")) if _Seed.SEED_DIR.exists() else []
+    check("seed briefings are checked in", len(seeds) >= 4, f"{len(seeds)} found")
+
+    if seeds:
+        topics = [json.load(open(p, encoding="utf-8"))["topic"] for p in seeds]
+        served = [asyncio.run(service.analyze(t)) for t in topics]
+
+        check("every suggestion is served without an LLM call",
+              counting.calls == 0, f"{counting.calls} calls made")
+        check("every suggestion returns a real briefing",
+              all(s["synthesis"]["executive_summary"] for s in served))
+        check("every suggestion matches the contract",
+              all(not diff(contract, s) for s in served))
+        check("seeded responses say they are seeded",
+              all(s["meta"].get("seeded") for s in served))
+        check("seeded responses keep their real capture time",
+              all(s["meta"].get("generated_at") for s in served))
+        check("no seeded briefing is a failed one",
+              not any(s.get("analysis_failed") or s.get("degraded") for s in served))
+
+    config.CACHE_ENABLED = False
 
     # ---------------------------------------------------------------- 4
     print("\n4. Cache is consulted before collection")

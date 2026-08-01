@@ -1,0 +1,1260 @@
+{
+  "meta": {
+    "topic": "Carbon accounting for SMBs",
+    "cached": false,
+    "generated_at": "2026-07-31T22:32:38.747845",
+    "intelligence_time": 5.02,
+    "synthesis_time": 0.0,
+    "collection_time": 5.71,
+    "ai_time": 5.02,
+    "parse_time": 0.0,
+    "evidence_count": 30,
+    "evidence_used": 24,
+    "portfolio_mode": true,
+    "total_time": 10.74,
+    "payload_time": 0.002
+  },
+  "signals": {
+    "virality": {
+      "momentum": 2,
+      "trend_growth": 0,
+      "avg_views_per_day": 0.18,
+      "avg_engagement_rate": 0.46
+    },
+    "competitive": {
+      "launches": 0,
+      "avg_votes_per_day": 0,
+      "competition_score": 0
+    },
+    "market": {
+      "growth_score": 0,
+      "startup_activity": 0
+    },
+    "customer": {
+      "discussion_volume": 30,
+      "comment_volume": 0
+    },
+    "market_opportunity": {
+      "market_size_mentions": 6,
+      "growth_mentions": 10,
+      "forecast_mentions": 7,
+      "cagr_mentions": 7,
+      "billion_mentions": 10,
+      "million_mentions": 3,
+      "detected_market_sizes": [
+        "$22.6 billion",
+        "$27.78 billion",
+        "$2.3m",
+        "$95m",
+        "$1 billion",
+        "$204m"
+      ],
+      "detected_growth_rates": [
+        "22.9%",
+        "24.59%",
+        "6.6%",
+        "82%",
+        "38.5%",
+        "90%",
+        "27.33%"
+      ],
+      "opportunity_score": 100
+    },
+    "market_size": {
+      "market_reports": 6
+    }
+  },
+  "intelligence": {
+    "customer": {
+      "customer_segments": [],
+      "pain_points": [],
+      "desired_outcomes": [],
+      "behavior_patterns": [],
+      "opportunity_areas": []
+    },
+    "market": {
+      "market_size": {
+        "estimate": "",
+        "confidence": 0
+      },
+      "growth_rate": {
+        "estimate": "",
+        "confidence": 0
+      },
+      "market_maturity": {
+        "stage": "",
+        "confidence": 0
+      },
+      "future_outlook": {
+        "direction": "",
+        "confidence": 0
+      },
+      "key_trends": [],
+      "emerging_trends": [],
+      "market_drivers": []
+    },
+    "competitive": {
+      "competitors": [],
+      "competitive_threats": [],
+      "positioning_gaps": [],
+      "white_space_opportunities": [],
+      "differentiation_opportunities": []
+    }
+  },
+  "synthesis": {
+    "market_pulse": 0,
+    "opportunity_score": 0,
+    "build_recommendation": {
+      "decision": "Monitor",
+      "reason": ""
+    },
+    "confidence": 0,
+    "confidence_explanation": "",
+    "top_reason_to_build": "",
+    "biggest_risk": "",
+    "best_customer_segment": "",
+    "best_moat": "",
+    "executive_summary": "",
+    "why_now": [],
+    "key_opportunities": [],
+    "key_risks": [],
+    "recommended_customer": "",
+    "recommended_positioning": "",
+    "potential_moats": [],
+    "execution_ideas": []
+  },
+  "evidence": [
+    {
+      "rank": 1,
+      "source": "ddgs",
+      "title": "Climate Emission (Carbon) Accounting For SMBs - A Chat With...",
+      "url": "https://www.climateconfidentpodcast.com/1329991/episodes/11607942-climate-emission-carbon-accounting-for-smbs-a-chat-with-greenly-ceo-alexis-normand",
+      "snippet": "Carbon accounting (measuring and reporting climate emissions) has not traditionally been something SMBs have needed to do. That is starting to change as larger organisations are requiring reporting from their supply chains.One company looking to help SMBs with this is Greenly.",
+      "query": "Carbon accounting for SMBs competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e1",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 2,
+      "source": "ddgs",
+      "title": "Carbon Accounting Guide for Businesses",
+      "url": "https://tallysolutions.com/accounting/carbon-accounting-guide-business/",
+      "snippet": "What carbon accounting covers. The GHG Protocol, the globally accepted standard for carbon measurement, classifies emissions into three scopes. Identifying which scope applies to your operations determines what you measure, report and manageSolutions for SMBs.",
+      "query": "Carbon accounting for SMBs reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e2",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 3,
+      "source": "ddgs",
+      "title": "Carbon Accounting Software Market Size, Growth | Analysis 2034Carbon Accounting Software Market Share, Size, Trends, Report ...Carbon Accounting Software Market Report: Size, Growth ...Carbon Accounting Software Market Size Report, 2026-2033Carbon Accounting Software Market Size, Growth, Forecast Till ...Carbon Accounting Software Market Size, Trends, Outlook 2035",
+      "url": "https://www.fortunebusinessinsights.com/carbon-accounting-software-market-107292",
+      "snippet": "Adoption of Generative AI Proficiencies into Carbon Accounting to Upsurge the Market Growth Generative AI is anticipated to significantly impact carbon accounting solutions, transforming the way organizations measure, manage, and mitigate their greenhouse gas (GHG) emissions and carbon footprint. Ge",
+      "query": "Carbon accounting for SMBs market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e3",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 4,
+      "source": "ddgs",
+      "title": "Layer launches $2.3M fund for SMB accounting | Daniel... | LinkedIn",
+      "url": "https://www.linkedin.com/posts/doneel_embedded-accounting-startup-layer-secures-activity-7196553348110581760-3IUX",
+      "snippet": "We're the real accounting system for real SMBs across a surprising range of industries.Embedded accounting startup Layer secures $2.3M toward goal of replacing Quickbooks | TechCrunch.",
+      "query": "Carbon accounting for SMBs funding startup launches",
+      "used_in_prompt": true,
+      "id": "e4",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 5,
+      "source": "ddgs",
+      "title": "Cost Accounting vs Financial Accounting for SMBs",
+      "url": "https://www.goldenappleagencyinc.com/blog/cost-accounting-vs-financial-accounting",
+      "snippet": "Improved decision-making: Cost accounting enables informed decisions about pricing, product mix, production methods, and other operational aspects. Knowing the true cost of each product allows a company to set a profitable price.",
+      "query": "Carbon accounting for SMBs pricing",
+      "used_in_prompt": true,
+      "id": "e5",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 6,
+      "source": "ddgs",
+      "title": "Future of SMBs 2026: Accounting Trends & Growth",
+      "url": "https://www.pacificabs.com/knowledge-center/blog/future-of-smbs-2026-accounting-trends-growth/",
+      "snippet": "Future of SMBs 2026: SMB Accounting Trends, Financial Planning & Outsourcing Strategies. According to the U.S. Bank Small Business Cash Flow Study, 82% of business failures are tied to poor cash flow management or misunderstandings around working capital.",
+      "query": "Carbon accounting for SMBs trends",
+      "used_in_prompt": true,
+      "id": "e6",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 7,
+      "source": "ddgs",
+      "title": "Carbon Accounting Platform - Talk to a Carbon Expert",
+      "url": "https://www.bing.com/aclick?ld=e8yVbBu9A4BihELLY1A81fajVUCUxe35V74L5zg2kMk5Z7RADpVbAFpDZfe2r9nT794OV7xga7Fk3sE0aMLeeJzM61eK0mfBvRhNTOVz4x4Vla2C9qczrqvOSOCMzd3bjE0Wjdp0H5W8-RM3-usxEDtqEQn7xoGnfWW_u9qMd4yEpyViZUkUs6-5jixGtY-N_FfbqiXuFP0fypQqiFmJPAcJdLytE&u=aHR0cHMlM2ElMmYlMmZuYXZpZ2F0b3IuY29uc3RlbGxhdGlvbi5jb20lMmZzb2x1dGlvbnMlMmZjYXJib24tYWNjb3VudGluZyUzZnV0bV90ZXJtJTNkY2FyYm9uJTI1MjByZWR1Y3Rpb24lMjUyMHN0cmF0ZWd5JTI2dXRtX2NhbXBhaWduJTNkTSUyYi0lMmJDYXJib24lMmJBY2NvdW50aW5nJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkcHBjJTI2dXRtX2lkJTNkNTcxMzcxMzAwJTI2aHNhX2FjYyUzZDc3MzE1NjQ2ODIlMjZoc2FfY2FtJTNkMjM5ODk1NDAyNTYlMjZoc2FfZ3JwJTNkMTE3ODY3ODc1MjA5OTYyMiUyNmhzYV9hZCUzZCUyNmhzYV9zcmMlM2RvJTI2aHNhX3RndCUzZGt3ZC03MzY2ODA4NTc0MTI3OCUzYWxvYy05MCUyNmhzYV9rdyUzZGNhcmJvbiUyNTIwcmVkdWN0aW9uJTI1MjBzdHJhdGVneSUyNmhzYV9tdCUzZHAlMjZoc2FfbmV0JTNkYWR3b3JkcyUyNmhzYV92ZXIlM2QzJTI2bXNjbGtpZCUzZDFlZGRhNmU5M2NlMzE2MmE5YjBhY2M4NDFlNjM1NmQ0&rlid=1edda6e93ce3162a9b0acc841e6356d4",
+      "snippet": "Turn emissions data into a clear plan to cut carbon and hit your reduction targets. Pinpoint emissions hotspots and prioritize the reductions that deliver the biggest impact. Track & Benchmark GHG · Defensible Baselines · Automated Data Collection · Emissions Hotspot Data Service Features, Supplier ",
+      "query": "site:reddit.com Carbon accounting for SMBs",
+      "used_in_prompt": true,
+      "id": "e7",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 8,
+      "source": "ddgs",
+      "title": "Carbon Accounting Software Market 2025-2029",
+      "url": "https://www.researchandmarkets.com/reports/5362673/carbon-accounting-software-market-2025-2029",
+      "snippet": "The carbon accounting software market is forecasted to grow by USD 33.08 billion during 2024-2029, accelerating at a CAGR of 38.5% during the forecast period. The report on the carbon accounting software market provides a holistic analysis, market size and forecast, trends, growth drivers, and chall",
+      "query": "Carbon accounting for SMBs industry report CAGR",
+      "used_in_prompt": true,
+      "id": "e8",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 9,
+      "source": "youtube",
+      "title": "Carbon Accounting for SMBs  Lessons From Microsoft’s Supplier Standards",
+      "url": "https://youtube.com/watch?v=210Z1YZBTgA",
+      "snippet": "As companies like Microsoft raise the bar for sustainability, small- and mid-sized businesses (SMBs) must adapt to new accounting requirements. But compliance isn’t just about checking a box—it’s an opportunity for growth, efficiency, and competitive advantage. Listen as Microsoft suppliers share ho",
+      "query": "",
+      "used_in_prompt": true,
+      "id": "e9",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 10,
+      "source": "ddgs",
+      "title": "Accounting - SMB Guide",
+      "url": "https://www.smbguide.com/accounting/",
+      "snippet": "Perfect software stack for SMBs. Accounting.FreshBooks Alternatives & Competitors. FreshBooks is a cloud-based accounting software that helps users with invoicing and expense tracking.",
+      "query": "Carbon accounting for SMBs competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e10",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 11,
+      "source": "ddgs",
+      "title": "LeadLabs - Simplifying CRO for SMBs Reviews 2026... | AppSumo",
+      "url": "https://appsumo.com/products/leadlabs-simplifying-cro-for-smbs/reviews/",
+      "snippet": "Explore helpful comments, compare pros and cons, and find out how LeadLabs - Simplifying CRO for SMBs works for a business like yours.",
+      "query": "Carbon accounting for SMBs reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e11",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 12,
+      "source": "ddgs",
+      "title": "Carbon Accounting Software Market Report: Size, Growth ...Carbon Accounting Software Market Size Report, 2026-2033Carbon Accounting Software Market Size, Growth, Forecast Till ...Carbon Accounting Software Market Size, Trends, Outlook 2035",
+      "url": "https://www.verifiedmarketresearch.com/product/carbon-accounting-software-market/",
+      "snippet": "What is the projected market size & growth rate of the Carbon Accounting Software Market? Carbon Accounting Software Market was valued at USD 10.71 Billion in 2024 and is projected to reach USD 46.95 Billion by 2032, growing at a CAGR of 24.59% during the forecasted period 2026 to 2032. Global Carbo",
+      "query": "Carbon accounting for SMBs market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e12",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 13,
+      "source": "ddgs",
+      "title": "Finally, SMB Accounting Startup, Raises $95M - New York Tech Media",
+      "url": "https://nytech.media/finally-smb-accounting-startup-raises-95m/",
+      "snippet": "Businesses working with Finally can connect their bank and credit accounts for immediate visibility into the financial health of their companies. With the launch of its corporate charge card, Finally is planning to make in excess of $1 billion in credit available to SMBs.",
+      "query": "Carbon accounting for SMBs funding startup launches",
+      "used_in_prompt": true,
+      "id": "e13",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 14,
+      "source": "ddgs",
+      "title": "2026 Best Expenses Report Software for SMBs",
+      "url": "https://www.fanruan.com/en/blog/best-expenses-report-software-for-smbs",
+      "snippet": "Accounting Integrations. FineBI. Custom pricing. SMBs to multi-entity businesses.Small businesses and growing SMBs. OCR receipts, mileage, travel features, active-user pricing. Good for SMB reimbursement workflows. Strong.",
+      "query": "Carbon accounting for SMBs pricing",
+      "used_in_prompt": true,
+      "id": "e14",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 15,
+      "source": "ddgs",
+      "title": "SMB Market in 2026: Size, Trends & Growth Data",
+      "url": "https://prospeo.io/s/smb-market",
+      "snippet": "The SMB market covers 33.3M US businesses and ~90% of companies worldwide. Explore 2026 size, trends, AI adoption, and how to sell to SMBs.",
+      "query": "Carbon accounting for SMBs trends",
+      "used_in_prompt": true,
+      "id": "e15",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 16,
+      "source": "ddgs",
+      "title": "Is it possible to learn Carbon Accounting by oneself for free?",
+      "url": "https://www.reddit.com/r/Environmental_Careers/comments/16k11hx/is_it_possible_to_learn_carbon_accounting_by/",
+      "snippet": "Is it possible to learn Carbon Accounting by oneself for free? Are there any specific courses or free training or workshops for carbon accounting?",
+      "query": "site:reddit.com Carbon accounting for SMBs",
+      "used_in_prompt": true,
+      "id": "e16",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 17,
+      "source": "ddgs",
+      "title": "Carbon Accounting Services Market Size, Growth Outlook 2034",
+      "url": "https://www.emergenresearch.com/industry-report/carbon-accounting-services-market",
+      "snippet": "Nov 20, 2025 · The Carbon Accounting Services Market size is expected to reach USD 7.8 billion in 2023 growing at a CAGR of 12.1. The Carbon Accounting Services Market report classifies market by segmentation, growth drivers, demand, trend, and forecast insights.",
+      "query": "Carbon accounting for SMBs industry report CAGR",
+      "used_in_prompt": true,
+      "id": "e17",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 18,
+      "source": "youtube",
+      "title": "Carbon accounting for small shops.",
+      "url": "https://youtube.com/watch?v=JQM1CKeN-Tk",
+      "snippet": "Carbon Accounting for Small Businesses: Emma’s Coffee Shop Journey to Net Zero” Welcome back to our channel! Today, we’re showing you how carbon accounting works for small businesses, with a focus on coffee shops like Emma’s Coffee Shop. Why should small businesses like Emma’s care about carbon acco",
+      "query": "",
+      "used_in_prompt": true,
+      "id": "e18",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 19,
+      "source": "ddgs",
+      "title": "r/carbonaccounting - Subreddit Stats & Analysis",
+      "url": "https://gummysearch.com/r/carbonaccounting/",
+      "snippet": "Solution Requests. : \"Best Carbon Accounting Software?\"Smb. : \"How are Smbs handling carbon emissions tracking?\"",
+      "query": "Carbon accounting for SMBs competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e19",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 20,
+      "source": "ddgs",
+      "title": "SMB Accounting Reviews From Our Experts | PCMag",
+      "url": "https://www.pcmag.com/categories/smb-accounting",
+      "snippet": "Hands-on testing, real-world insights, and side-by-side comparisons of the latest SMB Accounting from editors who know what matters most.",
+      "query": "Carbon accounting for SMBs reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e20",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 21,
+      "source": "ddgs",
+      "title": "Carbon Accounting Software Market Size, Growth, Forecast Till ...",
+      "url": "https://www.reportprime.com/carbon-accounting-software-r20498",
+      "snippet": "The Carbon Accounting Software market is expected to grow from USD 2.50 Billion in 2025 to USD 13.60 Billion by 2032, at a CAGR of 29.20 % during the forecast period.",
+      "query": "Carbon accounting for SMBs market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e21",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 22,
+      "source": "ddgs",
+      "title": "AMLOK - Capital Infrastructure for SMB Funding",
+      "url": "https://amlok.io/",
+      "snippet": "Small & Medium Businesses. Funded Startups. Funding Partners.Canadian SMBs leave billions in grants, tax credits, and low-cost lending on the table every year - because the system is fragmented and nobody tells you what's available. We fix that in 5 minutes.",
+      "query": "Carbon accounting for SMBs funding startup launches",
+      "used_in_prompt": true,
+      "id": "e22",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 23,
+      "source": "ddgs",
+      "title": "Green Project and BirdDog Interactive: Transforming SMB Compliance...",
+      "url": "https://www.greenprojecttech.com/newsroom/birddog-interactive-case-study",
+      "snippet": "For more insights, explore our detailed discussion with Eric McConnell and other small- and medium-sized suppliers in the webinar “Carbon Accounting for SMBs: Lessons from Microsoft's Supplier Standards.”",
+      "query": "Carbon accounting for SMBs pricing",
+      "used_in_prompt": true,
+      "id": "e23",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 24,
+      "source": "ddgs",
+      "title": "carbonaccounting - Reddit",
+      "url": "https://www.reddit.com/r/carbonaccounting/",
+      "snippet": "What is Carbon Accounting? Carbon accounting is the process of measuring and managing the carbon emissions resulting from business activities. It's a fundamental step for companies aiming to reduce their carbon footprint and contribute to the fight against climate change.",
+      "query": "site:reddit.com Carbon accounting for SMBs",
+      "used_in_prompt": true,
+      "id": "e24",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 25,
+      "source": "ddgs",
+      "title": "Carbon Accounting Market Report 2026 [Free PDF] | StartUs",
+      "url": "https://www.startus-insights.com/innovators-guide/carbon-accounting-market-report/",
+      "snippet": "Feb 11, 2026 · The carbon accounting market is valued at approximately USD 23.53 billion in 2025 and is projected to grow to USD 78.75 billion by 2030, expanding at a 27.33% CAGR.",
+      "query": "Carbon accounting for SMBs industry report CAGR",
+      "used_in_prompt": false,
+      "id": "e25",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 25 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 26,
+      "source": "youtube",
+      "title": "Easy Carbon Accounting for Small Business - Getting Started with Aclymate",
+      "url": "https://youtube.com/watch?v=fpLUN2QQ4UU",
+      "snippet": "At Aclymate we have the most user-friendly and affordable tools to help any business, no matter how small, be carbon neutral and become a Climate Leader. Our Climate Navigator explains how easy it is to get started. To schedule a 15-minute chat to discuss your sustainability needs, visit: https://ac",
+      "query": "",
+      "used_in_prompt": false,
+      "id": "e26",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": "Ranked 26 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 27,
+      "source": "ddgs",
+      "title": "Climatetech Small Businesses Carbon Accounting... | StartupTribunal",
+      "url": "https://startuptribunal.com/catalog/climatetech-small-businesses-carbon-accounting-too-expensive",
+      "snippet": "Carbon accounting software designed for larger enterprises is prohibitively expensive and feature-bloated for small climatetech businesses, forcing them to either overspend or avoid proper carbon tracking altogether.",
+      "query": "Carbon accounting for SMBs competitors alternatives",
+      "used_in_prompt": false,
+      "id": "e27",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 27 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 28,
+      "source": "ddgs",
+      "title": "10,000 Canadian Businesses Ditched Their Bank for Venn - YouTube",
+      "url": "https://www.youtube.com/watch?v=_zbhFL1SHD0",
+      "snippet": "Multi-currency accounts (CAD, USD, GBP, EUR) for SMBsCross-border USD payments and ACH adoption in CanadaCanada's entrepreneurial moment and SMB succession trends",
+      "query": "Carbon accounting for SMBs reviews complaints problems",
+      "used_in_prompt": false,
+      "id": "e28",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 28 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 29,
+      "source": "ddgs",
+      "title": "Carbon Accounting Software Market Size, Trends, Outlook 2035",
+      "url": "https://www.businessresearchinsights.com/market-reports/carbon-accounting-software-market-117640",
+      "snippet": "Jun 25, 2026 · Starting at USD 0.91 Billion in 2026, the global Carbon Accounting Software Market is set to witness notable growth. By 2035, it is projected to reach USD 1.61 Billion. The market is expected to expand at a CAGR of 6.6% throughout the forecast period from 2026 to 2035.",
+      "query": "Carbon accounting for SMBs market size growth forecast",
+      "used_in_prompt": false,
+      "id": "e29",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 29 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 30,
+      "source": "ddgs",
+      "title": "Pennylane Secures $204M in Series Funding from... | BEAMSTART",
+      "url": "https://beamstart.com/news/accounting-startup-pennylane-raises-204m-176889861",
+      "snippet": "The funding round, which also saw participation from existing investors like Sequoia Capital and DST Global, values Pennylane at nearly €3.6 billion, cementing its status as a fintech unicorn. Impact on European SMBs and the Accounting Sector.",
+      "query": "Carbon accounting for SMBs funding startup launches",
+      "used_in_prompt": false,
+      "id": "e30",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 30 of 30; below the prompt cutoff"
+    }
+  ],
+  "report": {
+    "schema_version": 2,
+    "verdict": {
+      "decision": "Monitor",
+      "reason": "",
+      "executive_summary": "",
+      "top_reason_to_build": "",
+      "biggest_risk": "",
+      "market_pulse": {
+        "value": 0,
+        "display": "0",
+        "unit": null,
+        "confidence": null,
+        "confidence_band": "none",
+        "basis": "The model's overall read of market conditions across every section it wrote.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": true
+      },
+      "confidence": {
+        "value": 0,
+        "display": "0",
+        "unit": null,
+        "confidence": 0,
+        "confidence_band": "low",
+        "basis": "How well the collected evidence supported the conclusions.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": true
+      }
+    },
+    "headline": {
+      "recommended_customer": {
+        "value": null,
+        "suppressed_reason": null
+      },
+      "best_customer_segment": {
+        "value": null,
+        "suppressed_reason": null
+      },
+      "recommended_positioning": {
+        "value": null,
+        "suppressed_reason": null
+      },
+      "best_moat": {
+        "value": null,
+        "suppressed_reason": null
+      }
+    },
+    "market": {
+      "market_size": {
+        "value": null,
+        "display": "—",
+        "unit": null,
+        "confidence": null,
+        "confidence_band": "none",
+        "basis": "The model returned no figure for this.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": false
+      },
+      "growth_rate": {
+        "value": null,
+        "display": "—",
+        "unit": null,
+        "confidence": null,
+        "confidence_band": "none",
+        "basis": "The model returned no figure for this.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": false
+      },
+      "market_maturity": {
+        "value": null,
+        "display": "—",
+        "unit": null,
+        "confidence": null,
+        "confidence_band": "none",
+        "basis": "The model returned no figure for this.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": false
+      },
+      "future_outlook": {
+        "value": null,
+        "display": "—",
+        "unit": null,
+        "confidence": null,
+        "confidence_band": "none",
+        "basis": "The model returned no figure for this.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": false
+      }
+    },
+    "signals": {
+      "customer": {
+        "discussion_volume": {
+          "value": 30,
+          "display": "30",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Count of items in the ranked evidence list.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        },
+        "comment_volume": {
+          "value": 0,
+          "display": "0",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Sum of the YouTube comment count on every collected video.",
+          "source_count": 3,
+          "evidence_ids": [
+            "e9",
+            "e18",
+            "e26"
+          ],
+          "collected": true
+        }
+      },
+      "market": {
+        "growth_score": {
+          "value": null,
+          "display": "—",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Google Trends returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "startup_activity": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        }
+      },
+      "competitive": {
+        "launches": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "avg_votes_per_day": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "competition_score": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        }
+      },
+      "virality": {
+        "momentum": {
+          "value": 2,
+          "display": "2",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Weighted blend of search growth, video engagement and daily views.",
+          "source_count": 3,
+          "evidence_ids": [
+            "e9",
+            "e18",
+            "e26"
+          ],
+          "collected": true
+        },
+        "trend_growth": {
+          "value": null,
+          "display": "—",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Google Trends returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "avg_views_per_day": {
+          "value": 0.18,
+          "display": "0.18",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Lifetime views divided by days since publication, averaged.",
+          "source_count": 3,
+          "evidence_ids": [
+            "e9",
+            "e18",
+            "e26"
+          ],
+          "collected": true
+        },
+        "avg_engagement_rate": {
+          "value": 0,
+          "display": "~0%",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "(likes + comments) / views x 100, averaged across videos.",
+          "source_count": 3,
+          "evidence_ids": [
+            "e9",
+            "e18",
+            "e26"
+          ],
+          "collected": true
+        }
+      },
+      "market_size": {
+        "market_reports": {
+          "value": 6,
+          "display": "6",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Sources whose text contains 'market size', 'market forecast' or 'industry report'.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        }
+      },
+      "market_opportunity": {
+        "sizing_language_density": {
+          "value": 100,
+          "display": "100",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Weighted count of sizing, growth, forecast and CAGR mentions, capped at 100.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        },
+        "mentions": {
+          "definition": "How often each kind of sizing language appeared in the collected sources. A property of the writing, not evidence of the market's actual size.",
+          "counts": {
+            "market_size_mentions": 6,
+            "growth_mentions": 10,
+            "forecast_mentions": 7,
+            "cagr_mentions": 7,
+            "billion_mentions": 10,
+            "million_mentions": 3
+          },
+          "detected_market_sizes": [
+            "$23 billion",
+            "$28 billion",
+            "$2.3 m",
+            "$95 m",
+            "$1 billion",
+            "$200 m"
+          ],
+          "detected_growth_rates": [
+            "23%",
+            "25%",
+            "7%",
+            "82%",
+            "38%",
+            "90%",
+            "27%"
+          ]
+        }
+      }
+    },
+    "signals_unavailable": [
+      "market.growth_score",
+      "market.startup_activity",
+      "competitive.launches",
+      "competitive.avg_votes_per_day",
+      "competitive.competition_score",
+      "virality.trend_growth"
+    ],
+    "lists": {
+      "customer_segments": {
+        "key": "customer_segments",
+        "label": "Customer segments",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "pain_points": {
+        "key": "pain_points",
+        "label": "Pain points",
+        "metric_key": "signal_strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "desired_outcomes": {
+        "key": "desired_outcomes",
+        "label": "Desired outcomes",
+        "metric_key": "importance",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "behavior_patterns": {
+        "key": "behavior_patterns",
+        "label": "Behaviour patterns",
+        "metric_key": "confidence",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "opportunity_areas": {
+        "key": "opportunity_areas",
+        "label": "Opportunity areas",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "key_trends": {
+        "key": "key_trends",
+        "label": "Key trends",
+        "metric_key": "strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "emerging_trends": {
+        "key": "emerging_trends",
+        "label": "Emerging trends",
+        "metric_key": "potential",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "market_drivers": {
+        "key": "market_drivers",
+        "label": "Market drivers",
+        "metric_key": "impact",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "competitors": {
+        "key": "competitors",
+        "label": "Competitors",
+        "metric_key": "strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "competitive_threats": {
+        "key": "competitive_threats",
+        "label": "Competitive threats",
+        "metric_key": "severity",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "positioning_gaps": {
+        "key": "positioning_gaps",
+        "label": "Positioning gaps",
+        "metric_key": "opportunity",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "white_space_opportunities": {
+        "key": "white_space_opportunities",
+        "label": "White space",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "differentiation_opportunities": {
+        "key": "differentiation_opportunities",
+        "label": "Differentiation",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "why_now": {
+        "key": "why_now",
+        "label": "Why now",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "key_opportunities": {
+        "key": "key_opportunities",
+        "label": "Key opportunities",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "key_risks": {
+        "key": "key_risks",
+        "label": "Key risks",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "potential_moats": {
+        "key": "potential_moats",
+        "label": "Potential moats",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      },
+      "execution_ideas": {
+        "key": "execution_ideas",
+        "label": "Execution ideas",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": []
+      }
+    },
+    "sources": [
+      {
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "count": 27
+      },
+      {
+        "source_key": "youtube",
+        "display_name": "YouTube",
+        "count": 3
+      }
+    ]
+  },
+  "metric_definitions": [
+    {
+      "key": "support",
+      "label": "Support",
+      "definition": "How consistently this item appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "score",
+      "label": "Score",
+      "definition": "How consistently this item appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "signal_strength",
+      "label": "Signal strength",
+      "definition": "How often and how emphatically this was raised in the source material.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "importance",
+      "label": "Importance",
+      "definition": "How central this was to the discussions where it appeared.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "confidence",
+      "label": "Confidence",
+      "definition": "How consistently this pattern appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "strength",
+      "label": "Strength",
+      "definition": "How established this is across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "potential",
+      "label": "Potential",
+      "definition": "How much room this has to grow, judged from the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "impact",
+      "label": "Impact",
+      "definition": "How strongly this shapes the market, judged from the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "severity",
+      "label": "Severity",
+      "definition": "How directly this threat overlaps with the proposed product.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "opportunity",
+      "label": "Opportunity",
+      "definition": "How much unmet demand this gap represents in the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "discussion_volume",
+      "label": "Discussions",
+      "definition": "Ranked sources matching this topic across every collector.",
+      "derivation": "Count of items in the ranked evidence list.",
+      "scale": "Whole number of sources."
+    },
+    {
+      "key": "comment_volume",
+      "label": "Comments",
+      "definition": "Total viewer replies across the collected videos.",
+      "derivation": "Sum of the YouTube comment count on every collected video.",
+      "scale": "Whole number."
+    },
+    {
+      "key": "growth_score",
+      "label": "Growth score",
+      "definition": "Movement in search interest for this topic over the sampled window.",
+      "derivation": "Google Trends growth rate for the topic term.",
+      "scale": "Percentage change."
+    },
+    {
+      "key": "startup_activity",
+      "label": "Startup activity",
+      "definition": "New products shipped into this space recently.",
+      "derivation": "Count of Product Hunt launches in the collected evidence.",
+      "scale": "Whole number of launches."
+    },
+    {
+      "key": "launches",
+      "label": "Launches",
+      "definition": "Recent product releases observed in this space.",
+      "derivation": "Count of Product Hunt items in the collected evidence.",
+      "scale": "Whole number."
+    },
+    {
+      "key": "avg_votes_per_day",
+      "label": "Avg votes / day",
+      "definition": "Mean daily upvotes across those releases.",
+      "derivation": "Product Hunt votes divided by days since launch, averaged.",
+      "scale": "Votes per day."
+    },
+    {
+      "key": "competition_score",
+      "label": "Competition score",
+      "definition": "How crowded the field looks, from launch count and traction.",
+      "derivation": "min(100, launches x 2 + mean votes per day).",
+      "scale": "0-100."
+    },
+    {
+      "key": "momentum",
+      "label": "Momentum",
+      "definition": "How fast attention is moving on this topic.",
+      "derivation": "Weighted blend of search growth, video engagement and daily views.",
+      "scale": "0-100."
+    },
+    {
+      "key": "trend_growth",
+      "label": "Trend growth",
+      "definition": "Change in search interest over the sampled window.",
+      "derivation": "Google Trends growth rate for the topic term.",
+      "scale": "Percentage change."
+    },
+    {
+      "key": "avg_views_per_day",
+      "label": "Avg views / day",
+      "definition": "Mean daily plays across the collected videos.",
+      "derivation": "Lifetime views divided by days since publication, averaged.",
+      "scale": "Views per day."
+    },
+    {
+      "key": "avg_engagement_rate",
+      "label": "Engagement rate",
+      "definition": "Likes and comments per 100 plays on the collected videos.",
+      "derivation": "(likes + comments) / views x 100, averaged across videos.",
+      "scale": "Percentage."
+    },
+    {
+      "key": "market_reports",
+      "label": "Market reports",
+      "definition": "Collected sources that read as dedicated industry research.",
+      "derivation": "Sources whose text contains 'market size', 'market forecast' or 'industry report'.",
+      "scale": "Whole number of sources."
+    },
+    {
+      "key": "sizing_language_density",
+      "label": "Sizing language density",
+      "definition": "How much of the collected text talks in figures and forecasts.",
+      "derivation": "Weighted count of sizing, growth, forecast and CAGR mentions, capped at 100.",
+      "scale": "0-100. A property of the text, not of the market."
+    }
+  ],
+  "score_scale": {
+    "values": [
+      90,
+      75,
+      50
+    ],
+    "bands": [
+      {
+        "score": 90,
+        "band": "high",
+        "label": "Directly supported",
+        "meaning": "Stated directly and repeatedly across multiple independent sources."
+      },
+      {
+        "score": 75,
+        "band": "moderate",
+        "label": "Clearly indicated",
+        "meaning": "Stated clearly but in few sources, or implied consistently across many."
+      },
+      {
+        "score": 50,
+        "band": "low",
+        "label": "Inferred",
+        "meaning": "Inferred from context; not directly stated in any single source."
+      }
+    ],
+    "note": "Three bands, not a continuous scale. The model cannot reliably distinguish a 72 from a 78, so it is not asked to."
+  },
+  "evidence_summary": {
+    "collected": 30,
+    "used": 24,
+    "excluded": 6
+  },
+  "signals_unavailable": [
+    "market.growth_score",
+    "market.startup_activity",
+    "competitive.launches",
+    "competitive.avg_votes_per_day",
+    "competitive.competition_score",
+    "virality.trend_growth"
+  ]
+}

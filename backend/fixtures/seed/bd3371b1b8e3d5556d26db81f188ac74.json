@@ -1,0 +1,2536 @@
+{
+  "topic": "Developer tools for edge functions",
+  "result": {
+    "meta": {
+      "topic": "Developer tools for edge functions",
+      "cached": false,
+      "generated_at": "2026-08-01T19:25:48.992091",
+      "intelligence_time": 22.77,
+      "synthesis_time": 0.0,
+      "collection_time": 8.04,
+      "ai_time": 22.77,
+      "parse_time": 0.0,
+      "evidence_count": 30,
+      "evidence_used": 24,
+      "portfolio_mode": true,
+      "total_time": 30.82,
+      "payload_time": 0.004
+    },
+    "signals": {
+      "virality": {
+        "momentum": 8,
+        "trend_growth": 0,
+        "avg_views_per_day": 1.65,
+        "avg_engagement_rate": 1.6
+      },
+      "competitive": {
+        "launches": 0,
+        "avg_votes_per_day": 0,
+        "competition_score": 0
+      },
+      "market": {
+        "growth_score": 0,
+        "startup_activity": 0
+      },
+      "customer": {
+        "discussion_volume": 30,
+        "comment_volume": 13
+      },
+      "market_opportunity": {
+        "market_size_mentions": 1,
+        "growth_mentions": 6,
+        "forecast_mentions": 0,
+        "cagr_mentions": 3,
+        "billion_mentions": 1,
+        "million_mentions": 1,
+        "sources_scanned": 30,
+        "detected_market_sizes": [
+          "$496.1m",
+          "$14.1b"
+        ],
+        "detected_growth_rates": [],
+        "opportunity_score": 100
+      },
+      "market_size": {
+        "market_reports": 1
+      }
+    },
+    "intelligence": {
+      "customer": {
+        "customer_segments": [
+          {
+            "name": "Developers using Supabase Edge Functions",
+            "score": 90,
+            "detail": "These developers are actively using or considering Supabase's serverless edge functions for global distribution and monitoring.",
+            "evidence_ids": [
+              "e1",
+              "e4",
+              "e6",
+              "e8",
+              "e9"
+            ]
+          },
+          {
+            "name": "Web developers focused on frontend projects",
+            "score": 75,
+            "detail": "This segment includes developers working with frameworks like Next.js and React, who benefit from zero-config deployments and preview URLs.",
+            "evidence_ids": [
+              "e10",
+              "e11",
+              "e19",
+              "e21",
+              "e22"
+            ]
+          },
+          {
+            "name": "Developers utilizing Microsoft Edge DevTools",
+            "score": 75,
+            "detail": "This group uses Edge's built-in developer tools for inspecting elements, debugging, and experimenting with web applications.",
+            "evidence_ids": [
+              "e2",
+              "e3",
+              "e16",
+              "e18",
+              "e22",
+              "e24"
+            ]
+          }
+        ],
+        "pain_points": [
+          {
+            "name": "Debugging Edge Functions",
+            "signal_strength": 90,
+            "detail": "Developers face challenges debugging Edge Functions, with issues noted even when using tools like VSCode.",
+            "evidence_ids": [
+              "e6",
+              "e8"
+            ]
+          },
+          {
+            "name": "Issues with Microsoft Edge's Developer Tools",
+            "signal_strength": 75,
+            "detail": "Users report problems with the Issues Tool, including reporting from external code and categorization based on severity.",
+            "evidence_ids": [
+              "e2"
+            ]
+          },
+          {
+            "name": "React Developer Tools instability",
+            "signal_strength": 75,
+            "detail": "Problems include detection failures for React on certain pages, general UI instability, errors, and compatibility issues with Next.js/React and Expo sites.",
+            "evidence_ids": [
+              "e10"
+            ]
+          },
+          {
+            "name": "Monitoring competition and identifying growth opportunities",
+            "signal_strength": 50,
+            "detail": "Developers and businesses need tools to track category rankings to monitor competitors and find growth areas.",
+            "evidence_ids": [
+              "e5"
+            ]
+          }
+        ],
+        "desired_outcomes": [
+          {
+            "name": "Easy authoring, deployment, and monitoring of serverless functions",
+            "importance": 90,
+            "detail": "Developers want a streamlined process for creating, deploying, and overseeing globally distributed serverless functions.",
+            "evidence_ids": [
+              "e1"
+            ]
+          },
+          {
+            "name": "Effective debugging capabilities for Edge Functions",
+            "importance": 90,
+            "detail": "The ability to debug Edge Functions using familiar tools like Chrome DevTools or VSCode is highly desired.",
+            "evidence_ids": [
+              "e6",
+              "e8"
+            ]
+          },
+          {
+            "name": "Comprehensive view of potential problems",
+            "importance": 75,
+            "detail": "Developers need tools that can report issues originating from external code to provide a holistic understanding of problems.",
+            "evidence_ids": [
+              "e2"
+            ]
+          },
+          {
+            "name": "Improved developer productivity",
+            "importance": 75,
+            "detail": "Developers seek resources and tools that offer more opportunities to enhance productivity, accessibility, and browser customization.",
+            "evidence_ids": [
+              "e17",
+              "e21"
+            ]
+          }
+        ],
+        "behavior_patterns": [
+          {
+            "name": "Seeking alternatives for existing tools",
+            "confidence": 90,
+            "detail": "Developers actively search for alternatives to current Edge Developer Tools and Supabase Edge Functions.",
+            "evidence_ids": [
+              "e9",
+              "e14"
+            ]
+          },
+          {
+            "name": "Utilizing browser-based developer tools for debugging",
+            "confidence": 90,
+            "detail": "Developers leverage browser developer tools like Chrome DevTools for inspecting elements, debugging, and experimenting.",
+            "evidence_ids": [
+              "e8",
+              "e16",
+              "e19"
+            ]
+          },
+          {
+            "name": "Engaging in community discussions for support and solutions",
+            "confidence": 75,
+            "detail": "Developers use platforms like Reddit to discuss issues, seek help, and share experiences with tools like Supabase and VSCode.",
+            "evidence_ids": [
+              "e6",
+              "e14",
+              "e22"
+            ]
+          },
+          {
+            "name": "Adopting open-source platforms",
+            "confidence": 75,
+            "detail": "Developers are drawn to open-source platforms that offer comprehensive features like databases, authentication, storage, and edge functions.",
+            "evidence_ids": [
+              "e4"
+            ]
+          }
+        ],
+        "opportunity_areas": [
+          {
+            "name": "Enhanced debugging experience for Edge Functions",
+            "score": 90,
+            "detail": "There is a clear need for more robust and less problematic debugging tools for Edge Functions, especially with integration into popular IDEs.",
+            "evidence_ids": [
+              "e6",
+              "e8"
+            ]
+          },
+          {
+            "name": "Improved stability and compatibility for React Developer Tools",
+            "score": 75,
+            "detail": "Addressing detection failures, UI instability, and compatibility issues with modern frameworks would greatly benefit React developers.",
+            "evidence_ids": [
+              "e10"
+            ]
+          },
+          {
+            "name": "Comprehensive issue reporting and categorization",
+            "score": 75,
+            "detail": "Tools that can effectively report issues from external code and categorize them by severity offer significant value.",
+            "evidence_ids": [
+              "e2"
+            ]
+          },
+          {
+            "name": "Developer productivity and customization tools",
+            "score": 75,
+            "detail": "Offering add-ons and extensions that boost productivity, accessibility, and browser customization for web developers presents an opportunity.",
+            "evidence_ids": [
+              "e17"
+            ]
+          }
+        ]
+      },
+      "market": {
+        "market_size": {
+          "estimate": "$14.1B",
+          "confidence": 75
+        },
+        "growth_rate": {
+          "estimate": "",
+          "confidence": 0
+        },
+        "market_maturity": {
+          "stage": "Growth",
+          "confidence": 75
+        },
+        "future_outlook": {
+          "direction": "Growing",
+          "confidence": 90
+        },
+        "key_trends": [
+          {
+            "name": "Rise of serverless edge functions",
+            "strength": 90,
+            "detail": "Edge functions allow developers to deploy serverless functions globally, close to users, for improved performance and reduced latency.",
+            "evidence_ids": [
+              "e1",
+              "e13",
+              "e21"
+            ]
+          },
+          {
+            "name": "Integration of developer tools with AI capabilities",
+            "strength": 75,
+            "detail": "Platforms like Supabase are incorporating vector embeddings for AI applications, indicating a trend towards AI-powered developer tools.",
+            "evidence_ids": [
+              "e4"
+            ]
+          },
+          {
+            "name": "Focus on developer productivity",
+            "strength": 75,
+            "detail": "There is a strong emphasis on tools that enhance developer productivity, accessibility, and browser customization.",
+            "evidence_ids": [
+              "e17",
+              "e21"
+            ]
+          },
+          {
+            "name": "Open-source adoption",
+            "strength": 75,
+            "detail": "Open-source platforms are gaining traction, offering comprehensive features and community-driven development.",
+            "evidence_ids": [
+              "e4"
+            ]
+          }
+        ],
+        "emerging_trends": [
+          {
+            "name": "Debugging Edge Functions via v8 inspector protocol",
+            "potential": 90,
+            "detail": "The Supabase CLI now supports debugging Edge Functions via the v8 inspector protocol, enabling debugging with Chrome DevTools.",
+            "evidence_ids": [
+              "e8"
+            ]
+          },
+          {
+            "name": "VS Code extensions for browser developer tools",
+            "potential": 75,
+            "detail": "The Microsoft Edge Dev Tools extension for VS Code is gaining popularity, allowing front-end web development directly within the IDE.",
+            "evidence_ids": [
+              "e22"
+            ]
+          }
+        ],
+        "market_drivers": [
+          {
+            "name": "Demand for faster, more distributed applications",
+            "impact": 90,
+            "detail": "The need to deliver content and logic closer to users drives the adoption of edge functions and related developer tools.",
+            "evidence_ids": [
+              "e1",
+              "e13"
+            ]
+          },
+          {
+            "name": "Growth of serverless architectures",
+            "impact": 75,
+            "detail": "The increasing popularity of serverless computing models fuels the demand for tools that support serverless function deployment and management.",
+            "evidence_ids": [
+              "e1"
+            ]
+          },
+          {
+            "name": "Developer preference for integrated and efficient workflows",
+            "impact": 75,
+            "detail": "Developers seek tools that offer seamless integration, zero-config deployments, and comprehensive features to streamline their work.",
+            "evidence_ids": [
+              "e4",
+              "e21"
+            ]
+          }
+        ]
+      },
+      "competitive": {
+        "competitors": [
+          {
+            "name": "Supabase Edge Functions",
+            "strength": 90,
+            "detail": "Supabase provides a full Postgres database with instant APIs, built-in authentication, storage, and edge functions, all open-source.",
+            "evidence_ids": [
+              "e1",
+              "e4",
+              "e6",
+              "e8",
+              "e9"
+            ]
+          },
+          {
+            "name": "Microsoft Edge Developer Tools",
+            "strength": 90,
+            "detail": "Microsoft Edge offers built-in developer tools for inspecting elements, debugging, and experimenting, with an extension for VS Code.",
+            "evidence_ids": [
+              "e2",
+              "e3",
+              "e16",
+              "e18",
+              "e22",
+              "e24"
+            ]
+          },
+          {
+            "name": "Vercel",
+            "strength": 75,
+            "detail": "Vercel is a default platform for Next.js and frontend projects, offering zero-config deployments, preview URLs, and edge functions.",
+            "evidence_ids": [
+              "e21"
+            ]
+          },
+          {
+            "name": "React Developer Tools (Chrome/Edge extension)",
+            "strength": 75,
+            "detail": "This extension adds React debugging tools to browser developer tools, essential for developers working with the React JavaScript library.",
+            "evidence_ids": [
+              "e10",
+              "e11",
+              "e19"
+            ]
+          }
+        ],
+        "competitive_threats": [
+          {
+            "name": "Dominance of established platforms",
+            "severity": 90,
+            "detail": "Existing players like Supabase and Vercel offer comprehensive, integrated solutions that make it difficult for new entrants to compete.",
+            "evidence_ids": [
+              "e1",
+              "e4",
+              "e21"
+            ]
+          },
+          {
+            "name": "Debugging complexity",
+            "severity": 75,
+            "detail": "The inherent difficulty in debugging edge functions, even with existing tools, poses a challenge for any new solution.",
+            "evidence_ids": [
+              "e6"
+            ]
+          },
+          {
+            "name": "Compatibility issues with evolving frameworks",
+            "severity": 75,
+            "detail": "Ensuring compatibility with rapidly changing frameworks like Next.js and React versions can be a significant hurdle.",
+            "evidence_ids": [
+              "e10"
+            ]
+          }
+        ],
+        "positioning_gaps": [
+          {
+            "name": "Seamless debugging across diverse environments",
+            "opportunity": 90,
+            "detail": "A solution that offers a truly seamless and less problematic debugging experience for edge functions across various IDEs and browsers.",
+            "evidence_ids": [
+              "e6",
+              "e8"
+            ]
+          },
+          {
+            "name": "Robust issue reporting for external code",
+            "opportunity": 75,
+            "detail": "A tool that excels at identifying and categorizing issues originating from external code, providing a more comprehensive view.",
+            "evidence_ids": [
+              "e2"
+            ]
+          },
+          {
+            "name": "Stable and highly compatible React developer tools",
+            "opportunity": 75,
+            "detail": "A more stable and universally compatible React developer tool that avoids detection failures and UI instability with modern frameworks.",
+            "evidence_ids": [
+              "e10"
+            ]
+          }
+        ],
+        "white_space_opportunities": [
+          {
+            "name": "Integrated performance and security monitoring for edge functions",
+            "score": 75,
+            "detail": "While monitoring is mentioned, a dedicated tool that deeply integrates performance and security analytics specifically for edge functions could be a niche.",
+            "evidence_ids": [
+              "e1"
+            ]
+          },
+          {
+            "name": "AI-powered code generation and optimization for edge functions",
+            "score": 50,
+            "detail": "Leveraging AI beyond vector embeddings for generating or optimizing edge function code could be a novel offering.",
+            "evidence_ids": [
+              "e4"
+            ]
+          }
+        ],
+        "differentiation_opportunities": [
+          {
+            "name": "Superior debugging experience",
+            "score": 90,
+            "detail": "Focus on creating a debugging experience for edge functions that is significantly more reliable, intuitive, and integrated than current offerings.",
+            "evidence_ids": [
+              "e6",
+              "e8"
+            ]
+          },
+          {
+            "name": "Cross-platform and framework compatibility",
+            "score": 75,
+            "detail": "Develop a tool that guarantees high compatibility and stability across a wider range of frameworks and deployment platforms for edge functions.",
+            "evidence_ids": [
+              "e10",
+              "e13"
+            ]
+          },
+          {
+            "name": "Advanced issue detection and resolution",
+            "score": 75,
+            "detail": "Offer advanced capabilities for detecting, diagnosing, and suggesting resolutions for complex issues in edge function deployments.",
+            "evidence_ids": [
+              "e2"
+            ]
+          }
+        ]
+      },
+      "market_sizing": {
+        "claims": [
+          {
+            "evidence_id": "e12",
+            "figure_text": "$14.1B",
+            "year": null,
+            "scope": "60 top-ranked developer tools companies have raised"
+          },
+          {
+            "evidence_id": "e1",
+            "figure_text": "$496.1m",
+            "year": 2026,
+            "scope": "Supabase Edge Functions Reviews, Pricing & Alternatives"
+          }
+        ]
+      }
+    },
+    "synthesis": {
+      "market_pulse": 8,
+      "opportunity_score": 100,
+      "build_recommendation": {
+        "decision": "Yes",
+        "reason": "There is a clear and strong demand for improved developer tools for edge functions, particularly in debugging and stability, within a growing market."
+      },
+      "confidence": 90,
+      "confidence_explanation": "The evidence consistently highlights the growth of edge functions and persistent pain points for developers, supported by multiple sources and discussions.",
+      "top_reason_to_build": "The significant pain point around debugging edge functions presents a strong entry point for a specialized developer tool.",
+      "biggest_risk": "The dominance of established platforms like Supabase and Vercel, which already offer integrated edge function solutions.",
+      "best_customer_segment": "Developers using Supabase Edge Functions who struggle with current debugging solutions.",
+      "best_moat": "Proprietary debugging technology that offers unparalleled reliability and integration for edge functions.",
+      "executive_summary": "The market for developer tools for edge functions is in a growth stage, driven by the demand for distributed applications. Developers face significant pain points, especially with debugging and tool stability. A startup focusing on a superior debugging experience for edge functions could find a strong entry point.",
+      "why_now": [
+        {
+          "title": "Growing adoption of Edge Functions",
+          "reason": "The increasing use of edge functions creates a larger user base for specialized developer tools.",
+          "detail": "The increasing use of edge functions creates a larger user base for specialized developer tools.",
+          "score": 90,
+          "evidence_ids": [
+            "e1",
+            "e13",
+            "e21"
+          ],
+          "evidence": "Developers are increasingly utilizing Edge functions for global distribution."
+        },
+        {
+          "title": "Existing debugging challenges",
+          "reason": "Current solutions are insufficient, leaving a clear gap for a more effective debugging tool.",
+          "detail": "Current solutions are insufficient, leaving a clear gap for a more effective debugging tool.",
+          "score": 90,
+          "evidence_ids": [
+            "e6",
+            "e8"
+          ],
+          "evidence": "Debugging Edge Functions is problematic, even with current tools like VSCode."
+        },
+        {
+          "title": "Market growth and investment",
+          "reason": "The overall developer tools market is attracting substantial investment, suggesting a fertile ground for new solutions.",
+          "detail": "The overall developer tools market is attracting substantial investment, suggesting a fertile ground for new solutions.",
+          "score": 75,
+          "evidence_ids": [
+            "e12"
+          ],
+          "evidence": "Developer tools startups have raised significant funding, indicating market vitality."
+        }
+      ],
+      "key_opportunities": [
+        {
+          "title": "Superior debugging experience",
+          "reason": "A highly effective and integrated debugging solution would address a critical pain point for a growing developer segment.",
+          "detail": "A highly effective and integrated debugging solution would address a critical pain point for a growing developer segment.",
+          "score": 90,
+          "evidence_ids": [
+            "e6",
+            "e8"
+          ],
+          "evidence": "Developers struggle with debugging Edge Functions."
+        },
+        {
+          "title": "Enhanced stability and compatibility for React tools",
+          "reason": "Improving the reliability and compatibility of tools for popular frameworks like React would attract a large user base.",
+          "detail": "Improving the reliability and compatibility of tools for popular frameworks like React would attract a large user base.",
+          "score": 75,
+          "evidence_ids": [
+            "e10"
+          ],
+          "evidence": "React Developer Tools face detection failures and compatibility issues."
+        },
+        {
+          "title": "Comprehensive issue reporting",
+          "reason": "Providing a more complete view of potential problems, including those from external code, offers significant value.",
+          "detail": "Providing a more complete view of potential problems, including those from external code, offers significant value.",
+          "score": 75,
+          "evidence_ids": [
+            "e2"
+          ],
+          "evidence": "The Issues Tool needs to report problems from external code effectively."
+        }
+      ],
+      "key_risks": [
+        {
+          "title": "Competition from integrated platforms",
+          "reason": "New entrants must differentiate significantly to compete with established, comprehensive solutions that developers already use.",
+          "detail": "New entrants must differentiate significantly to compete with established, comprehensive solutions that developers already use.",
+          "score": 90,
+          "evidence_ids": [
+            "e1",
+            "e4",
+            "e21"
+          ],
+          "evidence": "Supabase and Vercel offer full platforms with built-in edge functions and tools."
+        },
+        {
+          "title": "Rapid evolution of web technologies",
+          "reason": "Keeping pace with new frameworks and versions requires continuous development and can lead to compatibility challenges.",
+          "detail": "Keeping pace with new frameworks and versions requires continuous development and can lead to compatibility challenges.",
+          "score": 75,
+          "evidence_ids": [
+            "e10"
+          ],
+          "evidence": "Compatibility problems with Next.js 16/React 19 and Expo sites are noted."
+        },
+        {
+          "title": "Developer tool fatigue",
+          "reason": "The market is crowded with tools, making it challenging for a new product to gain traction and mindshare without a compelling advantage.",
+          "detail": "The market is crowded with tools, making it challenging for a new product to gain traction and mindshare without a compelling advantage.",
+          "score": 50,
+          "evidence_ids": [
+            "e9",
+            "e14"
+          ],
+          "evidence": "Developers are constantly seeking alternatives and new tools."
+        }
+      ],
+      "recommended_customer": "Developers actively building and deploying serverless edge functions, particularly those using platforms like Supabase, who are frustrated by current debugging limitations.",
+      "recommended_positioning": "Position the product as the definitive, most reliable, and seamlessly integrated debugging and development environment for edge functions, emphasizing stability and comprehensive issue resolution.",
+      "potential_moats": [
+        {
+          "title": "Proprietary debugging engine",
+          "reason": "Developing a unique and highly effective debugging engine for edge functions would be difficult to replicate, creating a strong technical moat.",
+          "detail": "Developing a unique and highly effective debugging engine for edge functions would be difficult to replicate, creating a strong technical moat.",
+          "score": 90,
+          "evidence_ids": [
+            "e6",
+            "e8"
+          ],
+          "evidence": "Debugging Edge Functions is very problematic."
+        },
+        {
+          "title": "Deep integration with popular IDEs and cloud platforms",
+          "reason": "Achieving deep, seamless integration with major developer environments and cloud providers would create significant switching costs and user loyalty.",
+          "detail": "Achieving deep, seamless integration with major developer environments and cloud providers would create significant switching costs and user loyalty.",
+          "score": 75,
+          "evidence_ids": [
+            "e1",
+            "e6",
+            "e22"
+          ],
+          "evidence": "VSCode integration is useful, and Supabase offers managed functions."
+        },
+        {
+          "title": "Community and ecosystem around edge function development",
+          "reason": "Building a strong community and ecosystem around the tool could foster network effects and provide valuable feedback and contributions.",
+          "detail": "Building a strong community and ecosystem around the tool could foster network effects and provide valuable feedback and contributions.",
+          "score": 75,
+          "evidence_ids": [
+            "e6",
+            "e14"
+          ],
+          "evidence": "Reddit discussions show active developer communities."
+        }
+      ],
+      "execution_ideas": [
+        {
+          "title": "Develop a universal edge function debugger",
+          "reason": "Focus on building a debugger that works reliably across different edge function providers and integrates with major IDEs like VSCode and browser dev tools.",
+          "detail": "Focus on building a debugger that works reliably across different edge function providers and integrates with major IDEs like VSCode and browser dev tools.",
+          "score": 90,
+          "evidence_ids": [
+            "e6",
+            "e8",
+            "e22"
+          ]
+        },
+        {
+          "title": "Prioritize stability and compatibility",
+          "reason": "Ensure the tool is highly stable and compatible with the latest versions of popular frameworks (e.g., React, Next.js) and browser environments.",
+          "detail": "Ensure the tool is highly stable and compatible with the latest versions of popular frameworks (e.g., React, Next.js) and browser environments.",
+          "score": 75,
+          "evidence_ids": [
+            "e10"
+          ]
+        },
+        {
+          "title": "Offer advanced issue diagnostics",
+          "reason": "Implement features that provide comprehensive issue reporting, including problems from external code, and categorize them by severity.",
+          "detail": "Implement features that provide comprehensive issue reporting, including problems from external code, and categorize them by severity.",
+          "score": 75,
+          "evidence_ids": [
+            "e2"
+          ]
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "rank": 1,
+        "source": "ddgs",
+        "title": "Supabase Edge Functions Reviews, Pricing & Alternatives (2026)",
+        "url": "https://toolradar.com/tools/supabase-edge-functions",
+        "snippet": "May 26, 2026 · Supabase Edge Functions allow developers to easily author, deploy, and monitor serverless functions distributed globally at the edge, close to their users. These functions are fully managed, automatically scale, and offer global deployments for maximum resiliency and low latency.",
+        "query": "Developer tools for edge functions competitors alternatives",
+        "used_in_prompt": true,
+        "id": "e1",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 2,
+        "source": "ddgs",
+        "title": "Issues with Microsoft Edge's Developer Tools - GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/issues-tool-in-microsoft-edge-browser/",
+        "snippet": "July 23, 2025 - This allows the tool to report issues originating from external code, providing a comprehensive view of potential problems. · The Issues Tool categorizes issues based on their severity, helping developers prioritize fixes.",
+        "query": "Developer tools for edge functions reviews complaints problems",
+        "used_in_prompt": true,
+        "id": "e2",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 3,
+        "source": "ddgs",
+        "title": "How To Open Developer Tools In Microsoft Edge - YouTube",
+        "url": "https://www.youtube.com/watch?v=_Pwq6IGYgTc",
+        "snippet": "How To Open Developer Tools In Microsoft Edge. Tap to unmute.",
+        "query": "Developer tools for edge functions market size growth forecast",
+        "used_in_prompt": true,
+        "id": "e3",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 4,
+        "source": "ddgs",
+        "title": "12 Fastest Growing Developer Tools Companies and Startups | Landbase",
+        "url": "https://www.landbase.com/blog/fastest-growing-developer-tools",
+        "snippet": "April 10, 2026 - Supabase provides a full Postgres database with instant APIs, built-in authentication, storage, and edge functions. The platform is open-source from day one and includes vector embeddings for AI applications, positioning itself as an open alternative to Firebase. Supabase raised $49",
+        "query": "Developer tools for edge functions funding startup launches",
+        "used_in_prompt": true,
+        "id": "e4",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 5,
+        "source": "ddgs",
+        "title": "The top 25 most used Edge add-on in \"Developer tools\" category",
+        "url": "https://chrome-stats.com/c/Developer-Tools/edge",
+        "snippet": "To see how any Edge add-on's ranking in this category has changed over time, click on it and visit its trends page. Tracking category rankings helps you monitor your competition, identify opportunities for growth, and measure the effectiveness of your optimization efforts. View results for Developer",
+        "query": "Developer tools for edge functions trends",
+        "used_in_prompt": true,
+        "id": "e5",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 6,
+        "source": "ddgs",
+        "title": "r/Supabase on Reddit: Debug your Edge Functions with Chrome Dev tools",
+        "url": "https://www.reddit.com/r/Supabase/comments/1jclngv/debug_your_edge_functions_with_chrome_dev_tools/",
+        "snippet": "March 16, 2025 - This subreddit is for developers and users building with Supabase Please keep discussions respectful, helpful, and on-topic. ... I debug on VSCode it works but it’s very problematic. Supabase team must make VSCode debugging experience perfect for edge functions.",
+        "query": "site:reddit.com Developer tools for edge functions",
+        "used_in_prompt": true,
+        "id": "e6",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 7,
+        "source": "ddgs",
+        "title": "CAGR formula in Excel (Easy Steps)",
+        "url": "https://www.excel-easy.com/examples/cagr.html",
+        "snippet": "Compound Annual Growth Rate. Note: the RRI function has three arguments (number of years = 5, start = 100, end = 147).3. Knowing this, we can easily create a CAGR formula that calculates the compound annual growth rate of an investment in Excel.",
+        "query": "Developer tools for edge functions industry report CAGR",
+        "used_in_prompt": true,
+        "id": "e7",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 8,
+        "source": "youtube",
+        "title": "Debug Edge Functions with Chrome DevTools",
+        "url": "https://youtube.com/watch?v=sOrtcoKg5zQ",
+        "snippet": "Since v1.171.0 the Supabase CLI supports debugging Edge Functions via the v8 inspector protocol, allowing for debugging via Chrome DevTools and other Chromium-based browsers. - Read the docs: https://supabase.link/ef-debugging-tools-docs Presented by Thor Schaeff (@thorwebdev https://go.thor.bio/x) ",
+        "query": "",
+        "used_in_prompt": true,
+        "id": "e8",
+        "source_key": "youtube",
+        "display_name": "YouTube",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 9,
+        "source": "ddgs",
+        "title": "Best Supabase Edge Functions Alternatives in 2026",
+        "url": "https://serverspotter.com/blog/best-supabase-edge-alternatives",
+        "snippet": "May 15, 2026 · Compare the best Supabase Edge Functions alternatives. Features, pricing, and honest reviews of top competitors in 2026.",
+        "query": "Developer tools for edge functions competitors alternatives",
+        "used_in_prompt": true,
+        "id": "e9",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 10,
+        "source": "ddgs",
+        "title": "React Developer Tools — Edge DevTools",
+        "url": "https://chrome-stats.com/d/gpphkfbcpidddadnkolkpfckpihlkkil",
+        "snippet": "October 20, 2025 - The most mentioned problems are detection failures for React on certain pages/SPAs, general UI instability and errors, plus occasional compatibility problems with Next.js 16/React 19 and Expo sites.",
+        "query": "Developer tools for edge functions reviews complaints problems",
+        "used_in_prompt": true,
+        "id": "e10",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 11,
+        "source": "ddgs",
+        "title": "React Developer Tools - Microsoft Edge Add-ons",
+        "url": "https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil",
+        "snippet": "Make Microsoft Edge your own with extensions that help you personalize the browser and be more productive.",
+        "query": "Developer tools for edge functions market size growth forecast",
+        "used_in_prompt": true,
+        "id": "e11",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 12,
+        "source": "ddgs",
+        "title": "Best Developer Tools Startups (2026) | Seedtable",
+        "url": "https://seedtable.com/best-developer-tools-startups",
+        "snippet": "Seedtable tracks 60+ funded developer tools startups, ranked by the Seedtable Score from real funding, stage and traction data. The 60 top-ranked developer tools companies have raised $14.1B between them. Most sit at Series A and Series B stage. The leading hubs are London, San Francisco and Paris.",
+        "query": "Developer tools for edge functions funding startup launches",
+        "used_in_prompt": true,
+        "id": "e12",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 13,
+        "source": "ddgs",
+        "title": "Understanding Edge Functions: Definition & Benefits | Sanity",
+        "url": "https://www.sanity.io/glossary/edge-function",
+        "snippet": "April 15, 2026 - Developers can utilize Edge functions by simply adding a JavaScript file to their repository and deploying it with their platform of choice. These files contain the necessary code for tasks such as modifying data, localizing content, or even deploying entire applications at the edge",
+        "query": "Developer tools for edge functions trends",
+        "used_in_prompt": true,
+        "id": "e13",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 14,
+        "source": "ddgs",
+        "title": "r/webdev on Reddit: Alternatives for Edge Developer Tools?",
+        "url": "https://www.reddit.com/r/webdev/comments/9orc8y/alternatives_for_edge_developer_tools/",
+        "snippet": "",
+        "query": "site:reddit.com Developer tools for edge functions",
+        "used_in_prompt": true,
+        "id": "e14",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 15,
+        "source": "ddgs",
+        "title": "CAGR Calculator - Calculate Compound Annual Growth Rate Online",
+        "url": "https://cagrcalculator.net/",
+        "snippet": "The compound annual growth rate, or CAGR for short, is the average rate at which some value (investment) grows over a certain period of time assuming the value has been compounding over that time period. Know more about CAGR. CAGR calculator formula",
+        "query": "Developer tools for edge functions industry report CAGR",
+        "used_in_prompt": true,
+        "id": "e15",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 16,
+        "source": "youtube",
+        "title": "How to Enable Developer Tools in Microsoft Edge Browser | Quick & Easy Guide",
+        "url": "https://youtube.com/watch?v=ejZr5hHUB20",
+        "snippet": "In this tutorial, learn how to enable Developer Tools in Microsoft Edge browser on your Windows PC. These tools are essential for web developers and enthusiasts who want to inspect elements, debug, and experiment with web pages. Follow this step-by-step guide to activate Developer Tools easily. Whet",
+        "query": "",
+        "used_in_prompt": true,
+        "id": "e16",
+        "source_key": "youtube",
+        "display_name": "YouTube",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 17,
+        "source": "ddgs",
+        "title": "Best Edge Add-ons for Web Developers",
+        "url": "https://tecnobits.com/en/Best-Edge-plugins-for-web-developers/",
+        "snippet": "In this article we review some of the Best Edge Add-ons for Web Developers. Resources that offer us more opportunities to improve productivity, accessibility, and browser customization.",
+        "query": "Developer tools for edge functions competitors alternatives",
+        "used_in_prompt": true,
+        "id": "e17",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 18,
+        "source": "ddgs",
+        "title": "Overview of DevTools - Microsoft Edge Developer documentation | Microsoft Learn",
+        "url": "https://learn.microsoft.com/en-us/microsoft-edge/devtools/overview",
+        "snippet": "To connect with the Microsoft Edge DevTools team to report a problem or issue (or to suggest an idea), describe what happened, and include a screenshot. See Contact the Microsoft Edge DevTools team. Click the Close DevTools () button in the upper right corner of DevTools to close DevTools and use th",
+        "query": "Developer tools for edge functions reviews complaints problems",
+        "used_in_prompt": true,
+        "id": "e18",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 19,
+        "source": "ddgs",
+        "title": "React Developer Tools - Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi",
+        "snippet": "Adds React debugging tools to the Chrome Developer Tools. Created from revision 3cde211b0c on 10/20/2025. React Developer Tools is a Chrome DevTools extension for the open-source React JavaScript library.",
+        "query": "Developer tools for edge functions market size growth forecast",
+        "used_in_prompt": true,
+        "id": "e19",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 20,
+        "source": "ddgs",
+        "title": "Top 100 Developer Tools Startups to Watch in 2026",
+        "url": "https://www.failory.com/startups/developer-tools",
+        "snippet": "November 14, 2025 - Below is our list of 100 Developer Tools startups worth keeping an eye on. ... Everything you need to raise funding for your startup, including 3,500+ investors, 7 tools, 18 templates and 3 learning resources.Buy It For $97 $297 →",
+        "query": "Developer tools for edge functions funding startup launches",
+        "used_in_prompt": true,
+        "id": "e20",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 21,
+        "source": "ddgs",
+        "title": "The Complete Guide to Developer Productivity Tools in 2026 - DEV Community",
+        "url": "https://dev.to/_d7eb1c1703182e3ce1782/the-complete-guide-to-developer-productivity-tools-in-2026-165b",
+        "snippet": "March 20, 2026 - Vercel — The default for Next.js and frontend projects. Zero-config deployments, preview URLs for every PR, and edge functions for API routes.",
+        "query": "Developer tools for edge functions trends",
+        "used_in_prompt": true,
+        "id": "e21",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 22,
+        "source": "ddgs",
+        "title": "r/vscode on Reddit: The Microsoft Edge Dev Tools extension for VS Code is so awesome that I’m ditching Chrome for web development",
+        "url": "https://www.reddit.com/r/vscode/comments/x0n4h2/the_microsoft_edge_dev_tools_extension_for_vs/",
+        "snippet": "August 29, 2022 - This extension is for front end web development, so it's most useful with JavaScript & TypeScript debugging with whatever framework you're using, CSS styling, general in-browser app testing during development, etc. ... That's what I figured. Thanks! ... Oh yeah, imo Edge is absolut",
+        "query": "site:reddit.com Developer tools for edge functions",
+        "used_in_prompt": true,
+        "id": "e22",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 23,
+        "source": "ddgs",
+        "title": "investopedia.com/terms/c/cagr.asp",
+        "url": "https://www.investopedia.com/terms/c/cagr.asp",
+        "snippet": "Compound Annual Growth Rate (CAGR) Formula and …",
+        "query": "Developer tools for edge functions industry report CAGR",
+        "used_in_prompt": true,
+        "id": "e23",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 24,
+        "source": "youtube",
+        "title": "Enable Disable ‘Open the Developer Tools ’ in Microsoft Edge [2025 Full Guide]",
+        "url": "https://youtube.com/watch?v=b304FIDdFh4",
+        "snippet": "Enable Disable ‘Open the Developer Tools ’ in Microsoft Edge [2025 Full Guide] In today's video we will show you disable developer tool in microsoft edge, disable developers tool in ms edge, how to enable javascript in microsoft edge, disable vertical tabs in microsoft edge using registry, enable ja",
+        "query": "",
+        "used_in_prompt": true,
+        "id": "e24",
+        "source_key": "youtube",
+        "display_name": "YouTube",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 25,
+        "source": "ddgs",
+        "title": "Discover the best Edge add-ons for web developers in 2025",
+        "url": "https://en.windowsnoticias.com/Discover-the-best-Edge-plugins-for-web-developers-in-2025/",
+        "snippet": "Explore a comprehensive selection of must-have add-ons and extensions for Microsoft Edge in 2025, from developer utilities to productivity and accessibility tools. Discover how each extension can improve your workflow, facilitating web development, task management, security, and user experience.",
+        "query": "Developer tools for edge functions competitors alternatives",
+        "used_in_prompt": false,
+        "id": "e25",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": "Ranked 25 of 30; below the prompt cutoff"
+      },
+      {
+        "rank": 26,
+        "source": "ddgs",
+        "title": "DevTools in Microsoft Edge Browser - GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/techtips/devtools-in-microsoft-edge-browser/",
+        "snippet": "July 30, 2024 - The tools provided a list of issues with respect to accessibility, compatibility, PWA, etc., and also provided documentation for further reading about the issues. The tools are very helpful as they showcase all possible issues that may have ...",
+        "query": "Developer tools for edge functions reviews complaints problems",
+        "used_in_prompt": false,
+        "id": "e26",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": "Ranked 26 of 30; below the prompt cutoff"
+      },
+      {
+        "rank": 27,
+        "source": "ddgs",
+        "title": "Boring Tools Market Size, Growth Potential: Unveiling Growth...",
+        "url": "https://www.linkedin.com/pulse/boring-tools-market-size-growth-potential-unveiling-f4vpc",
+        "snippet": "(C) The research includes the Boring Tools market split by different types, applications, technologies, and end-uses. This segmentation helps leaders plan their products and finances based on the upcoming development rates of each segment.",
+        "query": "Developer tools for edge functions market size growth forecast",
+        "used_in_prompt": false,
+        "id": "e27",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": "Ranked 27 of 30; below the prompt cutoff"
+      },
+      {
+        "rank": 28,
+        "source": "ddgs",
+        "title": "List of Developer Tools Investors & VC Firms for Startups",
+        "url": "https://www.openvc.app/investor-lists/developer-tools-investors",
+        "snippet": "Find active investors and VC firms funding developer tools startups. Raise capital for seed, pre-seed, and early-stage investments in dev tools.",
+        "query": "Developer tools for edge functions funding startup launches",
+        "used_in_prompt": false,
+        "id": "e28",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": "Ranked 28 of 30; below the prompt cutoff"
+      },
+      {
+        "rank": 29,
+        "source": "ddgs",
+        "title": "Best Edge Computing Platforms Compared: Challenges, Trends, How to use AI at the Edge | by Phani Bhushan Athlur | Medium",
+        "url": "https://medium.com/@PhaniBhushanAthlur/top-edge-computing-platforms-compared-challenges-trends-and-how-to-use-ai-at-the-edge-514358d0ba8b",
+        "snippet": "February 16, 2026 - The true strength lies in its mature CUDA software ecosystem, which provides a rich set of libraries, tools (like TensorRT for model optimization), and pre-trained models that dramatically accelerate development for robotics, video analytics, and autonomous systems. ... AWS IoT G",
+        "query": "Developer tools for edge functions trends",
+        "used_in_prompt": false,
+        "id": "e29",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": "Ranked 29 of 30; below the prompt cutoff"
+      },
+      {
+        "rank": 30,
+        "source": "ddgs",
+        "title": "r/techtalktutorials on Reddit: How To Open The Developer Tools In The Microsoft Edge Web Browser | PC |...",
+        "url": "https://www.reddit.com/r/techtalktutorials/comments/z3qf3b/how_to_open_the_developer_tools_in_the_microsoft/",
+        "snippet": "November 24, 2022 - This is a video tutorial on how to open the developer tools in the Edge web browser. The keyboard shortcut for the developer tools in \"ctrl + shirt + i\". I will be using a desktop PC for this tutorial.",
+        "query": "site:reddit.com Developer tools for edge functions",
+        "used_in_prompt": false,
+        "id": "e30",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": "Ranked 30 of 30; below the prompt cutoff"
+      }
+    ],
+    "degraded": false,
+    "degraded_reason": null,
+    "analysis_failed": false,
+    "retry_after": null,
+    "report": {
+      "schema_version": 2,
+      "verdict": {
+        "decision": "Yes",
+        "decision_unavailable_reason": null,
+        "reason": "There is a clear and strong demand for improved developer tools for edge functions, particularly in debugging and stability, within a growing market.",
+        "executive_summary": "The market for developer tools for edge functions is in a growth stage, driven by the demand for distributed applications. Developers face significant pain points, especially with debugging and tool stability. A startup focusing on a superior debugging experience for edge functions could find a strong entry point.",
+        "top_reason_to_build": "The significant pain point around debugging edge functions presents a strong entry point for a specialized developer tool.",
+        "biggest_risk": "The dominance of established platforms like Supabase and Vercel, which already offer integrated edge function solutions.",
+        "market_pulse": {
+          "value": 8,
+          "display": "8",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "The model's overall read of market conditions across every section it wrote.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": true
+        },
+        "confidence": {
+          "value": 90,
+          "display": "90",
+          "unit": null,
+          "confidence": 90,
+          "confidence_band": "high",
+          "basis": "The evidence consistently highlights the growth of edge functions and persistent pain points for developers, supported by multiple sources and discussions.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": true
+        }
+      },
+      "headline": {
+        "recommended_customer": {
+          "value": "Developers actively building and deploying serverless edge functions, particularly those using platforms like Supabase, who are frustrated by current debugging limitations.",
+          "suppressed_reason": null
+        },
+        "best_customer_segment": {
+          "value": "Developers using Supabase Edge Functions who struggle with current debugging solutions.",
+          "suppressed_reason": null
+        },
+        "recommended_positioning": {
+          "value": "Position the product as the definitive, most reliable, and seamlessly integrated debugging and development environment for edge functions, emphasizing stability and comprehensive issue resolution.",
+          "suppressed_reason": null
+        },
+        "best_moat": {
+          "value": "Proprietary debugging technology that offers unparalleled reliability and integration for edge functions.",
+          "suppressed_reason": null
+        }
+      },
+      "market_sizing": {
+        "claims": [
+          {
+            "evidence_id": "e12",
+            "source_name": "Web search",
+            "figure_text": "$14.1B",
+            "value_usd": 14100000000.0,
+            "year": null,
+            "scope": "60 top-ranked developer tools companies have raised",
+            "url": "https://seedtable.com/best-developer-tools-startups"
+          }
+        ],
+        "low_usd": 14100000000.0,
+        "high_usd": 14100000000.0,
+        "converges": true,
+        "display": "$14.1B — seedtable.com, the only source to state a figure.",
+        "basis": "One of 30 collected sources stated a market size."
+      },
+      "market": {
+        "market_size": {
+          "value": "$14 B",
+          "display": "$14 B",
+          "unit": null,
+          "confidence": 75,
+          "confidence_band": "moderate",
+          "basis": "Model estimate, grounded in the 4 collected sources containing sizing or forecast language.",
+          "source_count": 4,
+          "evidence_ids": [
+            "e7",
+            "e15",
+            "e23",
+            "e27"
+          ],
+          "collected": true
+        },
+        "growth_rate": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "The model returned no figure for this.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "market_maturity": {
+          "value": "Growth",
+          "display": "Growth",
+          "unit": null,
+          "confidence": 75,
+          "confidence_band": "moderate",
+          "basis": "Model estimate, grounded in the 4 collected sources containing sizing or forecast language.",
+          "source_count": 4,
+          "evidence_ids": [
+            "e7",
+            "e15",
+            "e23",
+            "e27"
+          ],
+          "collected": true
+        },
+        "future_outlook": {
+          "value": "Growing",
+          "display": "Growing",
+          "unit": null,
+          "confidence": 90,
+          "confidence_band": "high",
+          "basis": "Model estimate, grounded in the 4 collected sources containing sizing or forecast language.",
+          "source_count": 4,
+          "evidence_ids": [
+            "e7",
+            "e15",
+            "e23",
+            "e27"
+          ],
+          "collected": true
+        }
+      },
+      "signals": {
+        "customer": {
+          "discussion_volume": {
+            "value": 30,
+            "display": "30",
+            "unit": null,
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "Count of items in the ranked evidence list.",
+            "source_count": 30,
+            "evidence_ids": [
+              "e1",
+              "e2",
+              "e3",
+              "e4",
+              "e5",
+              "e6",
+              "e7",
+              "e8",
+              "e9",
+              "e10",
+              "e11",
+              "e12",
+              "e13",
+              "e14",
+              "e15",
+              "e16",
+              "e17",
+              "e18",
+              "e19",
+              "e20",
+              "e21",
+              "e22",
+              "e23",
+              "e24",
+              "e25",
+              "e26",
+              "e27",
+              "e28",
+              "e29",
+              "e30"
+            ],
+            "collected": true
+          },
+          "comment_volume": {
+            "value": 13,
+            "display": "13",
+            "unit": null,
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "Sum of the YouTube comment count on every collected video.",
+            "source_count": 3,
+            "evidence_ids": [
+              "e8",
+              "e16",
+              "e24"
+            ],
+            "collected": true
+          }
+        },
+        "market": {
+          "growth_score": {
+            "value": null,
+            "display": "—",
+            "unit": "%",
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "Google Trends returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+            "source_count": 0,
+            "evidence_ids": [],
+            "collected": false
+          },
+          "startup_activity": {
+            "value": null,
+            "display": "—",
+            "unit": null,
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+            "source_count": 0,
+            "evidence_ids": [],
+            "collected": false
+          }
+        },
+        "competitive": {
+          "launches": {
+            "value": null,
+            "display": "—",
+            "unit": null,
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+            "source_count": 0,
+            "evidence_ids": [],
+            "collected": false
+          },
+          "avg_votes_per_day": {
+            "value": null,
+            "display": "—",
+            "unit": null,
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+            "source_count": 0,
+            "evidence_ids": [],
+            "collected": false
+          },
+          "competition_score": {
+            "value": null,
+            "display": "—",
+            "unit": null,
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+            "source_count": 0,
+            "evidence_ids": [],
+            "collected": false
+          }
+        },
+        "virality": {
+          "momentum": {
+            "value": 8,
+            "display": "8",
+            "unit": null,
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "Weighted blend of search growth, video engagement and daily views.",
+            "source_count": 3,
+            "evidence_ids": [
+              "e8",
+              "e16",
+              "e24"
+            ],
+            "collected": true
+          },
+          "trend_growth": {
+            "value": null,
+            "display": "—",
+            "unit": "%",
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "Google Trends returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+            "source_count": 0,
+            "evidence_ids": [],
+            "collected": false
+          },
+          "avg_views_per_day": {
+            "value": 1.6,
+            "display": "1.6",
+            "unit": null,
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "Lifetime views divided by days since publication, averaged.",
+            "source_count": 3,
+            "evidence_ids": [
+              "e8",
+              "e16",
+              "e24"
+            ],
+            "collected": true
+          },
+          "avg_engagement_rate": {
+            "value": 2,
+            "display": "~2%",
+            "unit": "%",
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "(likes + comments) / views x 100, averaged across videos.",
+            "source_count": 3,
+            "evidence_ids": [
+              "e8",
+              "e16",
+              "e24"
+            ],
+            "collected": true
+          }
+        },
+        "market_size": {
+          "market_reports": {
+            "value": 1,
+            "display": "1",
+            "unit": null,
+            "confidence": null,
+            "confidence_band": "none",
+            "basis": "Sources whose text contains 'market size', 'market forecast' or 'industry report'.",
+            "source_count": 30,
+            "evidence_ids": [
+              "e1",
+              "e2",
+              "e3",
+              "e4",
+              "e5",
+              "e6",
+              "e7",
+              "e8",
+              "e9",
+              "e10",
+              "e11",
+              "e12",
+              "e13",
+              "e14",
+              "e15",
+              "e16",
+              "e17",
+              "e18",
+              "e19",
+              "e20",
+              "e21",
+              "e22",
+              "e23",
+              "e24",
+              "e25",
+              "e26",
+              "e27",
+              "e28",
+              "e29",
+              "e30"
+            ],
+            "collected": true
+          }
+        },
+        "market_opportunity": {
+          "sizing_language_density": {
+            "counts": {
+              "market_size_mentions": 1,
+              "growth_mentions": 6,
+              "forecast_mentions": 0,
+              "cagr_mentions": 3,
+              "billion_mentions": 1,
+              "million_mentions": 1
+            },
+            "sources_scanned": 30,
+            "definition": "How often each kind of sizing language appeared in the collected sources. A property of the writing, not evidence of the market's actual size.",
+            "basis": "Counts of sizing and growth language across the 30 collected sources. Not a score.",
+            "detected_market_sizes": [
+              "$500 m",
+              "$14 b"
+            ],
+            "detected_growth_rates": []
+          }
+        }
+      },
+      "signals_unavailable": [
+        "market.growth_score",
+        "market.startup_activity",
+        "competitive.launches",
+        "competitive.avg_votes_per_day",
+        "competitive.competition_score",
+        "virality.trend_growth"
+      ],
+      "lists": {
+        "customer_segments": {
+          "key": "customer_segments",
+          "label": "Customer segments",
+          "metric_key": "score",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "customer_segments-1",
+              "label": "Developers using Supabase Edge Functions",
+              "detail": "These developers are actively using or considering Supabase's serverless edge functions for global distribution and monitoring.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e1",
+                "e4",
+                "e6",
+                "e8",
+                "e9"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "customer_segments-3",
+              "label": "Developers utilizing Microsoft Edge DevTools",
+              "detail": "This group uses Edge's built-in developer tools for inspecting elements, debugging, and experimenting with web applications.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e2",
+                "e3",
+                "e16",
+                "e18",
+                "e22",
+                "e24"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "customer_segments-2",
+              "label": "Web developers focused on frontend projects",
+              "detail": "This segment includes developers working with frameworks like Next.js and React, who benefit from zero-config deployments and preview URLs.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e10",
+                "e11",
+                "e19",
+                "e21",
+                "e22"
+              ],
+              "rank": 3
+            }
+          ]
+        },
+        "pain_points": {
+          "key": "pain_points",
+          "label": "Pain points",
+          "metric_key": "signal_strength",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "pain_points-1",
+              "label": "Debugging Edge Functions",
+              "detail": "Developers face challenges debugging Edge Functions, with issues noted even when using tools like VSCode.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e6",
+                "e8"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "pain_points-2",
+              "label": "Issues with Microsoft Edge's Developer Tools",
+              "detail": "Users report problems with the Issues Tool, including reporting from external code and categorization based on severity.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e2"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "pain_points-3",
+              "label": "React Developer Tools instability",
+              "detail": "Problems include detection failures for React on certain pages, general UI instability, errors, and compatibility issues with Next.js/React and Expo sites.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e10"
+              ],
+              "rank": 3
+            },
+            {
+              "id": "pain_points-4",
+              "label": "Monitoring competition and identifying growth opportunities",
+              "detail": "Developers and businesses need tools to track category rankings to monitor competitors and find growth areas.",
+              "score": 50,
+              "score_band": "low",
+              "evidence_ids": [
+                "e5"
+              ],
+              "rank": 4
+            }
+          ]
+        },
+        "desired_outcomes": {
+          "key": "desired_outcomes",
+          "label": "Desired outcomes",
+          "metric_key": "importance",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "desired_outcomes-2",
+              "label": "Effective debugging capabilities for Edge Functions",
+              "detail": "The ability to debug Edge Functions using familiar tools like Chrome DevTools or VSCode is highly desired.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e6",
+                "e8"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "desired_outcomes-1",
+              "label": "Easy authoring, deployment, and monitoring of serverless functions",
+              "detail": "Developers want a streamlined process for creating, deploying, and overseeing globally distributed serverless functions.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e1"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "desired_outcomes-4",
+              "label": "Improved developer productivity",
+              "detail": "Developers seek resources and tools that offer more opportunities to enhance productivity, accessibility, and browser customization.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e17",
+                "e21"
+              ],
+              "rank": 3
+            },
+            {
+              "id": "desired_outcomes-3",
+              "label": "Comprehensive view of potential problems",
+              "detail": "Developers need tools that can report issues originating from external code to provide a holistic understanding of problems.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e2"
+              ],
+              "rank": 4
+            }
+          ]
+        },
+        "behavior_patterns": {
+          "key": "behavior_patterns",
+          "label": "Behaviour patterns",
+          "metric_key": "confidence",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "behavior_patterns-2",
+              "label": "Utilizing browser-based developer tools for debugging",
+              "detail": "Developers leverage browser developer tools like Chrome DevTools for inspecting elements, debugging, and experimenting.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e8",
+                "e16",
+                "e19"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "behavior_patterns-1",
+              "label": "Seeking alternatives for existing tools",
+              "detail": "Developers actively search for alternatives to current Edge Developer Tools and Supabase Edge Functions.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e9",
+                "e14"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "behavior_patterns-3",
+              "label": "Engaging in community discussions for support and solutions",
+              "detail": "Developers use platforms like Reddit to discuss issues, seek help, and share experiences with tools like Supabase and VSCode.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e6",
+                "e14",
+                "e22"
+              ],
+              "rank": 3
+            },
+            {
+              "id": "behavior_patterns-4",
+              "label": "Adopting open-source platforms",
+              "detail": "Developers are drawn to open-source platforms that offer comprehensive features like databases, authentication, storage, and edge functions.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e4"
+              ],
+              "rank": 4
+            }
+          ]
+        },
+        "opportunity_areas": {
+          "key": "opportunity_areas",
+          "label": "Opportunity areas",
+          "metric_key": "score",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "opportunity_areas-1",
+              "label": "Enhanced debugging experience for Edge Functions",
+              "detail": "There is a clear need for more robust and less problematic debugging tools for Edge Functions, especially with integration into popular IDEs.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e6",
+                "e8"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "opportunity_areas-2",
+              "label": "Improved stability and compatibility for React Developer Tools",
+              "detail": "Addressing detection failures, UI instability, and compatibility issues with modern frameworks would greatly benefit React developers.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e10"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "opportunity_areas-3",
+              "label": "Comprehensive issue reporting and categorization",
+              "detail": "Tools that can effectively report issues from external code and categorize them by severity offer significant value.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e2"
+              ],
+              "rank": 3
+            },
+            {
+              "id": "opportunity_areas-4",
+              "label": "Developer productivity and customization tools",
+              "detail": "Offering add-ons and extensions that boost productivity, accessibility, and browser customization for web developers presents an opportunity.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e17"
+              ],
+              "rank": 4
+            }
+          ]
+        },
+        "key_trends": {
+          "key": "key_trends",
+          "label": "Key trends",
+          "metric_key": "strength",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "key_trends-1",
+              "label": "Rise of serverless edge functions",
+              "detail": "Edge functions allow developers to deploy serverless functions globally, close to users, for improved performance and reduced latency.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e1",
+                "e13",
+                "e21"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "key_trends-3",
+              "label": "Focus on developer productivity",
+              "detail": "There is a strong emphasis on tools that enhance developer productivity, accessibility, and browser customization.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e17",
+                "e21"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "key_trends-2",
+              "label": "Integration of developer tools with AI capabilities",
+              "detail": "Platforms like Supabase are incorporating vector embeddings for AI applications, indicating a trend towards AI-powered developer tools.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e4"
+              ],
+              "rank": 3
+            },
+            {
+              "id": "key_trends-4",
+              "label": "Open-source adoption",
+              "detail": "Open-source platforms are gaining traction, offering comprehensive features and community-driven development.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e4"
+              ],
+              "rank": 4
+            }
+          ]
+        },
+        "emerging_trends": {
+          "key": "emerging_trends",
+          "label": "Emerging trends",
+          "metric_key": "potential",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "emerging_trends-1",
+              "label": "Debugging Edge Functions via v8 inspector protocol",
+              "detail": "The Supabase CLI now supports debugging Edge Functions via the v8 inspector protocol, enabling debugging with Chrome DevTools.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e8"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "emerging_trends-2",
+              "label": "VS Code extensions for browser developer tools",
+              "detail": "The Microsoft Edge Dev Tools extension for VS Code is gaining popularity, allowing front-end web development directly within the IDE.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e22"
+              ],
+              "rank": 2
+            }
+          ]
+        },
+        "market_drivers": {
+          "key": "market_drivers",
+          "label": "Market drivers",
+          "metric_key": "impact",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "market_drivers-1",
+              "label": "Demand for faster, more distributed applications",
+              "detail": "The need to deliver content and logic closer to users drives the adoption of edge functions and related developer tools.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e1",
+                "e13"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "market_drivers-3",
+              "label": "Developer preference for integrated and efficient workflows",
+              "detail": "Developers seek tools that offer seamless integration, zero-config deployments, and comprehensive features to streamline their work.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e4",
+                "e21"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "market_drivers-2",
+              "label": "Growth of serverless architectures",
+              "detail": "The increasing popularity of serverless computing models fuels the demand for tools that support serverless function deployment and management.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e1"
+              ],
+              "rank": 3
+            }
+          ]
+        },
+        "competitors": {
+          "key": "competitors",
+          "label": "Competitors",
+          "metric_key": "strength",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "competitors-2",
+              "label": "Microsoft Edge Developer Tools",
+              "detail": "Microsoft Edge offers built-in developer tools for inspecting elements, debugging, and experimenting, with an extension for VS Code.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e2",
+                "e3",
+                "e16",
+                "e18",
+                "e22",
+                "e24"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "competitors-1",
+              "label": "Supabase Edge Functions",
+              "detail": "Supabase provides a full Postgres database with instant APIs, built-in authentication, storage, and edge functions, all open-source.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e1",
+                "e4",
+                "e6",
+                "e8",
+                "e9"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "competitors-4",
+              "label": "React Developer Tools (Chrome/Edge extension)",
+              "detail": "This extension adds React debugging tools to browser developer tools, essential for developers working with the React JavaScript library.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e10",
+                "e11",
+                "e19"
+              ],
+              "rank": 3
+            },
+            {
+              "id": "competitors-3",
+              "label": "Vercel",
+              "detail": "Vercel is a default platform for Next.js and frontend projects, offering zero-config deployments, preview URLs, and edge functions.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e21"
+              ],
+              "rank": 4
+            }
+          ]
+        },
+        "competitive_threats": {
+          "key": "competitive_threats",
+          "label": "Competitive threats",
+          "metric_key": "severity",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "competitive_threats-1",
+              "label": "Dominance of established platforms",
+              "detail": "Existing players like Supabase and Vercel offer comprehensive, integrated solutions that make it difficult for new entrants to compete.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e1",
+                "e4",
+                "e21"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "competitive_threats-2",
+              "label": "Debugging complexity",
+              "detail": "The inherent difficulty in debugging edge functions, even with existing tools, poses a challenge for any new solution.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e6"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "competitive_threats-3",
+              "label": "Compatibility issues with evolving frameworks",
+              "detail": "Ensuring compatibility with rapidly changing frameworks like Next.js and React versions can be a significant hurdle.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e10"
+              ],
+              "rank": 3
+            }
+          ]
+        },
+        "positioning_gaps": {
+          "key": "positioning_gaps",
+          "label": "Positioning gaps",
+          "metric_key": "opportunity",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "positioning_gaps-1",
+              "label": "Seamless debugging across diverse environments",
+              "detail": "A solution that offers a truly seamless and less problematic debugging experience for edge functions across various IDEs and browsers.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e6",
+                "e8"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "positioning_gaps-2",
+              "label": "Robust issue reporting for external code",
+              "detail": "A tool that excels at identifying and categorizing issues originating from external code, providing a more comprehensive view.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e2"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "positioning_gaps-3",
+              "label": "Stable and highly compatible React developer tools",
+              "detail": "A more stable and universally compatible React developer tool that avoids detection failures and UI instability with modern frameworks.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e10"
+              ],
+              "rank": 3
+            }
+          ]
+        },
+        "white_space_opportunities": {
+          "key": "white_space_opportunities",
+          "label": "White space",
+          "metric_key": "score",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "white_space_opportunities-1",
+              "label": "Integrated performance and security monitoring for edge functions",
+              "detail": "While monitoring is mentioned, a dedicated tool that deeply integrates performance and security analytics specifically for edge functions could be a niche.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e1"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "white_space_opportunities-2",
+              "label": "AI-powered code generation and optimization for edge functions",
+              "detail": "Leveraging AI beyond vector embeddings for generating or optimizing edge function code could be a novel offering.",
+              "score": 50,
+              "score_band": "low",
+              "evidence_ids": [
+                "e4"
+              ],
+              "rank": 2
+            }
+          ]
+        },
+        "differentiation_opportunities": {
+          "key": "differentiation_opportunities",
+          "label": "Differentiation",
+          "metric_key": "score",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "differentiation_opportunities-1",
+              "label": "Superior debugging experience",
+              "detail": "Focus on creating a debugging experience for edge functions that is significantly more reliable, intuitive, and integrated than current offerings.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e6",
+                "e8"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "differentiation_opportunities-2",
+              "label": "Cross-platform and framework compatibility",
+              "detail": "Develop a tool that guarantees high compatibility and stability across a wider range of frameworks and deployment platforms for edge functions.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e10",
+                "e13"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "differentiation_opportunities-3",
+              "label": "Advanced issue detection and resolution",
+              "detail": "Offer advanced capabilities for detecting, diagnosing, and suggesting resolutions for complex issues in edge function deployments.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e2"
+              ],
+              "rank": 3
+            }
+          ]
+        },
+        "why_now": {
+          "key": "why_now",
+          "label": "Why now",
+          "metric_key": "support",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "why_now-1",
+              "label": "Growing adoption of Edge Functions",
+              "detail": "The increasing use of edge functions creates a larger user base for specialized developer tools.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e1",
+                "e13",
+                "e21"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "why_now-2",
+              "label": "Existing debugging challenges",
+              "detail": "Current solutions are insufficient, leaving a clear gap for a more effective debugging tool.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e6",
+                "e8"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "why_now-3",
+              "label": "Market growth and investment",
+              "detail": "The overall developer tools market is attracting substantial investment, suggesting a fertile ground for new solutions.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e12"
+              ],
+              "rank": 3
+            }
+          ]
+        },
+        "key_opportunities": {
+          "key": "key_opportunities",
+          "label": "Key opportunities",
+          "metric_key": "support",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "key_opportunities-1",
+              "label": "Superior debugging experience",
+              "detail": "A highly effective and integrated debugging solution would address a critical pain point for a growing developer segment.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e6",
+                "e8"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "key_opportunities-2",
+              "label": "Enhanced stability and compatibility for React tools",
+              "detail": "Improving the reliability and compatibility of tools for popular frameworks like React would attract a large user base.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e10"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "key_opportunities-3",
+              "label": "Comprehensive issue reporting",
+              "detail": "Providing a more complete view of potential problems, including those from external code, offers significant value.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e2"
+              ],
+              "rank": 3
+            }
+          ]
+        },
+        "key_risks": {
+          "key": "key_risks",
+          "label": "Key risks",
+          "metric_key": "support",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "key_risks-1",
+              "label": "Competition from integrated platforms",
+              "detail": "New entrants must differentiate significantly to compete with established, comprehensive solutions that developers already use.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e1",
+                "e4",
+                "e21"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "key_risks-2",
+              "label": "Rapid evolution of web technologies",
+              "detail": "Keeping pace with new frameworks and versions requires continuous development and can lead to compatibility challenges.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e10"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "key_risks-3",
+              "label": "Developer tool fatigue",
+              "detail": "The market is crowded with tools, making it challenging for a new product to gain traction and mindshare without a compelling advantage.",
+              "score": 50,
+              "score_band": "low",
+              "evidence_ids": [
+                "e9",
+                "e14"
+              ],
+              "rank": 3
+            }
+          ]
+        },
+        "potential_moats": {
+          "key": "potential_moats",
+          "label": "Potential moats",
+          "metric_key": "support",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "potential_moats-1",
+              "label": "Proprietary debugging engine",
+              "detail": "Developing a unique and highly effective debugging engine for edge functions would be difficult to replicate, creating a strong technical moat.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e6",
+                "e8"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "potential_moats-2",
+              "label": "Deep integration with popular IDEs and cloud platforms",
+              "detail": "Achieving deep, seamless integration with major developer environments and cloud providers would create significant switching costs and user loyalty.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e1",
+                "e6",
+                "e22"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "potential_moats-3",
+              "label": "Community and ecosystem around edge function development",
+              "detail": "Building a strong community and ecosystem around the tool could foster network effects and provide valuable feedback and contributions.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e6",
+                "e14"
+              ],
+              "rank": 3
+            }
+          ]
+        },
+        "execution_ideas": {
+          "key": "execution_ideas",
+          "label": "Execution ideas",
+          "metric_key": "support",
+          "sort_basis": "Score, then number of supporting sources",
+          "items": [
+            {
+              "id": "execution_ideas-1",
+              "label": "Develop a universal edge function debugger",
+              "detail": "Focus on building a debugger that works reliably across different edge function providers and integrates with major IDEs like VSCode and browser dev tools.",
+              "score": 90,
+              "score_band": "high",
+              "evidence_ids": [
+                "e6",
+                "e8",
+                "e22"
+              ],
+              "rank": 1
+            },
+            {
+              "id": "execution_ideas-2",
+              "label": "Prioritize stability and compatibility",
+              "detail": "Ensure the tool is highly stable and compatible with the latest versions of popular frameworks (e.g., React, Next.js) and browser environments.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e10"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "execution_ideas-3",
+              "label": "Offer advanced issue diagnostics",
+              "detail": "Implement features that provide comprehensive issue reporting, including problems from external code, and categorize them by severity.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e2"
+              ],
+              "rank": 3
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "source_key": "ddgs",
+          "display_name": "Web search",
+          "count": 27
+        },
+        {
+          "source_key": "youtube",
+          "display_name": "YouTube",
+          "count": 3
+        }
+      ]
+    },
+    "metric_definitions": [
+      {
+        "key": "support",
+        "label": "Support",
+        "definition": "How consistently this item appeared across the collected sources.",
+        "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+        "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+      },
+      {
+        "key": "score",
+        "label": "Score",
+        "definition": "How consistently this item appeared across the collected sources.",
+        "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+        "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+      },
+      {
+        "key": "signal_strength",
+        "label": "Signal strength",
+        "definition": "How often and how emphatically this was raised in the source material.",
+        "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+        "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+      },
+      {
+        "key": "importance",
+        "label": "Importance",
+        "definition": "How central this was to the discussions where it appeared.",
+        "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+        "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+      },
+      {
+        "key": "confidence",
+        "label": "Confidence",
+        "definition": "How consistently this pattern appeared across the collected sources.",
+        "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+        "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+      },
+      {
+        "key": "strength",
+        "label": "Strength",
+        "definition": "How established this is across the collected sources.",
+        "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+        "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+      },
+      {
+        "key": "potential",
+        "label": "Potential",
+        "definition": "How much room this has to grow, judged from the collected sources.",
+        "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+        "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+      },
+      {
+        "key": "impact",
+        "label": "Impact",
+        "definition": "How strongly this shapes the market, judged from the collected sources.",
+        "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+        "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+      },
+      {
+        "key": "severity",
+        "label": "Severity",
+        "definition": "How directly this threat overlaps with the proposed product.",
+        "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+        "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+      },
+      {
+        "key": "opportunity",
+        "label": "Opportunity",
+        "definition": "How much unmet demand this gap represents in the collected sources.",
+        "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+        "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+      },
+      {
+        "key": "discussion_volume",
+        "label": "Discussions",
+        "definition": "Ranked sources matching this topic across every collector.",
+        "derivation": "Count of items in the ranked evidence list.",
+        "scale": "Whole number of sources."
+      },
+      {
+        "key": "comment_volume",
+        "label": "Comments",
+        "definition": "Total viewer replies across the collected videos.",
+        "derivation": "Sum of the YouTube comment count on every collected video.",
+        "scale": "Whole number."
+      },
+      {
+        "key": "growth_score",
+        "label": "Growth score",
+        "definition": "Movement in search interest for this topic over the sampled window.",
+        "derivation": "Google Trends growth rate for the topic term.",
+        "scale": "Percentage change."
+      },
+      {
+        "key": "startup_activity",
+        "label": "Startup activity",
+        "definition": "New products shipped into this space recently.",
+        "derivation": "Count of Product Hunt launches in the collected evidence.",
+        "scale": "Whole number of launches."
+      },
+      {
+        "key": "launches",
+        "label": "Launches",
+        "definition": "Recent product releases observed in this space.",
+        "derivation": "Count of Product Hunt items in the collected evidence.",
+        "scale": "Whole number."
+      },
+      {
+        "key": "avg_votes_per_day",
+        "label": "Avg votes / day",
+        "definition": "Mean daily upvotes across those releases.",
+        "derivation": "Product Hunt votes divided by days since launch, averaged.",
+        "scale": "Votes per day."
+      },
+      {
+        "key": "competition_score",
+        "label": "Competition score",
+        "definition": "How crowded the field looks, from launch count and traction.",
+        "derivation": "min(100, launches x 2 + mean votes per day).",
+        "scale": "0-100."
+      },
+      {
+        "key": "momentum",
+        "label": "Momentum",
+        "definition": "How fast attention is moving on this topic.",
+        "derivation": "Weighted blend of search growth, video engagement and daily views.",
+        "scale": "0-100."
+      },
+      {
+        "key": "trend_growth",
+        "label": "Trend growth",
+        "definition": "Change in search interest over the sampled window.",
+        "derivation": "Google Trends growth rate for the topic term.",
+        "scale": "Percentage change."
+      },
+      {
+        "key": "avg_views_per_day",
+        "label": "Avg views / day",
+        "definition": "Mean daily plays across the collected videos.",
+        "derivation": "Lifetime views divided by days since publication, averaged.",
+        "scale": "Views per day."
+      },
+      {
+        "key": "avg_engagement_rate",
+        "label": "Engagement rate",
+        "definition": "Likes and comments per 100 plays on the collected videos.",
+        "derivation": "(likes + comments) / views x 100, averaged across videos.",
+        "scale": "Percentage."
+      },
+      {
+        "key": "market_reports",
+        "label": "Market reports",
+        "definition": "Collected sources that read as dedicated industry research.",
+        "derivation": "Sources whose text contains 'market size', 'market forecast' or 'industry report'.",
+        "scale": "Whole number of sources."
+      }
+    ],
+    "score_scale": {
+      "values": [
+        90,
+        75,
+        50
+      ],
+      "bands": [
+        {
+          "score": 90,
+          "band": "high",
+          "label": "Directly supported",
+          "meaning": "Stated directly and repeatedly across multiple independent sources."
+        },
+        {
+          "score": 75,
+          "band": "moderate",
+          "label": "Clearly indicated",
+          "meaning": "Stated clearly but in few sources, or implied consistently across many."
+        },
+        {
+          "score": 50,
+          "band": "low",
+          "label": "Inferred",
+          "meaning": "Inferred from context; not directly stated in any single source."
+        }
+      ],
+      "note": "Three bands, not a continuous scale. The model cannot reliably distinguish a 72 from a 78, so it is not asked to."
+    },
+    "evidence_summary": {
+      "collected": 30,
+      "used": 24,
+      "excluded": 6
+    },
+    "signals_unavailable": [
+      "market.growth_score",
+      "market.startup_activity",
+      "competitive.launches",
+      "competitive.avg_votes_per_day",
+      "competitive.competition_score",
+      "virality.trend_growth"
+    ],
+    "deprecated_fields": [
+      {
+        "path": "signals.market_opportunity.opportunity_score",
+        "replacement": "report.signals.market_opportunity.sizing_language_density",
+        "reason": "A weighted keyword sum clamped at 100. The weights were set when the extractor was gated to dedicated market-report sources; it now scans all 30 ranked sources, so the sum clears the clamp on ordinary inputs and the value saturates. Counts replace it."
+      },
+      {
+        "path": "synthesis.opportunity_score",
+        "replacement": "report.verdict.decision",
+        "reason": "A 0-100 composite the model writes with no stated formula. The verdict is the decision and its reason; a number cannot carry that and invites the interface to render it as a hero gauge."
+      }
+    ]
+  }
+}

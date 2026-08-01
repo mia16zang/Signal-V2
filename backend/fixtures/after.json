@@ -1,0 +1,2289 @@
+{
+  "meta": {
+    "topic": "Developer tools for edge functions",
+    "cached": false,
+    "generated_at": "2026-07-31T21:39:30.230322",
+    "intelligence_time": 21.21,
+    "synthesis_time": 0.0,
+    "collection_time": 5.57,
+    "ai_time": 21.21,
+    "parse_time": 0.0,
+    "evidence_count": 30,
+    "evidence_used": 24,
+    "portfolio_mode": true,
+    "total_time": 26.8
+  },
+  "signals": {
+    "virality": {
+      "momentum": 53,
+      "trend_growth": 76.67,
+      "avg_views_per_day": 246.17,
+      "avg_engagement_rate": 3.08
+    },
+    "competitive": {
+      "launches": 0,
+      "avg_votes_per_day": 0,
+      "competition_score": 0
+    },
+    "market": {
+      "growth_score": 76.67,
+      "startup_activity": 0
+    },
+    "customer": {
+      "discussion_volume": 30,
+      "comment_volume": 481
+    },
+    "market_opportunity": {
+      "market_size_mentions": 1,
+      "growth_mentions": 7,
+      "forecast_mentions": 2,
+      "cagr_mentions": 4,
+      "billion_mentions": 1,
+      "million_mentions": 1,
+      "detected_market_sizes": [
+        "$496.1m",
+        "$14.1b"
+      ],
+      "detected_growth_rates": [
+        "20.40%",
+        "19.60%",
+        "24%",
+        "76.67%"
+      ],
+      "opportunity_score": 100
+    },
+    "market_size": {
+      "market_reports": 1
+    }
+  },
+  "intelligence": {
+    "customer": {
+      "customer_segments": [
+        {
+          "name": "Web Developers and Enthusiasts",
+          "score": 90,
+          "detail": "This segment actively uses developer tools for inspecting elements, debugging, and experimenting with web applications.",
+          "evidence_ids": [
+            "e9",
+            "e17"
+          ]
+        },
+        {
+          "name": "Frontend and Full-stack Developers",
+          "score": 75,
+          "detail": "These developers are deploying frameworks like Next.js and need platforms with edge functions, serverless APIs, and instant previews.",
+          "evidence_ids": [
+            "e15"
+          ]
+        },
+        {
+          "name": "Companies using Postgres databases",
+          "score": 75,
+          "detail": "Businesses utilizing Postgres can benefit from platforms offering instant APIs, authentication, storage, and edge functions.",
+          "evidence_ids": [
+            "e4",
+            "e5"
+          ]
+        }
+      ],
+      "pain_points": [
+        {
+          "name": "Slow Developer Tools",
+          "signal_strength": 90,
+          "detail": "Developers experience significant delays (10-20 seconds) when opening and using built-in developer tools, hindering productivity.",
+          "evidence_ids": [
+            "e7"
+          ]
+        },
+        {
+          "name": "High Latency for Global Users",
+          "signal_strength": 90,
+          "detail": "Users in different geographical locations experience slow API responses (e.g., 800ms) due to server distance, impacting app performance.",
+          "evidence_ids": [
+            "e12"
+          ]
+        },
+        {
+          "name": "Operational Complexity of Edge and Serverless",
+          "signal_strength": 75,
+          "detail": "Implementing edge and serverless strategies requires proper tooling for deployment, testing, and observability to succeed.",
+          "evidence_ids": [
+            "e24"
+          ]
+        }
+      ],
+      "desired_outcomes": [
+        {
+          "name": "Faster Application Performance",
+          "importance": 90,
+          "detail": "Developers want to reduce latency for global users by leveraging edge functions to bring code closer to the user.",
+          "evidence_ids": [
+            "e12"
+          ]
+        },
+        {
+          "name": "Efficient Debugging and Development",
+          "importance": 90,
+          "detail": "Users seek developer tools that are responsive and quick to open, allowing for seamless inspection and experimentation.",
+          "evidence_ids": [
+            "e7",
+            "e9"
+          ]
+        },
+        {
+          "name": "Seamless Cloud Integration",
+          "importance": 75,
+          "detail": "Developers desire edge offerings that provide rapid provisioning, global reach, and seamless integration with cloud-native applications.",
+          "evidence_ids": [
+            "e6"
+          ]
+        },
+        {
+          "name": "Enhanced Developer Experience",
+          "importance": 75,
+          "detail": "Serverless V2 impacts developer experience, requiring new tools and approaches for development and deployment.",
+          "evidence_ids": [
+            "e16"
+          ]
+        }
+      ],
+      "behavior_patterns": [
+        {
+          "name": "Seeking Alternatives for Slow Tools",
+          "confidence": 90,
+          "detail": "Developers actively look for alternatives when built-in developer tools are too slow, indicating a willingness to switch for better performance.",
+          "evidence_ids": [
+            "e7"
+          ]
+        },
+        {
+          "name": "Utilizing Open-Source Solutions",
+          "confidence": 75,
+          "detail": "Developers are adopting open-source platforms that offer comprehensive features like databases, authentication, and edge functions.",
+          "evidence_ids": [
+            "e4",
+            "e5"
+          ]
+        },
+        {
+          "name": "Adopting Cloud-Native Architectures",
+          "confidence": 75,
+          "detail": "Developers are increasingly using public cloud-based edge functions for rapid provisioning and global reach.",
+          "evidence_ids": [
+            "e6"
+          ]
+        }
+      ],
+      "opportunity_areas": [
+        {
+          "name": "Performance-Optimized Developer Tools",
+          "score": 90,
+          "detail": "There is a significant opportunity to develop developer tools that are fast and responsive, directly addressing a major pain point.",
+          "evidence_ids": [
+            "e7"
+          ]
+        },
+        {
+          "name": "Integrated Edge Function Platforms",
+          "score": 90,
+          "detail": "Offering platforms that combine databases, authentication, storage, and edge functions can attract developers seeking comprehensive solutions.",
+          "evidence_ids": [
+            "e4",
+            "e5"
+          ]
+        },
+        {
+          "name": "Improved Tooling for Serverless and Edge Deployment",
+          "score": 75,
+          "detail": "Developing better tools for deployment, testing, and observability for edge and serverless strategies is crucial for success.",
+          "evidence_ids": [
+            "e16",
+            "e24"
+          ]
+        }
+      ]
+    },
+    "market": {
+      "market_size": {
+        "estimate": "$14.1B",
+        "confidence": 75
+      },
+      "growth_rate": {
+        "estimate": "24%",
+        "confidence": 75
+      },
+      "market_maturity": {
+        "stage": "Growth",
+        "confidence": 75
+      },
+      "future_outlook": {
+        "direction": "Positive",
+        "confidence": 90
+      },
+      "key_trends": [
+        {
+          "name": "Rise of Edge Functions",
+          "strength": 90,
+          "detail": "Edge functions are gaining traction as a solution to reduce latency and improve application performance for geographically dispersed users.",
+          "evidence_ids": [
+            "e12"
+          ]
+        },
+        {
+          "name": "Integration with Cloud Platforms",
+          "strength": 90,
+          "detail": "Edge functions are increasingly integrated with public cloud providers, offering rapid provisioning and seamless cloud-native application support.",
+          "evidence_ids": [
+            "e6"
+          ]
+        },
+        {
+          "name": "Serverless Architecture Adoption",
+          "strength": 75,
+          "detail": "Serverless V2 and edge functions are impacting developer experience, indicating a shift towards serverless architectures.",
+          "evidence_ids": [
+            "e16"
+          ]
+        }
+      ],
+      "emerging_trends": [
+        {
+          "name": "AI Integration in Developer Tools",
+          "potential": 75,
+          "detail": "Platforms like Supabase are incorporating vector embeddings for AI applications, suggesting a future trend of AI-enhanced developer tools.",
+          "evidence_ids": [
+            "e4"
+          ]
+        },
+        {
+          "name": "Focus on Developer Experience (DX)",
+          "potential": 75,
+          "detail": "The impact of Serverless V2 on developer experience highlights a growing emphasis on enhanced tooling and frameworks.",
+          "evidence_ids": [
+            "e16"
+          ]
+        }
+      ],
+      "market_drivers": [
+        {
+          "name": "Demand for Low Latency Applications",
+          "impact": 90,
+          "detail": "The need to reduce API response times for global users is a primary driver for the adoption of edge functions.",
+          "evidence_ids": [
+            "e12"
+          ]
+        },
+        {
+          "name": "Growth of Cloud-Native Development",
+          "impact": 90,
+          "detail": "The continuous enhancement of edge offerings by leading cloud providers supports the growth of cloud-native applications.",
+          "evidence_ids": [
+            "e6"
+          ]
+        },
+        {
+          "name": "Increased Focus on Developer Productivity",
+          "impact": 75,
+          "detail": "The desire for faster and more efficient developer tools drives innovation in this sector.",
+          "evidence_ids": [
+            "e7"
+          ]
+        }
+      ]
+    },
+    "competitive": {
+      "competitors": [
+        {
+          "name": "Supabase",
+          "strength": 90,
+          "detail": "Supabase offers a full Postgres database with instant APIs, authentication, storage, and edge functions, positioning itself as an open-source Firebase alternative.",
+          "evidence_ids": [
+            "e4",
+            "e5"
+          ]
+        },
+        {
+          "name": "Vercel",
+          "strength": 75,
+          "detail": "Vercel is a frontend cloud platform optimized for Next.js, providing edge functions, serverless APIs, instant previews, and a global CDN.",
+          "evidence_ids": [
+            "e15"
+          ]
+        },
+        {
+          "name": "Microsoft Edge Developer Tools",
+          "strength": 75,
+          "detail": "Microsoft Edge, built on Chromium, offers developer tools for web platform and extensions, though some users find them slow.",
+          "evidence_ids": [
+            "e2",
+            "e7"
+          ]
+        }
+      ],
+      "competitive_threats": [
+        {
+          "name": "Dominance of Established Cloud Providers",
+          "severity": 75,
+          "detail": "Leading cloud providers are continuously enhancing their edge offerings, potentially making it difficult for new entrants to compete.",
+          "evidence_ids": [
+            "e6"
+          ]
+        },
+        {
+          "name": "User Dissatisfaction with Tool Performance",
+          "severity": 75,
+          "detail": "Existing developer tools like Microsoft Edge's can be incredibly slow, leading to user frustration and a search for alternatives.",
+          "evidence_ids": [
+            "e7"
+          ]
+        }
+      ],
+      "positioning_gaps": [
+        {
+          "name": "Performance-First Developer Tools",
+          "opportunity": 90,
+          "detail": "There is a clear gap for developer tools that prioritize speed and responsiveness, directly addressing the slowness of existing options.",
+          "evidence_ids": [
+            "e7"
+          ]
+        },
+        {
+          "name": "Comprehensive Edge Function Tooling",
+          "opportunity": 75,
+          "detail": "A gap exists for robust operational controls and developer tooling specifically for deployment, testing, and observability of edge functions.",
+          "evidence_ids": [
+            "e24"
+          ]
+        }
+      ],
+      "white_space_opportunities": [
+        {
+          "name": "AI-Enhanced Edge Developer Tools",
+          "score": 75,
+          "detail": "Integrating AI capabilities, such as vector embeddings, into developer tools for edge functions presents a novel opportunity.",
+          "evidence_ids": [
+            "e4"
+          ]
+        },
+        {
+          "name": "Multi-Provider CI/CD for Edge",
+          "score": 75,
+          "detail": "Developing pipeline tools that support automated multi-provider CI/CD for edge and serverless strategies is an underserved area.",
+          "evidence_ids": [
+            "e24"
+          ]
+        }
+      ],
+      "differentiation_opportunities": [
+        {
+          "name": "Superior Performance and Responsiveness",
+          "score": 90,
+          "detail": "Offering developer tools that are significantly faster than existing options would be a strong differentiator.",
+          "evidence_ids": [
+            "e7"
+          ]
+        },
+        {
+          "name": "Integrated Full-Stack Edge Platform",
+          "score": 75,
+          "detail": "Providing a platform that seamlessly combines database, authentication, storage, and edge functions with a focus on developer experience.",
+          "evidence_ids": [
+            "e4",
+            "e5"
+          ]
+        }
+      ]
+    }
+  },
+  "synthesis": {
+    "market_pulse": 76,
+    "opportunity_score": 100,
+    "build_recommendation": {
+      "decision": "Strong Yes",
+      "reason": "The market for developer tools for edge functions shows strong growth, significant unmet customer needs, and clear white space opportunities."
+    },
+    "confidence": 90,
+    "confidence_explanation": "Confidence is high due to multiple direct mentions of market growth, specific pain points, and existing competitors in the edge function space.",
+    "top_reason_to_build": "There is a significant unmet need for performance-optimized developer tools, as existing options are notably slow.",
+    "biggest_risk": "The dominance and continuous enhancement of edge offerings by established cloud providers could pose a challenge.",
+    "best_customer_segment": "Frontend and full-stack developers deploying frameworks like Next.js, who prioritize performance and integrated solutions.",
+    "best_moat": "Proprietary technology that delivers significantly faster and more responsive developer tools for edge functions.",
+    "executive_summary": "The market for developer tools for edge functions is experiencing strong growth, driven by demand for low-latency applications and cloud-native development. There's a clear opportunity to address developer pain points related to slow tools and complex operational controls. A startup focused on performance and integrated solutions could thrive.",
+    "why_now": [
+      {
+        "title": "High Market Growth",
+        "reason": "The market is expanding rapidly, indicating a fertile ground for new solutions.",
+        "detail": "The market is expanding rapidly, indicating a fertile ground for new solutions.",
+        "score": 90,
+        "evidence_ids": [
+          "e8"
+        ],
+        "evidence": "Market growth score of 76.67% and CAGR of 24% for MEC."
+      },
+      {
+        "title": "Unmet Performance Needs",
+        "reason": "Existing solutions fail to meet basic performance expectations, creating an immediate need for better tools.",
+        "detail": "Existing solutions fail to meet basic performance expectations, creating an immediate need for better tools.",
+        "score": 90,
+        "evidence_ids": [
+          "e7"
+        ],
+        "evidence": "Developer tools are 'incredibly slow', taking '10-20 seconds to show anything'."
+      },
+      {
+        "title": "Increasing Adoption of Edge Functions",
+        "reason": "The shift towards edge computing creates a growing demand for specialized developer tools.",
+        "detail": "The shift towards edge computing creates a growing demand for specialized developer tools.",
+        "score": 75,
+        "evidence_ids": [
+          "e6",
+          "e12"
+        ],
+        "evidence": "Edge functions are 'game changers' for app performance and are 'continuously enhancing'."
+      }
+    ],
+    "key_opportunities": [
+      {
+        "title": "Performance-Optimized Developer Tools",
+        "reason": "Directly addressing the primary pain point of slow tools offers a strong market entry point.",
+        "detail": "Directly addressing the primary pain point of slow tools offers a strong market entry point.",
+        "score": 90,
+        "evidence_ids": [
+          "e7"
+        ],
+        "evidence": "The problem is that the built in developer tools are so incredibly slow."
+      },
+      {
+        "title": "Integrated Edge Function Platforms",
+        "reason": "Offering a comprehensive platform simplifies development for users seeking integrated solutions.",
+        "detail": "Offering a comprehensive platform simplifies development for users seeking integrated solutions.",
+        "score": 90,
+        "evidence_ids": [
+          "e4",
+          "e5"
+        ],
+        "evidence": "Supabase provides a full Postgres database with instant APIs, built-in authentication, storage, and edge functions."
+      },
+      {
+        "title": "Enhanced Tooling for Serverless/Edge Deployment",
+        "reason": "Improving the operational aspects of edge deployment can attract developers facing complexity.",
+        "detail": "Improving the operational aspects of edge deployment can attract developers facing complexity.",
+        "score": 75,
+        "evidence_ids": [
+          "e24"
+        ],
+        "evidence": "Edge and serverless strategies succeed when paired with proper tooling for deployment, testing, and observability."
+      }
+    ],
+    "key_risks": [
+      {
+        "title": "Competition from Established Cloud Providers",
+        "reason": "Large players have significant resources and existing customer bases, making competition fierce.",
+        "detail": "Large players have significant resources and existing customer bases, making competition fierce.",
+        "score": 75,
+        "evidence_ids": [
+          "e6"
+        ],
+        "evidence": "Leading cloud providers are continuously enhancing their edge offerings."
+      },
+      {
+        "title": "Developer Tool Adoption Inertia",
+        "reason": "Developers might be accustomed to existing tools, even if slow, requiring significant effort to switch.",
+        "detail": "Developers might be accustomed to existing tools, even if slow, requiring significant effort to switch.",
+        "score": 50,
+        "evidence_ids": [
+          "e2"
+        ],
+        "evidence": "Microsoft Edge Developer Tools are built on Chromium."
+      }
+    ],
+    "recommended_customer": "Web developers and enthusiasts who are actively frustrated by the slow performance of current developer tools and are looking for faster, more efficient alternatives for debugging and inspecting web applications.",
+    "recommended_positioning": "Position as the 'Performance-First Edge Developer Tool' – emphasizing speed, responsiveness, and seamless integration for modern web development workflows.",
+    "potential_moats": [
+      {
+        "title": "Proprietary Performance Optimization",
+        "reason": "Developing unique technology that significantly outperforms competitors in speed and responsiveness.",
+        "detail": "Developing unique technology that significantly outperforms competitors in speed and responsiveness.",
+        "score": 90,
+        "evidence_ids": [
+          "e7"
+        ],
+        "evidence": "The problem is that the built in developer tools are so incredibly slow."
+      },
+      {
+        "title": "Deep Integration with Edge Runtimes",
+        "reason": "Building a highly optimized and deeply integrated platform specifically for edge function deployment and management.",
+        "detail": "Building a highly optimized and deeply integrated platform specifically for edge function deployment and management.",
+        "score": 75,
+        "evidence_ids": [
+          "e15"
+        ],
+        "evidence": "Edge functions, serverless APIs, instant previews, and global CDN."
+      },
+      {
+        "title": "Strong Developer Community and Ecosystem",
+        "reason": "Fostering an active community and extensive ecosystem of integrations can create network effects.",
+        "detail": "Fostering an active community and extensive ecosystem of integrations can create network effects.",
+        "score": 75,
+        "evidence_ids": [
+          "e4"
+        ],
+        "evidence": "Supabase is open-source from day one."
+      }
+    ],
+    "execution_ideas": [
+      {
+        "title": "Focus on Core Performance",
+        "reason": "Prioritize making the core developer tool functions exceptionally fast and responsive to directly address the biggest pain point.",
+        "detail": "Prioritize making the core developer tool functions exceptionally fast and responsive to directly address the biggest pain point.",
+        "score": 90,
+        "evidence_ids": [
+          "e7"
+        ]
+      },
+      {
+        "title": "Offer a Freemium Model",
+        "reason": "Provide a free tier to attract developers, similar to successful competitors, then offer advanced features on paid plans.",
+        "detail": "Provide a free tier to attract developers, similar to successful competitors, then offer advanced features on paid plans.",
+        "score": 75,
+        "evidence_ids": [
+          "e5"
+        ]
+      },
+      {
+        "title": "Integrate with Popular Frameworks",
+        "reason": "Ensure seamless compatibility and optimized workflows for popular frameworks like Next.js to attract a broad developer base.",
+        "detail": "Ensure seamless compatibility and optimized workflows for popular frameworks like Next.js to attract a broad developer base.",
+        "score": 75,
+        "evidence_ids": [
+          "e15"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "rank": 1,
+      "source": "ddgs",
+      "title": "Best Microsoft Edge Alternatives & Competitors",
+      "url": "https://sourceforge.net/software/product/Microsoft-Edge/alternatives",
+      "snippet": "Compare Microsoft Edge alternatives for your business or organization using the curated list below.Compare features, ratings, user reviews, pricing, and more from Microsoft Edge competitors and alternatives in order to make an informed decision for your business.",
+      "query": "Developer tools for edge functions competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e1",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 2,
+      "source": "ddgs",
+      "title": "Microsoft Edge Developer",
+      "url": "https://developer.microsoft.com/en-us/microsoft-edge/?form=MA13LH",
+      "snippet": "Microsoft Edge Developer. Documentation. Web Platform. Tools.Microsoft Edge is built on Chromium and provides the best-in-class extension and web compatibility. Learn how to begin and get your extensions onto the Edge Add-ons website.",
+      "query": "Developer tools for edge functions reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e2",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 3,
+      "source": "ddgs",
+      "title": "Artificial Intelligence (AI) Market Size to Hit USD 4,216.29 Bn by 2035",
+      "url": "https://www.precedenceresearch.com/artificial-intelligence-market",
+      "snippet": "Market Size and Forecast. Artificial Intelligence (AI) Market Growth Factors.By function, the cybersecurity segment is expected to grow at a significant CAGR of 20.40% over the projected period. By end-use, the BFSI segment led the market share of 19.60% in 2025.",
+      "query": "Developer tools for edge functions market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e3",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 4,
+      "source": "ddgs",
+      "title": "12 Fastest Growing Developer Tools Companies and Startups | Landbase",
+      "url": "https://www.landbase.com/blog/fastest-growing-developer-tools",
+      "snippet": "April 10, 2026 - Supabase provides a full Postgres database with instant APIs, built-in authentication, storage, and edge functions. The platform is open-source from day one and includes vector embeddings for AI applications, positioning itself as an open alternative to Firebase. Supabase raised $49",
+      "query": "Developer tools for edge functions funding startup launches",
+      "used_in_prompt": true,
+      "id": "e4",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 5,
+      "source": "ddgs",
+      "title": "NestJS Alternatives in 2026 — 19 Tools Compared | techstack.sh",
+      "url": "https://techstack.sh/alternatives/nestjs/",
+      "snippet": "Supabase Supabase. Open-source Firebase alternative with Postgres, auth, storage, and edge functions. Pricing: Freemium — free tier, paid from $25/mo.Compare 141+ developer tools, see what real companies actually run, and build your stack without the guesswork.",
+      "query": "Developer tools for edge functions pricing",
+      "used_in_prompt": true,
+      "id": "e5",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 6,
+      "source": "ddgs",
+      "title": "Edge Functions on CDN Market Research Report 2033",
+      "url": "https://growthmarketreports.com/report/edge-functions-on-cdn-market",
+      "snippet": "Public cloud-based edge functions offer rapid provisioning, global reach, and seamless integration with cloud-native applications. Leading cloud providers are continuously enhancing their edge offerings, providing a rich ecosystem of developer tools, APIs...",
+      "query": "Developer tools for edge functions trends",
+      "used_in_prompt": true,
+      "id": "e6",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 7,
+      "source": "ddgs",
+      "title": "Alternatives for Edge Developer Tools? : r/webdev - Reddit",
+      "url": "https://www.reddit.com/r/webdev/comments/9orc8y/alternatives_for_edge_developer_tools/",
+      "snippet": "The problem is that the built in developer tools are so incredibly slow. Pressing F12 often takes 10-20 seconds to show anything in the developer window and using it is a pain because of the slowness.",
+      "query": "site:reddit.com Developer tools for edge functions",
+      "used_in_prompt": true,
+      "id": "e7",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 8,
+      "source": "ddgs",
+      "title": "Germany Mobile Edge Computing Market Outlook from 2026 to 2033...",
+      "url": "https://www.linkedin.com/pulse/germany-mobile-edge-computing-market-outlook-from-2026-2033-gx6ee",
+      "snippet": "Market analysts project a Compound Annual Growth Rate (CAGR) of approximately 24% for the Germany MEC sector through 2026. Key players include Deutsche Telekom, Ericsson, and Nokia, which are significant in driving innovations and ecosystem partnerships.",
+      "query": "Developer tools for edge functions industry report CAGR",
+      "used_in_prompt": true,
+      "id": "e8",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 9,
+      "source": "youtube",
+      "title": "How to Enable Developer Tools in Microsoft Edge Browser | Quick & Easy Guide",
+      "url": "https://youtube.com/watch?v=ejZr5hHUB20",
+      "snippet": "In this tutorial, learn how to enable Developer Tools in Microsoft Edge browser on your Windows PC. These tools are essential for web developers and enthusiasts who want to inspect elements, debug, and experiment with web pages. Follow this step-by-step guide to activate Developer Tools easily. Whet",
+      "query": "",
+      "used_in_prompt": true,
+      "id": "e9",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 10,
+      "source": "google_trends",
+      "title": "Developer tools for edge functions",
+      "url": "",
+      "snippet": "Interest: 0, 30d Avg: 3.3, 90d Avg: 1.9, Growth: 76.67%",
+      "query": "",
+      "used_in_prompt": true,
+      "id": "e10",
+      "source_key": "google_trends",
+      "display_name": "Google Trends",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 11,
+      "source": "ddgs",
+      "title": "React Developer Tools - Microsoft Edge Add-ons",
+      "url": "https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil",
+      "snippet": "Make Microsoft Edge your own with extensions that help you personalize the browser and be more productive.and development Deals for students and parents AI for education.",
+      "query": "Developer tools for edge functions competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e11",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 12,
+      "source": "ddgs",
+      "title": "Serverless Edge Functions: When Your Code Travels at Light Speed!",
+      "url": "https://www.linkedin.com/pulse/serverless-edge-functions-when-your-code-travels-light-davanço-vsrzf",
+      "snippet": "Stop Letting Geography Kill Your App Performance - Edge Functions Are Game Changers! Picture this: Your users in Tokyo are waiting 800ms for your API response while your servers sit in Virginia. Meanwhile, your competitors deliver the same functional...",
+      "query": "Developer tools for edge functions reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e12",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 13,
+      "source": "ddgs",
+      "title": "How To Open Developer Tools In Microsoft Edge - YouTube",
+      "url": "https://www.youtube.com/watch?v=_Pwq6IGYgTc",
+      "snippet": "How To Open Developer Tools In Microsoft Edge. Tap to unmute.",
+      "query": "Developer tools for edge functions market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e13",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 14,
+      "source": "ddgs",
+      "title": "Best Developer Tools Startups (2026) | Seedtable",
+      "url": "https://seedtable.com/best-developer-tools-startups",
+      "snippet": "Seedtable tracks 60+ funded developer tools startups, ranked by the Seedtable Score from real funding, stage and traction data. The 60 top-ranked developer tools companies have raised $14.1B between them. Most sit at Series A and Series B stage. The leading hubs are London, San Francisco and Paris.",
+      "query": "Developer tools for edge functions funding startup launches",
+      "used_in_prompt": true,
+      "id": "e14",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 15,
+      "source": "ddgs",
+      "title": "Fly.io Alternatives in 2026 — 6 Real Options... | stackwrite.com",
+      "url": "https://stackwrite.com/alternatives/fly-io/",
+      "snippet": "Frontend cloud platform optimized for Next.js with edge functions, serverless APIs, instant previews, and global CDN. It's best for frontend and full-stack developers deploying Next.js or any framework with zero-config. Pricing: Free tier available.",
+      "query": "Developer tools for edge functions pricing",
+      "used_in_prompt": true,
+      "id": "e15",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 16,
+      "source": "ddgs",
+      "title": "Serverless V2: Cold Starts and Edge Functions",
+      "url": "https://enicomp.com/serverless-v2-cold-starts-and-edge-functions/",
+      "snippet": "Beyond the purely technical considerations, Serverless V2 also impacts the developer experience, offering new tools and requiring different approaches to development and deployment. Enhanced Tooling and Frameworks.",
+      "query": "Developer tools for edge functions trends",
+      "used_in_prompt": true,
+      "id": "e16",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 17,
+      "source": "ddgs",
+      "title": "How To Open The Developer Tools In The Microsoft Edge Web ...",
+      "url": "https://www.reddit.com/r/techtalktutorials/comments/z3qf3b/how_to_open_the_developer_tools_in_the_microsoft/",
+      "snippet": "The keyboard shortcut for the developer tools in \"ctrl + shirt + i\". I will be using a desktop PC for this tutorial. Simple Steps Open the Edge web browser. Click on the 3 dot hamburger menu in the upper right corner. Place your mouse cursor over \"More Tools\" and click on \"Developer Tools\".",
+      "query": "site:reddit.com Developer tools for edge functions",
+      "used_in_prompt": true,
+      "id": "e17",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 18,
+      "source": "ddgs",
+      "title": "CAGR Calculator - Calculate Compound Annual Growth Rate Online",
+      "url": "https://cagrcalculator.net/",
+      "snippet": "CAGR Calculator is free online tool to calculate compound annual growth rate for your investment over a certain time period. Get the CAGR rate and Compounded growth chart for your investment value.",
+      "query": "Developer tools for edge functions industry report CAGR",
+      "used_in_prompt": true,
+      "id": "e18",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 19,
+      "source": "youtube",
+      "title": "Enable Disable ‘Open the Developer Tools ’ in Microsoft Edge [2025 Full Guide]",
+      "url": "https://youtube.com/watch?v=b304FIDdFh4",
+      "snippet": "Enable Disable ‘Open the Developer Tools ’ in Microsoft Edge [2025 Full Guide] In today's video we will show you disable developer tool in microsoft edge, disable developers tool in ms edge, how to enable javascript in microsoft edge, disable vertical tabs in microsoft edge using registry, enable ja",
+      "query": "",
+      "used_in_prompt": true,
+      "id": "e19",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 20,
+      "source": "ddgs",
+      "title": "React Developer Tools – Get this Extension for Firefox (en-US)",
+      "url": "https://addons.mozilla.org/en-US/firefox/addon/react-devtools/",
+      "snippet": "Download React Developer Tools for Firefox. React Developer Tools is a tool that allows you to inspect a React tree, including the component hierarchy, props, state, and more.",
+      "query": "Developer tools for edge functions competitors alternatives",
+      "used_in_prompt": true,
+      "id": "e20",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 21,
+      "source": "ddgs",
+      "title": "Google Chrome Developer Tools - Google Chrome",
+      "url": "https://www.google.com/chrome/dev/",
+      "snippet": "Google Chrome for developers was built for the open web. Test cutting-edge web platform APIs and developer tools that are updated weekly.Extensions. Chrome Developers logo, Developer Tools.",
+      "query": "Developer tools for edge functions reviews complaints problems",
+      "used_in_prompt": true,
+      "id": "e21",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 22,
+      "source": "ddgs",
+      "title": "The world's leading data visualization tool for international trade data.",
+      "url": "https://oec.world/",
+      "snippet": "Tariffs Simulator. Forecast Trends. Growth Prediction. Export Potential.Build detailed monthly trade forecast with our time series prediction tool, disaggregate by regions, products, and markets.",
+      "query": "Developer tools for edge functions market size growth forecast",
+      "used_in_prompt": true,
+      "id": "e22",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 23,
+      "source": "ddgs",
+      "title": "Top 100 Developer Tools Startups to Watch in 2026",
+      "url": "https://www.failory.com/startups/developer-tools",
+      "snippet": "November 14, 2025 - Below is our list of 100 Developer Tools startups worth keeping an eye on. ... Everything you need to raise funding for your startup, including 3,500+ investors, 7 tools, 18 templates and 3 learning resources.Buy It For $97 $297 →",
+      "query": "Developer tools for edge functions funding startup launches",
+      "used_in_prompt": true,
+      "id": "e23",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 24,
+      "source": "ddgs",
+      "title": "Edge Functions & Serverless to Reduce CDN Risk",
+      "url": "https://webs.direct/using-edge-functions-and-serverless-to-reduce-single-point-c",
+      "snippet": "Operational controls and developer tooling. Edge and serverless strategies succeed when paired with proper tooling for deployment, testing, and observability. Automated multi-provider CI/CD. Use pipeline tools that can deploy the same function package to multiple edge runtimes.",
+      "query": "Developer tools for edge functions pricing",
+      "used_in_prompt": true,
+      "id": "e24",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": null
+    },
+    {
+      "rank": 25,
+      "source": "ddgs",
+      "title": "Vercel Edge Functions - Vercel",
+      "url": "https://vercel.com/blog/edge-functions-generally-available",
+      "snippet": "Vercel Edge Functions are natively supported by Next.js, and many other frameworks like Nuxt, Astro, and SvelteKit. Edge Functions can also be created as a standalone function in Vercel CLI. In Next.js, set your app’s default runtime to edge, or select the runtime for an individual function.",
+      "query": "Developer tools for edge functions trends",
+      "used_in_prompt": false,
+      "id": "e25",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 25 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 26,
+      "source": "ddgs",
+      "title": "Chrome vs Edge devtools ? : r/webdev - Reddit",
+      "url": "https://www.reddit.com/r/webdev/comments/108ynl7/chrome_vs_edge_devtools/",
+      "snippet": "In short: no. As your skills sharpen, might find newer features in chrome or even chrome Canary - but I'd say for the vast majority of development you're going to be fine with Edge's copy of devtools.",
+      "query": "site:reddit.com Developer tools for edge functions",
+      "used_in_prompt": false,
+      "id": "e26",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 26 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 27,
+      "source": "ddgs",
+      "title": "investopedia.com/terms/c/cagr.asp",
+      "url": "https://www.investopedia.com/terms/c/cagr.asp",
+      "snippet": "Compound Annual Growth Rate (CAGR) Formula and …",
+      "query": "Developer tools for edge functions industry report CAGR",
+      "used_in_prompt": false,
+      "id": "e27",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 27 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 28,
+      "source": "youtube",
+      "title": "14 DevTools Tricks That`ll Make You a Better Developer",
+      "url": "https://youtube.com/watch?v=pw14NzfYPa8",
+      "snippet": "** Check out my new video: https://youtu.be/lJNjDoJi6hQ?si=EOlGTECyFbmRR4dK ** In this video, I’ll show you 14 powerful #DevTools features you probably didn’t know existed. From hidden #performance tools to smart #debugging tricks — these workflows will save you time and help you ship faster. #webde",
+      "query": "",
+      "used_in_prompt": false,
+      "id": "e28",
+      "source_key": "youtube",
+      "display_name": "YouTube",
+      "exclusion_reason": "Ranked 28 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 29,
+      "source": "ddgs",
+      "title": "Top 10 Vespa.ai Alternatives & Competitors in 2026 | G2",
+      "url": "https://www.g2.com/products/vespa-ai/competitors/alternatives",
+      "snippet": "The best Vespa.ai alternatives are Algolia, Elasticsearch, and SearchStax. Find top-ranking free & paid apps similar to Vespa.ai for your AI Search & Retrieval Infrastructure Platforms Software needs. Read the latest reviews, pricing details, and features.",
+      "query": "Developer tools for edge functions competitors alternatives",
+      "used_in_prompt": false,
+      "id": "e29",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 29 of 30; below the prompt cutoff"
+    },
+    {
+      "rank": 30,
+      "source": "ddgs",
+      "title": "React Developer Tools – React",
+      "url": "https://react.dev/learn/react-developer-tools",
+      "snippet": "Use React Developer Tools to inspect React components, edit props and state, and identify performance problems. You will learn.",
+      "query": "Developer tools for edge functions reviews complaints problems",
+      "used_in_prompt": false,
+      "id": "e30",
+      "source_key": "ddgs",
+      "display_name": "Web search",
+      "exclusion_reason": "Ranked 30 of 30; below the prompt cutoff"
+    }
+  ],
+  "report": {
+    "schema_version": 2,
+    "verdict": {
+      "decision": "Strong Yes",
+      "reason": "The market for developer tools for edge functions shows strong growth, significant unmet customer needs, and clear white space opportunities.",
+      "executive_summary": "The market for developer tools for edge functions is experiencing strong growth, driven by demand for low-latency applications and cloud-native development. There's a clear opportunity to address developer pain points related to slow tools and complex operational controls. A startup focused on performance and integrated solutions could thrive.",
+      "top_reason_to_build": "There is a significant unmet need for performance-optimized developer tools, as existing options are notably slow.",
+      "biggest_risk": "The dominance and continuous enhancement of edge offerings by established cloud providers could pose a challenge.",
+      "market_pulse": {
+        "value": 76,
+        "display": "76",
+        "unit": null,
+        "confidence": null,
+        "confidence_band": "none",
+        "basis": "The model's overall read of market conditions across every section it wrote.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": true
+      },
+      "confidence": {
+        "value": 90,
+        "display": "90",
+        "unit": null,
+        "confidence": 90,
+        "confidence_band": "high",
+        "basis": "Confidence is high due to multiple direct mentions of market growth, specific pain points, and existing competitors in the edge function space.",
+        "source_count": 0,
+        "evidence_ids": [],
+        "collected": true
+      }
+    },
+    "headline": {
+      "recommended_customer": {
+        "value": "Web developers and enthusiasts who are actively frustrated by the slow performance of current developer tools and are looking for faster, more efficient alternatives for debugging and inspecting web applications.",
+        "suppressed_reason": null
+      },
+      "best_customer_segment": {
+        "value": "Frontend and full-stack developers deploying frameworks like Next.js, who prioritize performance and integrated solutions.",
+        "suppressed_reason": null
+      },
+      "recommended_positioning": {
+        "value": "Position as the 'Performance-First Edge Developer Tool' – emphasizing speed, responsiveness, and seamless integration for modern web development workflows.",
+        "suppressed_reason": null
+      },
+      "best_moat": {
+        "value": "Proprietary technology that delivers significantly faster and more responsive developer tools for edge functions.",
+        "suppressed_reason": null
+      }
+    },
+    "market": {
+      "market_size": {
+        "value": "$14 B",
+        "display": "$14 B",
+        "unit": null,
+        "confidence": 75,
+        "confidence_band": "moderate",
+        "basis": "Model estimate, grounded in the 5 collected sources containing sizing or forecast language.",
+        "source_count": 5,
+        "evidence_ids": [
+          "e3",
+          "e8",
+          "e18",
+          "e22",
+          "e27"
+        ],
+        "collected": true
+      },
+      "growth_rate": {
+        "value": "24%",
+        "display": "24%",
+        "unit": null,
+        "confidence": 75,
+        "confidence_band": "moderate",
+        "basis": "Model estimate, grounded in the 5 collected sources containing sizing or forecast language.",
+        "source_count": 5,
+        "evidence_ids": [
+          "e3",
+          "e8",
+          "e18",
+          "e22",
+          "e27"
+        ],
+        "collected": true
+      },
+      "market_maturity": {
+        "value": "Growth",
+        "display": "Growth",
+        "unit": null,
+        "confidence": 75,
+        "confidence_band": "moderate",
+        "basis": "Model estimate, grounded in the 5 collected sources containing sizing or forecast language.",
+        "source_count": 5,
+        "evidence_ids": [
+          "e3",
+          "e8",
+          "e18",
+          "e22",
+          "e27"
+        ],
+        "collected": true
+      },
+      "future_outlook": {
+        "value": "Positive",
+        "display": "Positive",
+        "unit": null,
+        "confidence": 90,
+        "confidence_band": "high",
+        "basis": "Model estimate, grounded in the 5 collected sources containing sizing or forecast language.",
+        "source_count": 5,
+        "evidence_ids": [
+          "e3",
+          "e8",
+          "e18",
+          "e22",
+          "e27"
+        ],
+        "collected": true
+      }
+    },
+    "signals": {
+      "customer": {
+        "discussion_volume": {
+          "value": 30,
+          "display": "30",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Count of items in the ranked evidence list.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        },
+        "comment_volume": {
+          "value": 481,
+          "display": "481",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Sum of the YouTube comment count on every collected video.",
+          "source_count": 3,
+          "evidence_ids": [
+            "e9",
+            "e19",
+            "e28"
+          ],
+          "collected": true
+        }
+      },
+      "market": {
+        "growth_score": {
+          "value": 77,
+          "display": "~77%",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Google Trends growth rate for the topic term.",
+          "source_count": 1,
+          "evidence_ids": [
+            "e10"
+          ],
+          "collected": true
+        },
+        "startup_activity": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        }
+      },
+      "competitive": {
+        "launches": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "avg_votes_per_day": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        },
+        "competition_score": {
+          "value": null,
+          "display": "—",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Product Hunt returned nothing for this topic, so this was never measured. Not the same as a measured zero.",
+          "source_count": 0,
+          "evidence_ids": [],
+          "collected": false
+        }
+      },
+      "virality": {
+        "momentum": {
+          "value": 53,
+          "display": "53",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Weighted blend of search growth, video engagement and daily views.",
+          "source_count": 4,
+          "evidence_ids": [
+            "e10",
+            "e9",
+            "e19",
+            "e28"
+          ],
+          "collected": true
+        },
+        "trend_growth": {
+          "value": 77,
+          "display": "~77%",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Google Trends growth rate for the topic term.",
+          "source_count": 1,
+          "evidence_ids": [
+            "e10"
+          ],
+          "collected": true
+        },
+        "avg_views_per_day": {
+          "value": 250,
+          "display": "250",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Lifetime views divided by days since publication, averaged.",
+          "source_count": 3,
+          "evidence_ids": [
+            "e9",
+            "e19",
+            "e28"
+          ],
+          "collected": true
+        },
+        "avg_engagement_rate": {
+          "value": 3,
+          "display": "~3%",
+          "unit": "%",
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "(likes + comments) / views x 100, averaged across videos.",
+          "source_count": 3,
+          "evidence_ids": [
+            "e9",
+            "e19",
+            "e28"
+          ],
+          "collected": true
+        }
+      },
+      "market_size": {
+        "market_reports": {
+          "value": 1,
+          "display": "1",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Sources whose text contains 'market size', 'market forecast' or 'industry report'.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        }
+      },
+      "market_opportunity": {
+        "sizing_language_density": {
+          "value": 100,
+          "display": "100",
+          "unit": null,
+          "confidence": null,
+          "confidence_band": "none",
+          "basis": "Weighted count of sizing, growth, forecast and CAGR mentions, capped at 100.",
+          "source_count": 30,
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14",
+            "e15",
+            "e16",
+            "e17",
+            "e18",
+            "e19",
+            "e20",
+            "e21",
+            "e22",
+            "e23",
+            "e24",
+            "e25",
+            "e26",
+            "e27",
+            "e28",
+            "e29",
+            "e30"
+          ],
+          "collected": true
+        },
+        "mentions": {
+          "definition": "How often each kind of sizing language appeared in the collected sources. A property of the writing, not evidence of the market's actual size.",
+          "counts": {
+            "market_size_mentions": 1,
+            "growth_mentions": 7,
+            "forecast_mentions": 2,
+            "cagr_mentions": 4,
+            "billion_mentions": 1,
+            "million_mentions": 1
+          },
+          "detected_market_sizes": [
+            "$500 m",
+            "$14 b"
+          ],
+          "detected_growth_rates": [
+            "20%",
+            "20%",
+            "24%",
+            "77%"
+          ]
+        }
+      }
+    },
+    "signals_unavailable": [
+      "market.startup_activity",
+      "competitive.launches",
+      "competitive.avg_votes_per_day",
+      "competitive.competition_score"
+    ],
+    "lists": {
+      "customer_segments": {
+        "key": "customer_segments",
+        "label": "Customer segments",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "customer_segments-1",
+            "label": "Web Developers and Enthusiasts",
+            "detail": "This segment actively uses developer tools for inspecting elements, debugging, and experimenting with web applications.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e9",
+              "e17"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "customer_segments-3",
+            "label": "Companies using Postgres databases",
+            "detail": "Businesses utilizing Postgres can benefit from platforms offering instant APIs, authentication, storage, and edge functions.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e4",
+              "e5"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "customer_segments-2",
+            "label": "Frontend and Full-stack Developers",
+            "detail": "These developers are deploying frameworks like Next.js and need platforms with edge functions, serverless APIs, and instant previews.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e15"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "pain_points": {
+        "key": "pain_points",
+        "label": "Pain points",
+        "metric_key": "signal_strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "pain_points-1",
+            "label": "Slow Developer Tools",
+            "detail": "Developers experience significant delays (10-20 seconds) when opening and using built-in developer tools, hindering productivity.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e7"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "pain_points-2",
+            "label": "High Latency for Global Users",
+            "detail": "Users in different geographical locations experience slow API responses (e.g., 800ms) due to server distance, impacting app performance.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e12"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "pain_points-3",
+            "label": "Operational Complexity of Edge and Serverless",
+            "detail": "Implementing edge and serverless strategies requires proper tooling for deployment, testing, and observability to succeed.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e24"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "desired_outcomes": {
+        "key": "desired_outcomes",
+        "label": "Desired outcomes",
+        "metric_key": "importance",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "desired_outcomes-2",
+            "label": "Efficient Debugging and Development",
+            "detail": "Users seek developer tools that are responsive and quick to open, allowing for seamless inspection and experimentation.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e7",
+              "e9"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "desired_outcomes-1",
+            "label": "Faster Application Performance",
+            "detail": "Developers want to reduce latency for global users by leveraging edge functions to bring code closer to the user.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e12"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "desired_outcomes-3",
+            "label": "Seamless Cloud Integration",
+            "detail": "Developers desire edge offerings that provide rapid provisioning, global reach, and seamless integration with cloud-native applications.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e6"
+            ],
+            "rank": 3
+          },
+          {
+            "id": "desired_outcomes-4",
+            "label": "Enhanced Developer Experience",
+            "detail": "Serverless V2 impacts developer experience, requiring new tools and approaches for development and deployment.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e16"
+            ],
+            "rank": 4
+          }
+        ]
+      },
+      "behavior_patterns": {
+        "key": "behavior_patterns",
+        "label": "Behaviour patterns",
+        "metric_key": "confidence",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "behavior_patterns-1",
+            "label": "Seeking Alternatives for Slow Tools",
+            "detail": "Developers actively look for alternatives when built-in developer tools are too slow, indicating a willingness to switch for better performance.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e7"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "behavior_patterns-2",
+            "label": "Utilizing Open-Source Solutions",
+            "detail": "Developers are adopting open-source platforms that offer comprehensive features like databases, authentication, and edge functions.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e4",
+              "e5"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "behavior_patterns-3",
+            "label": "Adopting Cloud-Native Architectures",
+            "detail": "Developers are increasingly using public cloud-based edge functions for rapid provisioning and global reach.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e6"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "opportunity_areas": {
+        "key": "opportunity_areas",
+        "label": "Opportunity areas",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "opportunity_areas-2",
+            "label": "Integrated Edge Function Platforms",
+            "detail": "Offering platforms that combine databases, authentication, storage, and edge functions can attract developers seeking comprehensive solutions.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e5"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "opportunity_areas-1",
+            "label": "Performance-Optimized Developer Tools",
+            "detail": "There is a significant opportunity to develop developer tools that are fast and responsive, directly addressing a major pain point.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e7"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "opportunity_areas-3",
+            "label": "Improved Tooling for Serverless and Edge Deployment",
+            "detail": "Developing better tools for deployment, testing, and observability for edge and serverless strategies is crucial for success.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e16",
+              "e24"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "key_trends": {
+        "key": "key_trends",
+        "label": "Key trends",
+        "metric_key": "strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "key_trends-1",
+            "label": "Rise of Edge Functions",
+            "detail": "Edge functions are gaining traction as a solution to reduce latency and improve application performance for geographically dispersed users.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e12"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "key_trends-2",
+            "label": "Integration with Cloud Platforms",
+            "detail": "Edge functions are increasingly integrated with public cloud providers, offering rapid provisioning and seamless cloud-native application support.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e6"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "key_trends-3",
+            "label": "Serverless Architecture Adoption",
+            "detail": "Serverless V2 and edge functions are impacting developer experience, indicating a shift towards serverless architectures.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e16"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "emerging_trends": {
+        "key": "emerging_trends",
+        "label": "Emerging trends",
+        "metric_key": "potential",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "emerging_trends-1",
+            "label": "AI Integration in Developer Tools",
+            "detail": "Platforms like Supabase are incorporating vector embeddings for AI applications, suggesting a future trend of AI-enhanced developer tools.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e4"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "emerging_trends-2",
+            "label": "Focus on Developer Experience (DX)",
+            "detail": "The impact of Serverless V2 on developer experience highlights a growing emphasis on enhanced tooling and frameworks.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e16"
+            ],
+            "rank": 2
+          }
+        ]
+      },
+      "market_drivers": {
+        "key": "market_drivers",
+        "label": "Market drivers",
+        "metric_key": "impact",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "market_drivers-1",
+            "label": "Demand for Low Latency Applications",
+            "detail": "The need to reduce API response times for global users is a primary driver for the adoption of edge functions.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e12"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "market_drivers-2",
+            "label": "Growth of Cloud-Native Development",
+            "detail": "The continuous enhancement of edge offerings by leading cloud providers supports the growth of cloud-native applications.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e6"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "market_drivers-3",
+            "label": "Increased Focus on Developer Productivity",
+            "detail": "The desire for faster and more efficient developer tools drives innovation in this sector.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e7"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "competitors": {
+        "key": "competitors",
+        "label": "Competitors",
+        "metric_key": "strength",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "competitors-1",
+            "label": "Supabase",
+            "detail": "Supabase offers a full Postgres database with instant APIs, authentication, storage, and edge functions, positioning itself as an open-source Firebase alternative.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e5"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "competitors-3",
+            "label": "Microsoft Edge Developer Tools",
+            "detail": "Microsoft Edge, built on Chromium, offers developer tools for web platform and extensions, though some users find them slow.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e2",
+              "e7"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "competitors-2",
+            "label": "Vercel",
+            "detail": "Vercel is a frontend cloud platform optimized for Next.js, providing edge functions, serverless APIs, instant previews, and a global CDN.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e15"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "competitive_threats": {
+        "key": "competitive_threats",
+        "label": "Competitive threats",
+        "metric_key": "severity",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "competitive_threats-1",
+            "label": "Dominance of Established Cloud Providers",
+            "detail": "Leading cloud providers are continuously enhancing their edge offerings, potentially making it difficult for new entrants to compete.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e6"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "competitive_threats-2",
+            "label": "User Dissatisfaction with Tool Performance",
+            "detail": "Existing developer tools like Microsoft Edge's can be incredibly slow, leading to user frustration and a search for alternatives.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e7"
+            ],
+            "rank": 2
+          }
+        ]
+      },
+      "positioning_gaps": {
+        "key": "positioning_gaps",
+        "label": "Positioning gaps",
+        "metric_key": "opportunity",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "positioning_gaps-1",
+            "label": "Performance-First Developer Tools",
+            "detail": "There is a clear gap for developer tools that prioritize speed and responsiveness, directly addressing the slowness of existing options.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e7"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "positioning_gaps-2",
+            "label": "Comprehensive Edge Function Tooling",
+            "detail": "A gap exists for robust operational controls and developer tooling specifically for deployment, testing, and observability of edge functions.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e24"
+            ],
+            "rank": 2
+          }
+        ]
+      },
+      "white_space_opportunities": {
+        "key": "white_space_opportunities",
+        "label": "White space",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "white_space_opportunities-1",
+            "label": "AI-Enhanced Edge Developer Tools",
+            "detail": "Integrating AI capabilities, such as vector embeddings, into developer tools for edge functions presents a novel opportunity.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e4"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "white_space_opportunities-2",
+            "label": "Multi-Provider CI/CD for Edge",
+            "detail": "Developing pipeline tools that support automated multi-provider CI/CD for edge and serverless strategies is an underserved area.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e24"
+            ],
+            "rank": 2
+          }
+        ]
+      },
+      "differentiation_opportunities": {
+        "key": "differentiation_opportunities",
+        "label": "Differentiation",
+        "metric_key": "score",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "differentiation_opportunities-1",
+            "label": "Superior Performance and Responsiveness",
+            "detail": "Offering developer tools that are significantly faster than existing options would be a strong differentiator.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e7"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "differentiation_opportunities-2",
+            "label": "Integrated Full-Stack Edge Platform",
+            "detail": "Providing a platform that seamlessly combines database, authentication, storage, and edge functions with a focus on developer experience.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e4",
+              "e5"
+            ],
+            "rank": 2
+          }
+        ]
+      },
+      "why_now": {
+        "key": "why_now",
+        "label": "Why now",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "why_now-1",
+            "label": "High Market Growth",
+            "detail": "The market is expanding rapidly, indicating a fertile ground for new solutions.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e8"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "why_now-2",
+            "label": "Unmet Performance Needs",
+            "detail": "Existing solutions fail to meet basic performance expectations, creating an immediate need for better tools.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e7"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "why_now-3",
+            "label": "Increasing Adoption of Edge Functions",
+            "detail": "The shift towards edge computing creates a growing demand for specialized developer tools.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e6",
+              "e12"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "key_opportunities": {
+        "key": "key_opportunities",
+        "label": "Key opportunities",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "key_opportunities-2",
+            "label": "Integrated Edge Function Platforms",
+            "detail": "Offering a comprehensive platform simplifies development for users seeking integrated solutions.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e4",
+              "e5"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "key_opportunities-1",
+            "label": "Performance-Optimized Developer Tools",
+            "detail": "Directly addressing the primary pain point of slow tools offers a strong market entry point.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e7"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "key_opportunities-3",
+            "label": "Enhanced Tooling for Serverless/Edge Deployment",
+            "detail": "Improving the operational aspects of edge deployment can attract developers facing complexity.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e24"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "key_risks": {
+        "key": "key_risks",
+        "label": "Key risks",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "key_risks-1",
+            "label": "Competition from Established Cloud Providers",
+            "detail": "Large players have significant resources and existing customer bases, making competition fierce.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e6"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "key_risks-2",
+            "label": "Developer Tool Adoption Inertia",
+            "detail": "Developers might be accustomed to existing tools, even if slow, requiring significant effort to switch.",
+            "score": 50,
+            "score_band": "low",
+            "evidence_ids": [
+              "e2"
+            ],
+            "rank": 2
+          }
+        ]
+      },
+      "potential_moats": {
+        "key": "potential_moats",
+        "label": "Potential moats",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "potential_moats-1",
+            "label": "Proprietary Performance Optimization",
+            "detail": "Developing unique technology that significantly outperforms competitors in speed and responsiveness.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e7"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "potential_moats-2",
+            "label": "Deep Integration with Edge Runtimes",
+            "detail": "Building a highly optimized and deeply integrated platform specifically for edge function deployment and management.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e15"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "potential_moats-3",
+            "label": "Strong Developer Community and Ecosystem",
+            "detail": "Fostering an active community and extensive ecosystem of integrations can create network effects.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e4"
+            ],
+            "rank": 3
+          }
+        ]
+      },
+      "execution_ideas": {
+        "key": "execution_ideas",
+        "label": "Execution ideas",
+        "metric_key": "support",
+        "sort_basis": "Score, then number of supporting sources",
+        "items": [
+          {
+            "id": "execution_ideas-1",
+            "label": "Focus on Core Performance",
+            "detail": "Prioritize making the core developer tool functions exceptionally fast and responsive to directly address the biggest pain point.",
+            "score": 90,
+            "score_band": "high",
+            "evidence_ids": [
+              "e7"
+            ],
+            "rank": 1
+          },
+          {
+            "id": "execution_ideas-2",
+            "label": "Offer a Freemium Model",
+            "detail": "Provide a free tier to attract developers, similar to successful competitors, then offer advanced features on paid plans.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e5"
+            ],
+            "rank": 2
+          },
+          {
+            "id": "execution_ideas-3",
+            "label": "Integrate with Popular Frameworks",
+            "detail": "Ensure seamless compatibility and optimized workflows for popular frameworks like Next.js to attract a broad developer base.",
+            "score": 75,
+            "score_band": "moderate",
+            "evidence_ids": [
+              "e15"
+            ],
+            "rank": 3
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "count": 26
+      },
+      {
+        "source_key": "youtube",
+        "display_name": "YouTube",
+        "count": 3
+      },
+      {
+        "source_key": "google_trends",
+        "display_name": "Google Trends",
+        "count": 1
+      }
+    ]
+  },
+  "metric_definitions": [
+    {
+      "key": "support",
+      "label": "Support",
+      "definition": "How consistently this item appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "score",
+      "label": "Score",
+      "definition": "How consistently this item appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "signal_strength",
+      "label": "Signal strength",
+      "definition": "How often and how emphatically this was raised in the source material.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "importance",
+      "label": "Importance",
+      "definition": "How central this was to the discussions where it appeared.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "confidence",
+      "label": "Confidence",
+      "definition": "How consistently this pattern appeared across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "strength",
+      "label": "Strength",
+      "definition": "How established this is across the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "potential",
+      "label": "Potential",
+      "definition": "How much room this has to grow, judged from the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "impact",
+      "label": "Impact",
+      "definition": "How strongly this shapes the market, judged from the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "severity",
+      "label": "Severity",
+      "definition": "How directly this threat overlaps with the proposed product.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "opportunity",
+      "label": "Opportunity",
+      "definition": "How much unmet demand this gap represents in the collected sources.",
+      "derivation": "The model's own rating of how well the collected evidence backs this item, quantised to one of three bands. Not a measured quantity.",
+      "scale": "90, 75 or 50 -- reported in three bands, not a continuous scale."
+    },
+    {
+      "key": "discussion_volume",
+      "label": "Discussions",
+      "definition": "Ranked sources matching this topic across every collector.",
+      "derivation": "Count of items in the ranked evidence list.",
+      "scale": "Whole number of sources."
+    },
+    {
+      "key": "comment_volume",
+      "label": "Comments",
+      "definition": "Total viewer replies across the collected videos.",
+      "derivation": "Sum of the YouTube comment count on every collected video.",
+      "scale": "Whole number."
+    },
+    {
+      "key": "growth_score",
+      "label": "Growth score",
+      "definition": "Movement in search interest for this topic over the sampled window.",
+      "derivation": "Google Trends growth rate for the topic term.",
+      "scale": "Percentage change."
+    },
+    {
+      "key": "startup_activity",
+      "label": "Startup activity",
+      "definition": "New products shipped into this space recently.",
+      "derivation": "Count of Product Hunt launches in the collected evidence.",
+      "scale": "Whole number of launches."
+    },
+    {
+      "key": "launches",
+      "label": "Launches",
+      "definition": "Recent product releases observed in this space.",
+      "derivation": "Count of Product Hunt items in the collected evidence.",
+      "scale": "Whole number."
+    },
+    {
+      "key": "avg_votes_per_day",
+      "label": "Avg votes / day",
+      "definition": "Mean daily upvotes across those releases.",
+      "derivation": "Product Hunt votes divided by days since launch, averaged.",
+      "scale": "Votes per day."
+    },
+    {
+      "key": "competition_score",
+      "label": "Competition score",
+      "definition": "How crowded the field looks, from launch count and traction.",
+      "derivation": "min(100, launches x 2 + mean votes per day).",
+      "scale": "0-100."
+    },
+    {
+      "key": "momentum",
+      "label": "Momentum",
+      "definition": "How fast attention is moving on this topic.",
+      "derivation": "Weighted blend of search growth, video engagement and daily views.",
+      "scale": "0-100."
+    },
+    {
+      "key": "trend_growth",
+      "label": "Trend growth",
+      "definition": "Change in search interest over the sampled window.",
+      "derivation": "Google Trends growth rate for the topic term.",
+      "scale": "Percentage change."
+    },
+    {
+      "key": "avg_views_per_day",
+      "label": "Avg views / day",
+      "definition": "Mean daily plays across the collected videos.",
+      "derivation": "Lifetime views divided by days since publication, averaged.",
+      "scale": "Views per day."
+    },
+    {
+      "key": "avg_engagement_rate",
+      "label": "Engagement rate",
+      "definition": "Likes and comments per 100 plays on the collected videos.",
+      "derivation": "(likes + comments) / views x 100, averaged across videos.",
+      "scale": "Percentage."
+    },
+    {
+      "key": "market_reports",
+      "label": "Market reports",
+      "definition": "Collected sources that read as dedicated industry research.",
+      "derivation": "Sources whose text contains 'market size', 'market forecast' or 'industry report'.",
+      "scale": "Whole number of sources."
+    },
+    {
+      "key": "sizing_language_density",
+      "label": "Sizing language density",
+      "definition": "How much of the collected text talks in figures and forecasts.",
+      "derivation": "Weighted count of sizing, growth, forecast and CAGR mentions, capped at 100.",
+      "scale": "0-100. A property of the text, not of the market."
+    }
+  ],
+  "score_scale": {
+    "values": [
+      90,
+      75,
+      50
+    ],
+    "bands": [
+      {
+        "score": 90,
+        "band": "high",
+        "label": "Directly supported",
+        "meaning": "Stated directly and repeatedly across multiple independent sources."
+      },
+      {
+        "score": 75,
+        "band": "moderate",
+        "label": "Clearly indicated",
+        "meaning": "Stated clearly but in few sources, or implied consistently across many."
+      },
+      {
+        "score": 50,
+        "band": "low",
+        "label": "Inferred",
+        "meaning": "Inferred from context; not directly stated in any single source."
+      }
+    ],
+    "note": "Three bands, not a continuous scale. The model cannot reliably distinguish a 72 from a 78, so it is not asked to."
+  },
+  "evidence_summary": {
+    "collected": 30,
+    "used": 24,
+    "excluded": 6
+  },
+  "signals_unavailable": [
+    "market.startup_activity",
+    "competitive.launches",
+    "competitive.avg_votes_per_day",
+    "competitive.competition_score"
+  ]
+}

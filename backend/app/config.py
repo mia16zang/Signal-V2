@@ -193,7 +193,19 @@ GEMINI_THINKING_BUDGET = _int("GEMINI_THINKING_BUDGET", 0)
 
 LLM_TIMEOUT_SECONDS = _int("LLM_TIMEOUT_SECONDS", 75)
 LLM_MAX_ATTEMPTS = _int("LLM_MAX_ATTEMPTS", 3)
-LLM_MAX_OUTPUT_TOKENS = _int("LLM_MAX_OUTPUT_TOKENS", 4096)
+
+# How long a provider-suggested retry delay may be before waiting it out stops
+# being worth it. A per-minute rate limit answers with a delay of a few
+# seconds; an exhausted daily quota answers with no delay at all, and gets no
+# retries -- three attempts against a daily quota cost 4.5s of sleeps and
+# always failed anyway.
+LLM_MAX_RETRY_WAIT_SECONDS = _int("LLM_MAX_RETRY_WAIT_SECONDS", 10)
+# Raised from 4096. Every ranked item now carries `detail` and `evidence_ids`
+# on top of its name and score, which roughly doubles the reply. At 4096 the
+# JSON was being cut mid-object and recovered by the truncation repair path,
+# which silently drops whatever came after the cut -- usually synthesis, since
+# the model writes it last.
+LLM_MAX_OUTPUT_TOKENS = _int("LLM_MAX_OUTPUT_TOKENS", 8192)
 
 
 # --------------------------------------------------------------------------

@@ -213,7 +213,15 @@ class AnalysisService:
 
         print(f"Total: {total}s\n")
 
-        if config.CACHE_ENABLED:
+        # Never cache a briefing the model did not actually produce.
+        #
+        # This was unconditional, which compounded a transient failure into a
+        # lasting one: a single 429 wrote an empty briefing under the topic key
+        # for CACHE_TTL_HOURS, so every later request for that topic served the
+        # failure from cache in 1ms and looked perfectly healthy doing it.
+        if config.CACHE_ENABLED and not result.get("degraded"):
             CacheService.set(topic, result)
+        elif result.get("degraded"):
+            print(f"NOT CACHED -- degraded: {result.get('degraded_reason')}")
 
         return result
