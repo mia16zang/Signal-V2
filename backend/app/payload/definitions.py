@@ -315,27 +315,44 @@ MENTION_GROUP_DEFINITION = (
     "A property of the writing, not evidence of the market's actual size."
 )
 
-# Fields kept in the payload only so the deployed frontend keeps rendering.
-# Nothing new should read them, and a cleanup pass removes them once session 3
-# has moved across.
-DEPRECATED_FIELDS = [
+# Fields that have been removed from the response, kept here as a machine-
+# readable record so a client that still reads one gets told what replaced it
+# rather than silently rendering `undefined`.
+#
+# All three were removed in session 4. Each was driving a hero-sized number in
+# the interface while having no derivation anyone could state.
+REMOVED_FIELDS = [
     {
         "path": "signals.market_opportunity.opportunity_score",
+        "removed_in": "session-4",
         "replacement": "report.signals.market_opportunity.sizing_language_density",
         "reason": (
             "A weighted keyword sum clamped at 100. The weights were set when "
-            "the extractor was gated to dedicated market-report sources; it now "
-            "scans all 30 ranked sources, so the sum clears the clamp on "
-            "ordinary inputs and the value saturates. Counts replace it."
+            "the extractor was gated to dedicated market-report sources; it "
+            "later scanned all 30 ranked sources, so the sum cleared the clamp "
+            "on ordinary inputs and the value saturated at 100. The underlying "
+            "counts replace it."
         ),
     },
     {
         "path": "synthesis.opportunity_score",
+        "removed_in": "session-4",
         "replacement": "report.verdict.decision",
         "reason": (
-            "A 0-100 composite the model writes with no stated formula. The "
+            "A 0-100 composite the model wrote with no stated formula. The "
             "verdict is the decision and its reason; a number cannot carry "
-            "that and invites the interface to render it as a hero gauge."
+            "that and invited the interface to render it as a hero gauge."
+        ),
+    },
+    {
+        "path": "synthesis.market_pulse",
+        "removed_in": "session-4",
+        "replacement": "report.verdict.confidence",
+        "reason": (
+            "Undefined composite with no metric_definitions entry and no "
+            "derivation. Variance testing measured it spreading 92 points "
+            "across five identical runs (8, 100, 100, 94, 100) -- the least "
+            "reproducible number in the payload, rendered as the largest."
         ),
     },
 ]

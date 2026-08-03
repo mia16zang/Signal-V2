@@ -92,31 +92,22 @@ def extract(evidence):
         if "million" in text or _MILLION_SUFFIX.search(text):
             million_mentions += 1
 
-    # DEPRECATED -- kept only so the deployed frontend keeps rendering. Do not
-    # read this. `report.signals.market_opportunity.sizing_language_density`
-    # carries the counts instead.
+    # `opportunity_score` used to be returned here as
+    #     min(100, size*10 + growth*8 + forecast*10 + cagr*12 + billion*15 + million*5)
+    # and was removed in session 4 rather than repaired.
     #
-    # These weights were written when the loop above was gated to `market_report`
-    # sources, of which there would have been a handful. Removing that dead
-    # filter widened the input from zero items to all 30 ranked ones, and the
-    # weights were never re-tuned -- so the sum now clears 100 on ordinary
-    # inputs and the clamp does the rest. Measured on "Developer tools for edge
-    # functions": 2*10 + 7*8 + 2*10 + 2*12 + 1*15 + 1*5 = 140, clamped to 100.
+    # Those weights were written when the loop above was gated to
+    # `market_report` sources, of which there would have been a handful.
+    # Removing that dead filter widened the input from zero items to all 30
+    # ranked ones and the weights were never re-tuned, so the sum cleared 100
+    # on ordinary inputs and the clamp did the rest. Measured on "Developer
+    # tools for edge functions": 2*10 + 7*8 + 2*10 + 2*12 + 1*15 + 1*5 = 140,
+    # clamped to 100.
     #
-    # A composite that saturates is not measuring anything. There is also no
-    # defensible scale here: nothing makes a CAGR mention worth 12 of whatever
-    # a "billion" mention is worth 15 of. The counts are the finding; the
-    # weighted sum only obscured them.
-    opportunity_score = min(
-        100,
-        market_size_mentions * 10
-        + growth_mentions * 8
-        + forecast_mentions * 10
-        + cagr_mentions * 12
-        + billion_mentions * 15
-        + million_mentions * 5,
-    )
-
+    # A composite that saturates is not measuring anything, and there was no
+    # defensible scale underneath it -- nothing makes a CAGR mention worth 12
+    # of whatever a "billion" mention is worth 15 of. The counts below are the
+    # finding; the weighted sum only obscured them.
     return {
         "market_size_mentions": market_size_mentions,
         "growth_mentions": growth_mentions,
@@ -129,5 +120,4 @@ def extract(evidence):
         "sources_scanned": len(evidence),
         "detected_market_sizes": list(detected_market_sizes),
         "detected_growth_rates": list(detected_growth_rates),
-        "opportunity_score": opportunity_score,
     }

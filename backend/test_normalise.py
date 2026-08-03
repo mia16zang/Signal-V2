@@ -100,6 +100,19 @@ def main():
     ok("a genuine zero from a live collector stays a zero",
        measured.value == 0 and measured.collected is True,
        f"{measured.value} / {measured.collected}")
+    ok("a measured zero displays as 0, not an em-dash",
+       measured.display == "0", measured.display)
+    ok("a measured zero is not listed as unavailable",
+       measured.collected is True)
+
+    # The invariant that makes the whole distinction worth having: there must
+    # be no blanket 0 -> null mapping. YouTube is present in EVIDENCE, so a
+    # zero comment count is a real finding; Product Hunt is absent, so a zero
+    # launch count is an absence of measurement. Same integer, opposite meaning.
+    absent_signal = signal_estimate("competitive", "launches", 0, EVIDENCE)
+    ok("the same 0 from an absent collector becomes null",
+       absent_signal.value is None and measured.value == 0,
+       f"launches={absent_signal.value} comments={measured.value}")
 
     # trend_growth feeds from Google Trends, so it needs a Trends item present
     # before it counts as measured at all.
@@ -112,6 +125,47 @@ def main():
     pct = signal_estimate("virality", "trend_growth", 76.67, with_trends)
     eq("percentage signal is rounded and marked approximate", pct.display, "~77%")
     eq("percentage signal cites the Trends item", pct.evidence_ids, ["e4"])
+
+    print("\n3b. Basis and display copy never interpolate a bare zero")
+    from app.payload.normalise import market_estimate as _me
+
+    FIELDS = (("growth_rate", "estimate", "growth rate"),
+              ("market_size", "estimate", "market size"),
+              ("market_maturity", "stage", "maturity stage"),
+              ("future_outlook", "direction", "forward outlook"))
+    ONE = [{"id": "e1", "title": "market size $9B", "snippet": "cagr 20%",
+            "source_key": "ddgs"}]
+    MANY = [{"id": f"e{i}", "title": "x", "snippet": "y", "source_key": "ddgs"}
+            for i in range(1, 31)]
+
+    import re as _re
+    zeros, grammar = [], []
+    for ev in (MANY, ONE, []):
+        for field, value_key, label in FIELDS:
+            for raw in ({}, {value_key: "Growth", "confidence": 90},
+                        {value_key: "Growth", "confidence": 50}):
+                est = _me(raw, value_key, label, ev, field=field)
+                for text in (est.display or "", est.basis or ""):
+                    if _re.search(r"(?<![\d.$])0(?![\d.])", text):
+                        zeros.append((field, len(ev), text))
+                    if _re.search(r"\ba (?=[aeiou])", text) or " 1 sources" in text:
+                        grammar.append((field, text))
+
+    ok("no basis or display interpolates a bare 0 into prose", not zeros,
+       str(zeros[:2]))
+    ok("no 'a outlook' or 'the 1 sources' grammar slips", not grammar,
+       str(grammar[:2]))
+
+    absent = _me({}, "estimate", "growth rate", MANY, field="growth_rate")
+    ok("an absent growth rate explains itself rather than showing an em-dash",
+       "No growth figure" in absent.display, absent.display)
+    ok("and its basis says how many sources were scanned",
+       "30 sources were scanned" in absent.basis, absent.basis)
+
+    judged = _me({"stage": "Growth", "confidence": 90}, "stage",
+                 "maturity stage", ONE, field="market_maturity")
+    ok("a maturity read is called a judgement, not a grounded estimate",
+       judged.basis.startswith("Model judgement"), judged.basis)
 
     print("\n4. Headline de-duplication")
     out = dedupe_headlines({

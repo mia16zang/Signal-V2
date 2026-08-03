@@ -7,7 +7,7 @@ keys until session 2 moves it across.
 """
 
 from app.payload.definitions import (
-    DEPRECATED_FIELDS,
+    REMOVED_FIELDS,
     LIST_METRIC_KEYS,
     SCORE_SCALE,
     metric_definitions,
@@ -99,10 +99,15 @@ def build_report(intelligence: dict, synthesis: dict, signals: dict,
             "executive_summary": tidy_figures(synthesis.get("executive_summary", "")),
             "top_reason_to_build": tidy_figures(synthesis.get("top_reason_to_build", "")),
             "biggest_risk": tidy_figures(synthesis.get("biggest_risk", "")),
-            "market_pulse": _score_estimate(
-                synthesis.get("market_pulse"),
-                "The model's overall read of market conditions across every section it wrote.",
-            ).model_dump(),
+            # market_pulse is gone. It drove a large number above the verdict,
+            # had no entry in metric_definitions, and its only description was
+            # circular -- "the model's overall read" says nothing about how it
+            # is computed, because nothing computes it. Variance testing
+            # measured it spreading 92 points across five identical runs
+            # (8, 100, 100, 94, 100), so it was also the least stable number in
+            # the payload. A composite nobody can define and nobody can
+            # reproduce is not a summary; the verdict and its confidence carry
+            # that job.
             "confidence": _score_estimate(
                 synthesis.get("confidence"),
                 synthesis.get("confidence_explanation")
@@ -118,16 +123,22 @@ def build_report(intelligence: dict, synthesis: dict, signals: dict,
         ).model_dump(),
         "market": {
             "market_size": market_estimate(
-                market.get("market_size"), "estimate", "market size", evidence
+                market.get("market_size"), "estimate", "market size", evidence,
+                field="market_size",
             ).model_dump(),
             "growth_rate": market_estimate(
-                market.get("growth_rate"), "estimate", "growth rate", evidence
+                market.get("growth_rate"), "estimate", "growth rate", evidence,
+                field="growth_rate",
             ).model_dump(),
+            # Labels are interpolated into prose ("none stated a {label}"), so
+            # they read as noun phrases that take "a", not as field names.
             "market_maturity": market_estimate(
-                market.get("market_maturity"), "stage", "maturity read", evidence
+                market.get("market_maturity"), "stage", "maturity stage", evidence,
+                field="market_maturity",
             ).model_dump(),
             "future_outlook": market_estimate(
-                market.get("future_outlook"), "direction", "outlook", evidence
+                market.get("future_outlook"), "direction", "forward outlook", evidence,
+                field="future_outlook",
             ).model_dump(),
         },
         "signals": signal_report,
@@ -159,5 +170,5 @@ def attach(result: dict) -> dict:
     result["score_scale"] = SCORE_SCALE
     result["evidence_summary"] = evidence_summary(evidence)
     result["signals_unavailable"] = report["signals_unavailable"]
-    result["deprecated_fields"] = DEPRECATED_FIELDS
+    result["removed_fields"] = REMOVED_FIELDS
     return result

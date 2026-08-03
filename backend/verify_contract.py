@@ -117,7 +117,6 @@ FROZEN_CONTRACT = {
         },
         "market_size": {"market_reports": "number"},
         "market_opportunity": {
-            "opportunity_score": "number",
             "market_size_mentions": "number",
             "growth_mentions": "number",
             "forecast_mentions": "number",
@@ -155,8 +154,6 @@ FROZEN_CONTRACT = {
     },
     "synthesis": {
         "executive_summary": "str",
-        "market_pulse": "number",
-        "opportunity_score": "number",
         "confidence": "number",
         "confidence_explanation": "str",
         "build_recommendation": {"decision": "str", "reason": "str"},
@@ -298,7 +295,6 @@ GOOD = json.dumps({
         "differentiation_opportunities": [_row("Dietitian in the loop", "score", 75)],
     },
     "synthesis": {
-        "market_pulse": 68, "opportunity_score": 64,
         "build_recommendation": {"decision": "Yes", "reason": "Clear unserved segment."},
         "confidence": 75, "confidence_explanation": "Moderate evidence breadth.",
         "top_reason_to_build": "Retention gap in incumbents.",
@@ -330,7 +326,7 @@ ADVERSARIAL = {
     "truncated": GOOD[: int(len(GOOD) * 0.7)],
     "trailing commas": GOOD.replace("}]", "},]"),
     "scores as strings": GOOD.replace('"score": 90', '"score": "90"'),
-    "score out of range": GOOD.replace('"market_pulse": 68', '"market_pulse": 480'),
+    "score out of range": GOOD.replace('"confidence": 75', '"confidence": 480'),
     "empty": "",
     "not json at all": "I cannot help with that request.",
     "sections missing": json.dumps({"customer": json.loads(GOOD)["customer"]}),
@@ -379,8 +375,8 @@ def main():
 
     scored = normalise_bundle(parse_json(ADVERSARIAL["score out of range"]))
     check("clamps out-of-range score",
-          scored["synthesis"]["market_pulse"] <= 100,
-          str(scored["synthesis"]["market_pulse"]))
+          scored["synthesis"]["confidence"] <= 100,
+          str(scored["synthesis"]["confidence"]))
 
     stringy = normalise_bundle(parse_json(ADVERSARIAL["scores as strings"]))
     check("coerces string score to int",

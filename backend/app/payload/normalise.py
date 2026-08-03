@@ -241,8 +241,57 @@ _SIZING_TERMS = ("market size", "market forecast", "industry report", "cagr",
                  "billion", "million", "forecast", "projected")
 
 
+# What to say when the model returned nothing for a field. A bare em-dash next
+# to a neighbouring card carrying a full sentence reads as a rendering failure
+# rather than a finding, so every empty field states its own emptiness.
+_ABSENT_DISPLAY = {
+    "market_size": "No market size figure appeared in the collected sources.",
+    "growth_rate": "No growth figure appeared in the collected sources.",
+    "market_maturity": "The model did not characterise this market's stage.",
+    "future_outlook": "The model did not state an outlook for this market.",
+}
+
+# A size and a growth rate are figures extracted from sources. A maturity stage
+# and an outlook are judgements the model formed -- calling those "grounded in
+# N sources containing sizing language" was wrong even when N was non-zero,
+# because sizing language is not what a maturity read rests on.
+_JUDGEMENT_FIELDS = ("market_maturity", "future_outlook")
+
+
+def _plural(count: int, noun: str) -> str:
+    """`1 source`, `4 sources`. Never `the 1 sources`."""
+    return f"{count} {noun}" if count == 1 else f"{count} {noun}s"
+
+
+def _support_basis(field: str, supporting: int, scanned: int) -> str:
+    """The provenance sentence, with a branch for having found nothing.
+
+    The zero case existed but was never branched, so the template produced
+    "grounded in the 0 collected sources containing sizing or forecast
+    language" -- a sentence that reads as a broken interpolation and quietly
+    undercuts the value printed above it. There are two distinct zeros: no
+    source mentioned figures, and nothing was collected at all.
+    """
+    if field in _JUDGEMENT_FIELDS:
+        if supporting:
+            return (f"Model judgement, informed by the {_plural(supporting, 'source')} "
+                    f"containing sizing or forecast language.")
+        if not scanned:
+            return "Model judgement. No sources were collected for this topic."
+        return "Model judgement. No collected source stated this directly."
+
+    if supporting:
+        return (f"Model estimate, grounded in the "
+                f"{_plural(supporting, 'collected source')} containing sizing or "
+                f"forecast language.")
+    if not scanned:
+        return "Model estimate. No sources were collected for this topic."
+    return ("Model estimate. None of the collected sources stated a figure "
+            "directly.")
+
+
 def market_estimate(raw: dict, value_key: str, label: str,
-                    evidence: list[dict]) -> Estimate:
+                    evidence: list[dict], field: str = "") -> Estimate:
     """A model-written market figure, suppressed when weakly supported.
 
     The suppression is the point. A market size carrying confidence 50 is the
@@ -252,14 +301,21 @@ def market_estimate(raw: dict, value_key: str, label: str,
     value = (raw or {}).get(value_key) or ""
     confidence = (raw or {}).get("confidence") or 0
     supporting = ids_matching(evidence, _SIZING_TERMS)
+    scanned = len(evidence)
 
     if not value:
         return Estimate(
             value=None,
-            display=NOT_COLLECTED,
+            display=_ABSENT_DISPLAY.get(field, NOT_COLLECTED),
             confidence=None,
             confidence_band="none",
-            basis="The model returned no figure for this.",
+            basis=(
+                f"No sources were collected for this topic, so no {label} could "
+                f"be established."
+                if not scanned else
+                f"{_plural(scanned, 'source')} were scanned and none stated a "
+                f"{label}. No figure is estimated in its place."
+            ),
             source_count=0,
             evidence_ids=[],
             collected=False,
@@ -274,8 +330,10 @@ def market_estimate(raw: dict, value_key: str, label: str,
             basis=(
                 f"The model rated its own {label} at {confidence}/100, below the "
                 f"{MIN_REPORTABLE_CONFIDENCE} reporting threshold. "
-                f"{len(supporting)} of {len(evidence)} collected sources contain "
-                f"sizing language."
+                + (f"{len(supporting)} of {_plural(scanned, 'collected source')} "
+                   f"contain sizing language."
+                   if supporting else
+                   "None of the collected sources contain sizing language.")
             ),
             source_count=len(supporting),
             evidence_ids=supporting,
@@ -288,10 +346,7 @@ def market_estimate(raw: dict, value_key: str, label: str,
         display=tidied,
         confidence=confidence,
         confidence_band=band_for_confidence(confidence),
-        basis=(
-            f"Model estimate, grounded in the {len(supporting)} collected sources "
-            f"containing sizing or forecast language."
-        ),
+        basis=_support_basis(field, len(supporting), scanned),
         source_count=len(supporting),
         evidence_ids=supporting,
         collected=True,

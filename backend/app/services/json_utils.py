@@ -385,9 +385,18 @@ def normalise_synthesis(raw) -> dict:
         None,
     )
 
+    # `market_pulse` and `opportunity_score` are both gone as of session 4.
+    #
+    # opportunity_score was a weighted keyword sum clamped at 100, which
+    # saturated on ordinary inputs once the extractor stopped being gated to
+    # dedicated market-report sources. market_pulse had no derivation at all
+    # and moved 92 points across five identical runs.
+    #
+    # Both were removed rather than repaired: neither had a scale anyone could
+    # state, and both were driving hero-sized numbers in the interface.
+    # `report.signals.market_opportunity.sizing_language_density` carries the
+    # underlying counts instead.
     return {
-        "market_pulse": _clamp_score(raw.get("market_pulse")),
-        "opportunity_score": _clamp_score(raw.get("opportunity_score")),
         "build_recommendation": {
             "decision": match or (decision if decision else "Monitor"),
             "reason": _text(recommendation.get("reason")),

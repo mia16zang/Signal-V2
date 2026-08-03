@@ -69,8 +69,6 @@ SCHEMA = f"""{{
   "differentiation_opportunities": [{_row("score")}]
  }},
  "synthesis": {{
-  "market_pulse": 0,
-  "opportunity_score": 0,
   "build_recommendation": {{"decision": "", "reason": ""}},
   "confidence": 0,
   "confidence_explanation": "",
