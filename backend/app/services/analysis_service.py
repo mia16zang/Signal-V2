@@ -219,9 +219,14 @@ class AnalysisService:
         # lasting one: a single 429 wrote an empty briefing under the topic key
         # for CACHE_TTL_HOURS, so every later request for that topic served the
         # failure from cache in 1ms and looked perfectly healthy doing it.
-        if config.CACHE_ENABLED and not result.get("degraded"):
+        #
+        # Keyed on `analysis_failed` rather than `degraded`: a briefing written
+        # by the fallback provider is flagged degraded but is complete, and
+        # refusing to cache it would send every later visitor back through the
+        # same rate-limited primary to reach the same fallback again.
+        if config.CACHE_ENABLED and not result.get("analysis_failed"):
             CacheService.set(topic, result)
-        elif result.get("degraded"):
-            print(f"NOT CACHED -- degraded: {result.get('degraded_reason')}")
+        elif result.get("analysis_failed"):
+            print(f"NOT CACHED -- no briefing: {result.get('degraded_reason')}")
 
         return result

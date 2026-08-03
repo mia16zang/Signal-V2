@@ -601,6 +601,55 @@ def main():
 
     config.CACHE_ENABLED = False
 
+    # ------------------------------------------------------------- 3b
+    print("\n3b. A rate-limited primary falls through to the second provider")
+
+    from app.services.gemini_service import LLMUnavailable as _Unavailable
+
+    class _RateLimited:
+        def call(self, prompt, **kw):
+            raise _Unavailable("429", retryable=False, retry_after=33.0,
+                               reason="rate limited, clears in 33s")
+
+    class _Working:
+        calls = 0
+
+        def call(self, prompt, **kw):
+            _Working.calls += 1
+            return GOOD
+
+    saved_fallback = unified_intelligence._fallback_service
+    unified_intelligence._service = lambda: (_RateLimited(), "primary-model")
+    unified_intelligence._fallback_service = lambda: (_Working(), "fallback-model")
+
+    config.CACHE_ENABLED = True
+    served = asyncio.run(service.analyze("fallback probe topic"))
+
+    check("a rate-limited primary still produces a briefing",
+          served.get("analysis_failed") is False)
+    check("the fallback provider is the one that answered",
+          served.get("llm_provider") == "openrouter", str(served.get("llm_provider")))
+    check("the response says a different model wrote it",
+          "fallback model" in (served.get("degraded_reason") or ""),
+          str(served.get("degraded_reason")))
+    check("no phantom repair strategy is reported for a call that never returned",
+          "call_failed" not in (served.get("degraded_reason") or ""),
+          str(served.get("degraded_reason")))
+    check("a fallback briefing is cached, so the next visitor skips the "
+          "rate-limited primary",
+          _Cache.get("fallback probe topic") is not None)
+
+    # With no fallback configured, a dead primary must still fail loudly.
+    unified_intelligence._fallback_service = lambda: (None, None)
+    dead = asyncio.run(service.analyze("no fallback probe topic"))
+    check("without a fallback a dead primary still fails",
+          dead.get("analysis_failed") is True)
+    check("and that failure is still not cached",
+          _Cache.get("no fallback probe topic") is None)
+
+    config.CACHE_ENABLED = False
+    unified_intelligence._fallback_service = saved_fallback
+
     # ---------------------------------------------------------------- 4
     print("\n4. Cache is consulted before collection")
     from app.services.cache_service import CacheService

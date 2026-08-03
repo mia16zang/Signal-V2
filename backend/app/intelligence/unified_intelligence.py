@@ -21,6 +21,7 @@ median for synthesis.
 
 import json
 import logging
+import os
 
 from app import config
 from app.services.json_utils import normalise_bundle, parse_json_verbose
@@ -237,6 +238,29 @@ def _service():
     return GeminiService(), config.GEMINI_MODEL
 
 
+def _fallback_service():
+    """The other provider, used only when the first returns nothing.
+
+    Deliberately a separate function rather than a parameter on `_service`:
+    the verifier swaps `_service` for a stub, and a signature change there
+    would break every test that does so.
+    """
+    if not config.ENABLE_LLM_FALLBACK:
+        return None, None
+
+    # Gemini is the fallback when OpenRouter is primary, and vice versa.
+    if config.LLM_PROVIDER == "openrouter":
+        if not os.getenv("GEMINI_API_KEY"):
+            return None, None
+        from app.services.gemini_service import GeminiService
+        return GeminiService(), config.GEMINI_MODEL
+
+    if not os.getenv("OPENROUTER_API_KEY"):
+        return None, None
+    from app.services.openrouter_service import OpenRouterService
+    return OpenRouterService(), config.OPENROUTER_MODEL
+
+
 VALID_SCORES = (90, 75, 50)
 
 
@@ -318,7 +342,11 @@ def build_everything(topic, evidence, signals, known_competitors=None):
     parsed, parse_report = _call_once(service, prompt, topic)
     degraded: list[str] = []
 
-    if parse_report.get("strategy") not in ("direct", None):
+    # "call_failed" is not a repair strategy -- no reply arrived to repair. It
+    # is reported by the fallback block below, or as the failure reason if
+    # there is no fallback, so describing it here produced the phrase
+    # "model reply needed call_failed".
+    if parse_report.get("strategy") not in ("direct", "call_failed", None):
         degraded.append(
             f"model reply needed {parse_report['strategy']}"
             + (f", {parse_report['chars_lost']} chars discarded"
@@ -360,6 +388,33 @@ Your previous reply broke two rules. Return the whole JSON object again, fixed.
                     f"were snapped to the nearest band"
                 )
 
+    # The primary had nothing to give. Before returning an error page, try the
+    # other provider -- a slower briefing from a second model beats a 503 on a
+    # link someone is looking at right now.
+    provider_used = config.LLM_PROVIDER
+    if not parsed:
+        fallback, fallback_model = _fallback_service()
+        if fallback is not None:
+            print(f"  primary unavailable ({parse_report.get('detail')}); "
+                  f"falling back to {fallback_model}")
+            log.warning("falling back to secondary provider | query=%r reason=%s",
+                        topic, parse_report.get("detail"))
+
+            parsed, fallback_report = _call_once(fallback, prompt, topic)
+            if parsed:
+                provider_used = "openrouter" if config.LLM_PROVIDER != "openrouter" else "gemini"
+                # Said out loud in the payload, not hidden. The briefing was
+                # written by a different model than the one the timings and the
+                # rest of the response describe.
+                degraded.append(
+                    f"the usual model was unavailable; this briefing was written "
+                    f"by the fallback model ({fallback_model})"
+                )
+                parse_report = fallback_report
+            else:
+                parse_report.setdefault("fallback_detail",
+                                        fallback_report.get("detail"))
+
     if not parsed:
         log.warning("no usable model output | query=%r strategy=%s",
                     topic, parse_report.get("strategy"))
@@ -374,7 +429,8 @@ Your previous reply broke two rules. Return the whole JSON object again, fixed.
         reason = (f"no usable model output ({parse_report.get('detail')})"
                   if parse_report.get("strategy") == "call_failed"
                   else "the model reply could not be parsed")
-        return normalise_bundle({}), False, [reason], parse_report.get("retry_after")
+        return (normalise_bundle({}), False, [reason],
+                parse_report.get("retry_after"), provider_used)
 
     missing = [k for k in ("customer", "market", "competitive", "synthesis")
                if k not in parsed]
@@ -386,4 +442,4 @@ Your previous reply broke two rules. Return the whole JSON object again, fixed.
         print(f"  WARNING: model omitted sections {missing}; filled as empty")
         degraded.append(f"model omitted section(s): {', '.join(missing)}")
 
-    return normalise_bundle(parsed), True, degraded, None
+    return normalise_bundle(parsed), True, degraded, None, provider_used

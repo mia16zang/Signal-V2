@@ -31,6 +31,16 @@ services:
       - key: YOUTUBE_API_KEY
         sync: false
 
+      # The fallback provider, used only when Gemini returns nothing.
+      #
+      # Gemini's free tier allows 5 requests per minute per model, which the
+      # four seeded landing-page suggestions never touch but a visitor typing
+      # their own topic does. Without this key the fallback is inert and that
+      # visitor gets a 503, so set it -- it is the difference between "the
+      # demo is slow sometimes" and "the demo is broken".
+      - key: OPENROUTER_API_KEY
+        sync: false
+
       # Explicit rather than relying on the default in app/config.py, so the
       # deployed mode is visible here and can be flipped from the Render
       # dashboard without a code change.

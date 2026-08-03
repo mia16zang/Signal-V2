@@ -172,6 +172,21 @@ LLM_PROVIDER = os.getenv("LLM_PROVIDER", "gemini").strip().lower()
 
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 
+# When the primary provider has nothing to give, try the other one before
+# giving up.
+#
+# Gemini's free tier allows 5 requests per minute per model (measured:
+# quotaId GenerateRequestsPerMinutePerProjectPerModel-FreeTier, quotaValue 5).
+# That is fine for the seeded landing-page suggestions, which never reach a
+# provider, and not fine for a visitor typing their own topic -- a couple of
+# clicks in a minute and every subsequent request is a 503.
+#
+# The fallback trades latency for availability. OpenRouter's free models are
+# slower and less predictable (measured 64s, 76s and 126s tails against a 34.8s
+# median), so this is not a good primary. It is a much better answer than an
+# error page on a portfolio link.
+ENABLE_LLM_FALLBACK = _flag("ENABLE_LLM_FALLBACK", True)
+
 # Never "openrouter/free" -- that alias is the single largest source of tail
 # latency in the measured data.
 #

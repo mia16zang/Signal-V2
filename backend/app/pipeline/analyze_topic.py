@@ -41,13 +41,14 @@ def _legacy(topic, evidence, signals, known_competitors):
     synthesis_time = round(time.time() - started, 2)
     print(f"AI Analysis (synthesis, 1 call): {synthesis_time}s")
 
-    return intelligence, synthesis, intelligence_time, synthesis_time, [], None
+    return (intelligence, synthesis, intelligence_time, synthesis_time, [],
+            None, config.LLM_PROVIDER)
 
 
 def _unified(topic, evidence, signals, known_competitors):
     """One call for all four sections."""
     started = time.time()
-    bundle, ok, degraded, retry_after = build_everything(
+    bundle, ok, degraded, retry_after, provider = build_everything(
         topic=topic,
         evidence=evidence,
         signals=signals,
@@ -71,7 +72,8 @@ def _unified(topic, evidence, signals, known_competitors):
     # builder without changing the return arity again.
     intelligence["market_sizing"] = bundle.get("market_sizing", {"claims": []})
 
-    return intelligence, bundle["synthesis"], ai_time, 0.0, degraded, retry_after
+    return (intelligence, bundle["synthesis"], ai_time, 0.0, degraded,
+            retry_after, provider)
 
 
 def public_evidence(evidence):
@@ -120,12 +122,12 @@ def analyze_topic(
 
     if config.PORTFOLIO_MODE:
         (intelligence, synthesis, intelligence_time, synthesis_time,
-         degraded, retry_after) = _unified(
+         degraded, retry_after, provider) = _unified(
             topic, evidence, signals, known_competitors
         )
     else:
         (intelligence, synthesis, intelligence_time, synthesis_time,
-         degraded, retry_after) = _legacy(
+         degraded, retry_after, provider) = _legacy(
             topic, evidence, signals, known_competitors
         )
 
@@ -173,6 +175,10 @@ def analyze_topic(
         # Seconds until a retry would plausibly succeed, when the provider said
         # so. On the free tier a rate limit answers with 33s.
         "retry_after": retry_after,
+        # Which provider actually wrote this briefing. Differs from the
+        # configured default whenever the fallback fired, and the response
+        # should not quietly imply otherwise.
+        "llm_provider": provider,
     }
 
     # Everything above is the v1 contract, untouched. `attach` adds the v2
