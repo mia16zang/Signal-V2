@@ -4,24 +4,24 @@
     "meta": {
       "topic": "Carbon accounting for SMBs",
       "cached": false,
-      "generated_at": "2026-08-01T19:24:58.160368",
-      "intelligence_time": 22.35,
+      "generated_at": "2026-08-03T12:54:29.941613",
+      "intelligence_time": 26.16,
       "synthesis_time": 0.0,
-      "collection_time": 8.04,
-      "ai_time": 22.35,
+      "collection_time": 8.05,
+      "ai_time": 26.16,
       "parse_time": 0.0,
       "evidence_count": 30,
       "evidence_used": 24,
       "portfolio_mode": true,
-      "total_time": 30.39,
-      "payload_time": 0.006
+      "total_time": 34.22,
+      "payload_time": 0.003
     },
     "signals": {
       "virality": {
-        "momentum": 3,
+        "momentum": 2,
         "trend_growth": 0,
-        "avg_views_per_day": 0.16,
-        "avg_engagement_rate": 0.67
+        "avg_views_per_day": 0.17,
+        "avg_engagement_rate": 0.46
       },
       "competitive": {
         "launches": 0,
@@ -37,324 +37,375 @@
         "comment_volume": 0
       },
       "market_opportunity": {
-        "market_size_mentions": 3,
-        "growth_mentions": 5,
-        "forecast_mentions": 3,
+        "market_size_mentions": 4,
+        "growth_mentions": 6,
+        "forecast_mentions": 4,
         "cagr_mentions": 4,
-        "billion_mentions": 6,
+        "billion_mentions": 3,
         "million_mentions": 3,
         "sources_scanned": 30,
         "detected_market_sizes": [
-          "$22.6 billion",
-          "$27.78 billion",
-          "$63.54 billion",
-          "$2.3m",
-          "$95m",
-          "$1 billion",
-          "$204m"
+          "$74.4 billion",
+          "$101m",
+          "$27m",
+          "$52m"
         ],
         "detected_growth_rates": [
-          "22.9%",
-          "24.59%",
-          "22.21%",
-          "23%",
-          "37.0%",
-          "5.6%"
-        ],
-        "opportunity_score": 100
+          "21.8%",
+          "22.9%"
+        ]
       },
       "market_size": {
-        "market_reports": 3
+        "market_reports": 4
       }
     },
     "intelligence": {
       "customer": {
         "customer_segments": [
           {
-            "name": "SMBs in supply chains of larger organizations",
+            "name": "Small and Mid-Sized Businesses (SMBs)",
             "score": 90,
-            "detail": "Small and medium-sized businesses that are part of the supply chain for larger organizations are increasingly required to report their climate emissions.",
+            "detail": "SMBs are increasingly facing new carbon accounting requirements due to larger companies like Microsoft raising sustainability standards, and they need accessible solutions.",
             "evidence_ids": [
               "e1",
-              "e7"
-            ]
-          },
-          {
-            "name": "Small climatetech businesses",
-            "score": 75,
-            "detail": "Climatetech small businesses face a specific problem where existing carbon accounting software is too expensive and feature-rich for their needs.",
-            "evidence_ids": [
-              "e9"
-            ]
-          },
-          {
-            "name": "European SMBs",
-            "score": 75,
-            "detail": "Some carbon accounting software is primarily suited to European regulatory environments, indicating a specific segment of SMBs with these compliance needs.",
-            "evidence_ids": [
-              "e5",
-              "e12"
-            ]
-          },
-          {
-            "name": "Small businesses aiming for carbon neutrality",
-            "score": 75,
-            "detail": "Small businesses, such as coffee shops, are looking for ways to become carbon neutral and demonstrate climate leadership.",
-            "evidence_ids": [
+              "e6",
+              "e8",
+              "e13",
               "e14",
-              "e21"
+              "e15",
+              "e16",
+              "e22",
+              "e24"
+            ]
+          },
+          {
+            "name": "UK SMBs",
+            "score": 75,
+            "detail": "There is a specific offering for UK SMBs, including free carbon accounting and paid tiers with specific reporting documents.",
+            "evidence_ids": [
+              "e13"
+            ]
+          },
+          {
+            "name": "B2B sustainability teams",
+            "score": 75,
+            "detail": "Platforms are being built specifically for B2B sustainability teams to measure, report, and reduce emissions.",
+            "evidence_ids": [
+              "e7"
             ]
           }
         ],
         "pain_points": [
           {
-            "name": "Prohibitively expensive software for SMBs",
+            "name": "Navigating complexity of carbon accounting",
             "signal_strength": 90,
-            "detail": "Carbon accounting software designed for larger enterprises is too expensive and complex for small and medium-sized businesses.",
+            "detail": "SMBs need support to understand and comply with carbon accounting and reduction plans, often requiring expert assistance.",
             "evidence_ids": [
-              "e9",
-              "e5"
+              "e1",
+              "e9"
             ]
           },
           {
-            "name": "Lack of traditional need for carbon accounting",
+            "name": "Meeting new accounting requirements",
+            "signal_strength": 90,
+            "detail": "Companies like Microsoft are raising sustainability standards, forcing SMBs to adapt to new accounting requirements.",
+            "evidence_ids": [
+              "e6",
+              "e8"
+            ]
+          },
+          {
+            "name": "Data collection and integration challenges",
             "signal_strength": 75,
-            "detail": "Historically, SMBs have not needed to perform carbon accounting, making the new requirements a novel challenge.",
+            "detail": "Automated data collection through accounting and banking integrations is a desired feature, indicating manual processes are a pain point.",
             "evidence_ids": [
               "e1"
             ]
           },
           {
-            "name": "Complexity of GHG Protocol standards",
+            "name": "High data processing demands and costs",
             "signal_strength": 75,
-            "detail": "Understanding and applying the GHG Protocol, which classifies emissions into three scopes, can be complex for SMBs.",
+            "detail": "Real-time tracking can lead to higher data processing demands and potentially increased costs, especially for complex operations.",
             "evidence_ids": [
-              "e2"
+              "e18"
             ]
           },
           {
-            "name": "Need for onboarding support",
-            "signal_strength": 50,
-            "detail": "Some carbon accounting solutions may require onboarding support for companies, suggesting a learning curve for SMB users.",
+            "name": "Financial discipline over granularity",
+            "signal_strength": 75,
+            "detail": "SMBs require carbon accounting solutions that prioritize financial discipline rather than overly granular transaction tracking.",
             "evidence_ids": [
-              "e5"
+              "e14"
             ]
           }
         ],
         "desired_outcomes": [
           {
-            "name": "Compliance with new reporting requirements",
+            "name": "Accessible and intuitive platforms",
             "importance": 90,
-            "detail": "SMBs need to adapt to new carbon accounting requirements imposed by larger organizations and regulatory bodies.",
+            "detail": "SMBs seek user-friendly interfaces and accessible solutions to manage their carbon accounting effectively.",
             "evidence_ids": [
               "e1",
-              "e7"
+              "e24"
             ]
           },
           {
-            "name": "Cost savings and efficiency",
+            "name": "Compliance with regulations and customer requirements",
             "importance": 90,
-            "detail": "Carbon accounting can become a strategic asset for SMBs, driving cost savings and operational efficiency.",
+            "detail": "Businesses need to meet reporting requirements, provide reliable data for auditors, and comply with environmental regulations and customer procurement standards.",
             "evidence_ids": [
-              "e19"
+              "e10",
+              "e21",
+              "e22"
             ]
           },
           {
-            "name": "Customer loyalty and competitive advantage",
-            "importance": 75,
-            "detail": "Adopting carbon accounting can enhance customer loyalty and provide a competitive edge for SMBs.",
+            "name": "Expert support and guidance",
+            "importance": 90,
+            "detail": "Access to climate experts is crucial for SMBs to navigate the complexities of carbon accounting and reduction planning.",
             "evidence_ids": [
-              "e19"
+              "e1",
+              "e9"
             ]
           },
           {
-            "name": "User-friendly and affordable tools",
+            "name": "Reduced costs and improved efficiency",
             "importance": 75,
-            "detail": "SMBs are looking for carbon accounting tools that are easy to use and budget-friendly.",
+            "detail": "Implementing carbon accounting software can help SMBs reduce costs through optimized resource use and improved efficiency.",
             "evidence_ids": [
-              "e21"
+              "e22"
             ]
           },
           {
-            "name": "Becoming carbon neutral and a climate leader",
+            "name": "Opportunity for growth and competitive advantage",
             "importance": 75,
-            "detail": "Small businesses aspire to achieve carbon neutrality and position themselves as climate leaders.",
+            "detail": "Compliance with sustainability standards is not just a checkbox but an opportunity for growth and competitive advantage.",
             "evidence_ids": [
-              "e14",
-              "e21"
+              "e6",
+              "e8"
+            ]
+          },
+          {
+            "name": "Verifiable and transparent reporting",
+            "importance": 75,
+            "detail": "SMBs need platforms that enable verifiable reporting and allow them to track and benchmark GHG emissions.",
+            "evidence_ids": [
+              "e7"
             ]
           }
         ],
         "behavior_patterns": [
           {
-            "name": "Seeking software solutions for tracking emissions",
+            "name": "Seeking free tools and affordable options",
             "confidence": 90,
-            "detail": "SMBs are actively searching for software to help them track and manage their carbon emissions.",
+            "detail": "SMBs are encouraged to use free tools like the SME Climate Hub calculator and are offered free tiers or affordable starter packages for carbon accounting.",
             "evidence_ids": [
-              "e6",
-              "e20",
-              "e22"
+              "e2",
+              "e4",
+              "e13",
+              "e24"
             ]
           },
           {
-            "name": "Adapting to supplier standards",
-            "confidence": 90,
-            "detail": "SMBs are adapting to new sustainability standards set by larger companies like Microsoft, which require carbon accounting.",
-            "evidence_ids": [
-              "e7"
-            ]
-          },
-          {
-            "name": "Engaging in online discussions for solutions",
+            "name": "Surveying suppliers for carbon practices",
             "confidence": 75,
-            "detail": "SMBs and individuals are discussing carbon accounting software and methods on platforms like Reddit.",
-            "evidence_ids": [
-              "e6",
-              "e20",
-              "e22"
-            ]
-          },
-          {
-            "name": "Viewing carbon accounting as an opportunity",
-            "confidence": 75,
-            "detail": "SMBs are beginning to see carbon accounting not just as a compliance burden but as an opportunity for growth and value creation.",
-            "evidence_ids": [
-              "e7",
-              "e19"
-            ]
-          }
-        ],
-        "opportunity_areas": [
-          {
-            "name": "Developing affordable, SMB-specific carbon accounting software",
-            "score": 90,
-            "detail": "There is a clear need for carbon accounting software that is specifically designed for SMBs, addressing their cost and complexity concerns.",
-            "evidence_ids": [
-              "e9",
-              "e5",
-              "e21"
-            ]
-          },
-          {
-            "name": "Providing compliance solutions for supply chain reporting",
-            "score": 90,
-            "detail": "Offering solutions that help SMBs meet the carbon reporting requirements of larger organizations in their supply chain presents a significant opportunity.",
-            "evidence_ids": [
-              "e1",
-              "e7"
-            ]
-          },
-          {
-            "name": "Simplifying GHG Protocol for small businesses",
-            "score": 75,
-            "detail": "Creating tools or services that simplify the complex GHG Protocol standards for SMBs would be highly valuable.",
+            "detail": "SMBs start by surveying their top suppliers about carbon measurement practices and creating preferred vendor lists.",
             "evidence_ids": [
               "e2"
             ]
           },
           {
-            "name": "Integrating carbon accounting with existing SMB accounting systems",
-            "score": 50,
-            "detail": "Given the existence of other SMB accounting systems, integrating carbon accounting could streamline processes for businesses.",
+            "name": "Prioritizing ease of use and automation",
+            "confidence": 75,
+            "detail": "SMBs look for intuitive interfaces and automated data collection through integrations to simplify the process.",
             "evidence_ids": [
-              "e4",
-              "e8",
-              "e11",
-              "e15"
+              "e1"
+            ]
+          },
+          {
+            "name": "Engaging with climate experts for support",
+            "confidence": 75,
+            "detail": "Many platforms highlight the availability of climate experts to assist companies with carbon accounting and reduction plans.",
+            "evidence_ids": [
+              "e1",
+              "e9"
+            ]
+          }
+        ],
+        "opportunity_areas": [
+          {
+            "name": "Simplified, affordable, and expert-backed solutions for SMBs",
+            "score": 90,
+            "detail": "There is a clear need for accessible, intuitive, and expert-supported carbon accounting platforms specifically designed for SMBs.",
+            "evidence_ids": [
+              "e1",
+              "e9",
+              "e13",
+              "e24"
+            ]
+          },
+          {
+            "name": "Integration with existing accounting and banking systems",
+            "score": 75,
+            "detail": "Automated data collection through integrations with accounting and banking systems can significantly reduce the burden on SMBs.",
+            "evidence_ids": [
+              "e1"
+            ]
+          },
+          {
+            "name": "Tools for supplier carbon measurement and preferred vendor lists",
+            "score": 75,
+            "detail": "Developing tools that help SMBs survey suppliers and manage preferred vendor lists based on carbon practices presents an opportunity.",
+            "evidence_ids": [
+              "e2"
+            ]
+          },
+          {
+            "name": "AI-powered analytics and recommendations",
+            "score": 75,
+            "detail": "AI tools for carbon accounting that provide analytics and recommendations can enhance the value proposition for customers.",
+            "evidence_ids": [
+              "e20"
+            ]
+          },
+          {
+            "name": "Reporting packages for specific regulations (e.g., California SB 253, EU…",
+            "score": 75,
+            "detail": "Offering tailored reporting packages that align with specific regional and international regulations can address a key compliance need.",
+            "evidence_ids": [
+              "e21"
             ]
           }
         ]
       },
       "market": {
         "market_size": {
-          "estimate": "$22.6 billion",
-          "confidence": 90
+          "estimate": "$74.4 billion",
+          "confidence": 75
         },
         "growth_rate": {
-          "estimate": "22.9%",
-          "confidence": 90
+          "estimate": "21.8% CAGR",
+          "confidence": 75
         },
         "market_maturity": {
           "stage": "Growth",
-          "confidence": 90
+          "confidence": 75
         },
         "future_outlook": {
-          "direction": "Strong Growth",
+          "direction": "Positive",
           "confidence": 90
         },
         "key_trends": [
           {
-            "name": "Increasing demand for carbon accounting from larger organizations",
+            "name": "Increasing regulatory pressure and corporate sustainability demands",
             "strength": 90,
-            "detail": "Larger organizations are increasingly requiring carbon emission reporting from their supply chains, driving SMBs to adopt carbon accounting.",
+            "detail": "Companies like Microsoft are raising sustainability standards, and regulations like the European Green Deal are driving the need for carbon accounting.",
+            "evidence_ids": [
+              "e3",
+              "e6",
+              "e8",
+              "e11",
+              "e21"
+            ]
+          },
+          {
+            "name": "Focus on SMBs as a key segment",
+            "strength": 90,
+            "detail": "The market is actively developing solutions and marketing specifically to small and mid-sized businesses, recognizing their growing needs.",
             "evidence_ids": [
               "e1",
-              "e7"
-            ]
-          },
-          {
-            "name": "Shift from compliance to strategic asset",
-            "strength": 90,
-            "detail": "Carbon accounting is evolving from a mere compliance requirement to a strategic asset that can drive cost savings, efficiency, and customer loyalty for SMBs.",
-            "evidence_ids": [
-              "e7",
-              "e19"
-            ]
-          },
-          {
-            "name": "Exponential growth of carbon accounting software market",
-            "strength": 90,
-            "detail": "The carbon accounting software market has experienced and is projected to continue exponential growth in recent years.",
-            "evidence_ids": [
-              "e10",
+              "e2",
+              "e5",
+              "e6",
+              "e8",
+              "e13",
+              "e14",
+              "e15",
+              "e16",
+              "e22",
               "e24"
+            ]
+          },
+          {
+            "name": "Demand for automated data collection and integrations",
+            "strength": 75,
+            "detail": "Platforms are emphasizing automated data collection through integrations with accounting and banking systems to simplify the process.",
+            "evidence_ids": [
+              "e1"
+            ]
+          },
+          {
+            "name": "Importance of expert support",
+            "strength": 75,
+            "detail": "The provision of climate experts for dedicated and personalized support is a recurring feature in carbon accounting platforms.",
+            "evidence_ids": [
+              "e1",
+              "e9"
             ]
           }
         ],
         "emerging_trends": [
           {
-            "name": "Adoption of Generative AI in carbon accounting",
-            "potential": 90,
-            "detail": "Generative AI is anticipated to significantly impact carbon accounting solutions, transforming how organizations measure and manage emissions.",
+            "name": "AI-powered analytics and recommendations",
+            "potential": 75,
+            "detail": "The acquisition of an AI tools startup for carbon accounting indicates a move towards AI-powered analytics and recommendations.",
             "evidence_ids": [
-              "e3"
+              "e20"
             ]
           },
           {
-            "name": "Focus on user-friendly and affordable solutions for SMBs",
+            "name": "Free tiers and affordable pricing models",
             "potential": 75,
-            "detail": "There is a clear trend towards developing more accessible and cost-effective carbon accounting tools specifically for small businesses.",
+            "detail": "The availability of free tiers and affordable starter packages suggests a trend towards making carbon accounting more accessible.",
             "evidence_ids": [
-              "e9",
-              "e21"
+              "e4",
+              "e13",
+              "e24"
+            ]
+          },
+          {
+            "name": "Focus on financial discipline for SMBs",
+            "potential": 75,
+            "detail": "There is an emerging understanding that carbon accounting for SMBs needs to prioritize financial discipline over excessive granularity.",
+            "evidence_ids": [
+              "e14"
             ]
           }
         ],
         "market_drivers": [
           {
-            "name": "Regulatory and supply chain pressure on SMBs",
+            "name": "Environmental regulations (e.g., European Green Deal, California SB 253)",
             "impact": 90,
-            "detail": "New accounting requirements from larger organizations and evolving sustainability standards are compelling SMBs to engage in carbon accounting.",
+            "detail": "Extensive plans and specific bills are driving the need for carbon accounting software and compliance.",
             "evidence_ids": [
-              "e1",
-              "e7"
-            ]
-          },
-          {
-            "name": "Increased awareness of climate change and sustainability goals",
-            "impact": 75,
-            "detail": "Businesses are increasingly focused on achieving carbon neutrality and becoming climate leaders, driving demand for accounting tools.",
-            "evidence_ids": [
-              "e14",
+              "e3",
+              "e11",
               "e21"
             ]
           },
           {
-            "name": "Potential for cost savings and efficiency gains",
-            "impact": 75,
-            "detail": "The realization that carbon accounting can lead to operational cost savings and improved efficiency is a significant driver for adoption.",
+            "name": "Corporate sustainability mandates (e.g., Microsoft's supplier standards)",
+            "impact": 90,
+            "detail": "Large corporations are setting new sustainability requirements for their supply chains, impacting SMBs.",
             "evidence_ids": [
-              "e19"
+              "e6",
+              "e8"
+            ]
+          },
+          {
+            "name": "Increased awareness of environmental impact",
+            "impact": 75,
+            "detail": "Businesses are increasingly seeking to understand their environmental impact and identify areas for improvement.",
+            "evidence_ids": [
+              "e22"
+            ]
+          },
+          {
+            "name": "Opportunity for cost reduction and efficiency",
+            "impact": 75,
+            "detail": "Carbon accounting can help businesses reduce costs through optimized resource use and improved efficiency.",
+            "evidence_ids": [
+              "e22"
             ]
           }
         ]
@@ -363,16 +414,26 @@
         "competitors": [
           {
             "name": "Greenly",
-            "strength": 75,
-            "detail": "Greenly is a carbon accounting software well-suited to SMBs and European mid-market businesses, offering broad ESG coverage.",
+            "strength": 90,
+            "detail": "Greenly markets itself as an accessible alternative for SMBs with an intuitive interface, automated data collection, and climate experts. They also raised $52M Series B.",
             "evidence_ids": [
-              "e12"
+              "e1",
+              "e18",
+              "e20"
             ]
           },
           {
             "name": "Persefoni",
             "strength": 75,
-            "detail": "Persefoni is a carbon accounting software specializing in financial services and portfolio analytics.",
+            "detail": "Persefoni has raised $101M Series B, struck strategic partnerships, expanded into Japan, and offers a free tier.",
+            "evidence_ids": [
+              "e4"
+            ]
+          },
+          {
+            "name": "Plan A",
+            "strength": 75,
+            "detail": "Plan A, a European carbon accounting and ESG reporting platform, raised $27M in funding.",
             "evidence_ids": [
               "e12"
             ]
@@ -380,7 +441,16 @@
           {
             "name": "Aclymate",
             "strength": 75,
-            "detail": "Aclymate offers user-friendly and affordable tools for any business, no matter how small, to become carbon neutral.",
+            "detail": "Aclymate is highlighted as a best carbon accounting platform for SMBs, offering user-friendly and affordable tools.",
+            "evidence_ids": [
+              "e1",
+              "e24"
+            ]
+          },
+          {
+            "name": "Eco-Auditor",
+            "strength": 50,
+            "detail": "Eco-Auditor aligns with GHG Protocol for Scope 1, 2, and 3 emissions accounting and supports various reporting packages for SMBs.",
             "evidence_ids": [
               "e21"
             ]
@@ -388,87 +458,106 @@
         ],
         "competitive_threats": [
           {
-            "name": "Enterprise software being adapted for SMBs",
-            "severity": 75,
-            "detail": "Larger enterprise carbon accounting solutions might eventually adapt their offerings to be more accessible to SMBs, increasing competition.",
+            "name": "Congested market with well-funded players",
+            "severity": 90,
+            "detail": "The carbon accounting sector is described as congested, with companies like Greenly raising significant Series B funding.",
             "evidence_ids": [
-              "e9"
+              "e20"
             ]
           },
           {
-            "name": "Existing accounting software expanding into carbon accounting",
-            "severity": 50,
-            "detail": "Traditional SMB accounting software providers like SAP Business One or Microsoft Dynamics 365 could integrate carbon accounting features.",
+            "name": "Established players offering free tiers and strategic partnerships",
+            "severity": 75,
+            "detail": "Competitors like Persefoni offer free tiers and have strong corporate partnerships, making it harder for new entrants.",
             "evidence_ids": [
-              "e8",
-              "e15"
+              "e4"
+            ]
+          },
+          {
+            "name": "Acquisitions for advanced capabilities (e.g., AI)",
+            "severity": 75,
+            "detail": "Competitors are acquiring startups to integrate advanced features like AI-powered analytics, raising the bar for innovation.",
+            "evidence_ids": [
+              "e20"
+            ]
+          },
+          {
+            "name": "Focus on specific regional markets by existing players",
+            "severity": 50,
+            "detail": "Some competitors are specifically targeting regional markets like the UK, potentially limiting white space.",
+            "evidence_ids": [
+              "e13"
             ]
           }
         ],
         "positioning_gaps": [
           {
-            "name": "Affordable and simplified solutions for SMBs",
-            "opportunity": 90,
-            "detail": "There is a clear gap for carbon accounting software that is both affordable and simplified for the specific needs of small businesses.",
+            "name": "Solutions tailored for specific SMB niches (e.g., coffee shops)",
+            "opportunity": 75,
+            "detail": "While general SMB solutions exist, a platform specifically designed for the unique needs of a niche like coffee shops could be a gap.",
             "evidence_ids": [
-              "e9",
-              "e21"
+              "e16"
             ]
           },
           {
-            "name": "Solutions tailored to specific regulatory environments (e.g., non-European)",
+            "name": "Emphasis on financial discipline for SMBs",
             "opportunity": 75,
-            "detail": "Some existing solutions are primarily suited to European regulations, suggesting a gap for solutions tailored to other regions.",
+            "detail": "A consistent theme is that SMB carbon accounting needs financial discipline over heavy transaction granularity, suggesting a gap for solutions that prioritize this.",
             "evidence_ids": [
-              "e5"
+              "e14"
             ]
           }
         ],
         "white_space_opportunities": [
           {
-            "name": "Embedded carbon accounting within existing SMB financial tools",
+            "name": "Hyper-niche solutions for specific industries within SMBs",
             "score": 75,
-            "detail": "Integrating carbon accounting directly into existing SMB accounting or financial management platforms could offer a seamless experience.",
+            "detail": "Developing carbon accounting tools tailored to the very specific operational and reporting needs of particular small business sectors.",
             "evidence_ids": [
-              "e4",
-              "e11"
+              "e16"
             ]
           },
           {
-            "name": "AI-powered carbon accounting for efficiency",
+            "name": "Integrated supply chain carbon management for SMBs",
             "score": 75,
-            "detail": "Leveraging Generative AI to transform how organizations measure and manage carbon could create highly efficient and innovative solutions.",
+            "detail": "Tools that help SMBs not just account for their own emissions but also effectively survey and manage their suppliers' carbon practices.",
             "evidence_ids": [
-              "e3"
+              "e2"
             ]
           }
         ],
         "differentiation_opportunities": [
           {
-            "name": "Focus on ease of use and affordability",
+            "name": "Superior user experience and affordability for micro-SMBs",
             "score": 90,
-            "detail": "Differentiating by offering the most user-friendly and affordable carbon accounting tools specifically for SMBs.",
+            "detail": "Focusing on making the platform exceptionally user-friendly and highly affordable for the smallest businesses, potentially with a strong free tier.",
             "evidence_ids": [
-              "e9",
+              "e13",
+              "e24"
+            ]
+          },
+          {
+            "name": "AI-driven insights and actionable recommendations",
+            "score": 75,
+            "detail": "Leveraging AI not just for data processing but to provide clear, actionable insights and recommendations for emission reduction.",
+            "evidence_ids": [
+              "e20"
+            ]
+          },
+          {
+            "name": "Specialized compliance reporting for emerging regulations",
+            "score": 75,
+            "detail": "Offering highly specialized and up-to-date reporting packages for complex or rapidly evolving regional environmental regulations.",
+            "evidence_ids": [
               "e21"
             ]
           },
           {
-            "name": "Specialization in specific SMB industries or supply chain types",
+            "name": "Strong emphasis on financial benefits and cost reduction",
             "score": 75,
-            "detail": "Tailoring solutions to particular SMB sectors (e.g., coffee shops) or specific supply chain reporting requirements could provide a unique edge.",
+            "detail": "Positioning the solution primarily on how it helps SMBs reduce costs and improve efficiency, rather than just compliance.",
             "evidence_ids": [
-              "e14",
-              "e1"
-            ]
-          },
-          {
-            "name": "Integration with existing SMB business processes",
-            "score": 75,
-            "detail": "Offering seamless integration with common SMB operational and financial workflows to minimize disruption and maximize adoption.",
-            "evidence_ids": [
-              "e4",
-              "e11"
+              "e22"
             ]
           }
         ]
@@ -476,209 +565,202 @@
       "market_sizing": {
         "claims": [
           {
-            "evidence_id": "e10",
-            "figure_text": "USD 10.71 Billion",
-            "year": 2024,
-            "scope": "Carbon Accounting Software Market"
+            "evidence_id": "e3",
+            "figure_text": "$74.4 billion",
+            "year": 2031,
+            "scope": "Global Carbon Accounting Software Market"
           },
           {
-            "evidence_id": "e10",
-            "figure_text": "USD 46.95 Billion",
-            "year": 2032,
-            "scope": "Carbon Accounting Software Market"
-          },
-          {
-            "evidence_id": "e24",
-            "figure_text": "$22.6 billion",
-            "year": 2025,
-            "scope": "carbon accounting software market"
-          },
-          {
-            "evidence_id": "e24",
-            "figure_text": "$27.78 billion",
-            "year": 2026,
-            "scope": "carbon accounting software market"
+            "evidence_id": "e11",
+            "figure_text": "$74.4 billion",
+            "year": 2031,
+            "scope": "Global Carbon Accounting Software Market"
           }
         ]
       }
     },
     "synthesis": {
-      "market_pulse": 67,
-      "opportunity_score": 100,
       "build_recommendation": {
-        "decision": "Strong Yes",
-        "reason": "The market for carbon accounting software for SMBs is experiencing exponential growth, driven by regulatory pressure and a clear unmet need for affordable, user-friendly solutions."
+        "decision": "Yes",
+        "reason": "The market is growing rapidly, driven by strong regulatory and corporate demand, with clear pain points and opportunities for SMB-focused solutions."
       },
       "confidence": 90,
-      "confidence_explanation": "Confidence is high due to multiple independent sources confirming market growth, specific customer pain points, and clear opportunities for tailored solutions for SMBs.",
-      "top_reason_to_build": "There is a significant and growing demand for affordable, user-friendly carbon accounting solutions specifically designed for SMBs, which are currently underserved by enterprise-focused software.",
-      "biggest_risk": "The potential for existing enterprise solutions to adapt or for traditional accounting software to integrate carbon accounting features, increasing competition.",
-      "best_customer_segment": "SMBs in the supply chains of larger organizations, as they face immediate and mandated requirements for carbon reporting.",
-      "best_moat": "Proprietary technology that simplifies complex GHG Protocol standards and integrates seamlessly with common SMB operational workflows, combined with a strong focus on affordability.",
-      "executive_summary": "The carbon accounting market for SMBs is rapidly expanding due to increasing regulatory and supply chain pressures. There is a strong opportunity for startups to provide affordable, user-friendly, and specialized solutions. The market is ripe for innovation, particularly with AI integration.",
+      "confidence_explanation": "High confidence due to multiple independent sources confirming market size, growth, customer pain points, and competitive landscape. Quantitative signals for market opportunity are strong.",
+      "top_reason_to_build": "Strong market growth driven by increasing regulatory and corporate pressure on SMBs to adopt carbon accounting.",
+      "biggest_risk": "Market congestion with well-funded competitors already offering accessible solutions and advanced features.",
+      "best_customer_segment": "Small and Mid-Sized Businesses (SMBs) who are new to carbon accounting and are seeking accessible, expert-backed, and affordable solutions.",
+      "best_moat": "Proprietary AI-driven insights and actionable recommendations tailored for SMBs, coupled with deep integrations into common SMB accounting/banking systems.",
+      "executive_summary": "The carbon accounting market for SMBs is experiencing significant growth, driven by regulatory mandates and corporate supply chain demands. While competitive, there's a clear opportunity for solutions that prioritize affordability, ease of use, and expert support for SMBs. A startup should enter, focusing on a niche or superior user experience.",
       "why_now": [
         {
-          "title": "Increasing regulatory and supply chain pressure",
-          "reason": "SMBs are being forced to adopt carbon accounting, creating immediate demand.",
-          "detail": "SMBs are being forced to adopt carbon accounting, creating immediate demand.",
+          "title": "Rapid market growth",
+          "reason": "The market is expanding quickly, indicating a strong demand for carbon accounting solutions.",
+          "detail": "The market is expanding quickly, indicating a strong demand for carbon accounting solutions.",
           "score": 90,
           "evidence_ids": [
-            "e1",
-            "e7"
+            "e3",
+            "e11",
+            "e19"
           ],
-          "evidence": "Larger organizations are requiring reporting from their supply chains, making carbon accounting a new necessity for SMBs."
+          "evidence": "Market expected to reach $74.4 billion by 2031, rising at 21.8% CAGR."
         },
         {
-          "title": "Exponential market growth",
-          "reason": "The market is in a rapid growth phase, indicating high demand and investment potential.",
-          "detail": "The market is in a rapid growth phase, indicating high demand and investment potential.",
+          "title": "Increasing regulatory and corporate pressure on SMBs",
+          "reason": "SMBs are increasingly mandated or incentivized to adopt carbon accounting, creating a strong pull for solutions.",
+          "detail": "SMBs are increasingly mandated or incentivized to adopt carbon accounting, creating a strong pull for solutions.",
           "score": 90,
           "evidence_ids": [
-            "e24"
+            "e3",
+            "e6",
+            "e8",
+            "e11",
+            "e21"
           ],
-          "evidence": "The carbon accounting software market is projected to grow from $22.6 billion in 2025 to $27.78 billion in 2026."
+          "evidence": "European Green Deal, Microsoft's supplier standards, California SB 253."
         },
         {
-          "title": "Underserved SMB segment",
-          "reason": "A clear gap exists for tailored solutions that meet SMB needs without overspending.",
-          "detail": "A clear gap exists for tailored solutions that meet SMB needs without overspending.",
-          "score": 90,
+          "title": "SMBs actively seeking solutions",
+          "reason": "SMBs are aware of the need and are actively searching for tools and guidance.",
+          "detail": "SMBs are aware of the need and are actively searching for tools and guidance.",
+          "score": 75,
           "evidence_ids": [
-            "e9"
+            "e5",
+            "e15",
+            "e22"
           ],
-          "evidence": "Carbon accounting software designed for larger enterprises is prohibitively expensive and feature-bloated for small businesses."
+          "evidence": "Discussion volume of 30, and evidence of SMBs looking for best platforms."
         }
       ],
       "key_opportunities": [
         {
-          "title": "Develop affordable, SMB-specific software",
-          "reason": "Directly addresses the primary pain point of cost and complexity for SMBs.",
-          "detail": "Directly addresses the primary pain point of cost and complexity for SMBs.",
+          "title": "Simplified, affordable, expert-backed solutions",
+          "reason": "SMBs need solutions that are easy to use, cost-effective, and provide guidance through complexity.",
+          "detail": "SMBs need solutions that are easy to use, cost-effective, and provide guidance through complexity.",
           "score": 90,
           "evidence_ids": [
+            "e1",
             "e9",
-            "e21"
+            "e13",
+            "e24"
           ],
-          "evidence": "SMBs need user-friendly and affordable tools to become carbon neutral."
+          "evidence": "Greenly markets itself as accessible, Aclymate is user-friendly and affordable, expert support is highlighted."
         },
         {
-          "title": "Leverage AI for efficiency",
-          "reason": "AI can provide a competitive edge by transforming measurement and management processes.",
-          "detail": "AI can provide a competitive edge by transforming measurement and management processes.",
-          "score": 90,
+          "title": "AI-powered analytics and recommendations",
+          "reason": "AI can provide advanced insights and actionable steps, differentiating a new offering.",
+          "detail": "AI can provide advanced insights and actionable steps, differentiating a new offering.",
+          "score": 75,
           "evidence_ids": [
-            "e3"
+            "e20"
           ],
-          "evidence": "Generative AI is anticipated to significantly impact carbon accounting solutions."
+          "evidence": "Sweep acquired Consequence for AI tools for carbon accounting."
         },
         {
-          "title": "Focus on compliance and strategic value",
-          "reason": "Positioning the solution as both a compliance tool and a business growth driver will resonate with SMBs.",
-          "detail": "Positioning the solution as both a compliance tool and a business growth driver will resonate with SMBs.",
-          "score": 90,
+          "title": "Niche-specific solutions for SMBs",
+          "reason": "Tailoring solutions to specific SMB industries can address unique pain points and create strong loyalty.",
+          "detail": "Tailoring solutions to specific SMB industries can address unique pain points and create strong loyalty.",
+          "score": 75,
           "evidence_ids": [
-            "e19"
+            "e16"
           ],
-          "evidence": "Carbon accounting is becoming a strategic asset, driving cost savings and customer loyalty."
+          "evidence": "Example of carbon accounting for coffee shops."
         }
       ],
       "key_risks": [
         {
-          "title": "Competition from established players",
-          "reason": "Larger companies might pivot or integrate, making it harder for new entrants to gain market share.",
-          "detail": "Larger companies might pivot or integrate, making it harder for new entrants to gain market share.",
-          "score": 75,
+          "title": "Highly congested market",
+          "reason": "Entering a crowded market requires significant differentiation to gain traction against established, well-funded players.",
+          "detail": "Entering a crowded market requires significant differentiation to gain traction against established, well-funded players.",
+          "score": 90,
           "evidence_ids": [
-            "e12",
-            "e8"
+            "e20"
           ],
-          "evidence": "Existing enterprise solutions like Greenly and Persefoni, or traditional accounting software, could adapt for SMBs."
+          "evidence": "Greenly raises $52m Series B to take on congested carbon accounting sector."
         },
         {
-          "title": "Complexity of regulatory environments",
-          "reason": "Navigating diverse and evolving global or regional regulations can be challenging and costly.",
-          "detail": "Navigating diverse and evolving global or regional regulations can be challenging and costly.",
+          "title": "Existing players offering free tiers and strong partnerships",
+          "reason": "Competitors are already making their solutions accessible and building strong market presence, making it harder for new entrants.",
+          "detail": "Competitors are already making their solutions accessible and building strong market presence, making it harder for new entrants.",
           "score": 75,
           "evidence_ids": [
-            "e5"
+            "e4"
           ],
-          "evidence": "Some software is primarily suited to European regulatory environments, implying varied global standards."
+          "evidence": "Persefoni released a free tier and struck strategic corporate partnerships."
         },
         {
-          "title": "SMB adoption challenges",
-          "reason": "Overcoming inertia and educating SMBs on the necessity and benefits of carbon accounting may require significant effort.",
-          "detail": "Overcoming inertia and educating SMBs on the necessity and benefits of carbon accounting may require significant effort.",
-          "score": 50,
+          "title": "High data processing demands and costs for real-time tracking",
+          "reason": "Managing the technical complexity and associated costs of advanced features can be a barrier for a new startup.",
+          "detail": "Managing the technical complexity and associated costs of advanced features can be a barrier for a new startup.",
+          "score": 75,
+          "evidence_ids": [
+            "e18"
+          ],
+          "evidence": "Real-time tracking may lead to higher data processing demands and potentially increased costs."
+        }
+      ],
+      "recommended_customer": "SMBs that are just beginning their carbon accounting journey, driven by new compliance requirements from larger partners or regulations, and are looking for a straightforward, affordable, and guided solution.",
+      "recommended_positioning": "The most user-friendly and affordable carbon accounting platform for SMBs, offering automated data collection, expert guidance, and actionable insights to simplify compliance and drive sustainable growth.",
+      "potential_moats": [
+        {
+          "title": "Deep integrations with SMB accounting/banking systems",
+          "reason": "Seamless integration reduces manual effort and creates stickiness, making it hard for customers to switch.",
+          "detail": "Seamless integration reduces manual effort and creates stickiness, making it hard for customers to switch.",
+          "score": 90,
           "evidence_ids": [
             "e1"
           ],
-          "evidence": "Carbon accounting has not traditionally been something SMBs have needed to do."
-        }
-      ],
-      "recommended_customer": "Small and medium-sized businesses (SMBs) that are part of larger organizations' supply chains and are now mandated to report their climate emissions.",
-      "recommended_positioning": "The most user-friendly, affordable, and compliant carbon accounting solution specifically designed for SMBs, transforming a regulatory burden into a strategic advantage.",
-      "potential_moats": [
-        {
-          "title": "Proprietary AI-driven simplification",
-          "reason": "Developing unique AI algorithms to simplify complex carbon calculations and reporting for SMBs.",
-          "detail": "Developing unique AI algorithms to simplify complex carbon calculations and reporting for SMBs.",
-          "score": 90,
-          "evidence_ids": [
-            "e3"
-          ],
-          "evidence": "Generative AI is anticipated to significantly impact carbon accounting solutions."
+          "evidence": "Automated data collection through accounting and banking integrations."
         },
         {
-          "title": "Deep integration with SMB financial stacks",
-          "reason": "Seamlessly embedding carbon accounting into existing SMB financial and operational software, making it an indispensable part of their workflow.",
-          "detail": "Seamlessly embedding carbon accounting into existing SMB financial and operational software, making it an indispensable part of their workflow.",
+          "title": "Proprietary AI for actionable insights",
+          "reason": "AI that goes beyond reporting to offer unique, actionable advice can create a significant competitive advantage.",
+          "detail": "AI that goes beyond reporting to offer unique, actionable advice can create a significant competitive advantage.",
           "score": 75,
           "evidence_ids": [
-            "e4",
-            "e11"
+            "e20"
           ],
-          "evidence": "Layer launches $2.3M fund for SMB accounting; Finally raises $95M for SMB accounting."
+          "evidence": "Sweep acquired Consequence to provide AI-powered analytics and recommendations."
         },
         {
-          "title": "Specialized regulatory expertise and support",
-          "reason": "Building a reputation for expert guidance and support in navigating specific regional or industry-specific carbon accounting regulations.",
-          "detail": "Building a reputation for expert guidance and support in navigating specific regional or industry-specific carbon accounting regulations.",
+          "title": "Specialized expert support model",
+          "reason": "A highly effective and scalable expert support model can build strong customer loyalty and trust.",
+          "detail": "A highly effective and scalable expert support model can build strong customer loyalty and trust.",
           "score": 75,
           "evidence_ids": [
-            "e5"
+            "e1",
+            "e9"
           ],
-          "evidence": "Some software is primarily suited to European regulatory environments; others require onboarding support."
+          "evidence": "Team of climate experts providing dedicated and personalized support."
         }
       ],
       "execution_ideas": [
         {
-          "title": "Develop a freemium model or tiered pricing for SMBs",
-          "reason": "Addresses the 'prohibitively expensive' pain point and lowers the barrier to entry for SMBs.",
-          "detail": "Addresses the 'prohibitively expensive' pain point and lowers the barrier to entry for SMBs.",
+          "title": "Launch with a freemium model targeting micro-SMBs",
+          "reason": "Leverage the demand for free tools and affordable options to acquire a large user base, then upsell to paid features.",
+          "detail": "Leverage the demand for free tools and affordable options to acquire a large user base, then upsell to paid features.",
           "score": 90,
           "evidence_ids": [
-            "e9",
-            "e5"
+            "e4",
+            "e13",
+            "e24"
           ]
         },
         {
-          "title": "Create educational content and simplified guides",
-          "reason": "Helps SMBs understand the GHG Protocol and the benefits of carbon accounting, overcoming the 'not traditionally needed' hurdle.",
-          "detail": "Helps SMBs understand the GHG Protocol and the benefits of carbon accounting, overcoming the 'not traditionally needed' hurdle.",
+          "title": "Develop strong partnerships with accounting software providers",
+          "reason": "Integrate directly with popular SMB accounting and banking platforms to enable automated data collection and reduce friction.",
+          "detail": "Integrate directly with popular SMB accounting and banking platforms to enable automated data collection and reduce friction.",
           "score": 75,
           "evidence_ids": [
-            "e2",
             "e1"
           ]
         },
         {
-          "title": "Partner with existing SMB accounting platforms",
-          "reason": "Leverages existing customer bases and integrates carbon accounting into familiar workflows for SMBs.",
-          "detail": "Leverages existing customer bases and integrates carbon accounting into familiar workflows for SMBs.",
+          "title": "Focus on a specific SMB industry niche first",
+          "reason": "Build a highly tailored solution for a specific industry (e.g., hospitality, retail) to gain deep market penetration before expanding.",
+          "detail": "Build a highly tailored solution for a specific industry (e.g., hospitality, retail) to gain deep market penetration before expanding.",
           "score": 75,
           "evidence_ids": [
-            "e4",
-            "e15"
+            "e16"
           ]
         }
       ]
@@ -687,9 +769,9 @@
       {
         "rank": 1,
         "source": "ddgs",
-        "title": "Climate Emission (Carbon) Accounting For SMBs - A Chat With...",
-        "url": "https://www.climateconfidentpodcast.com/1329991/episodes/11607942-climate-emission-carbon-accounting-for-smbs-a-chat-with-greenly-ceo-alexis-normand",
-        "snippet": "Carbon accounting (measuring and reporting climate emissions) has not traditionally been something SMBs have needed to do. That is starting to change as larger organisations are requiring reporting from their supply chains.One company looking to help SMBs with this is Greenly.",
+        "title": "Best Carbon Accounting Platforms for Small and Mid-Sized Businesses | Aclymate",
+        "url": "https://netzero.aclymate.com/blog/insights/best-carbon-accounting-platforms-for-small-and-mid-sized-businesses",
+        "snippet": "May 15, 2026 - Greenly markets itself as the accessible alternative for SMBs. The platform has an intuitive interface, automated data collection through accounting and banking integrations, and a team of climate experts.",
         "query": "Carbon accounting for SMBs competitors alternatives",
         "used_in_prompt": true,
         "id": "e1",
@@ -700,9 +782,9 @@
       {
         "rank": 2,
         "source": "ddgs",
-        "title": "Carbon Accounting Guide for Businesses",
-        "url": "https://tallysolutions.com/accounting/carbon-accounting-guide-business/",
-        "snippet": "What carbon accounting covers. The GHG Protocol, the globally accepted standard for carbon measurement, classifies emissions into three scopes. Identifying which scope applies to your operations determines what you measure, report and manageSolutions for SMBs.",
+        "title": "Carbon Accounting for Small Business | Complete Controller",
+        "url": "https://www.completecontroller.com/carbon-accounting-for-small-business/",
+        "snippet": "April 29, 2026 - For SMBs, start by surveying your top 10 suppliers about their carbon measurement practices. Share free tools like the SME Climate Hub calculator. Create a preferred vendor list highlighting suppliers with verified emissions data or reduction commitments. When contracts renew, make ",
         "query": "Carbon accounting for SMBs reviews complaints problems",
         "used_in_prompt": true,
         "id": "e2",
@@ -713,9 +795,9 @@
       {
         "rank": 3,
         "source": "ddgs",
-        "title": "Carbon Accounting Software Market Size, Growth | Analysis 2034Carbon Accounting Software Market Share, Size, Trends, Report ...Carbon Accounting Software Market Report: Size, Growth ...Global Carbon Accounting Software Market Size, Share ...Carbon Accounting Software Market Size Report, 2026-2033Carbon Accounting Software Market Report 2026",
-        "url": "https://www.fortunebusinessinsights.com/carbon-accounting-software-market-107292",
-        "snippet": "Adoption of Generative AI Proficiencies into Carbon Accounting to Upsurge the Market Growth Generative AI is anticipated to significantly impact carbon accounting solutions, transforming the way organizations measure, manage, and mitigate their greenhouse gas (GHG) emissions and carbon footprint. Ge",
+        "title": "Carbon Accounting Software Market Size, Share & Trends Analysis Report By Deployment (Cloud and On-premises), By Enterprise Size (Large Enterprises and SMEs), By End-use (IT & Telecom and Others), By Regional Outlook and Forecast, 2024 - 2031",
+        "url": "https://www.researchandmarkets.com/reports/6007457/carbon-accounting-software-market-size-share-and",
+        "snippet": "The Global Carbon Accounting Software Market size is expected to reach $74.4 billion by 2031, rising at a market growth of 21.8% CAGR during the forecast period. The European Green Deal is an extensive plan to make Europe the first climate-neutral ...",
         "query": "Carbon accounting for SMBs market size growth forecast",
         "used_in_prompt": true,
         "id": "e3",
@@ -726,9 +808,9 @@
       {
         "rank": 4,
         "source": "ddgs",
-        "title": "Layer launches $2.3M fund for SMB accounting | Daniel... | LinkedIn",
-        "url": "https://www.linkedin.com/posts/doneel_embedded-accounting-startup-layer-secures-activity-7196553348110581760-3IUX",
-        "snippet": "I know you've been dying to see what all this hype about embedded SMB accounting is about - your wait is over! Today we're announcing Layer's $2.3M fundraise… |We're the real accounting system for real SMBs across a surprising range of industries.",
+        "title": "Climate accounting platform Persefoni raises $101M Series B led by Prelude and TPG | TechCrunch",
+        "url": "https://techcrunch.com/2021/10/28/climate-accounting-platform-persefoni-raises-101m-series-b-led-by-prelude-and-tpg/",
+        "snippet": "October 30, 2021 - Persefoni has recently struck strategic corporate partnerships with Bain & Co., EDF (EURONEXT: EDF) and SMBC (TYO: 8316), expanded into the Japanese market and released a free tier of its base carbon accounting platform for SMBs.",
         "query": "Carbon accounting for SMBs funding startup launches",
         "used_in_prompt": true,
         "id": "e4",
@@ -739,9 +821,9 @@
       {
         "rank": 5,
         "source": "ddgs",
-        "title": "Best Carbon Accounting Software - Carbon Market Network",
-        "url": "https://carbonmarketnetwork.com/blog/best-carbon-accounting-software/",
-        "snippet": "May 5, 2026 - Pricing: Starts from approximately $3,000–$5,000 per year for SMBs; enterprise pricing on request. Drawback: Primarily suited to European regulatory environments. May require onboarding support for companies new to structured carbon accounting.",
+        "title": "Best Carbon Accounting Software 2026 | Compare Top Tools",
+        "url": "https://www.knowesg.com/carbon-accounting-software",
+        "snippet": "Compare the best carbon accounting software and carbon management software for enterprises, mid-market, and SMBs. Find the right carbon reporting software and emissions management software with transparent pricing, expert reviews, and ROI calculators.",
         "query": "Carbon accounting for SMBs pricing",
         "used_in_prompt": true,
         "id": "e5",
@@ -752,10 +834,10 @@
       {
         "rank": 6,
         "source": "ddgs",
-        "title": "r/carbonaccounting on Reddit: Best software for carbon accounting?",
-        "url": "https://www.reddit.com/r/carbonaccounting/comments/1nikar8/best_software_for_carbon_accounting/",
-        "snippet": "",
-        "query": "site:reddit.com Carbon accounting for SMBs",
+        "title": "Carbon Accounting for SMBs: Lessons from Microsoft's Supplier Standards",
+        "url": "https://www.greenprojecttech.com/newsroom/carbon-accounting-for-smbs-lessons-from-microsofts-supplier-standards",
+        "snippet": "As companies like Microsoft raise the bar for sustainability, small- and mid-sized businesses (SMBs) are increasingly facing new accounting requirements. But compliance isn't just a box to check — it's an opportunity for growth, efficiency, and competitive advantage. We spoke with two Microsoft supp",
+        "query": "Carbon accounting for SMBs trends",
         "used_in_prompt": true,
         "id": "e6",
         "source_key": "ddgs",
@@ -764,37 +846,37 @@
       },
       {
         "rank": 7,
+        "source": "ddgs",
+        "title": "Carbon Accounting Platform - Simplify Carbon Reporting",
+        "url": "https://www.bing.com/aclick?ld=e8XrMJKJkrvkSQIHFsWZZlzjVUCUwngiiF98ojclYIcMIWgdqZywgFDsbHg5uhrYqA7odr-d8R36HWukTaS5FvTB50nUfXLeVHpDx8c4dJgS9W3qtlYQsSG9meFoIZzCnnwlof0v00BC08Q88mnq2EFq4j81eiXPa-YjoEnN1PQoiF6kIdbES6vLPWlPEx-nXlFaKllg&u=aHR0cHMlM2ElMmYlMmZuYXZpZ2F0b3IuY29uc3RlbGxhdGlvbi5jb20lMmZzb2x1dGlvbnMlMmZjYXJib24tYWNjb3VudGluZyUzZnV0bV90ZXJtJTNkY2FyYm9uJTI1MjBhY2NvdW50aW5nJTI1MjB0b29sJTI2dXRtX2NhbXBhaWduJTNkTSUyYi0lMmJDYXJib24lMmJBY2NvdW50aW5nJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkcHBjJTI2dXRtX2lkJTNkNTcxMzcxMzAwJTI2aHNhX2FjYyUzZDc3MzE1NjQ2ODIlMjZoc2FfY2FtJTNkMjM5ODk1NDAyNTYlMjZoc2FfZ3JwJTNkMTE3NjQ3OTcyODYxNDIyOCUyNmhzYV9hZCUzZCUyNmhzYV9zcmMlM2RvJTI2aHNhX3RndCUzZGt3ZC03MzUzMDY1MDEyNjA4MyUzYWxvYy0xMjklMjZoc2Ffa3clM2RjYXJib24lMjUyMGFjY291bnRpbmclMjUyMHRvb2wlMjZoc2FfbXQlM2RwJTI2aHNhX25ldCUzZGFkd29yZHMlMjZoc2FfdmVyJTNkMyUyNm1zY2xraWQlM2RkYzFkMmNiMTk2NDIxYmJjNjkyODQ2YzExOTJlZDRhZg&rlid=dc1d2cb196421bbc692846c1192ed4af",
+        "snippet": "Talk to a carbon expert or request a demo of Constellation Navigator today. Measure, report and reduce emissions on one platform built for B2B sustainability teams. Track & Benchmark GHG · Verifiable Reporting · Emissions Hotspot Data · Defensible Baselines Service Features, Data Analytics, Carbon A",
+        "query": "site:reddit.com Carbon accounting for SMBs",
+        "used_in_prompt": true,
+        "id": "e7",
+        "source_key": "ddgs",
+        "display_name": "Web search",
+        "exclusion_reason": null
+      },
+      {
+        "rank": 8,
         "source": "youtube",
         "title": "Carbon Accounting for SMBs  Lessons From Microsoft’s Supplier Standards",
         "url": "https://youtube.com/watch?v=210Z1YZBTgA",
         "snippet": "As companies like Microsoft raise the bar for sustainability, small- and mid-sized businesses (SMBs) must adapt to new accounting requirements. But compliance isn’t just about checking a box—it’s an opportunity for growth, efficiency, and competitive advantage. Listen as Microsoft suppliers share ho",
         "query": "",
         "used_in_prompt": true,
-        "id": "e7",
+        "id": "e8",
         "source_key": "youtube",
         "display_name": "YouTube",
         "exclusion_reason": null
       },
       {
-        "rank": 8,
-        "source": "ddgs",
-        "title": "10+ Best SAP for SMB Alternatives (2026): Hidden Costs... | ITQlick",
-        "url": "https://www.itqlick.com/sap-for-smb/competitors",
-        "snippet": "Looking for SAP for SMB alternatives? We reveal the top 10+ ERP competitors in 2026.Another alternative to SAP for SMB is Microsoft Dynamics 365. SAP Business One offers pricing based on the number of users, starting at $135 per user per month for the Starter Package.",
-        "query": "Carbon accounting for SMBs competitors alternatives",
-        "used_in_prompt": true,
-        "id": "e8",
-        "source_key": "ddgs",
-        "display_name": "Web search",
-        "exclusion_reason": null
-      },
-      {
         "rank": 9,
         "source": "ddgs",
-        "title": "Climatetech Small Businesses Carbon Accounting... | StartupTribunal",
-        "url": "https://startuptribunal.com/catalog/climatetech-small-businesses-carbon-accounting-too-expensive",
-        "snippet": "Problem Statement. Carbon accounting software designed for larger enterprises is prohibitively expensive and feature-bloated for small climatetech businesses, forcing them to either overspend or avoid proper carbon tracking altogether.",
-        "query": "Carbon accounting for SMBs reviews complaints problems",
+        "title": "Top 11 Best Carbon Accounting Software and Tools (2026)",
+        "url": "https://www.arbor.eco/blog/best-carbon-accounting-software",
+        "snippet": "Climate Expert Support: The platform is backed by a team of over 60 climate experts who provide dedicated and personalized support, ensuring companies can navigate the complexities of carbon accounting and reduction planning. Actionable Reduction and Reporting Tools: Greenly provides tools to build ",
+        "query": "Carbon accounting for SMBs competitors alternatives",
         "used_in_prompt": true,
         "id": "e9",
         "source_key": "ddgs",
@@ -804,10 +886,10 @@
       {
         "rank": 10,
         "source": "ddgs",
-        "title": "Carbon Accounting Software Market Report: Size, Growth ...Global Carbon Accounting Software Market Size, Share ...Carbon Accounting Software Market Size Report, 2026-2033Carbon Accounting Software Market Report 2026",
-        "url": "https://www.verifiedmarketresearch.com/product/carbon-accounting-software-market/",
-        "snippet": "What is the projected market size & growth rate of the Carbon Accounting Software Market? Carbon Accounting Software Market was valued at USD 10.71 Billion in 2024 and is projected to reach USD 46.95 Billion by 2032, growing at a CAGR of 24.59% during the forecasted period 2026 to 2032. May 25, 2026",
-        "query": "Carbon accounting for SMBs market size growth forecast",
+        "title": "Sustainability and Carbon Management Platform Reviews 2026: Details, Pricing, & Features | G2",
+        "url": "https://www.g2.com/products/sustainability-and-carbon-management-platform/reviews",
+        "snippet": "What problems is Sustainability and Carbon Management Platform solving and how is that benefiting you? Meets reporting requirements and provide auditors reliable data Review collected by and hosted on G2.com. ... Workiva (NYSE:WK) Wdesk is a cloud-based productivity platform for enterprises that col",
+        "query": "Carbon accounting for SMBs reviews complaints problems",
         "used_in_prompt": true,
         "id": "e10",
         "source_key": "ddgs",
@@ -817,10 +899,10 @@
       {
         "rank": 11,
         "source": "ddgs",
-        "title": "Finally, SMB Accounting Startup, Raises $95M - New York Tech Media",
-        "url": "https://nytech.media/finally-smb-accounting-startup-raises-95m/",
-        "snippet": "Businesses working with Finally can connect their bank and credit accounts for immediate visibility into the financial health of their companies. With the launch of its corporate charge card, Finally is planning to make in excess of $1 billion in credit available to SMBs.",
-        "query": "Carbon accounting for SMBs funding startup launches",
+        "title": "Carbon Accounting Software Market Size & Forecast 2031",
+        "url": "https://www.kbvresearch.com/carbon-accounting-software-market/",
+        "snippet": "September 13, 2024 - The Global Carbon Accounting Software Market size is expected to reach $74.4 billion by 2031, rising at a market growth of 21.8% CAGR during the forecast period. The European Gree",
+        "query": "Carbon accounting for SMBs market size growth forecast",
         "used_in_prompt": true,
         "id": "e11",
         "source_key": "ddgs",
@@ -830,10 +912,10 @@
       {
         "rank": 12,
         "source": "ddgs",
-        "title": "The 5 best carbon accounting software platforms 2026 | Normative",
-        "url": "https://normative.io/insight/the-5-best-carbon-accounting-software-platforms-2026/",
-        "snippet": "May 11, 2026 - Greenly is well-suited to SMBs and European mid-market businesses seeking broad ESG coverage, while Persefoni specializes in financial services and portfolio analytics. What is the most important question to ask when choosing carbon accounting software? Choosing the best carbon accoun",
-        "query": "Carbon accounting for SMBs pricing",
+        "title": "European carbon accounting startup Plan A raises $27M from VC and corporate heavyweights | TechCrunch",
+        "url": "https://techcrunch.com/2023/09/19/plan-a-carbon-accounting/",
+        "snippet": "September 19, 2023 - Plan A, a carbon accounting and ESG reporting platform, has raised $27M in a round of funding led by Lightspeed Venture partners.",
+        "query": "Carbon accounting for SMBs funding startup launches",
         "used_in_prompt": true,
         "id": "e12",
         "source_key": "ddgs",
@@ -843,10 +925,10 @@
       {
         "rank": 13,
         "source": "ddgs",
-        "title": "r/EcoInternet - How Carbon Footprint Accounting & Reporting Benefits SMBs: Experts Weigh In",
-        "url": "https://www.reddit.com/r/EcoInternet/comments/a4y8x1/how_carbon_footprint_accounting_reporting/",
-        "snippet": "2.7k members in the EcoInternet community. Climate Change and Environment News",
-        "query": "site:reddit.com Carbon accounting for SMBs",
+        "title": "Pricing — Carbon Accounting for UK SMBs | CarbonPass",
+        "url": "https://carbonpass.co/pricing",
+        "snippet": "Free carbon accounting for UK SMBs. Starter from £199/year — PDF reports, Carbon Passport and a PPN 006 bid document included. No lock-in. Start free today.",
+        "query": "Carbon accounting for SMBs pricing",
         "used_in_prompt": true,
         "id": "e13",
         "source_key": "ddgs",
@@ -855,24 +937,24 @@
       },
       {
         "rank": 14,
-        "source": "youtube",
-        "title": "Carbon accounting for small shops.",
-        "url": "https://youtube.com/watch?v=JQM1CKeN-Tk",
-        "snippet": "Carbon Accounting for Small Businesses: Emma’s Coffee Shop Journey to Net Zero” Welcome back to our channel! Today, we’re showing you how carbon accounting works for small businesses, with a focus on coffee shops like Emma’s Coffee Shop. Why should small businesses like Emma’s care about carbon acco",
-        "query": "",
+        "source": "ddgs",
+        "title": "Carbon accounting for SMBs: Financial Discipline Over Granularity",
+        "url": "https://www.linkedin.com/posts/warwickrussell_carbon-accounting-for-smbs-needs-financial-activity-7431770392140222465-KedY",
+        "snippet": "Carbon accounting for SMBs needs financial discipline. Over the past 12 months, I've reviewed 15 carbon accounting platforms and tested five in detail. A consistent theme: Heavy transaction ...",
+        "query": "Carbon accounting for SMBs trends",
         "used_in_prompt": true,
         "id": "e14",
-        "source_key": "youtube",
-        "display_name": "YouTube",
+        "source_key": "ddgs",
+        "display_name": "Web search",
         "exclusion_reason": null
       },
       {
         "rank": 15,
         "source": "ddgs",
-        "title": "Accounting - SMB Guide",
-        "url": "https://www.smbguide.com/accounting/",
-        "snippet": "Perfect software stack for SMBs. Accounting.FreshBooks Alternatives & Competitors. FreshBooks is a cloud-based accounting software that helps users with invoicing and expense tracking.",
-        "query": "Carbon accounting for SMBs competitors alternatives",
+        "title": "How Carbon Footprint Accounting & Reporting Benefits SMBs ...",
+        "url": "https://www.reddit.com/r/EcoInternet/comments/a4y8x1/how_carbon_footprint_accounting_reporting/",
+        "snippet": "How Carbon Footprint Accounting & Reporting Benefits SMBs: Experts Weigh In",
+        "query": "site:reddit.com Carbon accounting for SMBs",
         "used_in_prompt": true,
         "id": "e15",
         "source_key": "ddgs",
@@ -881,24 +963,24 @@
       },
       {
         "rank": 16,
-        "source": "ddgs",
-        "title": "LeadLabs - Simplifying CRO for SMBs Reviews 2026... | AppSumo",
-        "url": "https://appsumo.com/products/leadlabs-simplifying-cro-for-smbs/reviews/",
-        "snippet": "Explore helpful comments, compare pros and cons, and find out how LeadLabs - Simplifying CRO for SMBs works for a business like yours.",
-        "query": "Carbon accounting for SMBs reviews complaints problems",
+        "source": "youtube",
+        "title": "Carbon accounting for small shops.",
+        "url": "https://youtube.com/watch?v=JQM1CKeN-Tk",
+        "snippet": "Carbon Accounting for Small Businesses: Emma’s Coffee Shop Journey to Net Zero” Welcome back to our channel! Today, we’re showing you how carbon accounting works for small businesses, with a focus on coffee shops like Emma’s Coffee Shop. Why should small businesses like Emma’s care about carbon acco",
+        "query": "",
         "used_in_prompt": true,
         "id": "e16",
-        "source_key": "ddgs",
-        "display_name": "Web search",
+        "source_key": "youtube",
+        "display_name": "YouTube",
         "exclusion_reason": null
       },
       {
         "rank": 17,
         "source": "ddgs",
-        "title": "Online Financing Platform for SMBs Market Dynamics and Forecast...",
-        "url": "https://www.linkedin.com/pulse/online-financing-platform-smbs-market-dynamics-forecast-vhwee",
-        "snippet": "The Online Financing Platform for Small and Medium-sized Businesses (SMBs) market is projected to experience a robust annual growth rate of 5.6% CAGR from 2026 to 2033, reflecting an increasing demand for accessible funding solutions.",
-        "query": "Carbon accounting for SMBs market size growth forecast",
+        "title": "Top 10 Gaia Carbon Accounting Alternatives & Competitors in 2026 | G2",
+        "url": "https://www.g2.com/products/gaia-carbon-accounting/competitors/alternatives",
+        "snippet": "The best Gaia Carbon Accounting alternatives are Workiva, VelocityEHS | EHS Software to Outpace Risk, and osapiens. Find top-ranking free & paid apps similar to Gaia Carbon Accounting for your Carbon Accounting Software needs.",
+        "query": "Carbon accounting for SMBs competitors alternatives",
         "used_in_prompt": true,
         "id": "e17",
         "source_key": "ddgs",
@@ -908,10 +990,10 @@
       {
         "rank": 18,
         "source": "ddgs",
-        "title": "AMLOK - Capital Infrastructure for SMB Funding",
-        "url": "https://amlok.io/",
-        "snippet": "Small & Medium Businesses. Funded Startups. Funding Partners.Canadian SMBs leave billions in grants, tax credits, and low-cost lending on the table every year - because the system is fragmented and nobody tells you what's available. We fix that in 5 minutes.",
-        "query": "Carbon accounting for SMBs funding startup launches",
+        "title": "Best Carbon Accounting Software in 2026 | carbmee",
+        "url": "https://www.carbmee.com/knowledge-insights/blog-article/top-carbon-accounting-software",
+        "snippet": "January 8, 2026 - The emphasis on real-time tracking may lead to higher data processing demands and potentially increased costs, particularly for businesses with large and complex operations. 9. Greenly Focuses on carbon-tracking solutions for SMBs, with limited ...",
+        "query": "Carbon accounting for SMBs reviews complaints problems",
         "used_in_prompt": true,
         "id": "e18",
         "source_key": "ddgs",
@@ -921,10 +1003,10 @@
       {
         "rank": 19,
         "source": "ddgs",
-        "title": "Unlocking Value: Carbon Accounting for SMBs with Microsoft Webinar",
-        "url": "https://go.greenprojecttech.com/carbon-accounting-for-microsoft-smbs",
-        "snippet": "Learn how carbon accounting is becoming a strategic asset, not just a compliance requirement. SMBs Transforming Compliance into Value: How carbon accounting can drive cost savings, efficiency, and customer loyalty.",
-        "query": "Carbon accounting for SMBs pricing",
+        "title": "Carbon Accounting Software Market Size, Share & Growth, 2032",
+        "url": "https://www.snsinsider.com/reports/carbon-accounting-software-market-2769",
+        "snippet": "This development indicates an expansion of the market to cater to the needs of a wider range of companies. Ans: The expected CAGR of the Carbon Accounting Software Market during the forecast period is 22.9%.",
+        "query": "Carbon accounting for SMBs market size growth forecast",
         "used_in_prompt": true,
         "id": "e19",
         "source_key": "ddgs",
@@ -934,10 +1016,10 @@
       {
         "rank": 20,
         "source": "ddgs",
-        "title": "r/carbonaccounting on Reddit: How are SMBs handling carbon emissions tracking?",
-        "url": "https://www.reddit.com/r/carbonaccounting/comments/1k6a37m/how_are_smbs_handling_carbon_emissions_tracking/",
-        "snippet": "",
-        "query": "site:reddit.com Carbon accounting for SMBs",
+        "title": "Greenly raises $52m Series B to take on congested carbon accounting sector | Sifted",
+        "url": "https://sifted.eu/articles/greenly-raise-series-b-news",
+        "snippet": "June 27, 2025 - Earlier this week, Sweep announced that it has acquired Consequence, a UK startup that develops AI tools for carbon accounting, to provide AI-powered analytics and recommendations to customers. To keep attracting new users, Greenly is launching new services, such as life cycle assess",
+        "query": "Carbon accounting for SMBs funding startup launches",
         "used_in_prompt": true,
         "id": "e20",
         "source_key": "ddgs",
@@ -946,24 +1028,24 @@
       },
       {
         "rank": 21,
-        "source": "youtube",
-        "title": "Easy Carbon Accounting for Small Business - Getting Started with Aclymate",
-        "url": "https://youtube.com/watch?v=fpLUN2QQ4UU",
-        "snippet": "At Aclymate we have the most user-friendly and affordable tools to help any business, no matter how small, be carbon neutral and become a Climate Leader. Our Climate Navigator explains how easy it is to get started. To schedule a 15-minute chat to discuss your sustainability needs, visit: https://ac",
-        "query": "",
+        "source": "ddgs",
+        "title": "Eco-Auditor — GHG Carbon Accounting for SMBs",
+        "url": "https://ecoauditor.io/",
+        "snippet": "Eco-Auditor aligns with the GHG Protocol for Scope 1, 2, and 3 emissions accounting. It supports reporting packages for California SB 253, EU CBAM (Carbon Border Adjustment Mechanism), customer procurement requirements, and annual GHG inventories. Do I need a sustainability consultant to use Eco-Aud",
+        "query": "Carbon accounting for SMBs pricing",
         "used_in_prompt": true,
         "id": "e21",
-        "source_key": "youtube",
-        "display_name": "YouTube",
+        "source_key": "ddgs",
+        "display_name": "Web search",
         "exclusion_reason": null
       },
       {
         "rank": 22,
         "source": "ddgs",
-        "title": "r/carbonaccounting - Subreddit Stats & Analysis",
-        "url": "https://gummysearch.com/r/carbonaccounting/",
-        "snippet": "Solution Requests. : \"Best Carbon Accounting Software?\"Smb. : \"How are Smbs handling carbon emissions tracking?\"",
-        "query": "Carbon accounting for SMBs competitors alternatives",
+        "title": "Implementing Carbon Accounting Software for SMBs",
+        "url": "https://enicomp.com/implementing-carbon-accounting-software-for-smbs/",
+        "snippet": "Implementing carbon accounting software can help SMBs better understand their environmental impact and identify areas for improvement. It can also help businesses comply with environmental regulations, reduce costs through energy efficiency, and enhance their corporate social responsibility efforts.",
+        "query": "Carbon accounting for SMBs trends",
         "used_in_prompt": true,
         "id": "e22",
         "source_key": "ddgs",
@@ -973,10 +1055,10 @@
       {
         "rank": 23,
         "source": "ddgs",
-        "title": "AI for SMBs: The 90-Day Transformation Guide - YouTube",
-        "url": "https://www.youtube.com/watch?v=klCTdWUGj8k",
-        "snippet": "A Vancouver accounting firm doubled their client capacity without hiring anyone new. A Calgary e-commerce owner went from 70-hour weeks to 40 — while increasing revenue.",
-        "query": "Carbon accounting for SMBs reviews complaints problems",
+        "title": "carbonaccounting - Reddit",
+        "url": "https://www.reddit.com/r/carbonaccounting/",
+        "snippet": "What is Carbon Accounting? Carbon accounting is the process of measuring and managing the carbon emissions resulting from business activities. It's a fundamental step for companies aiming to reduce their carbon footprint and contribute to the fight against climate change.",
+        "query": "site:reddit.com Carbon accounting for SMBs",
         "used_in_prompt": true,
         "id": "e23",
         "source_key": "ddgs",
@@ -985,24 +1067,24 @@
       },
       {
         "rank": 24,
-        "source": "ddgs",
-        "title": "Carbon Accounting Software Market Share, Size, Trends, Report ...",
-        "url": "https://www.thebusinessresearchcompany.com/report/carbon-accounting-software-global-market-report",
-        "snippet": "What Is The Carbon Accounting Software Market Size and Share 2026? The carbon accounting software market size has grown exponentially in recent years. It will grow from $22.6 billion in 2025 to $27.78 billion in 2026 at a compound annual growth rate (CAGR) of 22.9%. The growth in the historic period",
-        "query": "Carbon accounting for SMBs market size growth forecast",
+        "source": "youtube",
+        "title": "Easy Carbon Accounting for Small Business - Getting Started with Aclymate",
+        "url": "https://youtube.com/watch?v=fpLUN2QQ4UU",
+        "snippet": "At Aclymate we have the most user-friendly and affordable tools to help any business, no matter how small, be carbon neutral and become a Climate Leader. Our Climate Navigator explains how easy it is to get started. To schedule a 15-minute chat to discuss your sustainability needs, visit: https://ac",
+        "query": "",
         "used_in_prompt": true,
         "id": "e24",
-        "source_key": "ddgs",
-        "display_name": "Web search",
+        "source_key": "youtube",
+        "display_name": "YouTube",
         "exclusion_reason": null
       },
       {
         "rank": 25,
         "source": "ddgs",
-        "title": "Pennylane Secures $204M in Series Funding from... | BEAMSTART",
-        "url": "https://beamstart.com/news/accounting-startup-pennylane-raises-204m-176889861",
-        "snippet": "The funding round, which also saw participation from existing investors like Sequoia Capital and DST Global, values Pennylane at nearly €3.6 billion, cementing its status as a fintech unicorn. Impact on European SMBs and the Accounting Sector.",
-        "query": "Carbon accounting for SMBs funding startup launches",
+        "title": "Best Carbon Accounting Software 2026 | Compare Top Tools | KnowESG",
+        "url": "https://knowesg.com/carbon-accounting-software",
+        "snippet": "April 16, 2026 - Which carbon accounting software is best for small businesses? For SMBs, consider Greenly, Normative, or Plan A - they start around $3-5K/year with guided setup and pre-configured emission factors.",
+        "query": "Carbon accounting for SMBs competitors alternatives",
         "used_in_prompt": false,
         "id": "e25",
         "source_key": "ddgs",
@@ -1012,10 +1094,10 @@
       {
         "rank": 26,
         "source": "ddgs",
-        "title": "Carbon Accounting for Small Business | Complete Controller",
-        "url": "https://www.completecontroller.com/carbon-accounting-for-small-business/",
-        "snippet": "April 29, 2026 - Starting your carbon footprint measurement for small business doesn’t require expensive consultants or complex software. You already have most of the data sitting in your filing cabinets and accounting system. The key is knowing what to look for and how to organize it systematically",
-        "query": "Carbon accounting for SMBs pricing",
+        "title": "Carbon Accounting for SMEs: 5 Common Misconceptions Holding You Back - Persefoni",
+        "url": "https://www.persefoni.com/blog/carbon-accounting-smes-misconceptions",
+        "snippet": "Debunk 5 common myths about carbon accounting for SMEs. Learn how smaller businesses can take action, reduce emissions, and drive climate action.",
+        "query": "Carbon accounting for SMBs reviews complaints problems",
         "used_in_prompt": false,
         "id": "e26",
         "source_key": "ddgs",
@@ -1025,10 +1107,10 @@
       {
         "rank": 27,
         "source": "ddgs",
-        "title": "r/carbonaccounting on Reddit: Best Carbon Accounting Software?",
-        "url": "https://www.reddit.com/r/carbonaccounting/comments/1dzqq46/best_carbon_accounting_software/",
-        "snippet": "",
-        "query": "site:reddit.com Carbon accounting for SMBs",
+        "title": "Carbon Accounting Software Market Size to Reach USD 102.9 Billion By 2032 | Increasing Sustainability Initiatives Drive the Market Growth. | Research by SNS Insider",
+        "url": "https://www.globenewswire.com/news-release/2024/09/27/2954513/0/en/Carbon-Accounting-Software-Market-Size-to-Reach-USD-102-9-Billion-By-2032-Increasing-Sustainability-Initiatives-Drive-the-Market-Growth-Research-by-SNS-Insider.html",
+        "snippet": "September 27, 2024 - Carbon Accounting Software Market was valued at USD 16.1 billion in 2023 and is projected to grow to USD 102.9 billion by 2032, at a compound annual growth rate (CAGR) of 22.9% over the forecast period of 2024-2032.”",
+        "query": "Carbon accounting for SMBs market size growth forecast",
         "used_in_prompt": false,
         "id": "e27",
         "source_key": "ddgs",
@@ -1037,24 +1119,24 @@
       },
       {
         "rank": 28,
-        "source": "youtube",
-        "title": "Tool Zero - Automated Carbon Accounting",
-        "url": "https://youtube.com/watch?v=SWDsObFKn50",
-        "snippet": "Tool Zero automates the carbon accounting process for small business by extracting all the information it needs directly from your invoices. No manual data entry required. Take action on your businesses climate impact and unlock access to sustainable funding and customers with Tool Zero. Sign up now",
-        "query": "",
+        "source": "ddgs",
+        "title": "Why carbon accounting is a strategic advantage for tech startups and seed-stage businesses",
+        "url": "https://www.pem.co.uk/article/why-carbon-accounting-is-a-strategic-advantage-for-tech-startups-and-seed-stage-businesses/",
+        "snippet": "December 8, 2025 - Carbon accounting is not just for ... businesses. By understanding and managing Scope 1, 2, and 3 emissions, tech startups can unlock funding, build trust, reduce costs, and future-proof their operations....",
+        "query": "Carbon accounting for SMBs funding startup launches",
         "used_in_prompt": false,
         "id": "e28",
-        "source_key": "youtube",
-        "display_name": "YouTube",
+        "source_key": "ddgs",
+        "display_name": "Web search",
         "exclusion_reason": "Ranked 28 of 30; below the prompt cutoff"
       },
       {
         "rank": 29,
         "source": "ddgs",
-        "title": "5 QuickBooks Alternatives for SMB Accounting",
-        "url": "https://technologyadvice.com/blog/information-technology/4-quickbooks-alternatives-for-smb-accounting/",
-        "snippet": "In this article, we’ll highlight four QuickBooks alternatives to help you make an informed purchase. Here are our top 5 QuickBooks alternatives for SMB accounting",
-        "query": "Carbon accounting for SMBs competitors alternatives",
+        "title": "Best Carbon Accounting Platforms for Small and Mid-Sized Businesses",
+        "url": "https://aclymate.com/blog/insights/best-carbon-accounting-platforms-for-small-and-mid-sized-businesses",
+        "snippet": "Compare the best carbon accounting platforms for small and mid-sized businesses, including software, expert support, certifications, and sustainability reporting tools designed for SMBs without dedicated sustainability teams.",
+        "query": "Carbon accounting for SMBs pricing",
         "used_in_prompt": false,
         "id": "e29",
         "source_key": "ddgs",
@@ -1064,10 +1146,10 @@
       {
         "rank": 30,
         "source": "ddgs",
-        "title": "19 Small Business Accounting Statistics Must Know (2024)",
-        "url": "https://www.businessdasher.com/small-business-accounting-statistics/",
-        "snippet": "ContentsTop Complaints SMBs Have About Their AccountantsSMB Accounting Software Usage",
-        "query": "Carbon accounting for SMBs reviews complaints problems",
+        "title": "6 Ways Carbon Accounting Can Help SMBs Win Contracts and Build Loyalty",
+        "url": "https://www.greenprojecttech.com/newsroom/6-ways-carbon-accounting-can-help-smbs-win-contracts-and-build-loyalty",
+        "snippet": "Carbon accounting isn't just for massive corporations anymore. As sustainability expectations grow — particularly with Scope 3 emissions reporting — small and medium-sized businesses (SMBs) are increasingly asked to measure and share their carbon footprint.",
+        "query": "Carbon accounting for SMBs trends",
         "used_in_prompt": false,
         "id": "e30",
         "source_key": "ddgs",
@@ -1079,33 +1161,23 @@
     "degraded_reason": null,
     "analysis_failed": false,
     "retry_after": null,
+    "llm_provider": "gemini",
     "report": {
       "schema_version": 2,
       "verdict": {
-        "decision": "Strong Yes",
+        "decision": "Yes",
         "decision_unavailable_reason": null,
-        "reason": "The market for carbon accounting software for SMBs is experiencing exponential growth, driven by regulatory pressure and a clear unmet need for affordable, user-friendly solutions.",
-        "executive_summary": "The carbon accounting market for SMBs is rapidly expanding due to increasing regulatory and supply chain pressures. There is a strong opportunity for startups to provide affordable, user-friendly, and specialized solutions. The market is ripe for innovation, particularly with AI integration.",
-        "top_reason_to_build": "There is a significant and growing demand for affordable, user-friendly carbon accounting solutions specifically designed for SMBs, which are currently underserved by enterprise-focused software.",
-        "biggest_risk": "The potential for existing enterprise solutions to adapt or for traditional accounting software to integrate carbon accounting features, increasing competition.",
-        "market_pulse": {
-          "value": 67,
-          "display": "67",
-          "unit": null,
-          "confidence": null,
-          "confidence_band": "none",
-          "basis": "The model's overall read of market conditions across every section it wrote.",
-          "source_count": 0,
-          "evidence_ids": [],
-          "collected": true
-        },
+        "reason": "The market is growing rapidly, driven by strong regulatory and corporate demand, with clear pain points and opportunities for SMB-focused solutions.",
+        "executive_summary": "The carbon accounting market for SMBs is experiencing significant growth, driven by regulatory mandates and corporate supply chain demands. While competitive, there's a clear opportunity for solutions that prioritize affordability, ease of use, and expert support for SMBs. A startup should enter, focusing on a niche or superior user experience.",
+        "top_reason_to_build": "Strong market growth driven by increasing regulatory and corporate pressure on SMBs to adopt carbon accounting.",
+        "biggest_risk": "Market congestion with well-funded competitors already offering accessible solutions and advanced features.",
         "confidence": {
           "value": 90,
           "display": "90",
           "unit": null,
           "confidence": 90,
           "confidence_band": "high",
-          "basis": "Confidence is high due to multiple independent sources confirming market growth, specific customer pain points, and clear opportunities for tailored solutions for SMBs.",
+          "basis": "High confidence due to multiple independent sources confirming market size, growth, customer pain points, and competitive landscape. Quantitative signals for market opportunity are strong.",
           "source_count": 0,
           "evidence_ids": [],
           "collected": true
@@ -1113,103 +1185,70 @@
       },
       "headline": {
         "recommended_customer": {
-          "value": "Small and medium-sized businesses (SMBs) that are part of larger organizations' supply chains and are now mandated to report their climate emissions.",
+          "value": "SMBs that are just beginning their carbon accounting journey, driven by new compliance requirements from larger partners or regulations, and are looking for a straightforward, affordable, and guided solution.",
           "suppressed_reason": null
         },
         "best_customer_segment": {
-          "value": "SMBs in the supply chains of larger organizations, as they face immediate and mandated requirements for carbon reporting.",
+          "value": "Small and Mid-Sized Businesses (SMBs) who are new to carbon accounting and are seeking accessible, expert-backed, and affordable solutions.",
           "suppressed_reason": null
         },
         "recommended_positioning": {
-          "value": "The most user-friendly, affordable, and compliant carbon accounting solution specifically designed for SMBs, transforming a regulatory burden into a strategic advantage.",
+          "value": "The most user-friendly and affordable carbon accounting platform for SMBs, offering automated data collection, expert guidance, and actionable insights to simplify compliance and drive sustainable growth.",
           "suppressed_reason": null
         },
         "best_moat": {
-          "value": "Proprietary technology that simplifies complex GHG Protocol standards and integrates seamlessly with common SMB operational workflows, combined with a strong focus on affordability.",
+          "value": "Proprietary AI-driven insights and actionable recommendations tailored for SMBs, coupled with deep integrations into common SMB accounting/banking systems.",
           "suppressed_reason": null
         }
       },
       "market_sizing": {
         "claims": [
           {
-            "evidence_id": "e10",
+            "evidence_id": "e3",
             "source_name": "Web search",
-            "figure_text": "USD 10.71 Billion",
-            "value_usd": 10710000000.0,
-            "year": 2024,
-            "scope": "Carbon Accounting Software Market",
-            "url": "https://www.verifiedmarketresearch.com/product/carbon-accounting-software-market/"
-          },
-          {
-            "evidence_id": "e10",
-            "source_name": "Web search",
-            "figure_text": "USD 46.95 Billion",
-            "value_usd": 46950000000.0,
-            "year": 2032,
-            "scope": "Carbon Accounting Software Market",
-            "url": "https://www.verifiedmarketresearch.com/product/carbon-accounting-software-market/"
-          },
-          {
-            "evidence_id": "e24",
-            "source_name": "Web search",
-            "figure_text": "$22.6 billion",
-            "value_usd": 22600000000.0,
-            "year": 2025,
-            "scope": "carbon accounting software market",
-            "url": "https://www.thebusinessresearchcompany.com/report/carbon-accounting-software-global-market-report"
-          },
-          {
-            "evidence_id": "e24",
-            "source_name": "Web search",
-            "figure_text": "$27.78 billion",
-            "value_usd": 27780000000.0,
-            "year": 2026,
-            "scope": "carbon accounting software market",
-            "url": "https://www.thebusinessresearchcompany.com/report/carbon-accounting-software-global-market-report"
+            "figure_text": "$74.4 billion",
+            "value_usd": 74400000000.0,
+            "year": 2031,
+            "scope": "Global Carbon Accounting Software Market",
+            "url": "https://www.researchandmarkets.com/reports/6007457/carbon-accounting-software-market-size-share-and"
           }
         ],
-        "low_usd": 10710000000.0,
-        "high_usd": 46950000000.0,
-        "converges": false,
-        "display": "4 sources imply figures from $11B to $47B — the estimates do not converge.",
-        "basis": "4 of 30 collected sources stated a figure, quoted verbatim and attributed. Spread is 4.4x. Figures target different years (2024, 2025, 2026, 2032), so they are not directly comparable."
+        "low_usd": 74400000000.0,
+        "high_usd": 74400000000.0,
+        "converges": true,
+        "display": "$74.4 billion — researchandmarkets.com, the only source to state a figure.",
+        "basis": "One of 30 collected sources stated a market size."
       },
       "market": {
         "market_size": {
-          "value": "$23 billion",
-          "display": "$23 billion",
+          "value": "$74 billion",
+          "display": "$74 billion",
           "unit": null,
-          "confidence": 90,
-          "confidence_band": "high",
-          "basis": "Model estimate, grounded in the 7 collected sources containing sizing or forecast language.",
-          "source_count": 7,
+          "confidence": 75,
+          "confidence_band": "moderate",
+          "basis": "Model estimate, grounded in the 4 collected sources containing sizing or forecast language.",
+          "source_count": 4,
           "evidence_ids": [
             "e3",
-            "e10",
             "e11",
-            "e17",
-            "e18",
-            "e24",
-            "e25"
+            "e19",
+            "e27"
           ],
           "collected": true
         },
         "growth_rate": {
-          "value": "23%",
-          "display": "23%",
+          "value": "22% CAGR",
+          "display": "22% CAGR",
           "unit": null,
-          "confidence": 90,
-          "confidence_band": "high",
-          "basis": "Model estimate, grounded in the 7 collected sources containing sizing or forecast language.",
-          "source_count": 7,
+          "confidence": 75,
+          "confidence_band": "moderate",
+          "basis": "Model estimate, grounded in the 4 collected sources containing sizing or forecast language.",
+          "source_count": 4,
           "evidence_ids": [
             "e3",
-            "e10",
             "e11",
-            "e17",
-            "e18",
-            "e24",
-            "e25"
+            "e19",
+            "e27"
           ],
           "collected": true
         },
@@ -1217,37 +1256,31 @@
           "value": "Growth",
           "display": "Growth",
           "unit": null,
-          "confidence": 90,
-          "confidence_band": "high",
-          "basis": "Model estimate, grounded in the 7 collected sources containing sizing or forecast language.",
-          "source_count": 7,
+          "confidence": 75,
+          "confidence_band": "moderate",
+          "basis": "Model judgement, informed by the 4 sources containing sizing or forecast language.",
+          "source_count": 4,
           "evidence_ids": [
             "e3",
-            "e10",
             "e11",
-            "e17",
-            "e18",
-            "e24",
-            "e25"
+            "e19",
+            "e27"
           ],
           "collected": true
         },
         "future_outlook": {
-          "value": "Strong Growth",
-          "display": "Strong Growth",
+          "value": "Positive",
+          "display": "Positive",
           "unit": null,
           "confidence": 90,
           "confidence_band": "high",
-          "basis": "Model estimate, grounded in the 7 collected sources containing sizing or forecast language.",
-          "source_count": 7,
+          "basis": "Model judgement, informed by the 4 sources containing sizing or forecast language.",
+          "source_count": 4,
           "evidence_ids": [
             "e3",
-            "e10",
             "e11",
-            "e17",
-            "e18",
-            "e24",
-            "e25"
+            "e19",
+            "e27"
           ],
           "collected": true
         }
@@ -1303,12 +1336,11 @@
             "confidence": null,
             "confidence_band": "none",
             "basis": "Sum of the YouTube comment count on every collected video.",
-            "source_count": 4,
+            "source_count": 3,
             "evidence_ids": [
-              "e7",
-              "e14",
-              "e21",
-              "e28"
+              "e8",
+              "e16",
+              "e24"
             ],
             "collected": true
           }
@@ -1374,18 +1406,17 @@
         },
         "virality": {
           "momentum": {
-            "value": 3,
-            "display": "3",
+            "value": 2,
+            "display": "2",
             "unit": null,
             "confidence": null,
             "confidence_band": "none",
             "basis": "Weighted blend of search growth, video engagement and daily views.",
-            "source_count": 4,
+            "source_count": 3,
             "evidence_ids": [
-              "e7",
-              "e14",
-              "e21",
-              "e28"
+              "e8",
+              "e16",
+              "e24"
             ],
             "collected": true
           },
@@ -1401,42 +1432,40 @@
             "collected": false
           },
           "avg_views_per_day": {
-            "value": 0.16,
-            "display": "0.16",
+            "value": 0.17,
+            "display": "0.17",
             "unit": null,
             "confidence": null,
             "confidence_band": "none",
             "basis": "Lifetime views divided by days since publication, averaged.",
-            "source_count": 4,
+            "source_count": 3,
             "evidence_ids": [
-              "e7",
-              "e14",
-              "e21",
-              "e28"
+              "e8",
+              "e16",
+              "e24"
             ],
             "collected": true
           },
           "avg_engagement_rate": {
-            "value": 1,
-            "display": "~1%",
+            "value": 0,
+            "display": "~0%",
             "unit": "%",
             "confidence": null,
             "confidence_band": "none",
             "basis": "(likes + comments) / views x 100, averaged across videos.",
-            "source_count": 4,
+            "source_count": 3,
             "evidence_ids": [
-              "e7",
-              "e14",
-              "e21",
-              "e28"
+              "e8",
+              "e16",
+              "e24"
             ],
             "collected": true
           }
         },
         "market_size": {
           "market_reports": {
-            "value": 3,
-            "display": "3",
+            "value": 4,
+            "display": "4",
             "unit": null,
             "confidence": null,
             "confidence_band": "none",
@@ -1480,32 +1509,25 @@
         "market_opportunity": {
           "sizing_language_density": {
             "counts": {
-              "market_size_mentions": 3,
-              "growth_mentions": 5,
-              "forecast_mentions": 3,
+              "market_size_mentions": 4,
+              "growth_mentions": 6,
+              "forecast_mentions": 4,
               "cagr_mentions": 4,
-              "billion_mentions": 6,
+              "billion_mentions": 3,
               "million_mentions": 3
             },
             "sources_scanned": 30,
             "definition": "How often each kind of sizing language appeared in the collected sources. A property of the writing, not evidence of the market's actual size.",
             "basis": "Counts of sizing and growth language across the 30 collected sources. Not a score.",
             "detected_market_sizes": [
-              "$23 billion",
-              "$28 billion",
-              "$64 billion",
-              "$2.3 m",
-              "$95 m",
-              "$1 billion",
-              "$200 m"
+              "$74 billion",
+              "$100 m",
+              "$27 m",
+              "$52 m"
             ],
             "detected_growth_rates": [
-              "23%",
-              "25%",
               "22%",
-              "23%",
-              "37%",
-              "6%"
+              "23%"
             ]
           }
         }
@@ -1527,50 +1549,44 @@
           "items": [
             {
               "id": "customer_segments-1",
-              "label": "SMBs in supply chains of larger organizations",
-              "detail": "Small and medium-sized businesses that are part of the supply chain for larger organizations are increasingly required to report their climate emissions.",
+              "label": "Small and Mid-Sized Businesses (SMBs)",
+              "detail": "SMBs are increasingly facing new carbon accounting requirements due to larger companies like Microsoft raising sustainability standards, and they need accessible solutions.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
                 "e1",
-                "e7"
+                "e6",
+                "e8",
+                "e13",
+                "e14",
+                "e15",
+                "e16",
+                "e22",
+                "e24"
               ],
               "rank": 1
             },
             {
-              "id": "customer_segments-3",
-              "label": "European SMBs",
-              "detail": "Some carbon accounting software is primarily suited to European regulatory environments, indicating a specific segment of SMBs with these compliance needs.",
+              "id": "customer_segments-2",
+              "label": "UK SMBs",
+              "detail": "There is a specific offering for UK SMBs, including free carbon accounting and paid tiers with specific reporting documents.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e5",
-                "e12"
+                "e13"
               ],
               "rank": 2
             },
             {
-              "id": "customer_segments-4",
-              "label": "Small businesses aiming for carbon neutrality",
-              "detail": "Small businesses, such as coffee shops, are looking for ways to become carbon neutral and demonstrate climate leadership.",
+              "id": "customer_segments-3",
+              "label": "B2B sustainability teams",
+              "detail": "Platforms are being built specifically for B2B sustainability teams to measure, report, and reduce emissions.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e14",
-                "e21"
+                "e7"
               ],
               "rank": 3
-            },
-            {
-              "id": "customer_segments-2",
-              "label": "Small climatetech businesses",
-              "detail": "Climatetech small businesses face a specific problem where existing carbon accounting software is too expensive and feature-rich for their needs.",
-              "score": 75,
-              "score_band": "moderate",
-              "evidence_ids": [
-                "e9"
-              ],
-              "rank": 4
             }
           ]
         },
@@ -1582,48 +1598,60 @@
           "items": [
             {
               "id": "pain_points-1",
-              "label": "Prohibitively expensive software for SMBs",
-              "detail": "Carbon accounting software designed for larger enterprises is too expensive and complex for small and medium-sized businesses.",
+              "label": "Navigating complexity of carbon accounting",
+              "detail": "SMBs need support to understand and comply with carbon accounting and reduction plans, often requiring expert assistance.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
-                "e9",
-                "e5"
+                "e1",
+                "e9"
               ],
               "rank": 1
             },
             {
               "id": "pain_points-2",
-              "label": "Lack of traditional need for carbon accounting",
-              "detail": "Historically, SMBs have not needed to perform carbon accounting, making the new requirements a novel challenge.",
-              "score": 75,
-              "score_band": "moderate",
+              "label": "Meeting new accounting requirements",
+              "detail": "Companies like Microsoft are raising sustainability standards, forcing SMBs to adapt to new accounting requirements.",
+              "score": 90,
+              "score_band": "high",
               "evidence_ids": [
-                "e1"
+                "e6",
+                "e8"
               ],
               "rank": 2
             },
             {
               "id": "pain_points-3",
-              "label": "Complexity of GHG Protocol standards",
-              "detail": "Understanding and applying the GHG Protocol, which classifies emissions into three scopes, can be complex for SMBs.",
+              "label": "Data collection and integration challenges",
+              "detail": "Automated data collection through accounting and banking integrations is a desired feature, indicating manual processes are a pain point.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e2"
+                "e1"
               ],
               "rank": 3
             },
             {
               "id": "pain_points-4",
-              "label": "Need for onboarding support",
-              "detail": "Some carbon accounting solutions may require onboarding support for companies, suggesting a learning curve for SMB users.",
-              "score": 50,
-              "score_band": "low",
+              "label": "High data processing demands and costs",
+              "detail": "Real-time tracking can lead to higher data processing demands and potentially increased costs, especially for complex operations.",
+              "score": 75,
+              "score_band": "moderate",
               "evidence_ids": [
-                "e5"
+                "e18"
               ],
               "rank": 4
+            },
+            {
+              "id": "pain_points-5",
+              "label": "Financial discipline over granularity",
+              "detail": "SMBs require carbon accounting solutions that prioritize financial discipline rather than overly granular transaction tracking.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e14"
+              ],
+              "rank": 5
             }
           ]
         },
@@ -1634,61 +1662,75 @@
           "sort_basis": "Score, then number of supporting sources",
           "items": [
             {
-              "id": "desired_outcomes-1",
-              "label": "Compliance with new reporting requirements",
-              "detail": "SMBs need to adapt to new carbon accounting requirements imposed by larger organizations and regulatory bodies.",
+              "id": "desired_outcomes-2",
+              "label": "Compliance with regulations and customer requirements",
+              "detail": "Businesses need to meet reporting requirements, provide reliable data for auditors, and comply with environmental regulations and customer procurement standards.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
-                "e1",
-                "e7"
+                "e10",
+                "e21",
+                "e22"
               ],
               "rank": 1
             },
             {
-              "id": "desired_outcomes-2",
-              "label": "Cost savings and efficiency",
-              "detail": "Carbon accounting can become a strategic asset for SMBs, driving cost savings and operational efficiency.",
+              "id": "desired_outcomes-1",
+              "label": "Accessible and intuitive platforms",
+              "detail": "SMBs seek user-friendly interfaces and accessible solutions to manage their carbon accounting effectively.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
-                "e19"
+                "e1",
+                "e24"
               ],
               "rank": 2
             },
             {
-              "id": "desired_outcomes-5",
-              "label": "Becoming carbon neutral and a climate leader",
-              "detail": "Small businesses aspire to achieve carbon neutrality and position themselves as climate leaders.",
-              "score": 75,
-              "score_band": "moderate",
+              "id": "desired_outcomes-3",
+              "label": "Expert support and guidance",
+              "detail": "Access to climate experts is crucial for SMBs to navigate the complexities of carbon accounting and reduction planning.",
+              "score": 90,
+              "score_band": "high",
               "evidence_ids": [
-                "e14",
-                "e21"
+                "e1",
+                "e9"
               ],
               "rank": 3
             },
             {
-              "id": "desired_outcomes-3",
-              "label": "Customer loyalty and competitive advantage",
-              "detail": "Adopting carbon accounting can enhance customer loyalty and provide a competitive edge for SMBs.",
+              "id": "desired_outcomes-5",
+              "label": "Opportunity for growth and competitive advantage",
+              "detail": "Compliance with sustainability standards is not just a checkbox but an opportunity for growth and competitive advantage.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e19"
+                "e6",
+                "e8"
               ],
               "rank": 4
             },
             {
               "id": "desired_outcomes-4",
-              "label": "User-friendly and affordable tools",
-              "detail": "SMBs are looking for carbon accounting tools that are easy to use and budget-friendly.",
+              "label": "Reduced costs and improved efficiency",
+              "detail": "Implementing carbon accounting software can help SMBs reduce costs through optimized resource use and improved efficiency.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e21"
+                "e22"
               ],
               "rank": 5
+            },
+            {
+              "id": "desired_outcomes-6",
+              "label": "Verifiable and transparent reporting",
+              "detail": "SMBs need platforms that enable verifiable reporting and allow them to track and benchmark GHG emissions.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e7"
+              ],
+              "rank": 6
             }
           ]
         },
@@ -1700,50 +1742,49 @@
           "items": [
             {
               "id": "behavior_patterns-1",
-              "label": "Seeking software solutions for tracking emissions",
-              "detail": "SMBs are actively searching for software to help them track and manage their carbon emissions.",
+              "label": "Seeking free tools and affordable options",
+              "detail": "SMBs are encouraged to use free tools like the SME Climate Hub calculator and are offered free tiers or affordable starter packages for carbon accounting.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
-                "e6",
-                "e20",
-                "e22"
+                "e2",
+                "e4",
+                "e13",
+                "e24"
               ],
               "rank": 1
             },
             {
-              "id": "behavior_patterns-2",
-              "label": "Adapting to supplier standards",
-              "detail": "SMBs are adapting to new sustainability standards set by larger companies like Microsoft, which require carbon accounting.",
-              "score": 90,
-              "score_band": "high",
+              "id": "behavior_patterns-4",
+              "label": "Engaging with climate experts for support",
+              "detail": "Many platforms highlight the availability of climate experts to assist companies with carbon accounting and reduction plans.",
+              "score": 75,
+              "score_band": "moderate",
               "evidence_ids": [
-                "e7"
+                "e1",
+                "e9"
               ],
               "rank": 2
             },
             {
-              "id": "behavior_patterns-3",
-              "label": "Engaging in online discussions for solutions",
-              "detail": "SMBs and individuals are discussing carbon accounting software and methods on platforms like Reddit.",
+              "id": "behavior_patterns-2",
+              "label": "Surveying suppliers for carbon practices",
+              "detail": "SMBs start by surveying their top suppliers about carbon measurement practices and creating preferred vendor lists.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e6",
-                "e20",
-                "e22"
+                "e2"
               ],
               "rank": 3
             },
             {
-              "id": "behavior_patterns-4",
-              "label": "Viewing carbon accounting as an opportunity",
-              "detail": "SMBs are beginning to see carbon accounting not just as a compliance burden but as an opportunity for growth and value creation.",
+              "id": "behavior_patterns-3",
+              "label": "Prioritizing ease of use and automation",
+              "detail": "SMBs look for intuitive interfaces and automated data collection through integrations to simplify the process.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e7",
-                "e19"
+                "e1"
               ],
               "rank": 4
             }
@@ -1757,33 +1798,33 @@
           "items": [
             {
               "id": "opportunity_areas-1",
-              "label": "Developing affordable, SMB-specific carbon accounting software",
-              "detail": "There is a clear need for carbon accounting software that is specifically designed for SMBs, addressing their cost and complexity concerns.",
+              "label": "Simplified, affordable, and expert-backed solutions for SMBs",
+              "detail": "There is a clear need for accessible, intuitive, and expert-supported carbon accounting platforms specifically designed for SMBs.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
+                "e1",
                 "e9",
-                "e5",
-                "e21"
+                "e13",
+                "e24"
               ],
               "rank": 1
             },
             {
               "id": "opportunity_areas-2",
-              "label": "Providing compliance solutions for supply chain reporting",
-              "detail": "Offering solutions that help SMBs meet the carbon reporting requirements of larger organizations in their supply chain presents a significant opportunity.",
-              "score": 90,
-              "score_band": "high",
+              "label": "Integration with existing accounting and banking systems",
+              "detail": "Automated data collection through integrations with accounting and banking systems can significantly reduce the burden on SMBs.",
+              "score": 75,
+              "score_band": "moderate",
               "evidence_ids": [
-                "e1",
-                "e7"
+                "e1"
               ],
               "rank": 2
             },
             {
               "id": "opportunity_areas-3",
-              "label": "Simplifying GHG Protocol for small businesses",
-              "detail": "Creating tools or services that simplify the complex GHG Protocol standards for SMBs would be highly valuable.",
+              "label": "Tools for supplier carbon measurement and preferred vendor lists",
+              "detail": "Developing tools that help SMBs survey suppliers and manage preferred vendor lists based on carbon practices presents an opportunity.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
@@ -1793,17 +1834,25 @@
             },
             {
               "id": "opportunity_areas-4",
-              "label": "Integrating carbon accounting with existing SMB accounting systems",
-              "detail": "Given the existence of other SMB accounting systems, integrating carbon accounting could streamline processes for businesses.",
-              "score": 50,
-              "score_band": "low",
+              "label": "AI-powered analytics and recommendations",
+              "detail": "AI tools for carbon accounting that provide analytics and recommendations can enhance the value proposition for customers.",
+              "score": 75,
+              "score_band": "moderate",
               "evidence_ids": [
-                "e4",
-                "e8",
-                "e11",
-                "e15"
+                "e20"
               ],
               "rank": 4
+            },
+            {
+              "id": "opportunity_areas-5",
+              "label": "Reporting packages for specific regulations (e.g., California SB 253, EU…",
+              "detail": "Offering tailored reporting packages that align with specific regional and international regulations can address a key compliance need.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e21"
+              ],
+              "rank": 5
             }
           ]
         },
@@ -1814,40 +1863,63 @@
           "sort_basis": "Score, then number of supporting sources",
           "items": [
             {
-              "id": "key_trends-1",
-              "label": "Increasing demand for carbon accounting from larger organizations",
-              "detail": "Larger organizations are increasingly requiring carbon emission reporting from their supply chains, driving SMBs to adopt carbon accounting.",
+              "id": "key_trends-2",
+              "label": "Focus on SMBs as a key segment",
+              "detail": "The market is actively developing solutions and marketing specifically to small and mid-sized businesses, recognizing their growing needs.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
                 "e1",
-                "e7"
+                "e2",
+                "e5",
+                "e6",
+                "e8",
+                "e13",
+                "e14",
+                "e15",
+                "e16",
+                "e22",
+                "e24"
               ],
               "rank": 1
             },
             {
-              "id": "key_trends-2",
-              "label": "Shift from compliance to strategic asset",
-              "detail": "Carbon accounting is evolving from a mere compliance requirement to a strategic asset that can drive cost savings, efficiency, and customer loyalty for SMBs.",
+              "id": "key_trends-1",
+              "label": "Increasing regulatory pressure and corporate sustainability demands",
+              "detail": "Companies like Microsoft are raising sustainability standards, and regulations like the European Green Deal are driving the need for carbon accounting.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
-                "e7",
-                "e19"
+                "e3",
+                "e6",
+                "e8",
+                "e11",
+                "e21"
               ],
               "rank": 2
             },
             {
-              "id": "key_trends-3",
-              "label": "Exponential growth of carbon accounting software market",
-              "detail": "The carbon accounting software market has experienced and is projected to continue exponential growth in recent years.",
-              "score": 90,
-              "score_band": "high",
+              "id": "key_trends-4",
+              "label": "Importance of expert support",
+              "detail": "The provision of climate experts for dedicated and personalized support is a recurring feature in carbon accounting platforms.",
+              "score": 75,
+              "score_band": "moderate",
               "evidence_ids": [
-                "e10",
-                "e24"
+                "e1",
+                "e9"
               ],
               "rank": 3
+            },
+            {
+              "id": "key_trends-3",
+              "label": "Demand for automated data collection and integrations",
+              "detail": "Platforms are emphasizing automated data collection through integrations with accounting and banking systems to simplify the process.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e1"
+              ],
+              "rank": 4
             }
           ]
         },
@@ -1858,27 +1930,39 @@
           "sort_basis": "Score, then number of supporting sources",
           "items": [
             {
-              "id": "emerging_trends-1",
-              "label": "Adoption of Generative AI in carbon accounting",
-              "detail": "Generative AI is anticipated to significantly impact carbon accounting solutions, transforming how organizations measure and manage emissions.",
-              "score": 90,
-              "score_band": "high",
+              "id": "emerging_trends-2",
+              "label": "Free tiers and affordable pricing models",
+              "detail": "The availability of free tiers and affordable starter packages suggests a trend towards making carbon accounting more accessible.",
+              "score": 75,
+              "score_band": "moderate",
               "evidence_ids": [
-                "e3"
+                "e4",
+                "e13",
+                "e24"
               ],
               "rank": 1
             },
             {
-              "id": "emerging_trends-2",
-              "label": "Focus on user-friendly and affordable solutions for SMBs",
-              "detail": "There is a clear trend towards developing more accessible and cost-effective carbon accounting tools specifically for small businesses.",
+              "id": "emerging_trends-1",
+              "label": "AI-powered analytics and recommendations",
+              "detail": "The acquisition of an AI tools startup for carbon accounting indicates a move towards AI-powered analytics and recommendations.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e9",
-                "e21"
+                "e20"
               ],
               "rank": 2
+            },
+            {
+              "id": "emerging_trends-3",
+              "label": "Focus on financial discipline for SMBs",
+              "detail": "There is an emerging understanding that carbon accounting for SMBs needs to prioritize financial discipline over excessive granularity.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e14"
+              ],
+              "rank": 3
             }
           ]
         },
@@ -1890,38 +1974,50 @@
           "items": [
             {
               "id": "market_drivers-1",
-              "label": "Regulatory and supply chain pressure on SMBs",
-              "detail": "New accounting requirements from larger organizations and evolving sustainability standards are compelling SMBs to engage in carbon accounting.",
+              "label": "Environmental regulations (e.g., European Green Deal, California SB 253)",
+              "detail": "Extensive plans and specific bills are driving the need for carbon accounting software and compliance.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
-                "e1",
-                "e7"
+                "e3",
+                "e11",
+                "e21"
               ],
               "rank": 1
             },
             {
               "id": "market_drivers-2",
-              "label": "Increased awareness of climate change and sustainability goals",
-              "detail": "Businesses are increasingly focused on achieving carbon neutrality and becoming climate leaders, driving demand for accounting tools.",
-              "score": 75,
-              "score_band": "moderate",
+              "label": "Corporate sustainability mandates (e.g., Microsoft's supplier standards)",
+              "detail": "Large corporations are setting new sustainability requirements for their supply chains, impacting SMBs.",
+              "score": 90,
+              "score_band": "high",
               "evidence_ids": [
-                "e14",
-                "e21"
+                "e6",
+                "e8"
               ],
               "rank": 2
             },
             {
               "id": "market_drivers-3",
-              "label": "Potential for cost savings and efficiency gains",
-              "detail": "The realization that carbon accounting can lead to operational cost savings and improved efficiency is a significant driver for adoption.",
+              "label": "Increased awareness of environmental impact",
+              "detail": "Businesses are increasingly seeking to understand their environmental impact and identify areas for improvement.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e19"
+                "e22"
               ],
               "rank": 3
+            },
+            {
+              "id": "market_drivers-4",
+              "label": "Opportunity for cost reduction and efficiency",
+              "detail": "Carbon accounting can help businesses reduce costs through optimized resource use and improved efficiency.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e22"
+              ],
+              "rank": 4
             }
           ]
         },
@@ -1934,35 +2030,60 @@
             {
               "id": "competitors-1",
               "label": "Greenly",
-              "detail": "Greenly is a carbon accounting software well-suited to SMBs and European mid-market businesses, offering broad ESG coverage.",
-              "score": 75,
-              "score_band": "moderate",
+              "detail": "Greenly markets itself as an accessible alternative for SMBs with an intuitive interface, automated data collection, and climate experts. They also raised $52M Series B.",
+              "score": 90,
+              "score_band": "high",
               "evidence_ids": [
-                "e12"
+                "e1",
+                "e18",
+                "e20"
               ],
               "rank": 1
             },
             {
+              "id": "competitors-4",
+              "label": "Aclymate",
+              "detail": "Aclymate is highlighted as a best carbon accounting platform for SMBs, offering user-friendly and affordable tools.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e1",
+                "e24"
+              ],
+              "rank": 2
+            },
+            {
               "id": "competitors-2",
               "label": "Persefoni",
-              "detail": "Persefoni is a carbon accounting software specializing in financial services and portfolio analytics.",
+              "detail": "Persefoni has raised $101M Series B, struck strategic partnerships, expanded into Japan, and offers a free tier.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e4"
+              ],
+              "rank": 3
+            },
+            {
+              "id": "competitors-3",
+              "label": "Plan A",
+              "detail": "Plan A, a European carbon accounting and ESG reporting platform, raised $27M in funding.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
                 "e12"
               ],
-              "rank": 2
+              "rank": 4
             },
             {
-              "id": "competitors-3",
-              "label": "Aclymate",
-              "detail": "Aclymate offers user-friendly and affordable tools for any business, no matter how small, to become carbon neutral.",
-              "score": 75,
-              "score_band": "moderate",
+              "id": "competitors-5",
+              "label": "Eco-Auditor",
+              "detail": "Eco-Auditor aligns with GHG Protocol for Scope 1, 2, and 3 emissions accounting and supports various reporting packages for SMBs.",
+              "score": 50,
+              "score_band": "low",
               "evidence_ids": [
                 "e21"
               ],
-              "rank": 3
+              "rank": 5
             }
           ]
         },
@@ -1974,26 +2095,47 @@
           "items": [
             {
               "id": "competitive_threats-1",
-              "label": "Enterprise software being adapted for SMBs",
-              "detail": "Larger enterprise carbon accounting solutions might eventually adapt their offerings to be more accessible to SMBs, increasing competition.",
-              "score": 75,
-              "score_band": "moderate",
+              "label": "Congested market with well-funded players",
+              "detail": "The carbon accounting sector is described as congested, with companies like Greenly raising significant Series B funding.",
+              "score": 90,
+              "score_band": "high",
               "evidence_ids": [
-                "e9"
+                "e20"
               ],
               "rank": 1
             },
             {
               "id": "competitive_threats-2",
-              "label": "Existing accounting software expanding into carbon accounting",
-              "detail": "Traditional SMB accounting software providers like SAP Business One or Microsoft Dynamics 365 could integrate carbon accounting features.",
+              "label": "Established players offering free tiers and strategic partnerships",
+              "detail": "Competitors like Persefoni offer free tiers and have strong corporate partnerships, making it harder for new entrants.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e4"
+              ],
+              "rank": 2
+            },
+            {
+              "id": "competitive_threats-3",
+              "label": "Acquisitions for advanced capabilities (e.g., AI)",
+              "detail": "Competitors are acquiring startups to integrate advanced features like AI-powered analytics, raising the bar for innovation.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e20"
+              ],
+              "rank": 3
+            },
+            {
+              "id": "competitive_threats-4",
+              "label": "Focus on specific regional markets by existing players",
+              "detail": "Some competitors are specifically targeting regional markets like the UK, potentially limiting white space.",
               "score": 50,
               "score_band": "low",
               "evidence_ids": [
-                "e8",
-                "e15"
+                "e13"
               ],
-              "rank": 2
+              "rank": 4
             }
           ]
         },
@@ -2005,24 +2147,23 @@
           "items": [
             {
               "id": "positioning_gaps-1",
-              "label": "Affordable and simplified solutions for SMBs",
-              "detail": "There is a clear gap for carbon accounting software that is both affordable and simplified for the specific needs of small businesses.",
-              "score": 90,
-              "score_band": "high",
+              "label": "Solutions tailored for specific SMB niches (e.g., coffee shops)",
+              "detail": "While general SMB solutions exist, a platform specifically designed for the unique needs of a niche like coffee shops could be a gap.",
+              "score": 75,
+              "score_band": "moderate",
               "evidence_ids": [
-                "e9",
-                "e21"
+                "e16"
               ],
               "rank": 1
             },
             {
               "id": "positioning_gaps-2",
-              "label": "Solutions tailored to specific regulatory environments (e.g., non-European)",
-              "detail": "Some existing solutions are primarily suited to European regulations, suggesting a gap for solutions tailored to other regions.",
+              "label": "Emphasis on financial discipline for SMBs",
+              "detail": "A consistent theme is that SMB carbon accounting needs financial discipline over heavy transaction granularity, suggesting a gap for solutions that prioritize this.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e5"
+                "e14"
               ],
               "rank": 2
             }
@@ -2036,24 +2177,23 @@
           "items": [
             {
               "id": "white_space_opportunities-1",
-              "label": "Embedded carbon accounting within existing SMB financial tools",
-              "detail": "Integrating carbon accounting directly into existing SMB accounting or financial management platforms could offer a seamless experience.",
+              "label": "Hyper-niche solutions for specific industries within SMBs",
+              "detail": "Developing carbon accounting tools tailored to the very specific operational and reporting needs of particular small business sectors.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e4",
-                "e11"
+                "e16"
               ],
               "rank": 1
             },
             {
               "id": "white_space_opportunities-2",
-              "label": "AI-powered carbon accounting for efficiency",
-              "detail": "Leveraging Generative AI to transform how organizations measure and manage carbon could create highly efficient and innovative solutions.",
+              "label": "Integrated supply chain carbon management for SMBs",
+              "detail": "Tools that help SMBs not just account for their own emissions but also effectively survey and manage their suppliers' carbon practices.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e3"
+                "e2"
               ],
               "rank": 2
             }
@@ -2067,39 +2207,48 @@
           "items": [
             {
               "id": "differentiation_opportunities-1",
-              "label": "Focus on ease of use and affordability",
-              "detail": "Differentiating by offering the most user-friendly and affordable carbon accounting tools specifically for SMBs.",
+              "label": "Superior user experience and affordability for micro-SMBs",
+              "detail": "Focusing on making the platform exceptionally user-friendly and highly affordable for the smallest businesses, potentially with a strong free tier.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
-                "e9",
-                "e21"
+                "e13",
+                "e24"
               ],
               "rank": 1
             },
             {
               "id": "differentiation_opportunities-2",
-              "label": "Specialization in specific SMB industries or supply chain types",
-              "detail": "Tailoring solutions to particular SMB sectors (e.g., coffee shops) or specific supply chain reporting requirements could provide a unique edge.",
+              "label": "AI-driven insights and actionable recommendations",
+              "detail": "Leveraging AI not just for data processing but to provide clear, actionable insights and recommendations for emission reduction.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e14",
-                "e1"
+                "e20"
               ],
               "rank": 2
             },
             {
               "id": "differentiation_opportunities-3",
-              "label": "Integration with existing SMB business processes",
-              "detail": "Offering seamless integration with common SMB operational and financial workflows to minimize disruption and maximize adoption.",
+              "label": "Specialized compliance reporting for emerging regulations",
+              "detail": "Offering highly specialized and up-to-date reporting packages for complex or rapidly evolving regional environmental regulations.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e4",
-                "e11"
+                "e21"
               ],
               "rank": 3
+            },
+            {
+              "id": "differentiation_opportunities-4",
+              "label": "Strong emphasis on financial benefits and cost reduction",
+              "detail": "Positioning the solution primarily on how it helps SMBs reduce costs and improve efficiency, rather than just compliance.",
+              "score": 75,
+              "score_band": "moderate",
+              "evidence_ids": [
+                "e22"
+              ],
+              "rank": 4
             }
           ]
         },
@@ -2110,36 +2259,43 @@
           "sort_basis": "Score, then number of supporting sources",
           "items": [
             {
-              "id": "why_now-1",
-              "label": "Increasing regulatory and supply chain pressure",
-              "detail": "SMBs are being forced to adopt carbon accounting, creating immediate demand.",
+              "id": "why_now-2",
+              "label": "Increasing regulatory and corporate pressure on SMBs",
+              "detail": "SMBs are increasingly mandated or incentivized to adopt carbon accounting, creating a strong pull for solutions.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
-                "e1",
-                "e7"
+                "e3",
+                "e6",
+                "e8",
+                "e11",
+                "e21"
               ],
               "rank": 1
             },
             {
-              "id": "why_now-2",
-              "label": "Exponential market growth",
-              "detail": "The market is in a rapid growth phase, indicating high demand and investment potential.",
+              "id": "why_now-1",
+              "label": "Rapid market growth",
+              "detail": "The market is expanding quickly, indicating a strong demand for carbon accounting solutions.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
-                "e24"
+                "e3",
+                "e11",
+                "e19"
               ],
               "rank": 2
             },
             {
               "id": "why_now-3",
-              "label": "Underserved SMB segment",
-              "detail": "A clear gap exists for tailored solutions that meet SMB needs without overspending.",
-              "score": 90,
-              "score_band": "high",
+              "label": "SMBs actively seeking solutions",
+              "detail": "SMBs are aware of the need and are actively searching for tools and guidance.",
+              "score": 75,
+              "score_band": "moderate",
               "evidence_ids": [
-                "e9"
+                "e5",
+                "e15",
+                "e22"
               ],
               "rank": 3
             }
@@ -2153,35 +2309,37 @@
           "items": [
             {
               "id": "key_opportunities-1",
-              "label": "Develop affordable, SMB-specific software",
-              "detail": "Directly addresses the primary pain point of cost and complexity for SMBs.",
+              "label": "Simplified, affordable, expert-backed solutions",
+              "detail": "SMBs need solutions that are easy to use, cost-effective, and provide guidance through complexity.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
+                "e1",
                 "e9",
-                "e21"
+                "e13",
+                "e24"
               ],
               "rank": 1
             },
             {
               "id": "key_opportunities-2",
-              "label": "Leverage AI for efficiency",
-              "detail": "AI can provide a competitive edge by transforming measurement and management processes.",
-              "score": 90,
-              "score_band": "high",
+              "label": "AI-powered analytics and recommendations",
+              "detail": "AI can provide advanced insights and actionable steps, differentiating a new offering.",
+              "score": 75,
+              "score_band": "moderate",
               "evidence_ids": [
-                "e3"
+                "e20"
               ],
               "rank": 2
             },
             {
               "id": "key_opportunities-3",
-              "label": "Focus on compliance and strategic value",
-              "detail": "Positioning the solution as both a compliance tool and a business growth driver will resonate with SMBs.",
-              "score": 90,
-              "score_band": "high",
+              "label": "Niche-specific solutions for SMBs",
+              "detail": "Tailoring solutions to specific SMB industries can address unique pain points and create strong loyalty.",
+              "score": 75,
+              "score_band": "moderate",
               "evidence_ids": [
-                "e19"
+                "e16"
               ],
               "rank": 3
             }
@@ -2195,35 +2353,34 @@
           "items": [
             {
               "id": "key_risks-1",
-              "label": "Competition from established players",
-              "detail": "Larger companies might pivot or integrate, making it harder for new entrants to gain market share.",
-              "score": 75,
-              "score_band": "moderate",
+              "label": "Highly congested market",
+              "detail": "Entering a crowded market requires significant differentiation to gain traction against established, well-funded players.",
+              "score": 90,
+              "score_band": "high",
               "evidence_ids": [
-                "e12",
-                "e8"
+                "e20"
               ],
               "rank": 1
             },
             {
               "id": "key_risks-2",
-              "label": "Complexity of regulatory environments",
-              "detail": "Navigating diverse and evolving global or regional regulations can be challenging and costly.",
+              "label": "Existing players offering free tiers and strong partnerships",
+              "detail": "Competitors are already making their solutions accessible and building strong market presence, making it harder for new entrants.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e5"
+                "e4"
               ],
               "rank": 2
             },
             {
               "id": "key_risks-3",
-              "label": "SMB adoption challenges",
-              "detail": "Overcoming inertia and educating SMBs on the necessity and benefits of carbon accounting may require significant effort.",
-              "score": 50,
-              "score_band": "low",
+              "label": "High data processing demands and costs for real-time tracking",
+              "detail": "Managing the technical complexity and associated costs of advanced features can be a barrier for a new startup.",
+              "score": 75,
+              "score_band": "moderate",
               "evidence_ids": [
-                "e1"
+                "e18"
               ],
               "rank": 3
             }
@@ -2237,35 +2394,35 @@
           "items": [
             {
               "id": "potential_moats-1",
-              "label": "Proprietary AI-driven simplification",
-              "detail": "Developing unique AI algorithms to simplify complex carbon calculations and reporting for SMBs.",
+              "label": "Deep integrations with SMB accounting/banking systems",
+              "detail": "Seamless integration reduces manual effort and creates stickiness, making it hard for customers to switch.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
-                "e3"
+                "e1"
               ],
               "rank": 1
             },
             {
-              "id": "potential_moats-2",
-              "label": "Deep integration with SMB financial stacks",
-              "detail": "Seamlessly embedding carbon accounting into existing SMB financial and operational software, making it an indispensable part of their workflow.",
+              "id": "potential_moats-3",
+              "label": "Specialized expert support model",
+              "detail": "A highly effective and scalable expert support model can build strong customer loyalty and trust.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e4",
-                "e11"
+                "e1",
+                "e9"
               ],
               "rank": 2
             },
             {
-              "id": "potential_moats-3",
-              "label": "Specialized regulatory expertise and support",
-              "detail": "Building a reputation for expert guidance and support in navigating specific regional or industry-specific carbon accounting regulations.",
+              "id": "potential_moats-2",
+              "label": "Proprietary AI for actionable insights",
+              "detail": "AI that goes beyond reporting to offer unique, actionable advice can create a significant competitive advantage.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e5"
+                "e20"
               ],
               "rank": 3
             }
@@ -2279,37 +2436,36 @@
           "items": [
             {
               "id": "execution_ideas-1",
-              "label": "Develop a freemium model or tiered pricing for SMBs",
-              "detail": "Addresses the 'prohibitively expensive' pain point and lowers the barrier to entry for SMBs.",
+              "label": "Launch with a freemium model targeting micro-SMBs",
+              "detail": "Leverage the demand for free tools and affordable options to acquire a large user base, then upsell to paid features.",
               "score": 90,
               "score_band": "high",
               "evidence_ids": [
-                "e9",
-                "e5"
+                "e4",
+                "e13",
+                "e24"
               ],
               "rank": 1
             },
             {
               "id": "execution_ideas-2",
-              "label": "Create educational content and simplified guides",
-              "detail": "Helps SMBs understand the GHG Protocol and the benefits of carbon accounting, overcoming the 'not traditionally needed' hurdle.",
+              "label": "Develop strong partnerships with accounting software providers",
+              "detail": "Integrate directly with popular SMB accounting and banking platforms to enable automated data collection and reduce friction.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e2",
                 "e1"
               ],
               "rank": 2
             },
             {
               "id": "execution_ideas-3",
-              "label": "Partner with existing SMB accounting platforms",
-              "detail": "Leverages existing customer bases and integrates carbon accounting into familiar workflows for SMBs.",
+              "label": "Focus on a specific SMB industry niche first",
+              "detail": "Build a highly tailored solution for a specific industry (e.g., hospitality, retail) to gain deep market penetration before expanding.",
               "score": 75,
               "score_band": "moderate",
               "evidence_ids": [
-                "e4",
-                "e15"
+                "e16"
               ],
               "rank": 3
             }
@@ -2320,12 +2476,12 @@
         {
           "source_key": "ddgs",
           "display_name": "Web search",
-          "count": 26
+          "count": 27
         },
         {
           "source_key": "youtube",
           "display_name": "YouTube",
-          "count": 4
+          "count": 3
         }
       ]
     },
@@ -2526,16 +2682,24 @@
       "competitive.competition_score",
       "virality.trend_growth"
     ],
-    "deprecated_fields": [
+    "removed_fields": [
       {
         "path": "signals.market_opportunity.opportunity_score",
+        "removed_in": "session-4",
         "replacement": "report.signals.market_opportunity.sizing_language_density",
-        "reason": "A weighted keyword sum clamped at 100. The weights were set when the extractor was gated to dedicated market-report sources; it now scans all 30 ranked sources, so the sum clears the clamp on ordinary inputs and the value saturates. Counts replace it."
+        "reason": "A weighted keyword sum clamped at 100. The weights were set when the extractor was gated to dedicated market-report sources; it later scanned all 30 ranked sources, so the sum cleared the clamp on ordinary inputs and the value saturated at 100. The underlying counts replace it."
       },
       {
         "path": "synthesis.opportunity_score",
+        "removed_in": "session-4",
         "replacement": "report.verdict.decision",
-        "reason": "A 0-100 composite the model writes with no stated formula. The verdict is the decision and its reason; a number cannot carry that and invites the interface to render it as a hero gauge."
+        "reason": "A 0-100 composite the model wrote with no stated formula. The verdict is the decision and its reason; a number cannot carry that and invited the interface to render it as a hero gauge."
+      },
+      {
+        "path": "synthesis.market_pulse",
+        "removed_in": "session-4",
+        "replacement": "report.verdict.confidence",
+        "reason": "Undefined composite with no metric_definitions entry and no derivation. Variance testing measured it spreading 92 points across five identical runs (8, 100, 100, 94, 100) -- the least reproducible number in the payload, rendered as the largest."
       }
     ]
   }
