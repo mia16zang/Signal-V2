@@ -120,6 +120,27 @@ def classify(error) -> tuple[bool, float | None, str]:
     if code == 429 or "RESOURCE_EXHAUSTED" in text:
         delay = _suggested_delay(error)
 
+        # A daily cap and a per-minute cap are both 429, and Google attaches a
+        # retryDelay of 20-30s to *both*. Believing that number on a daily cap
+        # produces exactly the loop this project already built once: retry,
+        # fail, retry, fail, all day.
+        #
+        # Measured 2026-08-03 on the free tier:
+        #   GenerateRequestsPerMinutePerProjectPerModel-FreeTier  limit 5
+        #   GenerateRequestsPerDayPerProjectPerModel-FreeTier     limit 20
+        #
+        # The daily one is the ceiling that actually bites, and it does not
+        # clear until the quota resets -- so say so instead of promising 26s.
+        quota_id = _QUOTA_ID.search(text)
+        if quota_id and "PerDay" in quota_id.group(1):
+            limit = _QUOTA_VALUE.search(text)
+            cap = f" ({limit.group(1)}/day)" if limit else ""
+            return False, None, (
+                f"daily free-tier quota exhausted{cap}; resets at midnight "
+                f"Pacific, not in {delay:.0f}s" if delay else
+                f"daily free-tier quota exhausted{cap}; resets at midnight Pacific"
+            )
+
         # Measured on the free tier, 2026-08-02:
         #   quotaId    GenerateRequestsPerMinutePerProjectPerModel-FreeTier
         #   quotaValue 5

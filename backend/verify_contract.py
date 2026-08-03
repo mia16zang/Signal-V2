@@ -557,6 +557,25 @@ def main():
         check(f"a 429 carrying {label} is still read as a rate limit",
               "rate limited" in reason and wait == 50.0, reason)
 
+    # Google attaches a 20-30s retryDelay to a *daily* cap as well as a
+    # per-minute one. Reporting that number for a daily cap invites an
+    # all-day retry loop, so the two must not be conflated.
+    daily = classify(Exception(
+        "429 RESOURCE_EXHAUSTED {'quotaId': "
+        "'GenerateRequestsPerDayPerProjectPerModel-FreeTier', "
+        "'quotaValue': '20'} {'retryDelay': '26s'}"))
+    check("a daily quota is not reported as a 26-second wait",
+          daily[1] is None and "daily" in daily[2], str(daily))
+    check("a daily quota names the cap and when it resets",
+          "20/day" in daily[2] and "midnight" in daily[2], daily[2])
+
+    minute = classify(Exception(
+        "429 RESOURCE_EXHAUSTED {'quotaId': "
+        "'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', "
+        "'quotaValue': '5'} {'retryDelay': '33s'}"))
+    check("a per-minute limit still carries its retry window",
+          minute[1] == 33.0, str(minute))
+
     check("a structured 403 is a rejection, not a rate limit",
           classify(Exception("{'error': {'code': 403, 'message': 'PERMISSION_DENIED'}}"))[2]
           == "request rejected by the provider")

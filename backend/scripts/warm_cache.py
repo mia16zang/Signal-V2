@@ -36,9 +36,48 @@ CHIPS = [
     "Vertical CRM for law firms",
 ]
 
-# 5 requests/minute means one every 12s. 20s leaves room for the compliance
-# retry to fire without tripping the limit.
-SPACING_SECONDS = 20
+# One topic at a time, with the window given time to clear between them.
+#
+# 5 requests/minute sounds like one every 12s, and 20s was the first guess.
+# It failed on 3 of 4 topics: an analysis takes 30-80s, so the calls were
+# already 50-100s apart and still hit the limit. The deployed service shares
+# the same key, so anything else touching /analyze -- a visitor, a browser tab
+# left open -- competes for the same bucket. Waiting a clear two minutes is the
+# difference between a run that works and a run that wastes four minutes.
+SPACING_SECONDS = 120
+
+# Per topic, not per run. A rate limit is transient, so the topic is retried
+# rather than abandoned.
+MAX_ATTEMPTS = 4
+
+
+def capture(service, topic):
+    """Analyse one topic, retrying while the provider is merely rate limited.
+
+    Returns a clean result or None. Never returns a degraded one -- a briefing
+    written by the fallback model, or missing sections, must not become a
+    committed sample that ships to every visitor.
+    """
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        result = asyncio.run(service.analyze(topic))
+
+        if not (result.get("analysis_failed") or result.get("degraded")):
+            return result
+
+        reason = result.get("degraded_reason") or "unknown"
+        # The provider says when it will accept another request; believe it
+        # rather than guessing, and add headroom.
+        wait = (result.get("retry_after") or 45) + 20
+
+        if attempt == MAX_ATTEMPTS:
+            print(f"  giving up after {attempt} attempts -- {reason}", flush=True)
+            return None
+
+        print(f"  attempt {attempt} unusable ({reason}); "
+              f"retrying in {wait:.0f}s", flush=True)
+        time.sleep(wait)
+
+    return None
 
 
 def main():
@@ -50,11 +89,9 @@ def main():
 
     for index, topic in enumerate(topics, 1):
         print(f"\n=== {index}/{len(topics)}  {topic} ===", flush=True)
-        result = asyncio.run(service.analyze(topic))
+        result = capture(service, topic)
 
-        # A failed briefing must never become a committed sample.
-        if result.get("analysis_failed") or result.get("degraded"):
-            print(f"  SKIPPED -- {result.get('degraded_reason')}")
+        if result is None:
             failed.append(topic)
         else:
             path = CacheService.SEED_DIR / f"{CacheService._key(topic)}.json"
@@ -62,10 +99,12 @@ def main():
                 json.dump({"topic": topic, "result": result}, f,
                           indent=2, ensure_ascii=False)
             size = path.stat().st_size / 1024
-            print(f"  wrote {path} ({size:.0f}KB)")
+            print(f"  wrote {path.name} ({size:.0f}KB)", flush=True)
             written.append(topic)
 
         if index < len(topics):
+            print(f"  pausing {SPACING_SECONDS}s before the next topic",
+                  flush=True)
             time.sleep(SPACING_SECONDS)
 
     print(f"\n{len(written)} seeds written, {len(failed)} failed")
