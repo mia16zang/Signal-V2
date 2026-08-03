@@ -51,13 +51,32 @@ class LLMUnavailable(RuntimeError):
         self.reason = reason or message
 
 
-# Conditions that do not fix themselves inside one request. Retrying these
-# burns the user's wall-clock for nothing -- measured 4.5s of sleeps across
-# three attempts against a quota that resets daily.
+# Conditions that do not fix themselves inside one request.
+#
+# Status *names* only. Bare numbers were in this tuple and matched as
+# substrings against the whole error body, so a 429 carrying "limit: 400", a
+# quotaValue of "401" or a docs URL ending /404 was classified as fatal and
+# never retried. Observed live: four identical requests returned three rate
+# limits and one spurious "request rejected by the provider".
 _FATAL_MARKERS = (
     "INVALID_ARGUMENT", "PERMISSION_DENIED", "UNAUTHENTICATED",
-    "NOT_FOUND", "API key not valid", "400", "401", "403", "404",
+    "NOT_FOUND", "FAILED_PRECONDITION", "API key not valid",
 )
+
+# The provider's own status code, read from the structured body ({'code': 429})
+# or the leading token of the message. Matching this instead of scanning the
+# whole string for digits is the difference between reading the error and
+# guessing at it.
+_STATUS_CODE = re.compile(r"['\"]code['\"]:\s*(\d{3})\b|^\s*(\d{3})\b")
+
+_FATAL_CODES = {400, 401, 403, 404, 405}
+
+
+def status_code(error) -> int | None:
+    match = _STATUS_CODE.search(str(error))
+    if not match:
+        return None
+    return int(match.group(1) or match.group(2))
 
 _RETRY_DELAY = re.compile(r"['\"]retryDelay['\"]:\s*['\"](\d+(?:\.\d+)?)s['\"]")
 
@@ -94,11 +113,11 @@ def quota_detail(error) -> str:
 def classify(error) -> tuple[bool, float | None, str]:
     """(retryable, wait_seconds, reason)."""
     text = str(error)
+    code = status_code(error)
 
-    if any(marker in text for marker in _FATAL_MARKERS):
-        return False, None, "request rejected by the provider"
-
-    if "RESOURCE_EXHAUSTED" in text or "429" in text:
+    # Rate limiting is checked first and by code, because a 429 body routinely
+    # contains three-digit numbers that mean something else entirely.
+    if code == 429 or "RESOURCE_EXHAUSTED" in text:
         delay = _suggested_delay(error)
 
         # Measured on the free tier, 2026-08-02:
@@ -120,6 +139,9 @@ def classify(error) -> tuple[bool, float | None, str]:
         # Waitable in principle, but not inside a request that already costs
         # ~30s. Fail fast and hand the caller the retry window instead.
         return False, delay, f"rate limited, clears in {delay:.0f}s"
+
+    if code in _FATAL_CODES or any(m in text for m in _FATAL_MARKERS):
+        return False, None, "request rejected by the provider"
 
     return True, None, "transient provider error"
 

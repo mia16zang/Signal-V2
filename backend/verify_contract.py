@@ -540,6 +540,27 @@ def main():
     # Non-fatal provider errors are still retried; fatal ones are not.
     from app.services.gemini_service import classify
 
+    # A 429 body routinely carries three-digit numbers that are not status
+    # codes -- a quota value, a limit, a docs URL. Matching those as bare
+    # substrings classified a rate limit as a fatal rejection, which was
+    # observed live: four identical requests, three rate limits and one
+    # spurious "request rejected by the provider".
+    for label, body in (
+        ("limit: 400 in the message",
+         "429 RESOURCE_EXHAUSTED {'message': 'limit: 400'} {'retryDelay': '50s'}"),
+        ("a docs URL ending 404",
+         "429 RESOURCE_EXHAUSTED https://x.dev/e/404 {'retryDelay': '50s'}"),
+        ("a quotaValue of 401",
+         "429 RESOURCE_EXHAUSTED {'quotaValue': '401'} {'retryDelay': '50s'}"),
+    ):
+        retryable, wait, reason = classify(Exception(body))
+        check(f"a 429 carrying {label} is still read as a rate limit",
+              "rate limited" in reason and wait == 50.0, reason)
+
+    check("a structured 403 is a rejection, not a rate limit",
+          classify(Exception("{'error': {'code': 403, 'message': 'PERMISSION_DENIED'}}"))[2]
+          == "request rejected by the provider")
+
     check("an exhausted quota is not retried",
           classify(Exception("429 RESOURCE_EXHAUSTED quota")) [0] is False)
     check("a rate limit with a short delay is retried",
