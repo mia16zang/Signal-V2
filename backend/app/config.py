@@ -181,11 +181,25 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 # provider, and not fine for a visitor typing their own topic -- a couple of
 # clicks in a minute and every subsequent request is a 503.
 #
-# The fallback trades latency for availability. OpenRouter's free models are
-# slower and less predictable (measured 64s, 76s and 126s tails against a 34.8s
-# median), so this is not a good primary. It is a much better answer than an
-# error page on a portfolio link.
-ENABLE_LLM_FALLBACK = _flag("ENABLE_LLM_FALLBACK", True)
+# OFF by default, because no *free* OpenRouter model can currently produce this
+# payload and a fallback that cannot succeed is worse than none -- it spends 50
+# to 77 seconds before returning the same 503.
+#
+# Measured 2026-08-03 against the real prompt:
+#
+#   nvidia/nemotron-3-nano-30b-a3b:free   answered, omitted all four sections
+#                                         (does not support response_format)
+#   nvidia/nemotron-3-super-120b-a12b:free  truncated at 6,170 chars; only
+#                                         `customer` survived
+#
+# The bundle is ~18KB of nested JSON across 13 ranked lists. Free models either
+# ignore the schema or stop early.
+#
+# Turn this on when OPENROUTER_MODEL points at a *paid* model that supports
+# structured output -- it is then a genuine availability win. The cleaner fix
+# is billing on the Gemini project, which removes the 5/minute ceiling that
+# creates the need for a fallback at all.
+ENABLE_LLM_FALLBACK = _flag("ENABLE_LLM_FALLBACK", False)
 
 # Never "openrouter/free" -- that alias is the single largest source of tail
 # latency in the measured data.
