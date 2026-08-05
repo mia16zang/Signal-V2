@@ -167,6 +167,85 @@ def main():
     ok("a maturity read is called a judgement, not a grounded estimate",
        judged.basis.startswith("Model judgement"), judged.basis)
 
+    print("\n3c. Attributed claims outrank model estimates")
+    from app.payload import build as _build
+    from app.payload.normalise import figure_conflicts
+
+    def _report(with_claims):
+        ev = [{"id": f"e{i}", "rank": i, "source": "ddgs", "source_key": "ddgs",
+               "display_name": "Web search", "url": f"https://s{i}.com",
+               "used_in_prompt": True, "title": "",
+               "snippet": "The market reaches $195.8 billion growing 13.7% CAGR."}
+              for i in range(1, 31)]
+        sizing = {
+            "claims": [{"evidence_id": "e1", "figure_text": "$195.8 billion",
+                        "scope": "the market", "scope_match": "exact"}],
+            "growth_claims": [{"evidence_id": "e1", "figure_text": "13.7% CAGR",
+                               "scope": "the market", "scope_match": "exact"}],
+        } if with_claims else {"claims": [], "growth_claims": []}
+        intel = {"market": {"market_size": {"estimate": "$310 billion",
+                                            "confidence": 90},
+                            "growth_rate": {"estimate": "14% CAGR",
+                                            "confidence": 90}},
+                 "market_sizing": sizing}
+        syn = {"executive_summary": "S", "confidence": 90,
+               "build_recommendation": {"decision": "Yes", "reason": "r"}}
+        return _build.build_report(intel, syn, {}, ev)
+
+    with_claims = _report(True)
+    ok("a model market size is suppressed when sources state one",
+       with_claims["market"]["market_size"]["value"] is None,
+       str(with_claims["market"]["market_size"]["value"]))
+    ok("and points the reader at the claims",
+       "attributed claims" in with_claims["market"]["market_size"]["display"],
+       with_claims["market"]["market_size"]["display"])
+    ok("a model growth rate is suppressed the same way",
+       with_claims["market"]["growth_rate"]["value"] is None)
+    ok("the suppression is marked machine-readably",
+       with_claims["market"]["market_size"].get("superseded_by") == "claims")
+
+    # The invariant the whole rule exists for.
+    eq("no two panels state a figure for the same quantity",
+       figure_conflicts(with_claims), [])
+
+    without = _report(False)
+    ok("with no claims the model estimate still stands",
+       without["market"]["market_size"]["value"] is not None,
+       str(without["market"]["market_size"]["value"]))
+    ok("and keeps its basis",
+       "Model estimate" in without["market"]["market_size"]["basis"],
+       without["market"]["market_size"]["basis"])
+    eq("which is not a conflict", figure_conflicts(without), [])
+
+    # The guard must actually fire if precedence is ever bypassed.
+    tampered = {"market_sizing": {"claims": [{"figure_text": "x"}]},
+                "market_growth": {"claims": []},
+                "market": {"market_size": {"value": "$310 billion"},
+                           "growth_rate": {"value": None}}}
+    ok("the guard catches a reintroduced conflict",
+       len(figure_conflicts(tampered)) == 1, str(figure_conflicts(tampered)))
+
+    print("\n3d. Insufficient evidence is structural, not prose")
+    thin_ev = [{"id": f"e{i}", "rank": i, "source": "ddgs", "source_key": "ddgs",
+                "display_name": "Web search", "url": f"https://s{i}.com",
+                "used_in_prompt": True, "title": "", "snippet": "x"}
+               for i in range(1, 4)]
+    thin = _build.build_report(
+        {"market": {}, "market_sizing": {}},
+        {"executive_summary": "A full briefing regardless.", "confidence": 90,
+         "build_recommendation": {"decision": "Yes", "reason": "r"}},
+        {}, thin_ev)
+    ok("three sources is flagged insufficient",
+       thin["evidence_sufficient"] is False)
+    ok("and says why, with the threshold",
+       "only 3 sources" in (thin["insufficient_reason"] or ""),
+       str(thin["insufficient_reason"]))
+
+    rich = _report(True)
+    ok("thirty sources at high confidence is sufficient",
+       rich["evidence_sufficient"] is True,
+       str(rich.get("insufficient_reason")))
+
     print("\n4. Headline de-duplication")
     out = dedupe_headlines({
         "recommended_customer": "Web developers using React and Next.js",

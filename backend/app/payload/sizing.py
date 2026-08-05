@@ -22,6 +22,7 @@ one end of it and attaching a confidence score.
 
 import logging
 import re
+from typing import Literal
 
 from pydantic import BaseModel
 
@@ -33,6 +34,11 @@ log = logging.getLogger("signal.sizing")
 # (different year, slightly different scope). Beyond that they are answers to
 # different questions and averaging them would invent a third.
 CONVERGENCE_RATIO = 2.0
+
+# Growth rates converge on percentage points, not on a ratio. 4% and 8% are
+# 2x apart but only four points, which a reader reads as broad agreement;
+# 40% and 80% are the same ratio and a completely different disagreement.
+GROWTH_CONVERGENCE_POINTS = 5.0
 
 _SCALES = {
     "trillion": 1e12, "tn": 1e12, "t": 1e12,
@@ -96,6 +102,17 @@ def _normalise(text: str) -> str:
     return re.sub(r"[^a-z0-9]", "", (text or "").lower())
 
 
+# How well a claim's scope matches the topic that was asked about.
+#
+# Two sources both sizing "the global SaaS market" are honest claims and
+# useless as a headline for "B2B SaaS for HR" -- they describe a category
+# several orders of magnitude wider. Printing the scope was not enough: the
+# figures still drove the hero range.
+ScopeMatch = Literal["exact", "broader", "unclear"]
+
+_SCOPE_VALUES = ("exact", "broader", "unclear")
+
+
 class SizingClaim(BaseModel):
     evidence_id: str
     source_name: str
@@ -103,6 +120,18 @@ class SizingClaim(BaseModel):
     value_usd: float | None = None
     year: int | None = None
     scope: str = ""
+    scope_match: ScopeMatch = "unclear"
+    url: str = ""
+
+
+class GrowthClaim(BaseModel):
+    evidence_id: str
+    source_name: str
+    figure_text: str
+    value_pct: float | None = None
+    period: str = ""
+    scope: str = ""
+    scope_match: ScopeMatch = "unclear"
     url: str = ""
 
 
@@ -111,12 +140,44 @@ class MarketSizing(BaseModel):
     low_usd: float | None = None
     high_usd: float | None = None
     converges: bool = False
+    # Which scope band the headline range was computed from, so a reader can
+    # see that a range of "broader" figures is not a range for their topic.
+    range_scope: ScopeMatch | None = None
     display: str = ""
     basis: str = ""
 
 
-def _verify(claim: dict, by_id: dict) -> SizingClaim | None:
-    """Accept a claim only if the source it cites really says it.
+class MarketGrowth(BaseModel):
+    claims: list[GrowthClaim] = []
+    low_pct: float | None = None
+    high_pct: float | None = None
+    converges: bool = False
+    range_scope: ScopeMatch | None = None
+    display: str = ""
+    basis: str = ""
+
+
+_PERCENT_FIGURE = re.compile(r"(\d+(?:[.,]\d+)?)\s*%")
+
+
+def parse_pct(text: str) -> float | None:
+    """First percentage in a quoted figure. `13.7% CAGR` -> 13.7."""
+    match = _PERCENT_FIGURE.search(text or "")
+    if not match:
+        return None
+    try:
+        return float(match.group(1).replace(",", "."))
+    except ValueError:
+        return None
+
+
+def _scope_match(raw) -> str:
+    value = str(raw or "").strip().lower()
+    return value if value in _SCOPE_VALUES else "unclear"
+
+
+def _cited_source(claim: dict, by_id: dict, kind: str):
+    """The evidence item a claim cites, if the source really says it.
 
     Two ways a claim dies here: it cites an id that was never collected, or it
     quotes a figure that does not occur in the source it points at. Both mean
@@ -126,19 +187,27 @@ def _verify(claim: dict, by_id: dict) -> SizingClaim | None:
     evidence_id = str(claim.get("evidence_id") or "").strip()
     item = by_id.get(evidence_id)
     if not item:
-        log.warning("sizing claim cites unknown evidence id %r", evidence_id)
-        return None
+        log.warning("%s claim cites unknown evidence id %r", kind, evidence_id)
+        return None, "", ""
 
     figure = str(claim.get("figure_text") or "").strip()
     if not figure:
-        return None
+        return None, "", ""
 
     haystack = _normalise(f"{item.get('title', '')} {item.get('snippet', '')}")
     if _normalise(figure) not in haystack:
         log.warning(
-            "sizing claim not found in its cited source | id=%s figure=%r",
-            evidence_id, figure[:60],
+            "%s claim not found in its cited source | id=%s figure=%r",
+            kind, evidence_id, figure[:60],
         )
+        return None, "", ""
+
+    return item, evidence_id, figure
+
+
+def _verify(claim: dict, by_id: dict) -> SizingClaim | None:
+    item, evidence_id, figure = _cited_source(claim, by_id, "sizing")
+    if item is None:
         return None
 
     year = claim.get("year")
@@ -156,8 +225,41 @@ def _verify(claim: dict, by_id: dict) -> SizingClaim | None:
         value_usd=parse_usd(figure),
         year=year,
         scope=str(claim.get("scope") or "").strip(),
+        scope_match=_scope_match(claim.get("scope_match")),
         url=item.get("url", ""),
     )
+
+
+def _verify_growth(claim: dict, by_id: dict) -> GrowthClaim | None:
+    item, evidence_id, figure = _cited_source(claim, by_id, "growth")
+    if item is None:
+        return None
+
+    return GrowthClaim(
+        evidence_id=evidence_id,
+        source_name=item.get("display_name", "Unknown source"),
+        figure_text=figure,
+        value_pct=parse_pct(figure),
+        period=str(claim.get("period") or "").strip(),
+        scope=str(claim.get("scope") or "").strip(),
+        scope_match=_scope_match(claim.get("scope_match")),
+        url=item.get("url", ""),
+    )
+
+
+def _pick_scope_band(claims):
+    """The claims a headline range may be computed from.
+
+    Exact-scope claims win outright. Falling back to broader ones is allowed --
+    they are still real, attributed figures and worth showing -- but the two
+    are never mixed, because a range whose ends measure different categories
+    is not a range of anything.
+    """
+    for band in ("exact", "broader", "unclear"):
+        subset = [c for c in claims if c.scope_match == band]
+        if subset:
+            return band, subset
+    return None, []
 
 
 def build_market_sizing(raw, evidence: list[dict]) -> MarketSizing:
@@ -195,38 +297,67 @@ def build_market_sizing(raw, evidence: list[dict]) -> MarketSizing:
             ),
         )
 
-    values = [c.value_usd for c in claims if c.value_usd]
+    # Every verified claim is still published. Only the *range* is restricted
+    # to one scope band, so a reader sees all the evidence but the headline
+    # figure describes one thing.
+    band, in_band = _pick_scope_band(claims)
+    widest = ""
+    if band == "broader":
+        subject = (in_band[0].scope or "a wider category").strip()
+        widest = (f" These figures describe {subject}, which is broader than the "
+                  f"topic asked about.")
+    elif band == "unclear":
+        widest = (" It is not clear from the sources whether these figures "
+                  "describe this topic or a wider category.")
+
+    # Claims held back from the range because they measure something else.
+    # Stated wherever a basis is produced, not only on the multi-claim path --
+    # a lone in-scope figure sitting beside two out-of-scope ones is exactly
+    # the case a reader needs told.
+    excluded = len(claims) - len(in_band)
+    excluded_note = (
+        f" {excluded} further claim(s) were collected at a different scope and "
+        f"are excluded from this range." if excluded else ""
+    )
+
+    values = [c.value_usd for c in in_band if c.value_usd]
     low = min(values) if values else None
     high = max(values) if values else None
 
-    if len(claims) == 1:
-        only = claims[0]
+    if len(in_band) == 1:
+        only = in_band[0]
         where = _domain(only.url) or only.source_name
         return MarketSizing(
             claims=claims, low_usd=low, high_usd=high, converges=True,
-            display=f"{only.figure_text} — {where}, the only source to state a figure.",
-            basis=f"One of {scanned} collected sources stated a market size.",
+            range_scope=band,
+            display=f"{only.figure_text} — {where}, the only source to state a figure."
+                    + widest,
+            basis=(f"One of {scanned} collected sources stated a market size at "
+                   f"this scope." + excluded_note),
         )
 
     if not low or not high:
         return MarketSizing(
             claims=claims, low_usd=low, high_usd=high, converges=False,
-            display=f"{len(claims)} sources state figures, but none could be parsed "
+            range_scope=band,
+            display=f"{len(in_band)} sources state figures, but none could be parsed "
                     f"into a comparable amount.",
-            basis=f"{len(claims)} of {scanned} collected sources stated a figure.",
+            basis=(f"{len(claims)} of {scanned} collected sources stated a figure."
+                   + excluded_note),
         )
 
     converges = (high / low) <= CONVERGENCE_RATIO
 
     if converges:
-        display = (f"{len(claims)} sources imply {format_usd(low)}–{format_usd(high)}.")
+        display = f"{len(in_band)} sources imply {format_usd(low)}–{format_usd(high)}."
     else:
         display = (
-            f"{len(claims)} sources imply figures from {format_usd(low)} to "
+            f"{len(in_band)} sources imply figures from {format_usd(low)} to "
             f"{format_usd(high)} — the estimates do not converge."
         )
+    display += widest
 
-    years = sorted({c.year for c in claims if c.year})
+    years = sorted({c.year for c in in_band if c.year})
     scope_note = ""
     if len(years) > 1:
         scope_note = (f" Figures target different years ({', '.join(map(str, years))}), "
@@ -235,15 +366,104 @@ def build_market_sizing(raw, evidence: list[dict]) -> MarketSizing:
     # A spread this wide is almost never one market measured differently -- it
     # is different things being measured. Say so rather than presenting it as
     # disagreement about a single quantity.
-    scopes = {c.scope.strip().lower() for c in claims if c.scope.strip()}
+    scopes = {c.scope.strip().lower() for c in in_band if c.scope.strip()}
     if not converges and len(scopes) > 1:
         scope_note += (f" They also measure {len(scopes)} different scopes, so the "
                        f"spread is partly a difference in what is being counted.")
 
+    scope_note += excluded_note
+
     return MarketSizing(
         claims=claims, low_usd=low, high_usd=high, converges=converges,
+        range_scope=band,
         display=display,
-        basis=(f"{len(claims)} of {scanned} collected sources stated a figure, quoted "
-               f"verbatim and attributed. Spread is {round(high / low, 1)}x."
+        basis=(f"{len(in_band)} of {scanned} collected sources stated a figure at "
+               f"this scope, quoted verbatim and attributed. "
+               f"Spread is {round(high / low, 1)}x."
                + scope_note),
+    )
+
+
+def build_market_growth(raw, evidence: list[dict]) -> MarketGrowth:
+    """Growth rates, extracted and attributed the same way sizing is.
+
+    Exists because the model's own `growth_rate` estimate was landing on
+    figures no source had stated -- "14% CAGR" against sources saying 13.7%
+    and 10.60%. An extracted figure can be checked; a generated one cannot.
+    """
+    by_id = {e.get("id"): e for e in evidence}
+    raw_claims = (raw.get("growth_claims") or []) if isinstance(raw, dict) else []
+
+    claims = []
+    for candidate in raw_claims:
+        if isinstance(candidate, dict):
+            verified = _verify_growth(candidate, by_id)
+            if verified:
+                claims.append(verified)
+
+    seen, unique = set(), []
+    for claim in claims:
+        key = _normalise(claim.figure_text)
+        if key not in seen:
+            seen.add(key)
+            unique.append(claim)
+    claims = unique
+
+    scanned = len(evidence)
+
+    if not claims:
+        return MarketGrowth(
+            claims=[],
+            display="No growth figure appeared in the collected sources.",
+            basis=(f"{scanned} sources were scanned and none stated a growth rate "
+                   f"or CAGR."),
+        )
+
+    band, in_band = _pick_scope_band(claims)
+    widest = ""
+    if band == "broader":
+        subject = (in_band[0].scope or "a wider category").strip()
+        widest = (f" These rates describe {subject}, which is broader than the "
+                  f"topic asked about.")
+
+    values = [c.value_pct for c in in_band if c.value_pct is not None]
+    low = min(values) if values else None
+    high = max(values) if values else None
+
+    def pct(value):
+        return f"{value:g}%"
+
+    if len(in_band) == 1:
+        only = in_band[0]
+        where = _domain(only.url) or only.source_name
+        return MarketGrowth(
+            claims=claims, low_pct=low, high_pct=high, converges=True,
+            range_scope=band,
+            display=f"{only.figure_text} — {where}, the only source to state a rate."
+                    + widest,
+            basis=f"One of {scanned} collected sources stated a growth rate.",
+        )
+
+    if low is None or high is None:
+        return MarketGrowth(
+            claims=claims, converges=False, range_scope=band,
+            display=f"{len(in_band)} sources state growth rates, but none could be "
+                    f"parsed into a comparable figure.",
+            basis=f"{len(claims)} of {scanned} collected sources stated a rate.",
+        )
+
+    # Growth rates are already a ratio, so a ratio-of-ratios is the wrong test.
+    # Percentage points is what a reader compares.
+    converges = (high - low) <= GROWTH_CONVERGENCE_POINTS
+    display = (f"{len(in_band)} sources imply {pct(low)}–{pct(high)}."
+               if converges else
+               f"{len(in_band)} sources imply rates from {pct(low)} to {pct(high)} "
+               f"— they do not converge.") + widest
+
+    return MarketGrowth(
+        claims=claims, low_pct=low, high_pct=high, converges=converges,
+        range_scope=band,
+        display=display,
+        basis=(f"{len(in_band)} of {scanned} collected sources stated a growth rate "
+               f"at this scope, quoted verbatim and attributed."),
     )

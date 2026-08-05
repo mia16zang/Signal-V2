@@ -354,6 +354,70 @@ def market_estimate(raw: dict, value_key: str, label: str,
 
 
 # --------------------------------------------------------------------------
+# Extracted values outrank generated ones
+# --------------------------------------------------------------------------
+
+SUPERSEDED_BY_CLAIMS = (
+    "See the attributed claims. No independent estimate is produced when "
+    "sources state figures."
+)
+
+
+def supersede(estimate: dict, claim_count: int, quantity: str) -> dict:
+    """Silence a model estimate when attributed claims exist for the same thing.
+
+    The product's claim is that it reports what sources said. Publishing a
+    model-written market size next to two verbatim, attributed figures breaks
+    that in the most damaging possible way -- the generated number looks like
+    corroboration, and a reader has no way to tell which panel is which.
+    Observed live: sources stated $195.8B and $307.3B, and a neighbouring panel
+    read "$310 billion" as an independent estimate.
+
+    The estimate is not deleted. It is emptied and pointed at the claims, so
+    the panel still renders and says why it is empty.
+    """
+    if not claim_count:
+        return estimate
+
+    return {
+        **estimate,
+        "value": None,
+        "display": SUPERSEDED_BY_CLAIMS,
+        "confidence": None,
+        "confidence_band": "none",
+        "basis": (
+            f"{claim_count} collected source(s) stated a {quantity} directly, so "
+            f"the model's own estimate is not reported alongside them."
+        ),
+        "superseded_by": "claims",
+    }
+
+
+def figure_conflicts(report: dict) -> list[str]:
+    """Quantities stated differently in more than one place in one response.
+
+    A guard rather than a transformation: if a third panel ever starts
+    publishing its own market size, this fails loudly instead of shipping two
+    numbers for one quantity and letting the reader pick.
+    """
+    conflicts = []
+
+    for quantity, claims_key, estimate_key in (
+        ("market size", "market_sizing", "market_size"),
+        ("growth rate", "market_growth", "growth_rate"),
+    ):
+        claims = (report.get(claims_key) or {}).get("claims") or []
+        estimate = (report.get("market") or {}).get(estimate_key) or {}
+        if claims and estimate.get("value") is not None:
+            conflicts.append(
+                f"{quantity}: {len(claims)} attributed claim(s) alongside a "
+                f"model estimate of {estimate.get('value')!r}"
+            )
+
+    return conflicts
+
+
+# --------------------------------------------------------------------------
 # §4.4 Headline de-duplication
 # --------------------------------------------------------------------------
 

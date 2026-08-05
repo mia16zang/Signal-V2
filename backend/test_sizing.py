@@ -125,7 +125,72 @@ def main():
     ])
     eq("identical figures deduplicate to one claim", len(tight.claims), 1)
 
-    print("\n7. Malformed input does not raise")
+    print("\n7. Scope matching")
+    from app.payload.sizing import build_market_growth
+
+    SCOPED = [
+        {"id": "e1", "display_name": "Web search", "url": "https://a.com/1",
+         "title": "", "snippet": "The global SaaS market reaches $195.8 billion."},
+        {"id": "e2", "display_name": "Web search", "url": "https://b.com/2",
+         "title": "", "snippet": "Global SaaS hits $307.3 billion by 2030."},
+        {"id": "e3", "display_name": "Web search", "url": "https://c.com/3",
+         "title": "", "snippet": "HR SaaS specifically is worth $12.4 billion."},
+    ]
+
+    mixed = build_market_sizing({"claims": [
+        {"evidence_id": "e1", "figure_text": "$195.8 billion",
+         "scope": "global SaaS market", "scope_match": "broader"},
+        {"evidence_id": "e2", "figure_text": "$307.3 billion",
+         "scope": "global SaaS market", "scope_match": "broader"},
+        {"evidence_id": "e3", "figure_text": "$12.4 billion",
+         "scope": "HR SaaS", "scope_match": "exact"},
+    ]}, SCOPED)
+
+    eq("every claim carries a scope_match",
+       [c.scope_match for c in mixed.claims], ["broader", "broader", "exact"])
+    eq("all three claims are still published", len(mixed.claims), 3)
+    eq("the range is computed from the exact-scope claim only",
+       (mixed.low_usd, mixed.high_usd), (12.4e9, 12.4e9))
+    eq("and says which scope it used", mixed.range_scope, "exact")
+    ok("the excluded broader claims are accounted for",
+       "different scope" in mixed.basis, mixed.basis)
+
+    broader_only = build_market_sizing({"claims": [
+        {"evidence_id": "e1", "figure_text": "$195.8 billion",
+         "scope": "global SaaS market", "scope_match": "broader"},
+        {"evidence_id": "e2", "figure_text": "$307.3 billion",
+         "scope": "global SaaS market", "scope_match": "broader"},
+    ]}, SCOPED)
+    eq("with no exact claims the broader ones are still shown",
+       len(broader_only.claims), 2)
+    ok("but the display says they describe a wider category",
+       "broader than the topic" in broader_only.display, broader_only.display)
+
+    print("\n8. Growth claims are extracted, not generated")
+    GROWTH_EV = [
+        {"id": "e8", "display_name": "Web search", "url": "https://a.com/8",
+         "title": "", "snippet": "HR SaaS grows at 13.7% CAGR through 2030."},
+        {"id": "e20", "display_name": "Web search", "url": "https://b.com/20",
+         "title": "", "snippet": "HR software CAGR 10.60% over the period."},
+    ]
+    g = build_market_growth({"growth_claims": [
+        {"evidence_id": "e8", "figure_text": "13.7% CAGR", "scope": "HR SaaS",
+         "scope_match": "exact", "period": "2025-2030"},
+        {"evidence_id": "e20", "figure_text": "10.60%", "scope": "HR software",
+         "scope_match": "exact"},
+    ]}, GROWTH_EV)
+    eq("both rates verified", len(g.claims), 2)
+    eq("parsed from the quoted text", (g.low_pct, g.high_pct), (10.6, 13.7))
+    ok("3.1 points apart converges", g.converges is True)
+    ok("the range reflects what sources said, not a round number",
+       "10.6%" in g.display and "13.7%" in g.display, g.display)
+
+    none_stated = build_market_growth({"growth_claims": []}, GROWTH_EV)
+    eq("no rate stated is a legitimate answer", none_stated.claims, [])
+    ok("and says so", "No growth figure" in none_stated.display,
+       none_stated.display)
+
+    print("\n9. Malformed input does not raise")
     for bad in (None, {}, {"claims": None}, {"claims": ["string"]},
                 {"claims": [{"evidence_id": None}]}):
         result = build_market_sizing(bad, EVIDENCE)

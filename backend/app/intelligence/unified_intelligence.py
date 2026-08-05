@@ -51,7 +51,8 @@ SCHEMA = f"""{{
   "opportunity_areas": [{_row("score")}]
  }},
  "market_sizing": {{
-  "claims": [{{"evidence_id": "e1", "figure_text": "", "year": 2030, "scope": ""}}]
+  "claims": [{{"evidence_id": "e1", "figure_text": "", "year": 2030, "scope": "", "scope_match": "exact"}}],
+  "growth_claims": [{{"evidence_id": "e1", "figure_text": "", "period": "", "scope": "", "scope_match": "exact"}}]
  }},
  "market": {{
   "market_size": {{"estimate": "", "confidence": 0}},
@@ -214,6 +215,19 @@ market_sizing — extraction only, no judgement
 - If no source states a market size, return `"claims": []`. That is a normal
   and common outcome. Do not estimate one, do not infer one from adjacent
   markets, and do not carry a figure over from `market.market_size`.
+- `scope_match` compares the figure's scope to TOPIC above:
+    "exact"   - the figure measures this topic
+    "broader" - it measures a wider category that contains this topic, e.g.
+                a figure for the whole SaaS market when the topic is HR SaaS
+    "unclear" - the source does not make the scope plain
+  Be strict. A figure for a parent category is "broader", never "exact".
+
+growth_claims — the same rules, for growth rates
+- List every source that states a growth rate, CAGR or percentage change for
+  this market. `figure_text` verbatim, `evidence_id` cited, `scope_match` as
+  above. `period` is the window the rate covers, e.g. "2025-2030", or "".
+- Return `"growth_claims": []` when no source states a rate. Do not convert a
+  market size into an implied rate, and do not average.
 
 Numbers
 - Return null for any quantitative estimate the evidence does not directly

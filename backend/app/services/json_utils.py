@@ -424,8 +424,9 @@ def normalise_bundle(raw: dict) -> dict:
     """Split one merged model response into the contract sections."""
     raw = raw if isinstance(raw, dict) else {}
 
-    sizing = raw.get("market_sizing")
-    claims = sizing.get("claims") if isinstance(sizing, dict) else None
+    sizing = raw.get("market_sizing") if isinstance(raw.get("market_sizing"), dict) else {}
+    claims = sizing.get("claims")
+    growth_claims = sizing.get("growth_claims")
 
     return {
         "customer": normalise_customer(raw.get("customer")),
@@ -436,5 +437,8 @@ def normalise_bundle(raw: dict) -> dict:
         # against the source it cites in app.payload.sizing, which is the only
         # place that can see the evidence text, so shaping it here would just
         # be a second, weaker check.
-        "market_sizing": {"claims": claims if isinstance(claims, list) else []},
+        "market_sizing": {
+            "claims": claims if isinstance(claims, list) else [],
+            "growth_claims": growth_claims if isinstance(growth_claims, list) else [],
+        },
     }
